@@ -5,3 +5,24 @@
     outline: none;
     padding: 0;
 }
+
+body {
+    @include body-font;
+    background: #F2F2F2;
+    color: #272727;
+}
+
+.wrapper {
+    width: 860px;
+    margin: 0 auto;
+}
+
+#page-container {
+    background: #FFFFFF;
+    box-shadow: 0 0 8px black(0.27);
+    padding: $page-padding;
+
+    // Push the page in front of the footer
+    position: relative;
+    z-index: 2;
+}
