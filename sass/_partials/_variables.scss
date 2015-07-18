@@ -2,9 +2,12 @@ $urn-purple: #5E44CB;
 $inner-wrapper-padding: 18px;
 $page-padding: 35px;
 $wrapper-width: 860px;
+$wrapper-width-small: 760px;
 
 // Header
 $logo-width: 175px;
+$logo-width-small: 155px;
+$logo-width-difference: #{$logo-width - $logo-width-small};
 $logo-height: 160px;
 
 // Footer

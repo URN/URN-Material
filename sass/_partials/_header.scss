@@ -13,7 +13,14 @@
         text-decoration: none;
 
         img {
+            @include flex-shrink(0);
             width: $logo-width;
+
+            @include breakpoint(laptop) {
+                margin-top: #{$logo-width-difference / 4};
+                width: $logo-width-small;
+                height: 100%;
+            }
         }
 
         h1 {
@@ -28,6 +35,13 @@
             text-align: center;
             text-transform: uppercase;
             white-space: nowrap;
+
+            @include breakpoint(laptop) {
+                white-space: normal;
+                line-height: 1.2;
+                text-align: left;
+                margin-top: 35px;
+            }
         }
 
         &:hover,
