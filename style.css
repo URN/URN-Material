@@ -98,8 +98,14 @@ body {
     width: 760px;
   }
 }
+@media (max-width: 780px) {
+  /* line 15, sass/_partials/_base.scss */
+  .wrapper {
+    width: 100%;
+  }
+}
 
-/* line 26, sass/_partials/_base.scss */
+/* line 30, sass/_partials/_base.scss */
 #page-container {
   background: #FFFFFF;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.27);
@@ -109,15 +115,21 @@ body {
   z-index: 2;
 }
 @media (min-width: 1430px) {
-  /* line 26, sass/_partials/_base.scss */
+  /* line 30, sass/_partials/_base.scss */
   #page-container {
     width: 1400px;
   }
 }
 @media (max-width: 950px) {
-  /* line 26, sass/_partials/_base.scss */
+  /* line 30, sass/_partials/_base.scss */
   #page-container {
     width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 30, sass/_partials/_base.scss */
+  #page-container {
+    width: 100%;
   }
 }
 
@@ -148,12 +160,20 @@ body {
 @media (max-width: 950px) {
   /* line 15, sass/_partials/_header.scss */
   #header #title img {
+    height: 100%;
     margin-top: 20px/4;
     width: 155px;
-    height: 100%;
   }
 }
-/* line 26, sass/_partials/_header.scss */
+@media (max-width: 600px) {
+  /* line 15, sass/_partials/_header.scss */
+  #header #title img {
+    display: block;
+    margin: 0 auto;
+    width: 175px;
+  }
+}
+/* line 32, sass/_partials/_header.scss */
 #header #title h1 {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -169,19 +189,26 @@ body {
   white-space: nowrap;
 }
 @media (max-width: 950px) {
-  /* line 26, sass/_partials/_header.scss */
+  /* line 32, sass/_partials/_header.scss */
   #header #title h1 {
-    white-space: normal;
+    font-size: 2em;
     line-height: 1.2;
+    margin-top: 40px;
     text-align: left;
-    margin-top: 35px;
+    white-space: normal;
   }
 }
-/* line 49, sass/_partials/_header.scss */
+@media (max-width: 600px) {
+  /* line 32, sass/_partials/_header.scss */
+  #header #title h1 {
+    display: none;
+  }
+}
+/* line 60, sass/_partials/_header.scss */
 #header #title:hover:after, #header #title:focus:after {
   box-shadow: 0px 0px 160px 130px rgba(255, 255, 255, 0.3);
 }
-/* line 55, sass/_partials/_header.scss */
+/* line 66, sass/_partials/_header.scss */
 #header #title:after {
   -moz-transition: box-shadow 0.15s ease;
   -o-transition: box-shadow 0.15s ease;
@@ -198,13 +225,13 @@ body {
   width: 1px;
 }
 
-/* line 70, sass/_partials/_header.scss */
+/* line 81, sass/_partials/_header.scss */
 #nav {
   margin-top: -230px;
   position: relative;
   z-index: 3;
 }
-/* line 78, sass/_partials/_header.scss */
+/* line 89, sass/_partials/_header.scss */
 #nav ul {
   display: -webkit-flex;
   display: flex;
@@ -212,7 +239,7 @@ body {
   flex-direction: row;
 }
 
-/* line 84, sass/_partials/_header.scss */
+/* line 95, sass/_partials/_header.scss */
 .nav-item a {
   -moz-transition: color 0.15s ease;
   -o-transition: color 0.15s ease;
@@ -225,25 +252,37 @@ body {
   padding: 10px 4px;
   text-decoration: none;
 }
-/* line 93, sass/_partials/_header.scss */
+/* line 104, sass/_partials/_header.scss */
 .nav-item a:hover, .nav-item a:focus {
   color: white;
 }
 
-/* line 99, sass/_partials/_header.scss */
+/* line 110, sass/_partials/_header.scss */
 .nav-item {
   padding: 0 12px;
 }
-/* line 102, sass/_partials/_header.scss */
+/* line 113, sass/_partials/_header.scss */
 .nav-item:first-child {
   padding-left: 18px;
 }
-/* line 106, sass/_partials/_header.scss */
+@media (max-width: 600px) {
+  /* line 113, sass/_partials/_header.scss */
+  .nav-item:first-child {
+    padding-left: 0;
+  }
+}
+/* line 121, sass/_partials/_header.scss */
 .nav-item:last-child {
   padding-right: 18px;
 }
+@media (max-width: 600px) {
+  /* line 121, sass/_partials/_header.scss */
+  .nav-item:last-child {
+    padding-right: 0;
+  }
+}
 
-/* line 111, sass/_partials/_header.scss */
+/* line 130, sass/_partials/_header.scss */
 .nav-item.current a {
   border-color: white;
   color: white;
@@ -258,8 +297,8 @@ body {
   line-height: 1.6;
   margin-top: -20px;
   overflow: hidden;
-  padding-top: 52px;
   padding-bottom: 32px;
+  padding-top: 52px;
   position: relative;
   z-index: 1;
 }
@@ -403,9 +442,9 @@ section > h1 {
 }
 /* line 12, sass/_partials/_recent-posts.scss */
 .recent-post p {
-  margin: 15px 0;
-  line-height: 1.3;
   color: gray;
+  line-height: 1.3;
+  margin: 15px 0;
 }
 /* line 17, sass/_partials/_recent-posts.scss */
 .recent-post footer {

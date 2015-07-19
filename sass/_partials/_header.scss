@@ -17,9 +17,15 @@
             width: $logo-width;
 
             @include breakpoint(laptop) {
+                height: 100%;
                 margin-top: #{$logo-width-difference / 4};
                 width: $logo-width-small;
-                height: 100%;
+            }
+
+            @include breakpoint(mobile) {
+                display: block;
+                margin: 0 auto;
+                width: $logo-width;
             }
         }
 
@@ -37,10 +43,15 @@
             white-space: nowrap;
 
             @include breakpoint(laptop) {
-                white-space: normal;
+                font-size: 2em;
                 line-height: 1.2;
+                margin-top: 40px;
                 text-align: left;
-                margin-top: 35px;
+                white-space: normal;
+            }
+
+            @include breakpoint(mobile) {
+                display: none;
             }
         }
 
@@ -101,10 +112,18 @@
 
     &:first-child {
         padding-left: $inner-wrapper-padding;
+
+        @include breakpoint(mobile) {
+            padding-left: 0;
+        }
     }
 
     &:last-child {
         padding-right: $inner-wrapper-padding;
+
+        @include breakpoint(mobile) {
+            padding-right: 0;
+        }
     }
 }
 
