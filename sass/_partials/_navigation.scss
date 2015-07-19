@@ -1,0 +1,139 @@
+#nav {
+    margin-top: -230px;
+
+    // Push nav above the page so that page's box shadow doesn't 
+    // overlap current indicator bar
+    position: relative;
+    z-index: 3;
+
+    > ul {
+        @include display-flex;
+        @include flex-direction(row);
+
+        > .nav-item {
+            @include flex-shrink(0);
+            padding: 0 12px;
+
+            @include breakpoint(mobile) {
+                padding: 0 6px;
+            }
+
+            &:first-child {
+                padding-left: $inner-wrapper-padding;
+
+                @include breakpoint(mobile) {
+                    padding-left: 0;
+                }
+            }
+
+            &:last-child {
+                padding-right: $inner-wrapper-padding;
+
+                @include breakpoint(mobile) {
+                    padding-right: 0;
+                }
+            }
+
+            a {
+                @include transition(color 0.15s ease);
+                border-bottom: 6px solid transparent;
+                color: white(0.7);
+                display: block;
+                font-size: 1.125em;
+                padding: 10px 4px;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: white;
+                }
+            }
+
+            &.current a {
+                border-color: white;
+                color: white;
+            }
+        }
+    }
+}
+
+#nav.overflowing .nav-overflow {
+    display: block;
+}
+
+.nav-overflow {
+    display: none;
+    position: relative;
+
+    > a {
+        @include transition(color 0.05s ease,
+                            background 0.05s ease);
+        background: white(0.2);
+        color: white;
+        display: block;
+        font-size: 1.125em;
+        font-weight: 700;
+        padding: 10px 10px;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            background: white;
+            color: $body-text-color;
+        }
+    }
+}
+
+.nav-overflow-list {
+    background: white;
+    box-shadow: 0 1px 3px black(0.3);
+    display: none;
+    padding: 5px 0;
+    position: absolute;
+    right: 0;
+    top: 35px;
+
+    .nav-item {
+        white-space: nowrap;
+        a {
+            color: $body-text-color;
+            display: block;
+            font-size: 1.125em;
+            padding: 10px 18px;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                background: #E2E2E2;
+            }
+        }
+    }
+
+    &:before {
+        background: transparent;
+        content: "";
+        height: 140%;
+        left: 0;
+        margin-left: -20%;
+        position: absolute;
+        top: 0;
+        width: 140%;
+        z-index: -1;
+    }
+}
+
+.overflow-open {
+    .nav-overflow > a {
+        background: white;
+        color: $body-text-color;
+    }
+}
+
+.nav-overflow:hover > a {
+    background: white;
+    color: $body-text-color;
+}
+
+.overflow-open .nav-overflow-list,
+.nav-overflow-list:hover {
+    display: block;
+}
