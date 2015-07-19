@@ -74,6 +74,10 @@
             position: absolute;
             top: #{$logo-height / 2};
             width: 1px;
+
+            @include breakpoint(mobile) {
+                left: 50%;
+            }
         }
     }
 }
