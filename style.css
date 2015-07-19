@@ -249,34 +249,40 @@ body {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
   padding: 0 12px;
+  text-align: center;
 }
 @media (max-width: 620px) {
   /* line 13, sass/_partials/_navigation.scss */
   #nav > ul > .nav-item {
     padding: 0 6px;
   }
+  /* line 21, sass/_partials/_navigation.scss */
+  #nav > ul > .nav-item.flex-grow {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
 }
-/* line 21, sass/_partials/_navigation.scss */
+/* line 26, sass/_partials/_navigation.scss */
 #nav > ul > .nav-item:first-child {
   padding-left: 18px;
 }
 @media (max-width: 620px) {
-  /* line 21, sass/_partials/_navigation.scss */
+  /* line 26, sass/_partials/_navigation.scss */
   #nav > ul > .nav-item:first-child {
     padding-left: 0;
   }
 }
-/* line 29, sass/_partials/_navigation.scss */
+/* line 34, sass/_partials/_navigation.scss */
 #nav > ul > .nav-item:last-child {
   padding-right: 18px;
 }
 @media (max-width: 620px) {
-  /* line 29, sass/_partials/_navigation.scss */
+  /* line 34, sass/_partials/_navigation.scss */
   #nav > ul > .nav-item:last-child {
     padding-right: 0;
   }
 }
-/* line 37, sass/_partials/_navigation.scss */
+/* line 42, sass/_partials/_navigation.scss */
 #nav > ul > .nav-item a {
   -moz-transition: color 0.15s ease;
   -o-transition: color 0.15s ease;
@@ -289,27 +295,27 @@ body {
   padding: 10px 4px;
   text-decoration: none;
 }
-/* line 46, sass/_partials/_navigation.scss */
+/* line 51, sass/_partials/_navigation.scss */
 #nav > ul > .nav-item a:hover, #nav > ul > .nav-item a:focus {
   color: white;
 }
-/* line 52, sass/_partials/_navigation.scss */
+/* line 57, sass/_partials/_navigation.scss */
 #nav > ul > .nav-item.current a {
   border-color: white;
   color: white;
 }
 
-/* line 60, sass/_partials/_navigation.scss */
+/* line 65, sass/_partials/_navigation.scss */
 #nav.overflowing .nav-overflow {
   display: block;
 }
 
-/* line 64, sass/_partials/_navigation.scss */
+/* line 69, sass/_partials/_navigation.scss */
 .nav-overflow {
   display: none;
   position: relative;
 }
-/* line 68, sass/_partials/_navigation.scss */
+/* line 73, sass/_partials/_navigation.scss */
 .nav-overflow > a {
   -moz-transition: color 0.05s ease, background 0.05s ease;
   -o-transition: color 0.05s ease, background 0.05s ease;
@@ -323,13 +329,13 @@ body {
   padding: 10px 10px;
   text-decoration: none;
 }
-/* line 78, sass/_partials/_navigation.scss */
+/* line 83, sass/_partials/_navigation.scss */
 .nav-overflow > a:hover, .nav-overflow > a:focus {
   background: white;
   color: #272727;
 }
 
-/* line 86, sass/_partials/_navigation.scss */
+/* line 91, sass/_partials/_navigation.scss */
 .nav-overflow-list {
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -339,11 +345,11 @@ body {
   right: 0;
   top: 35px;
 }
-/* line 95, sass/_partials/_navigation.scss */
+/* line 100, sass/_partials/_navigation.scss */
 .nav-overflow-list .nav-item {
   white-space: nowrap;
 }
-/* line 97, sass/_partials/_navigation.scss */
+/* line 102, sass/_partials/_navigation.scss */
 .nav-overflow-list .nav-item a {
   color: #272727;
   display: block;
@@ -351,11 +357,11 @@ body {
   padding: 10px 18px;
   text-decoration: none;
 }
-/* line 104, sass/_partials/_navigation.scss */
+/* line 109, sass/_partials/_navigation.scss */
 .nav-overflow-list .nav-item a:hover, .nav-overflow-list .nav-item a:focus {
   background: #E2E2E2;
 }
-/* line 111, sass/_partials/_navigation.scss */
+/* line 116, sass/_partials/_navigation.scss */
 .nav-overflow-list:before {
   background: transparent;
   content: "";
@@ -368,19 +374,19 @@ body {
   z-index: -1;
 }
 
-/* line 125, sass/_partials/_navigation.scss */
+/* line 130, sass/_partials/_navigation.scss */
 .overflow-open .nav-overflow > a {
   background: white;
   color: #272727;
 }
 
-/* line 131, sass/_partials/_navigation.scss */
+/* line 136, sass/_partials/_navigation.scss */
 .nav-overflow:hover > a {
   background: white;
   color: #272727;
 }
 
-/* line 136, sass/_partials/_navigation.scss */
+/* line 141, sass/_partials/_navigation.scss */
 .overflow-open .nav-overflow-list,
 .nav-overflow-list:hover {
   display: block;

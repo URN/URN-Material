@@ -38,6 +38,9 @@ jQuery(document).ready(function ($) {
     }
 
     $(window).resize(function () {
+        // Remove the flex grow before recalculating otherwise it screws it up
+        $items.removeClass("flex-grow");
+
         // The nav item on the far right
         var $lastVisibleItem = getLastArrayItem(itemsVisible);
 
@@ -86,6 +89,9 @@ jQuery(document).ready(function ($) {
         else {
             $nav.addClass("overflowing");
         }
+
+        // Make the visible nav items grow to fill the available horizontal space
+        $items.addClass("flex-grow");
     });
 
     $overflowButton.click(function (e) {
