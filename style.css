@@ -126,7 +126,7 @@ body {
     width: 95%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   /* line 30, sass/_partials/_base.scss */
   #page-container {
     width: 100%;
@@ -165,7 +165,7 @@ body {
     width: 155px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   /* line 15, sass/_partials/_header.scss */
   #header #title img {
     display: block;
@@ -198,7 +198,7 @@ body {
     white-space: normal;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   /* line 32, sass/_partials/_header.scss */
   #header #title h1 {
     display: none;
@@ -232,15 +232,46 @@ body {
   z-index: 3;
 }
 /* line 89, sass/_partials/_header.scss */
-#nav ul {
+#nav > ul {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
 }
-
-/* line 95, sass/_partials/_header.scss */
-.nav-item a {
+/* line 93, sass/_partials/_header.scss */
+#nav > ul > .nav-item {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 0 12px;
+}
+@media (max-width: 620px) {
+  /* line 93, sass/_partials/_header.scss */
+  #nav > ul > .nav-item {
+    padding: 0 6px;
+  }
+}
+/* line 101, sass/_partials/_header.scss */
+#nav > ul > .nav-item:first-child {
+  padding-left: 18px;
+}
+@media (max-width: 620px) {
+  /* line 101, sass/_partials/_header.scss */
+  #nav > ul > .nav-item:first-child {
+    padding-left: 0;
+  }
+}
+/* line 109, sass/_partials/_header.scss */
+#nav > ul > .nav-item:last-child {
+  padding-right: 18px;
+}
+@media (max-width: 620px) {
+  /* line 109, sass/_partials/_header.scss */
+  #nav > ul > .nav-item:last-child {
+    padding-right: 0;
+  }
+}
+/* line 117, sass/_partials/_header.scss */
+#nav > ul > .nav-item a {
   -moz-transition: color 0.15s ease;
   -o-transition: color 0.15s ease;
   -webkit-transition: color 0.15s ease;
@@ -252,40 +283,101 @@ body {
   padding: 10px 4px;
   text-decoration: none;
 }
-/* line 104, sass/_partials/_header.scss */
-.nav-item a:hover, .nav-item a:focus {
+/* line 126, sass/_partials/_header.scss */
+#nav > ul > .nav-item a:hover, #nav > ul > .nav-item a:focus {
   color: white;
 }
-
-/* line 110, sass/_partials/_header.scss */
-.nav-item {
-  padding: 0 12px;
-}
-/* line 113, sass/_partials/_header.scss */
-.nav-item:first-child {
-  padding-left: 18px;
-}
-@media (max-width: 600px) {
-  /* line 113, sass/_partials/_header.scss */
-  .nav-item:first-child {
-    padding-left: 0;
-  }
-}
-/* line 121, sass/_partials/_header.scss */
-.nav-item:last-child {
-  padding-right: 18px;
-}
-@media (max-width: 600px) {
-  /* line 121, sass/_partials/_header.scss */
-  .nav-item:last-child {
-    padding-right: 0;
-  }
-}
-
-/* line 130, sass/_partials/_header.scss */
-.nav-item.current a {
+/* line 132, sass/_partials/_header.scss */
+#nav > ul > .nav-item.current a {
   border-color: white;
   color: white;
+}
+
+/* line 140, sass/_partials/_header.scss */
+#nav.overflowing .nav-overflow {
+  display: block;
+}
+
+/* line 144, sass/_partials/_header.scss */
+.nav-overflow {
+  display: none;
+  position: relative;
+}
+/* line 148, sass/_partials/_header.scss */
+.nav-overflow > a {
+  -moz-transition: color 0.05s ease, background 0.05s ease;
+  -o-transition: color 0.05s ease, background 0.05s ease;
+  -webkit-transition: color 0.05s ease, background 0.05s ease;
+  transition: color 0.05s ease, background 0.05s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  display: block;
+  font-size: 1.125em;
+  font-weight: 700;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+/* line 158, sass/_partials/_header.scss */
+.nav-overflow > a:hover, .nav-overflow > a:focus {
+  background: white;
+  color: #272727;
+}
+
+/* line 166, sass/_partials/_header.scss */
+.nav-overflow-list {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  display: none;
+  padding: 5px 0;
+  position: absolute;
+  right: 0;
+  top: 35px;
+}
+/* line 175, sass/_partials/_header.scss */
+.nav-overflow-list .nav-item {
+  white-space: nowrap;
+}
+/* line 177, sass/_partials/_header.scss */
+.nav-overflow-list .nav-item a {
+  color: #272727;
+  display: block;
+  font-size: 1.125em;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+/* line 184, sass/_partials/_header.scss */
+.nav-overflow-list .nav-item a:hover, .nav-overflow-list .nav-item a:focus {
+  background: #E2E2E2;
+}
+/* line 191, sass/_partials/_header.scss */
+.nav-overflow-list:before {
+  background: transparent;
+  content: "";
+  height: 140%;
+  left: 0;
+  margin-left: -20%;
+  position: absolute;
+  top: 0;
+  width: 140%;
+  z-index: -1;
+}
+
+/* line 205, sass/_partials/_header.scss */
+.overflow-open .nav-overflow > a {
+  background: white;
+  color: #272727;
+}
+
+/* line 211, sass/_partials/_header.scss */
+.nav-overflow:hover > a {
+  background: white;
+  color: #272727;
+}
+
+/* line 216, sass/_partials/_header.scss */
+.overflow-open .nav-overflow-list,
+.nav-overflow-list:hover {
+  display: block;
 }
 
 /* line 1, sass/_partials/_footer.scss */

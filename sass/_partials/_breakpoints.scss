@@ -9,6 +9,6 @@
         @media (max-width: 780px) { @content; }
     }
     @else if $point == mobile {
-        @media (max-width: 600px)  { @content; }
+        @media (max-width: 620px)  { @content; }
     }
 }
