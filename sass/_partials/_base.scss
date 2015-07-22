@@ -6,10 +6,21 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     @include body-font;
     background: #F2F2F2;
     color: $body-text-color;
+}
+
+#page-wrap {
+    @include display-flex;
+    @include flex-direction(column);
+    min-height: 100%;
 }
 
 .wrapper {
@@ -30,6 +41,7 @@ body {
 #page-container {
     background: #FFFFFF;
     box-shadow: 0 0 8px black(0.27);
+    @include flex(1);
     padding: $page-padding;
     width: 90%;
 

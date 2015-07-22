@@ -80,54 +80,71 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 9, sass/_partials/_base.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 14, sass/_partials/_base.scss */
 body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
   background: #F2F2F2;
   color: #272727;
 }
 
-/* line 15, sass/_partials/_base.scss */
+/* line 20, sass/_partials/_base.scss */
+#page-wrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* line 26, sass/_partials/_base.scss */
 .wrapper {
   width: 860px;
   margin: 0 auto;
 }
 @media (max-width: 950px) {
-  /* line 15, sass/_partials/_base.scss */
+  /* line 26, sass/_partials/_base.scss */
   .wrapper {
     padding: 0 20px;
     width: 760px;
   }
 }
 @media (max-width: 780px) {
-  /* line 15, sass/_partials/_base.scss */
+  /* line 26, sass/_partials/_base.scss */
   .wrapper {
     width: 100%;
   }
 }
 
-/* line 30, sass/_partials/_base.scss */
+/* line 41, sass/_partials/_base.scss */
 #page-container {
   background: #FFFFFF;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.27);
+  -webkit-flex: 1;
+  flex: 1;
   padding: 35px;
   width: 90%;
   position: relative;
   z-index: 2;
 }
 @media (min-width: 1430px) {
-  /* line 30, sass/_partials/_base.scss */
+  /* line 41, sass/_partials/_base.scss */
   #page-container {
     width: 1400px;
   }
 }
 @media (max-width: 950px) {
-  /* line 30, sass/_partials/_base.scss */
+  /* line 41, sass/_partials/_base.scss */
   #page-container {
     width: 95%;
   }
 }
 @media (max-width: 620px) {
-  /* line 30, sass/_partials/_base.scss */
+  /* line 41, sass/_partials/_base.scss */
   #page-container {
     width: 100%;
   }

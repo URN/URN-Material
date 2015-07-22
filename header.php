@@ -9,6 +9,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<div id="page-wrap">
     <header id="header">
         <div class="wrapper">
             <a href="/" id="title">
