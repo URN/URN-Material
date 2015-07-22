@@ -7,4 +7,8 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('nav-overflow', get_template_directory_uri() . '/js/nav-overflow.js', array('jquery'), false, true);
 });
 
+add_action('get_header', function() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+});
+
 ?>
