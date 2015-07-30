@@ -21,11 +21,13 @@
     <nav id="nav" class="wrapper">
         <ul>
             <li class="nav-item current"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="#">Shows</a></li>
+            <li class="nav-item"><a href="#">Schedule</a></li>
             <li class="nav-item"><a href="#">About Us</a></li>
-            <li class="nav-item"><a href="#">Playlist</a></li>
-            <li class="nav-item"><a href="#">Videos</a></li>
-            <li class="nav-item"><a href="#">Social Media</a></li>
+            <li class="nav-item"><a href="#">Your News</a></li>
+            <li class="nav-item"><a href="#">Your Competitions</a></li>
+            <li class="nav-item"><a href="#">Podcasts</a></li>
+            <li class="nav-item"><a href="#">URN TV</a></li>
+            <li class="nav-item"><a href="#">Get Involved</a></li>
             <li class="nav-overflow">
                 <a href="#">&middot;&middot;&middot;</a>
                 <ul class="nav-overflow-list"></ul>
