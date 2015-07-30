@@ -11,7 +11,7 @@
                 <strong>Winner of Best Student Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014!</strong><br>
                 To contact the on-air presenters, you can text us on <strong>07762 212 434</strong> or tweet us <a href="#">@URN1350</a><br>
                 Find out more about us, and get in touch on our <a href="#">about</a> page<br>
-                Web Design &amp; Development by <strong>James Turner</strong> and <strong>Harry Mumford-Turner</strong> - Read about it <a href="#">here</a>
+                Web Design &amp; Development by <strong>James Turner</strong>, <strong>Harry Mumford-Turner</strong> and <strong>Iona Hampson</strong> - Read about it <a href="#">here</a>
             </div>
         </div>
     </footer>
