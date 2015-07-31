@@ -8,7 +8,7 @@
         background: $urn-purple;
         border-bottom-right-radius: $now-playing-bar-border-radius;
         border-top-right-radius: $now-playing-bar-border-radius;
-        color: white;
+        color: #fff;
         display: block;
         font-weight: 600;
         height: $now-playing-bar-height;
@@ -19,8 +19,8 @@
         text-transform: uppercase;
 
         &:before {
-            background: url(images/play-icon.png);
-            content: "";
+            background: url('images/play-icon.png');
+            content: '';
             height: 68px;
             left: -21px;
             position: absolute;
@@ -32,17 +32,17 @@
 
 #now-playing-bar {
     @include flex-grow(1);
-    background: #F2F2F2;
+    background: #f2f2f2;
     border-bottom-left-radius: $now-playing-bar-border-radius;
     border-top-left-radius: $now-playing-bar-border-radius;
-    border: 1px solid #E2E2E2;
+    border: 1px solid #e2e2e2;
     height: $now-playing-bar-height;
     overflow: hidden;
     position: relative;
 
     span {
         display: block;
-        font-size: 0.75em;
+        font-size: .75em;
         height: 100%;
         left: 0;
         line-height: #{$now-playing-bar-height - 4px};
@@ -58,6 +58,6 @@
 }
 
 #now-playing-progress {
-    background: #E2E2E2;
+    background: #e2e2e2;
     height: 100%;
 }
