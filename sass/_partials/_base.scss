@@ -24,6 +24,7 @@ body {
 }
 
 .wrapper {
+    margin: 0 auto;
     width: $wrapper-width;
 
     @include breakpoint(laptop) {
@@ -34,16 +35,16 @@ body {
     @include breakpoint(tablet) {
         width: 100%;
     }
-
-    margin: 0 auto;
 }
 
 #page-container {
+    @include flex(1);
     background: #fff;
     box-shadow: 0 0 8px black(.27);
-    @include flex(1);
     padding: $page-padding;
+    position: relative;
     width: 90%;
+    z-index: 2;
 
     @include breakpoint(desktop) {
         width: 1400px;
@@ -57,7 +58,4 @@ body {
         width: 100%;
     }
 
-    // Push the page in front of the footer
-    position: relative;
-    z-index: 2;
 }

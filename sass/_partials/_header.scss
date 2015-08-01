@@ -4,80 +4,81 @@
     height: 460px;
     overflow: hidden;
 
-    #title {
-        @include display-flex;
-        @include flex-direction(row);
-        margin-top: 55px;
-        padding: 0 $inner-wrapper-padding;
-        position: relative;
-        text-decoration: none;
+}
 
-        img {
-            @include flex-shrink(0);
+#title {
+    @include display-flex;
+    @include flex-direction(row);
+    margin-top: 55px;
+    padding: 0 $inner-wrapper-padding;
+    position: relative;
+    text-decoration: none;
+
+    img {
+        @include flex-shrink(0);
+        width: $logo-width;
+
+        @include breakpoint(laptop) {
+            height: 100%;
+            margin-top: #{$logo-width-difference / 4};
+            width: $logo-width-small;
+        }
+
+        @include breakpoint(mobile) {
+            display: block;
+            margin: 0 auto;
             width: $logo-width;
+        }
+    }
 
-            @include breakpoint(laptop) {
-                height: 100%;
-                margin-top: #{$logo-width-difference / 4};
-                width: $logo-width-small;
-            }
+    h1 {
+        @include flex-grow(1);
+        @include title-font;
+        color: #fff;
+        font-size: 2.25em;
+        font-weight: 300;
+        height: $logo-height;
+        line-height: $logo-height;
+        margin: 0 35px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
 
-            @include breakpoint(mobile) {
-                display: block;
-                margin: 0 auto;
-                width: $logo-width;
-            }
+        @include breakpoint(laptop) {
+            font-size: 2em;
+            line-height: 1.2;
+            margin-top: 40px;
+            text-align: left;
+            white-space: normal;
         }
 
-        h1 {
-            @include flex-grow(1);
-            @include title-font;
-            color: #fff;
-            font-size: 2.25em;
-            font-weight: 300;
-            height: $logo-height;
-            line-height: $logo-height;
-            margin: 0 35px;
-            text-align: center;
-            text-transform: uppercase;
-            white-space: nowrap;
-
-            @include breakpoint(laptop) {
-                font-size: 2em;
-                line-height: 1.2;
-                margin-top: 40px;
-                text-align: left;
-                white-space: normal;
-            }
-
-            @include breakpoint(mobile) {
-                display: none;
-            }
+        @include breakpoint(mobile) {
+            display: none;
         }
+    }
 
-        &:hover,
-        &:focus {
-            &:after {
-                box-shadow: 0 0 160px 130px white(.3);
-            }
-        }
-
-        // Create a white glow around the logo
+    &:hover,
+    &:focus {
         &:after {
-            @include transition(box-shadow .15s ease);
-            background: transparent;
-            border-radius: 50%;
-            box-shadow: 0 0 160px 130px white(.2);
-            content: '';
-            height: 1px;
-            left: #{$inner-wrapper-padding + ($logo-width / 2)};
-            position: absolute;
-            top: #{$logo-height / 2};
-            width: 1px;
+            box-shadow: 0 0 160px 130px white(.3);
+        }
+    }
 
-            @include breakpoint(mobile) {
-                left: 50%;
-            }
+    // Create a white glow around the logo
+    &:after {
+        @include transition(box-shadow .15s ease);
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 160px 130px white(.2);
+        content: '';
+        height: 1px;
+        left: #{$inner-wrapper-padding + ($logo-width / 2)};
+        position: absolute;
+        top: #{$logo-height / 2};
+        width: 1px;
+
+        @include breakpoint(mobile) {
+            left: 50%;
         }
     }
 }

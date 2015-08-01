@@ -60,10 +60,10 @@
             }
         }
     }
-}
 
-#nav.overflowing .nav-overflow {
-    display: block;
+    &.overflowing .nav-overflow {
+        display: block;
+    }
 }
 
 .nav-overflow {
@@ -71,26 +71,27 @@
     position: relative;
 
     > a {
-        @include transition(color 0.05s ease,
-                            background 0.05s ease);
-        background: white(0.2);
-        color: white;
+        @include transition(color .05s ease,
+                            background .05s ease);
+        background: white(.2);
+        color: #fff;
         display: block;
         font-size: 1.125em;
         font-weight: 700;
-        padding: 10px 10px;
+        padding: 10px;
         text-decoration: none;
+
         &:hover,
         &:focus {
-            background: white;
+            background: #fff;
             color: $body-text-color;
         }
     }
 }
 
 .nav-overflow-list {
-    background: white;
-    box-shadow: 0 1px 3px black(0.3);
+    background: #fff;
+    box-shadow: 0 1px 3px black(.3);
     display: none;
     padding: 5px 0;
     position: absolute;
@@ -99,6 +100,7 @@
 
     .nav-item {
         white-space: nowrap;
+
         a {
             color: $body-text-color;
             display: block;
@@ -108,14 +110,14 @@
 
             &:hover,
             &:focus {
-                background: #E2E2E2;
+                background: #e2e2e2;
             }
         }
     }
 
     &:before {
         background: transparent;
-        content: "";
+        content: '';
         height: 140%;
         left: 0;
         margin-left: -20%;
@@ -128,13 +130,13 @@
 
 .overflow-open {
     .nav-overflow > a {
-        background: white;
+        background: #fff;
         color: $body-text-color;
     }
 }
 
 .nav-overflow:hover > a {
-    background: white;
+    background: #fff;
     color: $body-text-color;
 }
 

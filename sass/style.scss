@@ -6,16 +6,16 @@
     License: ?
 */
 
-@import "compass",
-        "compass/reset";
+@import 'compass',
+        'compass/reset';
 
-@import "_partials/variables",
-        "_partials/mixins",
-        "_partials/functions",
-        "_partials/breakpoints",
-        "_partials/base",
-        "_partials/header",
-        "_partials/navigation",
-        "_partials/footer",
-        "_partials/now-playing",
-        "_partials/recent-posts";
+@import '_partials/variables',
+        '_partials/mixins',
+        '_partials/functions',
+        '_partials/breakpoints',
+        '_partials/base',
+        '_partials/header',
+        '_partials/navigation',
+        '_partials/footer',
+        '_partials/now-playing',
+        '_partials/recent-posts';
