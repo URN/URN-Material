@@ -1,0 +1,22 @@
+{
+  "name": "urn-material",
+  "version": "0.0.1",
+  "description": "The URN WordPress theme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/URN/URN-Material.git"
+  },
+  "author": "James Turner & Harry Mumford-Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/URN/URN-Material/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-scss-lint": "^0.3.8"
+  }
+}
