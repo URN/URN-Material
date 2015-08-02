@@ -1,5 +1,2 @@
 .sass-cache
 node_modules/
-
-# Stops CodeKit's (https://incident57.com/codekit/) config file
-config.codekit
