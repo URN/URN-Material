@@ -34,4 +34,5 @@
             </li>
         </ul>
     </nav>
+    <?php include('includes/listen-now.html'); ?>
     <div class="wrapper" id="page-container"><!-- start main page container -->

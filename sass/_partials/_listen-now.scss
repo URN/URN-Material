@@ -1,0 +1,145 @@
+#listen-now {
+    background: $urn-pink;
+    box-shadow: 0 3px 3px -2px black(0.4);
+    color: #fff;
+    margin: 0 auto -20px;
+    position: relative;
+    width: $wrapper-width - ($inner-wrapper-padding * 2);
+    z-index: 3;
+
+    .now-playing {
+        @include display-flex;
+        @include flex-direction(row);
+        box-shadow: 0 3px 3px black(0.1);
+        font-size: 0.75em;
+        font-weight: 600;
+        padding: 5px;
+        position: relative;
+        z-index: 3;
+
+        .current-track {
+            @include flex-shrink(0);
+        }
+
+        .current-track:before {
+            content: '\266A';
+            font-family: 'Arial';
+            font-weight: 600;
+            margin-right: 3px;
+        }
+
+        .progress-container {
+            align-self: center;
+            margin-top: 1px;
+            padding: 0 5px 0 10px;
+            width: 100%;
+
+            .progress-bar {
+                background: #fff;
+                height: 4px;
+                width: 33%;
+            }
+        }
+    }
+
+    .show-container {
+        @include display-flex;
+        @include flex-direction(row);
+        background-image: url('images/iona.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .show-info {
+            @include flex-grow(1);
+            padding: 10px 0;
+            position: relative;
+            text-align: right;
+
+            .show-title-prelude,
+            .show-title-time {
+                font-size: 0.75em;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .show-title-name {
+                @include title-font;
+                font-size: 1.875em;
+                margin: 4px 0;
+            }
+
+            .show-title-prelude,
+            .show-title-time,
+            .show-title-name {
+                position: relative;
+                z-index: 2;
+            }
+
+
+            &:after {
+                @include background-image(linear-gradient(left, rgba(30, 87, 153, 0.3) 0%, rgba(93, 54, 163, 1) 20%, rgba(230, 61, 155, 1) 56%, rgba(230, 61, 155, 1) 100%));
+                @include filter-gradient(#5e44cb, #db2e93, horizontal); // IE6-9
+                content: '';
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+
+        .play {
+            align-self: center;
+            background-color: #fff;
+            background-image: url('images/play-icon.svg');
+            background-position: 60% 50%;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            border-radius: 50%;
+            display: block;
+            height: 32px;
+            margin: 0 25px;
+            overflow: hidden;
+            position: relative;
+            text-indent: 100%;
+            white-space: nowrap;
+            width: 32px;
+        }
+
+        .send-message {
+            position: relative;
+            width: 50%;
+
+            textarea {
+                @include body-font;
+                border: 0;
+                border-radius: 0;
+                font-size: 0.875em;
+                height: 100%;
+                padding: 6px;
+                resize: none;
+                width: 100%;
+            }
+
+            button {
+                @include body-font;
+                background: $urn-pink;
+                border: 0;
+                bottom: 6px;
+                color: #fff;
+                font-size: 0.875em;
+                font-weight: 700;
+                padding: 2px 12px;
+                position: absolute;
+                right: 6px;
+                text-transform: uppercase;
+
+                &:after {
+                    content: '!';
+                }
+            }
+        }
+    }
+}
