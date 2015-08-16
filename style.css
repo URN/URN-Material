@@ -411,69 +411,6 @@ body {
   color: #fff;
 }
 
-#now-playing {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  padding: 25px 0;
-  width: 100%;
-}
-#now-playing a {
-  background: #5e44cb;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  color: #fff;
-  display: block;
-  font-weight: 600;
-  height: 25px;
-  line-height: 21px;
-  padding: 0 15px 0 35px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-#now-playing a:before {
-  background: url("images/play-icon.png");
-  content: '';
-  height: 68px;
-  left: -21px;
-  position: absolute;
-  top: -21px;
-  width: 61px;
-}
-
-#now-playing-bar {
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  background: #f2f2f2;
-  border: 1px solid #e2e2e2;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  height: 25px;
-  overflow: hidden;
-  position: relative;
-}
-#now-playing-bar span {
-  display: block;
-  font-size: .75em;
-  height: 100%;
-  left: 0;
-  line-height: 21px;
-  margin-left: 15px;
-  position: absolute;
-  top: 0;
-}
-#now-playing-bar strong {
-  font-weight: 600;
-  margin: 0 5px;
-}
-
-#now-playing-progress {
-  background: #e2e2e2;
-  height: 100%;
-}
-
 section > h1 {
   font-size: 2em;
   font-weight: 700;
