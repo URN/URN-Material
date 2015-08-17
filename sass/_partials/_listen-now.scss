@@ -88,6 +88,17 @@
                 width: 100%;
                 z-index: 1;
             }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url('images/noise.png');
+                height: 100%;
+                width: 150%;
+                z-index: 2;
+            }
         }
 
         .play {
@@ -106,11 +117,13 @@
             text-indent: 100%;
             white-space: nowrap;
             width: 32px;
+            z-index: 2;
         }
 
         .send-message {
             position: relative;
             width: 50%;
+            z-index: 2;
 
             textarea {
                 @include body-font;
