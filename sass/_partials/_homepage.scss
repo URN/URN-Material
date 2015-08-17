@@ -1,0 +1,44 @@
+.row {
+    @include display-flex;
+    @include flex-direction(row);
+
+    .module {
+        @include flex-grow(1);
+        background: #e6e6e6;
+        height: 200px;
+        margin-top: $general-element-spacing;
+        text-align: center;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: $general-element-spacing;
+        }
+    }
+
+    .twitter {
+        @include flex-shrink(0);
+        margin-top: $general-element-spacing;
+
+        .twitter-timeline {
+            width: 100%;
+        }
+    }
+
+    &.vertical {
+        @include flex-direction(column);
+        @include flex-grow(2);
+        margin-top: $general-element-spacing;
+        max-width: 700px;
+        padding-left: $general-element-spacing;
+    }
+
+    .clip {
+        margin-bottom: $general-element-spacing;
+    }
+
+    .schedule {
+        @include flex-grow(1);
+        background: #e6e6e6;
+        height: 250px;
+    }
+}

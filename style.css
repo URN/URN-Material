@@ -109,14 +109,15 @@ body {
   flex: 1;
   background: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.27);
-  padding: 35px;
+  padding: 15px;
+  padding-top: 50px;
   position: relative;
   width: 90%;
   z-index: 2;
 }
 @media (min-width: 1430px) {
   #page-container {
-    width: 1400px;
+    width: 1000px;
   }
 }
 @media (max-width: 950px) {
@@ -269,7 +270,7 @@ body {
   color: rgba(255, 255, 255, 0.7);
   display: block;
   font-size: 1.125em;
-  padding: 10px 4px;
+  padding: 10px 0;
   text-decoration: none;
 }
 #nav > ul > .nav-item a:hover, #nav > ul > .nav-item a:focus {
@@ -447,6 +448,16 @@ body {
   width: 100%;
   z-index: 1;
 }
+#listen-now .show-container .show-info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("images/noise.png");
+  height: 100%;
+  width: 150%;
+  z-index: 2;
+}
 #listen-now .show-container .play {
   align-self: center;
   background-color: #fff;
@@ -463,10 +474,12 @@ body {
   text-indent: 100%;
   white-space: nowrap;
   width: 32px;
+  z-index: 2;
 }
 #listen-now .show-container .send-message {
   position: relative;
   width: 50%;
+  z-index: 2;
 }
 #listen-now .show-container .send-message textarea {
   font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
@@ -493,6 +506,51 @@ body {
 }
 #listen-now .show-container .send-message button:after {
   content: '!';
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.row .module {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  background: #e6e6e6;
+  height: 200px;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+.row .module:not(:last-child) {
+  margin-right: 15px;
+}
+.row .twitter {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin-top: 15px;
+}
+.row .twitter .twitter-timeline {
+  width: 100%;
+}
+.row.vertical {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 2;
+  flex-grow: 2;
+  margin-top: 15px;
+  max-width: 700px;
+  padding-left: 15px;
+}
+.row .clip {
+  margin-bottom: 15px;
+}
+.row .schedule {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  background: #e6e6e6;
+  height: 250px;
 }
 
 #footer {

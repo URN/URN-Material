@@ -41,13 +41,14 @@ body {
     @include flex(1);
     background: #fff;
     box-shadow: 0 0 8px black(.27);
-    padding: $page-padding;
+    padding: $general-element-spacing;
+    padding-top: 50px;
     position: relative;
     width: 90%;
     z-index: 2;
 
     @include breakpoint(desktop) {
-        width: 1400px;
+        width: 1000px;
     }
 
     @include breakpoint(laptop) {
