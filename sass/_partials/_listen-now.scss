@@ -7,6 +7,10 @@
     width: $wrapper-width - ($inner-wrapper-padding * 2);
     z-index: 3;
 
+    @include breakpoint(laptop) {
+        width: 100%;
+    }
+
     .now-playing {
         @include display-flex;
         @include flex-direction(row);
@@ -90,7 +94,7 @@
             }
 
             &:before {
-                content: "";
+                content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -102,6 +106,7 @@
         }
 
         .play {
+            @include flex-shrink(0);
             align-self: center;
             background-color: #fff;
             background-image: url('images/play-icon.svg');
