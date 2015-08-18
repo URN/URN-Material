@@ -9,8 +9,19 @@
  */
 get_header(); ?>
 
-<h1>Post Content</h1>
-<?php the_content(); ?>
-</h1>End Post content</h1>
+<?php the_title( '<h1>', '</h1>' ); ?>
+
+<div class="content">
+    <?php
+        // Start the loop.
+        while ( have_posts() ) : the_post();
+
+            // Include the page content template.
+            the_content();
+
+        // End the loop.
+        endwhile;
+        ?>
+</div>
 
 <?php get_footer(); ?>
