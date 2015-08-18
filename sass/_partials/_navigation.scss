@@ -4,7 +4,7 @@
     // Push nav above the page so that page's box shadow doesn't
     // overlap current indicator bar
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
     > ul {
         @include display-flex;
