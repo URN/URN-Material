@@ -13,7 +13,7 @@ linters:
         character: space
         width: 4
         exclude:
-          - 'sass/style.scss' # Stops force @import indentation
+          - 'sass/style.scss' # Stops force @import indentation (Note SBT scss-linter wont adhere to this)
 
     IdSelector:
         enabled: false
