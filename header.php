@@ -1,3 +1,29 @@
+<?php
+
+$nav_links = array();
+$nav_links[] = array('name' => 'Home', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Get Involved', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'About Us', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'URN TV', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Your News', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Blogs', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Podcasts', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Schedule', 'link' => '#', 'current' => false);
+$nav_links[] = array('name' => 'Music', 'link' => '#', 'current' => false);
+
+if ($pagename === "") {
+    $nav_links[0]['current'] = true;
+}
+else {
+    foreach ($nav_links as $key => $link) {
+        if (strtolower($link['name']) === $pagename) {
+            $nav_links[$key]['current'] = true;
+            break;
+        }
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -20,15 +46,20 @@
     </header>
     <nav id="nav" class="wrapper">
         <ul>
-            <li class="nav-item current"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="#">Get Involved</a></li>
-            <li class="nav-item"><a href="#">About Us</a></li>
-            <li class="nav-item"><a href="#">URN TV</a></li>
-            <li class="nav-item"><a href="#">Your News</a></li>
-            <li class="nav-item"><a href="#">Blogs</a></li>
-            <li class="nav-item"><a href="#">Podcasts</a></li>
-            <li class="nav-item"><a href="#">Schedule</a></li>
-            <li class="nav-item"><a href="#">Music</a></li>
+            <?php
+
+            foreach ($nav_links as $link) {
+                if ($link['current'] === true) {
+                    $current = 'current';
+                }
+                else {
+                    $current = '';
+                }
+
+                echo '<li class="nav-item ' . $current . '"><a href="' . $link['link'] . '">' . $link['name'] . '</a></li>';
+            }
+
+            ?>
             <li class="nav-overflow">
                 <a href="#">&middot;&middot;&middot;</a>
                 <ul class="nav-overflow-list"></ul>
