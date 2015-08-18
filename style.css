@@ -635,3 +635,7 @@ button::-moz-focus-inner {
 #footer a {
   color: #fff;
 }
+
+.some-schedule-class {
+  color: #bada55;
+}
