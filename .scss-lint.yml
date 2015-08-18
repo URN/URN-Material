@@ -1,3 +1,7 @@
+# Find more configuration details here
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+# Config syntax for them here
+# https://github.com/brigade/scss-lint/blob/master/config/default.yml
 linters:
     Comment:
         enabled: true
@@ -8,6 +12,8 @@ linters:
         allow_non_nested_indentation: false
         character: space
         width: 4
+        exclude:
+          - 'sass/style.scss' # Stops force @import indentation
 
     IdSelector:
         enabled: false
@@ -21,5 +27,14 @@ linters:
     NestingDepth:
         max_depth: 5
 
+    # Comments should all be // not /*
+    Comment:
+        enabled: false
+
+    # Should we have 0.1 or .1
     LeadingZero:
+        enabled: false
+
+    # Properties should be sorted in order
+    PropertySortOrder:
         enabled: false
