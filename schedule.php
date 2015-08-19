@@ -68,7 +68,7 @@ get_header(); ?>
 
                 <!-- Live thing (set the width via PHP based on server time) -->
                 <?php
-                    $time_hours = date("h") + 1; // + 1 Moves time to GMT
+                    $time_hours = date("H") + 1; // + 1 Moves time to GMT
                     $time_minutes = date("i");
                     $hours_from_midnight = $time_hours + ($time_minutes / 100);
                     $schedule_pixel_width = $hours_from_midnight * 2 * 60;
@@ -76,7 +76,7 @@ get_header(); ?>
                 <div class="schedule-progress" style="width:<?php echo $schedule_pixel_width; ?>px;">
                     <span>
                     <?php
-                        echo $time_hours . ":" . $time_minutes . " " . date("A") . "<br>Live"; // Prints pretty Time
+                        echo $time_hours . ":" . $time_minutes . "<br>Live"; // Prints pretty Time
                     ?>
                     </span>
                 </div>
