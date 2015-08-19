@@ -1,29 +1,4 @@
-<?php
 
-$nav_links = array();
-$nav_links[] = array('name' => 'Home', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Get Involved', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'About Us', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'URN TV', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Your News', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Blogs', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Podcasts', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Schedule', 'link' => '#', 'current' => false);
-$nav_links[] = array('name' => 'Music', 'link' => '#', 'current' => false);
-
-if ($pagename === "") {
-    $nav_links[0]['current'] = true;
-}
-else {
-    foreach ($nav_links as $key => $link) {
-        if (get_page_by_title( $link['name'] )->post_name === $pagename) {
-            $nav_links[$key]['current'] = true;
-            break;
-        }
-    }
-}
-
-?>
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -44,32 +19,24 @@ else {
             </a>
         </div>
     </header>
-    <nav id="nav" class="wrapper">
-        <ul>
-            <?php
 
-            foreach ($nav_links as $link) {
-                if ($link['current'] === true) {
-                    $current = 'current';
-                }
-                else {
-                    $current = '';
-                }
+<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 
-                $nav_page_url = esc_url( get_permalink( get_page_by_title( $link['name'] ) ) );
-                if($link['name'] === "Home") {
-                    $nav_page_url = get_home_url();
-                }
+    <nav id="nav" class="wrapper" role="navigation">
+        <?php
+            // Primary navigation menu.
+            wp_nav_menu( array(
+                'menu_class'     => 'menu',
+                'theme_location' => 'header-menu',
+                'container' => false,
+                'items_wrap' => '<ul>%3$s</ul>',
+                'walker' => new header_nav_walker()
+            ) );
+        ?>
+    </nav><!-- .main-navigation -->
 
-                echo '<li class="nav-item ' . $current . '"><a href="' . $nav_page_url . '">' . $link['name'] . '</a></li>';
-            }
+<?php endif; ?>
 
-            ?>
-            <li class="nav-overflow">
-                <a href="#">&middot;&middot;&middot;</a>
-                <ul class="nav-overflow-list"></ul>
-            </li>
-        </ul>
-    </nav>
     <?php include('includes/listen-now.html'); ?>
     <div class="wrapper" id="page-container"><!-- start main page container -->
+
