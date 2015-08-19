@@ -9,9 +9,9 @@
  */
 get_header(); ?>
 
-<?php the_title( '<h1>', '</h1>' ); ?>
-
-<div class="content">
+<div class="row">
+    <div class="content">
+    <?php the_title( '<h1>', '</h1>' ); ?>
     <?php
         // Start the loop.
         while ( have_posts() ) : the_post();
@@ -22,6 +22,6 @@ get_header(); ?>
         // End the loop.
         endwhile;
         ?>
+    </div>
 </div>
-
 <?php get_footer(); ?>
