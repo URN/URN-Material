@@ -259,7 +259,7 @@ var youmax_global_options = {};
       var $youmaxLoadMoreDiv = $('#youmax-load-more-div');
       //console.log('nextPageToken-'+nextPageToken);
 
-      if (null !== nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
+      if (null != nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
         $youmaxLoadMoreDiv.data('nextpagetoken', nextPageToken);
       } else {
         $youmaxLoadMoreDiv.data('nextpagetoken', '');
@@ -336,7 +336,7 @@ var youmax_global_options = {};
 
       youmaxColumns = youmax_global_options.youmaxColumns;
 
-      if (null !== nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
+      if (null != nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
         $youmaxLoadMoreDiv.data('nextpagetoken', nextPageToken);
       } else {
         $youmaxLoadMoreDiv.data('nextpagetoken', '');
@@ -576,7 +576,7 @@ var youmax_global_options = {};
         var nextPageToken = $youmaxLoadMoreDiv.data('nextpagetoken');
         // console.log('load more clicked : nextPageToken-' + nextPageToken);
 
-        if (null !== nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
+        if (null != nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
           if (youmaxTabId.indexOf("featured_") != -1) {
             getUploads('featured_' + youmax_global_options.youmaxFeaturedPlaylistId, null, nextPageToken);
           } else if (youmaxTabId.indexOf("uploads_") != -1) {
