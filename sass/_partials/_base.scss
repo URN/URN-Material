@@ -60,3 +60,20 @@ body {
     }
 
 }
+
+.row {
+    h1,
+    h2 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
