@@ -9,6 +9,8 @@
 @import 'compass',
         'compass/reset';
 
+@import '_vendor/youmax';
+
 @import '_partials/variables',
         '_partials/mixins',
         '_partials/functions',
