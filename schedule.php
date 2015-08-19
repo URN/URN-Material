@@ -6,9 +6,23 @@
 get_header(); ?>
 
 <div class="row">
-    <div class="module">Daytime</div>
-    <div class="module">Speech, News and Culture</div>
-    <div class="module">After Dark</div>
+
+    <?php
+        $show_categories = array();
+        $show_categories[] = array('name' => 'After Dark', 'link' => 'afterdark.jpg');
+        $show_categories[] = array('name' => 'Culture', 'link' => 'culture.jpg');
+        $show_categories[] = array('name' => 'Daytime', 'link' => 'daytime.jpg');
+        $show_categories[] = array('name' => 'News', 'link' => 'news.jpg');
+        $show_categories[] = array('name' => 'Sport', 'link' => 'sport.jpg');
+
+        foreach($show_categories as $show) {
+            $show_img_url = get_template_directory_uri() . "/images/schedule/" . $show['link'];
+            echo "<div class='module show-photo'>";
+            echo "  <img src='" . $show_img_url . "'>";
+            echo "  <button class='btn'>" . $show['name'] . "</button>";
+            echo "</div>";
+        }
+    ?>
 </div>
 
 <div class="row">

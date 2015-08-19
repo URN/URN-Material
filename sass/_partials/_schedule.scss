@@ -6,6 +6,10 @@ $schedule-4hours: 480px;
 
 $schedule-width: #{($schedule-hour * 24)}; // 2880px;
 
+.show-photo img {
+    width: 100%;
+}
+
 // Wrapper
 .schedule {
     display: block;
@@ -119,12 +123,9 @@ $schedule-width: #{($schedule-hour * 24)}; // 2880px;
             width: $schedule-4hours;
         }
 
-
         li {
             float: left;
             height: 100%;
-
-
 
             a {
                 display: block;
