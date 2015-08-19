@@ -56,7 +56,12 @@ else {
                     $current = '';
                 }
 
-                echo '<li class="nav-item ' . $current . '"><a href="' . esc_url( get_permalink( get_page_by_title( $link['name'] ) ) ) . '">' . $link['name'] . '</a></li>';
+                $nav_page_url = esc_url( get_permalink( get_page_by_title( $link['name'] ) ) );
+                if($link['name'] === "Home") {
+                    $nav_page_url = get_home_url();
+                }
+
+                echo '<li class="nav-item ' . $current . '"><a href="' . $nav_page_url . '">' . $link['name'] . '</a></li>';
             }
 
             ?>
