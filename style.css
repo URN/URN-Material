@@ -679,7 +679,7 @@ button::-moz-focus-inner {
 
 .schedule-progress {
   background-color: rgba(97, 74, 195, 0.1);
-  border-right: 2px solid #775EE0;
+  border-right: 2px solid #775ee0;
   text-align: right;
   padding: 5px;
 }
@@ -719,7 +719,7 @@ button::-moz-focus-inner {
 .schedule-day > ul .schedule-duration-60 {
   width: 120px;
 }
-.schedule-day > ul .schedule-duration-180 {
+.schedule-day > ul .schedule-duration-120 {
   width: 240px;
 }
 .schedule-day > ul .schedule-duration-240 {

@@ -59,7 +59,7 @@ $schedule-width: #{($schedule-hour * 24)}; // 2880px;
 
 .schedule-progress {
     background-color: rgba(97, 74, 195, 0.1);
-    border-right: 2px solid #775EE0;
+    border-right: 2px solid #775ee0;
     text-align: right;
     padding: 5px;
 }
@@ -99,20 +99,22 @@ $schedule-width: #{($schedule-hour * 24)}; // 2880px;
             background-color: #555;
         }
 
-        // 60 Minutes
+        // 1 hour / 60 minutes
         .schedule-duration-60 {
             width: $schedule-hour;
         }
 
-        // 180 Minutes
-        .schedule-duration-180 {
+        // 2 hours / 120 minutes
+        .schedule-duration-120 {
             width: $schedule-2hours;
         }
 
+        // 3 hours / 240 minutes
         .schedule-duration-240 {
             width: $schedule-3hours;
         }
 
+        // 4 hours / 300 minutes
         .schedule-duration-300 {
             width: $schedule-4hours;
         }
