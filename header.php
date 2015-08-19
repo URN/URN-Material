@@ -16,7 +16,7 @@ if ($pagename === "") {
 }
 else {
     foreach ($nav_links as $key => $link) {
-        if (strtolower($link['name']) === $pagename) {
+        if (get_page_by_title( $link['name'] )->post_name === $pagename) {
             $nav_links[$key]['current'] = true;
             break;
         }
@@ -56,7 +56,7 @@ else {
                     $current = '';
                 }
 
-                echo '<li class="nav-item ' . $current . '"><a href="' . $link['link'] . '">' . $link['name'] . '</a></li>';
+                echo '<li class="nav-item ' . $current . '"><a href="' . esc_url( get_permalink( get_page_by_title( $link['name'] ) ) ) . '">' . $link['name'] . '</a></li>';
             }
 
             ?>
