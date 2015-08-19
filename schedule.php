@@ -70,9 +70,12 @@ get_header(); ?>
                 <?php
                     $time_hours = date("H") + 1; // + 1 Moves time to GMT
                     $time_minutes = date("i");
-                    $hours_from_midnight = $time_hours + ($time_minutes / 100);
+                    $hours_from_midnight = $time_hours + (($time_minutes * 1.66) / 100); // e.g. 17.50 == 5.30pm
                     $schedule_pixel_width = $hours_from_midnight * 2 * 60;
                 ?>
+                <script>
+                    document.getElementsByClassName('schedule-timeline')[0].scrollLeft += <?php echo $schedule_pixel_width - 200 ?>;
+                </script>
                 <div class="schedule-progress" style="width:<?php echo $schedule_pixel_width; ?>px;">
                     <span>
                     <?php
