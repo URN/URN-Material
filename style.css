@@ -799,3 +799,7 @@ button::-moz-focus-inner {
 .schedule-day > ul li:first-child a {
   margin-left: 0;
 }
+
+.videos {
+  color: #e13371;
+}
