@@ -143,6 +143,13 @@ body {
   font-size: 22px;
   font-weight: bold;
 }
+.row p {
+  line-height: 1.4em;
+  margin-bottom: 6px;
+}
+.row b {
+  font-weight: bold;
+}
 
 button::-moz-focus-inner {
   border: 0;
