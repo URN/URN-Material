@@ -63,8 +63,9 @@ class header_nav_walker extends Walker_Nav_Menu
     * @param object $item   Menu item data object.
     * @param int    $depth  Depth of menu item. Used for padding.
     * @param array  $args   An array of arguments. @see wp_nav_menu()
+    * @param int    $id     ID of element
     */
-    function start_el(&$output, $item, $depth, $args)
+    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 )
     {
         global $wp_query;
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -77,11 +78,11 @@ class header_nav_walker extends Walker_Nav_Menu
         $output .= $indent . "<li class='nav-item " . $is_current . "'>";
         $title = $item->title;
 
-        $item_output .= '<a href="' . esc_attr( $item->url) .'">';
-        $item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
+        $item_output = '<a href="' . esc_attr( $item->url) .'">';
+        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID );
         $item_output .= '</a>';
 
-        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
     }
 }
 
