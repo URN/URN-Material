@@ -32,7 +32,8 @@ module.exports = function(grunt) {
                 command: [
                     'ssh urn \'mysqldump -u readonlyuser wordpress > /tmp/wordpress-dump.sql\'',
                     'scp urn:/tmp/wordpress-dump.sql /tmp/wordpress-dump.sql',
-                    'mysql -u root -ppassword wordpress < /tmp/wordpress-dump.sql'
+                    'mysql -u root -ppassword wordpress < /tmp/wordpress-dump.sql',
+                    'mysql -u root -ppassword -e "UPDATE wordpress.wp_options SET option_value = \'${URNLOCAL}\' WHERE option_name = \'siteurl\' OR option_name= \'home\';"'
                 ].join('&&')
             },
             options: {
