@@ -6,7 +6,6 @@
 get_header(); ?>
 
 <div class="row">
-
     <?php
         $show_categories = array();
         $show_categories[] = array('name' => 'After Dark', 'link' => 'afterdark.jpg');
@@ -100,85 +99,55 @@ get_header(); ?>
 
             </div>
 
-            <!-- A Row on the schedule table -->
-            <div class="schedule-day">
 
-                <h2 class="schedule-day-text">
-                    <a href="#">
-                        <span>Monday</span>
-                    </a>
-                </h2>
+            <?php
+                // Get weekly schedule
+                $schedule = json_decode(file_get_contents('http://live.urn1350.net/api/schedule/week'));
+                // print_r($schedule->monday); // Mondays schedule
+                // print_r($schedule->monday[0]->name); // Get name of 1st show on monday's schedule
+                // print_r($schedule->monday[0]->slug); // Show link?
+                // print_r($schedule->monday[0]->description); // Show description
+                // print_r($schedule->monday[0]->from); // Start time of show
+                // print_r($schedule->monday[0]->to); // End time of show
+                // print_r($schedule->monday[0]->live); // Is the show live?
 
-                <!-- List of shows on the day -->
-                <ul>
-                    <li class="schedule-past schedule-duration-60">
-                        <a href="#">
-                            <span>A Morning Show</span>
-                            <i><span> with </span>Someone</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-300">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-120">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-300">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-300">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-120">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
+                $days_of_week = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+                $day_of_week = 0;
 
-                    <li class="schedule-past schedule-duration-60">
-                        <a href="#">
-                            <span>A Morning Show</span>
-                            <i><span> with </span>Someone</i>
-                        </a>
-                    </li>
+                foreach ($schedule as $day) {
+                    print "<div class='schedule-day'>";
+                    print "<h2 class='schedule-day-text'>";
+                    print "  <a href='#'><span>" . $days_of_week[$day_of_week] . "</span></a>";
+                    $day_of_week++;
+                    print "</h2>";
 
-                    <li class="schedule-past schedule-duration-240">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-120">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                    <li class="schedule-past schedule-duration-60">
-                        <a href="#">
-                            <span>Show name</span>
-                            <i><span> with </span>Name of Host</i>
-                        </a>
-                    </li>
-                </ul>
+                    print "<ul>";
+                    foreach ($day as $show) {
 
-            </div><!-- ./ schedule-day -->
+                        // print $show->description . "<br>";
 
-            <!-- Dummy data, minified -->
-            <div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Tuesday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-240"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div><div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Wednesday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-240"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div><div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Thursday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-240"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div><div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Friday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-240"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div><div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Saturday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-240"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div><div class="schedule-day"> <h2 class="schedule-day-text"> <a href="#"> <span>Sunday</span> </a> </h2> <ul> <li class="schedule-past schedule-duration-120"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-300"> <a href="#"> <span>A Morning Show</span> <i><span> with </span>Someone</i> </a> </li><li class="schedule-past schedule-duration-240"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-120"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li><li class="schedule-past schedule-duration-60"> <a href="#"> <span>Show name</span> <i><span> with </span>Name of Host</i> </a> </li></ul> </div>
+                        // print $show->from . "<br>";
+                        // print $show->to . "<br>";
+
+                        $show_length = "300"; // $show->length
+                        $show_class = "schedule-duration-" . $show_length;
+
+                        if($show->live) {
+                            $show_class .= " schedule-live";
+                        }
+
+                        print "<li class='" . $show_class ."'>";
+                        print "  <a href='" . get_permalink(get_page_by_path($show->slug)) . "'>";
+                        print "    <span>" . $show->name . "</span>";
+                        print "    <i><span> with " . "show->host" . "</span>";
+                        print "  </a>";
+                        print "</li>";
+                    }
+
+                    print "</ul>";
+                    print "</div>";
+                }
+            ?>
 
         </div>
     </div>
