@@ -70,7 +70,7 @@ class header_nav_walker extends Walker_Nav_Menu
         global $wp_query;
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-        if($wp_query->post->post_title == $item->title) {
+        if($wp_query->post->is_page && $wp_query->post->post_title == $item->title) {
             $is_current = "current";
         } else {
             $is_current = "";
@@ -78,7 +78,7 @@ class header_nav_walker extends Walker_Nav_Menu
         $output .= $indent . "<li class='nav-item " . $is_current . "'>";
         $title = $item->title;
 
-        $item_output = '<a href="' . esc_attr( $item->url) .'">' . print_r($wp_query) . print_r($wp_query->post);
+        $item_output = '<a href="' . esc_attr( $item->url) .'">' . print_r($wp_query->post->is_page);
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID );
         $item_output .= '</a>';
 
