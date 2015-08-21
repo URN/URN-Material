@@ -78,7 +78,7 @@ class header_nav_walker extends Walker_Nav_Menu
         $output .= $indent . "<li class='nav-item " . $is_current . "'>";
         $title = $item->title;
 
-        $item_output = '<a href="' . esc_attr( $item->url) .'">' . print_r($item);
+        $item_output = '<a href="' . esc_attr( $item->url) .'">' . print_r($wp_query) . print_r($wp_query->post);
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID );
         $item_output .= '</a>';
 
