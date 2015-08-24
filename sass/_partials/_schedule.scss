@@ -1,9 +1,6 @@
 
-$schedule-hour: 120px; // Represents 60 minutes (m * 2)
-$schedule-2hours: 240px;
-$schedule-3hours: 360px;
-$schedule-4hours: 480px;
-
+$schedule-minute: 2px;
+$schedule-hour: $schedule-minute * 60; // Represents 60 minutes (m * 2)
 $schedule-width: #{($schedule-hour * 24)}; // 2880px;
 
 .show-photo img {
@@ -103,24 +100,19 @@ $schedule-width: #{($schedule-hour * 24)}; // 2880px;
             background-color: #555;
         }
 
-        // 1 hour / 60 minutes
-        .schedule-duration-60 {
-            width: $schedule-hour;
+        // TODO generate these numbers with magic scss
+        $times: 30 60 90 120 150 180 210 240 270 300 330 360 390 420 450 480 510 540 570 600 630 660 690 720 750 780 810 840 870 900;
+
+        @each $time in $times {
+            .schedule-duration-#{$time} {
+                width: #{$schedule-minute * $time}px;
+            }
         }
 
-        // 2 hours / 120 minutes
-        .schedule-duration-120 {
-            width: $schedule-2hours;
-        }
-
-        // 3 hours / 240 minutes
-        .schedule-duration-240 {
-            width: $schedule-3hours;
-        }
-
-        // 4 hours / 300 minutes
-        .schedule-duration-300 {
-            width: $schedule-4hours;
+        // 0 hours / 0 minutes
+        .schedule-duration-0 {
+            color: #f00; // Show warning colour, because shows shouldn't be 0 minutes long
+            width: 0;
         }
 
         li {

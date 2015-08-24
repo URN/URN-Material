@@ -103,13 +103,6 @@ get_header(); ?>
             <?php
                 // Get weekly schedule
                 $schedule = json_decode(file_get_contents('http://live.urn1350.net/api/schedule/week'));
-                // print_r($schedule->monday); // Mondays schedule
-                // print_r($schedule->monday[0]->name); // Get name of 1st show on monday's schedule
-                // print_r($schedule->monday[0]->slug); // Show link?
-                // print_r($schedule->monday[0]->description); // Show description
-                // print_r($schedule->monday[0]->from); // Start time of show
-                // print_r($schedule->monday[0]->to); // End time of show
-                // print_r($schedule->monday[0]->live); // Is the show live?
 
                 $days_of_week = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
                 $day_of_week = 0;
@@ -123,13 +116,7 @@ get_header(); ?>
 
                     print "<ul>";
                     foreach ($day as $show) {
-
-                        // print $show->description . "<br>";
-
-                        // print $show->from . "<br>";
-                        // print $show->to . "<br>";
-
-                        $show_length = "300"; // $show->length
+                        $show_length = $show->length;
                         $show_class = "schedule-duration-" . $show_length;
 
                         if($show->live) {
@@ -139,8 +126,20 @@ get_header(); ?>
                         print "<li class='" . $show_class ."'>";
                         print "  <a href='" . get_permalink(get_page_by_path($show->slug)) . "'>";
                         print "    <span>" . $show->name . "</span>";
-                        print "    <i><span> with " . "show->host" . "</span>";
-                        print "  </a>";
+
+                        // Print show hosts if there are any set.
+                        if (count($show->hosts) > 0) {
+                            print "    <i><span> with ";
+
+                            foreach($show->hosts as $host) {
+                                print $host->name;
+                                if (count($show->hosts) > 1) {
+                                    print ', ';
+                                }
+                            }
+                        }
+
+                        print "</span></a>";
                         print "</li>";
                     }
 
@@ -148,7 +147,6 @@ get_header(); ?>
                     print "</div>";
                 }
             ?>
-
         </div>
     </div>
 </div>
