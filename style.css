@@ -991,98 +991,100 @@ button::-moz-focus-inner {
   background-color: #555;
 }
 .schedule-day > ul .schedule-duration-30 {
-  width: 60pxpx;
+  width: 60px;
 }
 .schedule-day > ul .schedule-duration-60 {
-  width: 120pxpx;
+  width: 120px;
 }
 .schedule-day > ul .schedule-duration-90 {
-  width: 180pxpx;
+  width: 180px;
 }
 .schedule-day > ul .schedule-duration-120 {
-  width: 240pxpx;
+  width: 240px;
 }
 .schedule-day > ul .schedule-duration-150 {
-  width: 300pxpx;
+  width: 300px;
 }
 .schedule-day > ul .schedule-duration-180 {
-  width: 360pxpx;
+  width: 360px;
 }
 .schedule-day > ul .schedule-duration-210 {
-  width: 420pxpx;
+  width: 420px;
 }
 .schedule-day > ul .schedule-duration-240 {
-  width: 480pxpx;
+  width: 480px;
 }
 .schedule-day > ul .schedule-duration-270 {
-  width: 540pxpx;
+  width: 540px;
 }
 .schedule-day > ul .schedule-duration-300 {
-  width: 600pxpx;
+  width: 600px;
 }
 .schedule-day > ul .schedule-duration-330 {
-  width: 660pxpx;
+  width: 660px;
 }
 .schedule-day > ul .schedule-duration-360 {
-  width: 720pxpx;
+  width: 720px;
 }
 .schedule-day > ul .schedule-duration-390 {
-  width: 780pxpx;
+  width: 780px;
 }
 .schedule-day > ul .schedule-duration-420 {
-  width: 840pxpx;
+  width: 840px;
 }
 .schedule-day > ul .schedule-duration-450 {
-  width: 900pxpx;
+  width: 900px;
 }
 .schedule-day > ul .schedule-duration-480 {
-  width: 960pxpx;
+  width: 960px;
 }
 .schedule-day > ul .schedule-duration-510 {
-  width: 1020pxpx;
+  width: 1020px;
 }
 .schedule-day > ul .schedule-duration-540 {
-  width: 1080pxpx;
+  width: 1080px;
 }
 .schedule-day > ul .schedule-duration-570 {
-  width: 1140pxpx;
+  width: 1140px;
 }
 .schedule-day > ul .schedule-duration-600 {
-  width: 1200pxpx;
+  width: 1200px;
 }
 .schedule-day > ul .schedule-duration-630 {
-  width: 1260pxpx;
+  width: 1260px;
 }
 .schedule-day > ul .schedule-duration-660 {
-  width: 1320pxpx;
+  width: 1320px;
 }
 .schedule-day > ul .schedule-duration-690 {
-  width: 1380pxpx;
+  width: 1380px;
 }
 .schedule-day > ul .schedule-duration-720 {
-  width: 1440pxpx;
+  width: 1440px;
 }
 .schedule-day > ul .schedule-duration-750 {
-  width: 1500pxpx;
+  width: 1500px;
 }
 .schedule-day > ul .schedule-duration-780 {
-  width: 1560pxpx;
+  width: 1560px;
 }
 .schedule-day > ul .schedule-duration-810 {
-  width: 1620pxpx;
+  width: 1620px;
 }
 .schedule-day > ul .schedule-duration-840 {
-  width: 1680pxpx;
+  width: 1680px;
 }
 .schedule-day > ul .schedule-duration-870 {
-  width: 1740pxpx;
+  width: 1740px;
 }
 .schedule-day > ul .schedule-duration-900 {
-  width: 1800pxpx;
+  width: 1800px;
 }
 .schedule-day > ul .schedule-duration-0 {
-  color: #f00;
-  width: 0;
+  width: 100px;
+}
+.schedule-day > ul .schedule-duration-0 a {
+  color: #f00 !important;
 }
 .schedule-day > ul li {
   float: left;

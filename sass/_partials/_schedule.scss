@@ -105,14 +105,17 @@ $schedule-width: #{($schedule-hour * 24)}; // 2880px;
 
         @each $time in $times {
             .schedule-duration-#{$time} {
-                width: #{$schedule-minute * $time}px;
+                width: #{$schedule-minute * $time};
             }
         }
 
         // 0 hours / 0 minutes
         .schedule-duration-0 {
-            color: #f00; // Show warning colour, because shows shouldn't be 0 minutes long
-            width: 0;
+            width: 100px;
+
+            a { // Show warning colour, because shows shouldn't be 0 minutes long
+                color: #f00 !important;
+            }
         }
 
         li {
