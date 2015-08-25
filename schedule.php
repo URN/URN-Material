@@ -61,92 +61,35 @@ get_header(); ?>
             <div class="schedule-label">
                 <ul>
                     <li><span>Midnight</span></li>
-                <?php
-                    // Prints out every hour of the day 1am - 11pm
-                    for ($x = 1; $x <= 23; $x++) {
-                        echo "<li><span>";
-
-                        if ($x < 12) {
-                            echo $x . "am";
-                        } elseif($x == 12) {
-                            echo "Noon";
-                        } else {
-                            echo ($x - 12) . "pm";
-                        }
-
-                        echo "</span><li>";
-                    }
-                ?>
+                    <li><span>1am</span></li>
+                    <li><span>2am</span></li>
+                    <li><span>3am</span></li>
+                    <li><span>4am</span></li>
+                    <li><span>5am</span></li>
+                    <li><span>6am</span></li>
+                    <li><span>7am</span></li>
+                    <li><span>8am</span></li>
+                    <li><span>9am</span></li>
+                    <li><span>10am</span></li>
+                    <li><span>11am</span></li>
+                    <li><span>Noon</span></li>
+                    <li><span>1pm</span></li>
+                    <li><span>2pm</span></li>
+                    <li><span>3pm</span></li>
+                    <li><span>4pm</span></li>
+                    <li><span>5pm</span></li>
+                    <li><span>6pm</span></li>
+                    <li><span>7pm</span></li>
+                    <li><span>8pm</span></li>
+                    <li><span>9pm</span></li>
+                    <li><span>10pm</span></li>
+                    <li><span>11pm</span></li>
                 </ul>
 
-                <!-- Live thing (set the width via PHP based on server time) -->
-                <?php
-                    $time_hours = date("H") + 1; // + 1 Moves time to GMT
-                    $time_minutes = date("i");
-                    $hours_from_midnight = $time_hours + (($time_minutes * 1.66) / 100); // e.g. 17.50 == 5.30pm
-                    $schedule_pixel_width = $hours_from_midnight * 2 * 60;
-                ?>
-                <script>
-                    document.getElementsByClassName('schedule-timeline')[0].scrollLeft += <?php echo $schedule_pixel_width - 200 ?>;
-                </script>
-                <div class="schedule-progress" style="width:<?php echo $schedule_pixel_width; ?>px;">
-                    <span>
-                    <?php
-                        echo $time_hours . ":" . $time_minutes . "<br>Live"; // Prints pretty Time
-                    ?>
-                    </span>
-                </div>
-
+                <div class="schedule-progress"></div>
             </div>
 
-
-            <?php
-                // Get weekly schedule
-                $schedule = json_decode(file_get_contents('http://live.urn1350.net/api/schedule/week'));
-
-                $days_of_week = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
-                $day_of_week = 0;
-
-                foreach ($schedule as $day) {
-                    print "<div class='schedule-day'>";
-                    print "<h2 class='schedule-day-text'>";
-                    print "  <a href='#'><span>" . $days_of_week[$day_of_week] . "</span></a>";
-                    $day_of_week++;
-                    print "</h2>";
-
-                    print "<ul>";
-                    foreach ($day as $show) {
-                        $show_length = $show->length;
-                        $show_class = "schedule-duration-" . $show_length;
-
-                        if($show->live) {
-                            $show_class .= " schedule-live";
-                        }
-
-                        print "<li class='" . $show_class ."'>";
-                        print "  <a href='" . get_permalink(get_page_by_path($show->slug)) . "'>";
-                        print "    <span>" . $show->name . "</span>";
-
-                        // Print show hosts if there are any set.
-                        if (count($show->hosts) > 0) {
-                            print "    <i><span> with ";
-
-                            foreach($show->hosts as $host) {
-                                print $host->name;
-                                if (count($show->hosts) > 1) {
-                                    print ', ';
-                                }
-                            }
-                        }
-
-                        print "</span></a>";
-                        print "</li>";
-                    }
-
-                    print "</ul>";
-                    print "</div>";
-                }
-            ?>
+            <div class="schedule-week"></div>
         </div>
     </div>
 </div>
