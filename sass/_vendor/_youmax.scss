@@ -33,12 +33,6 @@
     position: relative;
 }
 
-#youmax-encloser,
-#youmax-tabs {
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-}
-
 .youmax-stat {
     float: right;
     margin: 25px 10px 10px;
@@ -63,7 +57,6 @@
 #youmax {
     width: 100%;
     max-width: 1000px;
-    background-color: #e6e6e6;
     margin: 0 auto;
     font-family: Calibri;
     font-size: 14px;
@@ -90,7 +83,6 @@
 }
 
 #youmax-encloser {
-    border-bottom: 1px solid #ccc;
     padding-top: 20px;
 }
 
@@ -98,7 +90,6 @@
     width: 100%;
     text-align: left;
     display: inline-block;
-    background-color: #e6e6e6;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -147,11 +138,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-#youmax-tabs,
-.youmax-tab {
-    background-color: #e6e6e6;
 }
 
 .youmax-tab {
@@ -205,6 +191,7 @@
 }
 
 #youmax-header-logo {
+    border: 5px solid #fff;
     vertical-align: middle;
     height: 60px;
     margin: 15px 15px 15px 32px;
@@ -220,8 +207,8 @@
 }
 
 .youmax-tab-hover {
-    color: #eee;
-    background-color: #999;
+    color: #fff;
+    background-color: #5a5959;
     text-shadow: 0 0;
 }
 
@@ -239,6 +226,6 @@
 
 #youmax-load-more-div:hover,
 .youmax-load-more-div-click {
-    background: #a9a9a9;
+    background: #616060;
     color: #fff;
 }
