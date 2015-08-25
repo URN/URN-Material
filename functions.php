@@ -5,8 +5,14 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Raleway:300');
 
     wp_enqueue_script('nav-overflow', get_template_directory_uri() . '/js/nav-overflow.js', array('jquery'), false, true);
-    wp_enqueue_script('schedule-main', get_template_directory_uri() . '/js/schedule-main.js', array('jquery'), false, true);
-    wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
+
+    if ( is_page ('schedule')) {
+        wp_enqueue_script('schedule-main', get_template_directory_uri() . '/js/schedule-main.js', array('jquery'), false, true);
+    }
+
+    if (is_page ('urn-tv')) {
+        wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
+    }
 });
 
 add_action('get_header', function() {
