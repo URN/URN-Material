@@ -361,33 +361,6 @@ body {
   }
 }
 
-.row h1,
-.row h2 {
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-.row h1 {
-  font-size: 30px;
-}
-.row h2 {
-  font-size: 22px;
-  font-weight: bold;
-}
-.row p {
-  line-height: 1.4em;
-  margin-bottom: 6px;
-}
-.row b {
-  font-weight: bold;
-}
-.row li {
-  font-weight: 400;
-  line-height: 1.2em;
-  list-style-type: disc;
-  margin-left: 50px;
-  padding-bottom: 10px;
-}
-
 button::-moz-focus-inner {
   border: 0;
 }
@@ -810,30 +783,19 @@ button::-moz-focus-inner {
   margin-right: 15px;
 }
 .row .twitter {
-  -webkit-flex-shrink: 0;
-  flex-shrink: 0;
   margin-top: 15px;
-}
-.row .twitter .twitter-timeline {
-  width: 100%;
 }
 .row.vertical {
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
   margin-top: 15px;
-  max-width: 700px;
   padding-left: 15px;
+  width: 0;
 }
 .row .clip {
   margin-bottom: 15px;
-}
-.row .schedule {
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  background: #e6e6e6;
-  height: 250px;
 }
 
 #footer {
@@ -1112,6 +1074,168 @@ button::-moz-focus-inner {
 }
 .schedule-day > ul li:first-child a {
   margin-left: 0;
+}
+
+.mini-schedule {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  /*
+      .days {
+      }
+  
+      .day {
+          @include display-flex;
+          @include flex-direction(row);
+      }
+  
+  
+  
+  
+  
+  
+      */
+}
+.mini-schedule .times {
+  height: 40px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.mini-schedule .times > li:not(.live-indicator) {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 10px;
+  border-right: 2px solid white;
+  width: 100px;
+}
+.mini-schedule .timetable {
+  background: rgba(0, 0, 0, 0.03);
+  overflow: auto;
+}
+.mini-schedule .day-names {
+  width: 150px;
+  margin-top: 40px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+.mini-schedule .days {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 100%;
+  width: 2400px;
+}
+.mini-schedule .day-name {
+  display: block;
+  width: 150px;
+  padding: 10px 10px 40px 10px;
+  height: 100px;
+  font-size: 1.3em;
+}
+.mini-schedule .day-name:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.03);
+}
+.mini-schedule .live-indicator {
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  margin-left: 150px;
+  padding: 8px 0;
+  text-align: center;
+  color: white;
+  background: #e63d9b;
+  text-transform: uppercase;
+  width: 60px;
+}
+.mini-schedule .live-indicator:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #e63d9b transparent transparent transparent;
+  font-weight: 700;
+  left: 30px;
+  margin-left: -15%;
+  bottom: -10px;
+}
+.mini-schedule .live-indicator:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 740px;
+  background: #e63d9b;
+  left: 30px;
+  z-index: 1;
+  top: 40px;
+}
+.mini-schedule .slots {
+  background: white;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.mini-schedule .show {
+  background: #ef81be;
+  color: white;
+  padding: 6px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  -moz-transition: background 0.15s ease;
+  -o-transition: background 0.15s ease;
+  -webkit-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+.mini-schedule .show.live {
+  background: #e63d9b;
+}
+.mini-schedule .show.live:after {
+  top: -18px;
+  left: 0;
+  position: absolute;
+  content: "On Air";
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  font-size: 0.75em;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  background: inherit;
+}
+.mini-schedule .show:hover, .mini-schedule .show:focus {
+  background: #d51b82;
+}
+.mini-schedule .show .title {
+  font-weight: 600;
+}
+.mini-schedule .show .hosts {
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-weight: 600;
+}
+.mini-schedule .show .hosts:before {
+  opacity: 0.6;
+  font-weight: 400;
+  content: "Hosts: ";
+}
+.mini-schedule .show:first-child {
+  left: 30px;
+  width: 280px;
+}
+.mini-schedule .show:last-child {
+  left: 363px;
+  width: 250px;
 }
 
 .videos {
