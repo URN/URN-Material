@@ -4,6 +4,7 @@ $schedule-hour: $schedule-minute * 60; // Represents 60 minutes (m * 2)
 $schedule-width: #{($schedule-hour * 24)}; // 2880px;
 
 .show-photo img {
+    padding: 5px;
     width: 100%;
 }
 

@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
         $('.schedule-progress').css('width', schedule_pixel_width + 'px');
 
         // Scroll along table to live time
-        $('.schedule-timeline')[0].scrollLeft += schedule_pixel_width - 30;
+        $('.schedule-timeline')[0].scrollLeft += schedule_pixel_width - 300;
 
         // Show time on live bar
         var pretty_time = (('00' + the_time.getHours()).slice (-2)) + ':' + (('00' + the_time.getMinutes()).slice (-2));
@@ -92,7 +92,7 @@ jQuery(document).ready(function ($) {
                         class: 'schedule-duration-' + days[dayNo][s].show['length']}
                     ).append(
                         $('<a></a>', {
-                            class: window.location.origin + '/show/' + days[dayNo][s].show.slug }
+                            href: WP_VARS.site_url + '/show/' + days[dayNo][s].show.slug }
                         ).append(
                             $('<span></span>').text(days[dayNo][s].show.name),
                             $('<i></i>').html(show_hosts)
