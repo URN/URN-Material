@@ -361,6 +361,33 @@ body {
   }
 }
 
+.row .content h1,
+.row .content h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.row .content h1 {
+  font-size: 30px;
+}
+.row .content h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.row .content p {
+  line-height: 1.4em;
+  margin-bottom: 6px;
+}
+.row .content b {
+  font-weight: bold;
+}
+.row .content li {
+  font-weight: 400;
+  line-height: 1.2em;
+  list-style-type: disc;
+  margin-left: 50px;
+  padding-bottom: 10px;
+}
+
 button::-moz-focus-inner {
   border: 0;
 }
