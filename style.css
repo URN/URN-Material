@@ -1109,7 +1109,7 @@ button::-moz-focus-inner {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
   padding: 10px;
-  border-right: 2px solid white;
+  border-right: 2px solid #fff;
   width: 100px;
 }
 .mini-schedule .timetable {
@@ -1133,7 +1133,7 @@ button::-moz-focus-inner {
 .mini-schedule .day-name {
   display: block;
   width: 150px;
-  padding: 10px 10px 40px 10px;
+  padding: 10px 10px 40px;
   height: 100px;
   font-size: 1.3em;
 }
@@ -1147,26 +1147,26 @@ button::-moz-focus-inner {
   margin-left: 150px;
   padding: 8px 0;
   text-align: center;
-  color: white;
+  color: #fff;
   background: #e63d9b;
   text-transform: uppercase;
   width: 60px;
 }
 .mini-schedule .live-indicator:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #e63d9b transparent transparent transparent;
+  border-width: 10px 10px 0;
+  border-color: #e63d9b transparent transparent;
   font-weight: 700;
   left: 30px;
   margin-left: -15%;
   bottom: -10px;
 }
 .mini-schedule .live-indicator:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 1px;
   height: 740px;
@@ -1176,14 +1176,14 @@ button::-moz-focus-inner {
   top: 40px;
 }
 .mini-schedule .slots {
-  background: white;
+  background: #fff;
   position: relative;
   width: 100%;
   height: 100px;
 }
 .mini-schedule .show {
   background: #ef81be;
-  color: white;
+  color: #fff;
   padding: 6px;
   position: absolute;
   top: 0;
@@ -1201,9 +1201,9 @@ button::-moz-focus-inner {
   top: -18px;
   left: 0;
   position: absolute;
-  content: "On Air";
+  content: 'On Air';
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   font-weight: 600;
   font-size: 0.75em;
   height: 18px;
@@ -1227,7 +1227,7 @@ button::-moz-focus-inner {
 .mini-schedule .show .hosts:before {
   opacity: 0.6;
   font-weight: 400;
-  content: "Hosts: ";
+  content: 'Hosts: ';
 }
 .mini-schedule .show:first-child {
   left: 30px;

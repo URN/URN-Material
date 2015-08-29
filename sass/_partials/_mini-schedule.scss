@@ -1,5 +1,5 @@
 $day-name-width: 150px;
-$border-color: white;
+$border-color: #fff;
 $border-width: 2px;
 $time-width: 100px;
 $time-height: 40px;
@@ -8,8 +8,8 @@ $live-indicator-width: 60px;
 
 .mini-schedule {
     position: relative;
-        @include display-flex;
-        @include flex-direction(row);
+    @include display-flex;
+    @include flex-direction(row);
 
     .times {
         height: $time-height;
@@ -41,10 +41,11 @@ $live-indicator-width: 60px;
         height: 100%;
         width: #{$time-width * 24};
     }
+
     .day-name {
         display: block;
         width: $day-name-width;
-        padding: 10px 10px 40px 10px;
+        padding: 10px 10px 40px;
         height: $day-height;
         font-size: 1.3em;
         // border-bottom: $border-width solid $border-color;
@@ -61,19 +62,19 @@ $live-indicator-width: 60px;
         margin-left: $day-name-width;
         padding: 8px 0;
         text-align: center;
-        color: white;
+        color: #fff;
         background: $urn-pink;
         text-transform: uppercase;
         width: $live-indicator-width;
 
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 10px 10px 0 10px;
-            border-color: $urn-pink transparent transparent transparent;
+            border-width: 10px 10px 0;
+            border-color: $urn-pink transparent transparent;
             font-weight: 700;
             left: #{$live-indicator-width / 2};
             margin-left: -15%;
@@ -81,7 +82,7 @@ $live-indicator-width: 60px;
         }
 
         &:before {
-            content: "";
+            content: '';
             position: absolute;
             width: 1px;
             height: #{($day-height * 7) + $time-height};
@@ -93,7 +94,7 @@ $live-indicator-width: 60px;
     }
 
     .slots {
-        background: white;
+        background: #fff;
         position: relative;
         width: 100%;
         height: #{$day-height};
@@ -101,7 +102,7 @@ $live-indicator-width: 60px;
 
     .show {
         background: lighten($urn-pink, 15%);
-        color: white;
+        color: #fff;
         padding: 6px;
         position: absolute;
         top: 0;
@@ -116,9 +117,9 @@ $live-indicator-width: 60px;
                 top: -18px;
                 left: 0;
                 position: absolute;
-                content: "On Air";
+                content: 'On Air';
                 text-transform: uppercase;
-                color: white;
+                color: #fff;
                 font-weight: 600;
                 font-size: 0.75em;
                 height: 18px;
@@ -147,7 +148,7 @@ $live-indicator-width: 60px;
             &:before {
                 opacity: 0.6;
                 font-weight: 400;
-                content: "Hosts: ";
+                content: 'Hosts: ';
             }
         }
     }
@@ -156,10 +157,12 @@ $live-indicator-width: 60px;
         left: 30px; //set by js
         width: 280px;
     }
+
     .show:last-child {
         left: 363px; //set by js
         width: 250px;
     }
+
 /*
     .days {
     }
