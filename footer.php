@@ -5,7 +5,7 @@
                 <strong>&copy; URN <?php echo date('Y') ?></strong><br>
                 University Radio Nottingham<br>
                 <a href="#">Competition Terms</a><br>
-                <a href="#">Members Login</a>
+                <?php wp_loginout(); ?>
             </div>
             <div>
                 <strong>Winner of Best Student Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014!</strong><br>
