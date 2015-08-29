@@ -520,7 +520,7 @@ button::-moz-focus-inner {
 #nav > ul > .nav-item {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  padding: 0 12px;
+  padding: 0 11px;
   text-align: center;
 }
 @media (max-width: 620px) {
@@ -556,7 +556,7 @@ button::-moz-focus-inner {
   border-bottom: 6px solid transparent;
   color: rgba(255, 255, 255, 0.7);
   display: block;
-  font-size: 1.125em;
+  font-size: 1.05em;
   padding: 10px 0;
   text-decoration: none;
 }

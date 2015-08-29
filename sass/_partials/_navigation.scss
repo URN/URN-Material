@@ -12,7 +12,7 @@
 
         > .nav-item {
             @include flex-shrink(0);
-            padding: 0 12px;
+            padding: 0 11px;
             text-align: center;
 
             @include breakpoint(mobile) {
@@ -44,7 +44,7 @@
                 border-bottom: 6px solid transparent;
                 color: white(.7);
                 display: block;
-                font-size: 1.125em;
+                font-size: 1.05em;
                 padding: 10px 0;
                 text-decoration: none;
 

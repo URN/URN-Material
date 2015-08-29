@@ -40,7 +40,7 @@ function add_extension_to_nav( $items, $args )
 }
 
 // Filter wp_nav_menu() to add additional links and other output
-function add_home_to_nav($items) {
+function add_additional_nav_items($items) {
     if(wp_title('', false) == "") {
         $is_current = "current";
     } else {
@@ -48,14 +48,17 @@ function add_home_to_nav($items) {
     }
 
     $homelink = '<li class="nav-item ' . $is_current . '"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
-    $items = $homelink . $items;
+    $competitionslink = '<li class="nav-item js-nav-competition-toggle"><a href="#">Competitions</a></li>';
+    $items = $homelink . $items . $competitionslink;
+
     return $items;
 }
 
-// Add the ... (responsiveness) to the Header nav
+// Add the responsiveness ('...') to the Header nav
 add_filter( 'wp_nav_menu_items', 'add_extension_to_nav', 10, 2 ); // 10: priority
+
 // Add Home to Nav
-add_filter( 'wp_nav_menu_items', 'add_home_to_nav' ); // TODO add filter, so this doesnt apply to every nav
+add_filter( 'wp_nav_menu_items', 'add_additional_nav_items'); // TODO add filter, so this doesnt apply to every nav
 
 
 //
