@@ -13,6 +13,19 @@ add_action('wp_enqueue_scripts', function() {
     if (is_page ('urn-tv')) {
         wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
     }
+
+    //
+    // Gives us access to Wordpress variables in Javascript.
+    // e.g.
+    //  var url = WP_VARS.site_url; // Wordpress site URL 'http://live.urn1350.net/'
+    //
+    // Note, we attach this to nav-overflow just so we can access these from any page.
+    //
+    $wp_custom_vars = array (
+        'template_url' => get_bloginfo('template_url'),
+        'site_url' => get_option('siteurl')
+    );
+    wp_localize_script('nav-overflow', 'WP_VARS', $wp_custom_vars);
 });
 
 add_action('get_header', function() {
