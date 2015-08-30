@@ -61,8 +61,7 @@ function add_additional_nav_items($items) {
     }
 
     $homelink = '<li class="nav-item ' . $is_current . '"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
-    $competitionslink = '<li class="nav-item js-nav-competition-toggle"><a href="#">Competitions</a></li>';
-    $items = $homelink . $items . $competitionslink;
+    $items = $homelink . $items;
 
     return $items;
 }
