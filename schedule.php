@@ -25,7 +25,7 @@ get_header(); ?>
 </div>
 
 <div class="row">
-    <div class="content">
+    <div class="entry-content">
         <?php the_title( '<h1>', '</h1>' ); ?>
 
         <?php

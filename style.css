@@ -361,31 +361,53 @@ body {
   }
 }
 
-.row .content h1,
-.row .content h2 {
+/**
+ * Typography
+ */
+.row .entry-content h1,
+.row .entry-content h2 {
   margin-bottom: 10px;
   margin-top: 20px;
 }
-.row .content h1 {
+.row .entry-content h1 {
   font-size: 30px;
 }
-.row .content h2 {
+.row .entry-content h2 {
   font-size: 22px;
   font-weight: bold;
 }
-.row .content p {
+.row .entry-content p {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
-.row .content b {
+.row .entry-content b {
   font-weight: bold;
 }
-.row .content li {
+.row .entry-content li {
   font-weight: 400;
   line-height: 1.2em;
   list-style-type: disc;
   margin-left: 50px;
   padding-bottom: 10px;
+}
+
+/**
+ * Alignment
+ */
+.alignleft {
+  float: left;
+  margin: 7px 28px 28px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 7px 0 28px 28px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 7px auto;
 }
 
 button::-moz-focus-inner {

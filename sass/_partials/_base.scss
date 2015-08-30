@@ -61,7 +61,13 @@ body {
 
 }
 
-.row .content {
+
+
+/**
+ * Typography
+ */
+
+.row .entry-content {
     h1,
     h2 {
         margin-bottom: 10px;
@@ -93,4 +99,25 @@ body {
         margin-left: 50px;
         padding-bottom: 10px;
     }
+}
+
+
+/**
+ * Alignment
+ */
+
+.alignleft {
+    float: left;
+    margin: 7px 28px 28px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 7px 0 28px 28px;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 7px auto;
 }

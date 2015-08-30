@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="row">
-    <div class="content">
+    <div class="entry-content">
     <?php the_title( '<h1>', '</h1>' ); ?>
     <?php
         // Start the loop.
