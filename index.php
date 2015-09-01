@@ -57,43 +57,25 @@
                     <li>11pm</li>
                 </ul>
                 <ul class="days">
-                    <li class="day">
-                        <ul class="slots">
-                            <li class="show">
-                                <h1 class="title">The Afternoon Show with James Turner</h1>
-                                <h2 class="hosts">James Turner</h1>
-                            </li>
-                            <li class="show">
-                                <h1 class="title">The Afternoon Show with James Turner</h1>
-                                <h2 class="hosts">James Turner</h1>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="day">
+                    <li class="day monday">
                         <ul class="slots"></ul>
                     </li>
-                    <li class="day">
+                    <li class="day tuesday">
                         <ul class="slots"></ul>
                     </li>
-                    <li class="day current">
-                        <ul class="slots">
-                            <li class="show live">
-                                <h1 class="title">The Afternoon Show with James Turner</h1>
-                                <h2 class="hosts">James Turner</h1>
-                            </li>
-                            <li class="show">
-                                <h1 class="title">The Afternoon Show with James Turner</h1>
-                                <h2 class="hosts">James Turner</h1>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="day">
+                    <li class="day wednesday">
                         <ul class="slots"></ul>
                     </li>
-                    <li class="day">
+                    <li class="day thursday">
                         <ul class="slots"></ul>
                     </li>
-                    <li class="day">
+                    <li class="day friday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day saturday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day sunday">
                         <ul class="slots"></ul>
                     </li>
                 </ul>

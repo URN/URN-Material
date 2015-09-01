@@ -1,39 +1,40 @@
-$day-name-width: 150px;
 $border-color: #fff;
 $border-width: 2px;
-$time-width: 100px;
-$time-height: 40px;
 $day-height: 100px;
-$live-indicator-width: 60px;
+$day-name-width: 150px;
+$live-indicator-width: 40px;
+$slot-spacing: 4px;
+$time-height: 40px;
+$time-width: 100px;
 
 .mini-schedule {
-    position: relative;
     @include display-flex;
     @include flex-direction(row);
+    position: relative;
 
-    .times {
-        height: $time-height;
-        @include display-flex;
-        @include flex-direction(row);
-        > li:not(.live-indicator) {
-            @include flex-shrink(0);
-            padding: 10px;
-            border-right: $border-width solid $border-color;
+    .timetable {
+        background: black(0.1);
+        overflow: auto;
 
-            width: $time-width;
+        > .times {
+            @include display-flex;
+            @include flex-direction(row);
+            height: $time-height;
+
+            > li:not(.live-indicator) {
+                @include flex-shrink(0);
+                border-right: $slot-spacing solid $border-color;
+                padding: 10px;
+                width: $time-width;
+            }
         }
     }
 
-    .timetable {
-        background: black(0.03);
-        overflow: auto;
-    }
-
     .day-names {
-        width: $day-name-width;
-        margin-top: #{$time-height};
-        @include flex-shrink(0);
         @include flex-grow(0);
+        @include flex-shrink(0);
+        margin-top: #{$time-height};
+        width: $day-name-width;
     }
 
     .days {
@@ -44,94 +45,105 @@ $live-indicator-width: 60px;
 
     .day-name {
         display: block;
-        width: $day-name-width;
-        padding: 10px 10px 40px;
-        height: $day-height;
         font-size: 1.3em;
-        // border-bottom: $border-width solid $border-color;
+        height: #{$day-height - $slot-spacing};
+        margin-bottom: $slot-spacing;
+        padding: 10px 10px 40px;
+        width: $day-name-width;
 
         &:nth-child(odd) {
-            background: black(0.03);
+            background: black(0.1);
         }
     }
 
     .live-indicator {
-        position: absolute;
-        top: -40px;
+        background: $urn-pink;
+        color: #fff;
+        font-size: 0.875em;
         left: 30px;
         margin-left: $day-name-width;
-        padding: 8px 0;
+        padding: 4px 0;
+        position: absolute;
         text-align: center;
-        color: #fff;
-        background: $urn-pink;
         text-transform: uppercase;
+        top: -20px;
         width: $live-indicator-width;
 
         &:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 10px 0;
             border-color: $urn-pink transparent transparent;
+            border-style: solid;
+            border-width: 7px 6px 0;
+            bottom: -6px;
+            content: '';
             font-weight: 700;
+            height: 0;
             left: #{$live-indicator-width / 2};
             margin-left: -15%;
-            bottom: -10px;
+            position: absolute;
+            width: 0;
         }
 
         &:before {
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: #{($day-height * 7) + $time-height};
             background: $urn-pink;
+            content: '';
+            height: #{($day-height * 7) + $time-height};
             left: #{$live-indicator-width / 2};
+            position: absolute;
+            top: 20px;
+            width: 1px;
             z-index: 1;
-            top: 40px;
         }
     }
 
     .slots {
         background: #fff;
+        height: #{$day-height};
         position: relative;
         width: 100%;
-        height: #{$day-height};
     }
 
     .show {
-        background: lighten($urn-pink, 15%);
         color: #fff;
-        padding: 6px;
+        cursor: pointer;
+        height: 100%;
+        padding-bottom: $slot-spacing;
+        padding-right: $slot-spacing;
         position: absolute;
         top: 0;
-        height: 100%;
-        cursor: pointer;
-        @include transition(background 0.15s ease);
 
-        &.live {
+        &.live a {
             background: $urn-pink;
 
             &:after {
-                top: -18px;
-                left: 0;
-                position: absolute;
-                content: 'On Air';
-                text-transform: uppercase;
+                background: inherit;
                 color: #fff;
-                font-weight: 600;
+                content: 'On Air';
                 font-size: 0.75em;
+                font-weight: 600;
                 height: 18px;
+                left: 0;
                 line-height: 18px;
                 padding: 0 6px;
-                background: inherit;
+                position: absolute;
+                text-transform: uppercase;
+                top: -18px;
             }
         }
 
-        &:hover,
-        &:focus {
-            background: darken($urn-pink, 10%);
+        a {
+            @include transition(background 0.15s ease);
+            background: lighten($urn-pink, 15%);
+            color: inherit;
+            display: block;
+            height: 100%;
+            padding: 6px;
+            position: relative;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-pink, 10%);
+            }
         }
 
         .title {
@@ -139,17 +151,25 @@ $live-indicator-width: 60px;
         }
 
         .hosts {
-            font-size: 0.75em;
-            position: absolute;
             bottom: 6px;
-            right: 6px;
+            font-size: 0.75em;
             font-weight: 600;
+            position: absolute;
+            right: 6px;
 
             &:before {
-                opacity: 0.6;
-                font-weight: 400;
                 content: 'Hosts: ';
+                font-weight: 400;
+                opacity: 0.6;
             }
+        }
+
+        .times {
+            bottom: 6px;
+            font-size: 0.75em;
+            font-weight: 600;
+            left: 6px;
+            position: absolute;
         }
     }
 
@@ -162,20 +182,4 @@ $live-indicator-width: 60px;
         left: 363px; //set by js
         width: 250px;
     }
-
-/*
-    .days {
-    }
-
-    .day {
-        @include display-flex;
-        @include flex-direction(row);
-    }
-
-
-
-
-
-
-    */
 }
