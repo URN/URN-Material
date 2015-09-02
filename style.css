@@ -1261,10 +1261,10 @@ button::-moz-focus-inner {
   background: #e3228d;
 }
 .mini-schedule .show.after-dark a {
-  background: #000000;
+  background: #2d2d2d;
 }
 .mini-schedule .show.after-dark a:hover, .mini-schedule .show.after-dark a:focus {
-  background: black;
+  background: #1e1e1e;
 }
 .mini-schedule .show.culture a {
   background: #ed6346;
