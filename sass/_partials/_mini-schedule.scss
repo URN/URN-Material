@@ -103,7 +103,7 @@ $time-width: 100px;
     }
 
     .show {
-        color: #fff;
+        color: white(0.8);
         cursor: pointer;
         height: 100%;
         padding-bottom: $slot-spacing;
@@ -112,7 +112,11 @@ $time-width: 100px;
         top: 0;
 
         &.live a {
-            background: $urn-pink;
+            @include transform(scale(1.08));
+            background: darken($urn-pink, 20%);
+            box-shadow: 0 0 50px black(0.4);
+            color: white;
+            z-index: 1;
 
             &:after {
                 background: inherit;
@@ -131,7 +135,7 @@ $time-width: 100px;
         }
 
         a {
-            @include transition(background 0.1s ease);
+            @include transition(color 0.25s ease);
             background: $urn-pink;
             color: inherit;
             display: block;
@@ -143,6 +147,7 @@ $time-width: 100px;
             &:hover,
             &:focus {
                 background: darken($urn-pink, 6%);
+                color: white;
             }
         }
 

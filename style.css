@@ -1219,7 +1219,7 @@ button::-moz-focus-inner {
   width: 100%;
 }
 .mini-schedule .show {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   height: 100%;
   padding-bottom: 4px;
@@ -1228,7 +1228,14 @@ button::-moz-focus-inner {
   top: 0;
 }
 .mini-schedule .show.live a {
-  background: #e63d9b;
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  background: #a71667;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  color: white;
+  z-index: 1;
 }
 .mini-schedule .show.live a:after {
   background: inherit;
@@ -1245,10 +1252,10 @@ button::-moz-focus-inner {
   top: -18px;
 }
 .mini-schedule .show a {
-  -moz-transition: background 0.1s ease;
-  -o-transition: background 0.1s ease;
-  -webkit-transition: background 0.1s ease;
-  transition: background 0.1s ease;
+  -moz-transition: color 0.25s ease;
+  -o-transition: color 0.25s ease;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
   background: #e63d9b;
   color: inherit;
   display: block;
@@ -1259,6 +1266,7 @@ button::-moz-focus-inner {
 }
 .mini-schedule .show a:hover, .mini-schedule .show a:focus {
   background: #e3228d;
+  color: white;
 }
 .mini-schedule .show.after-dark a {
   background: #2d2d2d;
