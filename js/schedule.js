@@ -30,6 +30,25 @@
             $slot.addClass("live");
         }
 
+        switch (slotData.category) {
+            case "After Dark":
+                $slot.addClass("after-dark");
+                break;
+            case "Culture":
+                $slot.addClass("culture");
+                break;
+            case "Daytime":
+                $slot.addClass("daytime");
+                break;
+            case "News":
+                $slot.addClass("news");
+                break;
+            case "Sport":
+                $slot.addClass("sport");
+                break;
+            default:
+        }
+
         $a.append($title);
         $a.append($hosts);
         $a.append($times);

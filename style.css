@@ -1245,11 +1245,11 @@ button::-moz-focus-inner {
   top: -18px;
 }
 .mini-schedule .show a {
-  -moz-transition: background 0.15s ease;
-  -o-transition: background 0.15s ease;
-  -webkit-transition: background 0.15s ease;
-  transition: background 0.15s ease;
-  background: #ef81be;
+  -moz-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+  background: #e63d9b;
   color: inherit;
   display: block;
   height: 100%;
@@ -1258,7 +1258,37 @@ button::-moz-focus-inner {
   text-decoration: none;
 }
 .mini-schedule .show a:hover, .mini-schedule .show a:focus {
-  background: #d51b82;
+  background: #e3228d;
+}
+.mini-schedule .show.after-dark a {
+  background: #000000;
+}
+.mini-schedule .show.after-dark a:hover, .mini-schedule .show.after-dark a:focus {
+  background: black;
+}
+.mini-schedule .show.culture a {
+  background: #ed6346;
+}
+.mini-schedule .show.culture a:hover, .mini-schedule .show.culture a:focus {
+  background: #ea4b2a;
+}
+.mini-schedule .show.daytime a {
+  background: #e50052;
+}
+.mini-schedule .show.daytime a:hover, .mini-schedule .show.daytime a:focus {
+  background: #c60047;
+}
+.mini-schedule .show.news a {
+  background: #009994;
+}
+.mini-schedule .show.news a:hover, .mini-schedule .show.news a:focus {
+  background: #007a76;
+}
+.mini-schedule .show.sport a {
+  background: #009fe3;
+}
+.mini-schedule .show.sport a:hover, .mini-schedule .show.sport a:focus {
+  background: #008ac4;
 }
 .mini-schedule .show .title {
   font-weight: 600;

@@ -131,8 +131,8 @@ $time-width: 100px;
         }
 
         a {
-            @include transition(background 0.15s ease);
-            background: lighten($urn-pink, 15%);
+            @include transition(background 0.1s ease);
+            background: $urn-pink;
             color: inherit;
             display: block;
             height: 100%;
@@ -142,7 +142,52 @@ $time-width: 100px;
 
             &:hover,
             &:focus {
-                background: darken($urn-pink, 10%);
+                background: darken($urn-pink, 6%);
+            }
+        }
+
+        &.after-dark a {
+            background: $urn-after-dark-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-after-dark-color, 6%);
+            }
+        }
+
+        &.culture a {
+            background: $urn-culture-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-culture-color, 6%);
+            }
+        }
+
+        &.daytime a {
+            background: $urn-daytime-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-daytime-color, 6%);
+            }
+        }
+
+        &.news a {
+            background: $urn-news-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-news-color, 6%);
+            }
+        }
+
+        &.sport a {
+            background: $urn-sport-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-sport-color, 6%);
             }
         }
 
