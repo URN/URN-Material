@@ -383,10 +383,12 @@ body {
 .row .entry-content b {
   font-weight: bold;
 }
+.row .entry-content ol {
+  list-style-type: decimal;
+}
 .row .entry-content li {
   font-weight: 400;
   line-height: 1.2em;
-  list-style-type: disc;
   margin-left: 50px;
   padding-bottom: 10px;
 }
