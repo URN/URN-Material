@@ -4,7 +4,8 @@
             <div>
                 <strong>&copy; URN <?php echo date('Y') ?></strong><br>
                 University Radio Nottingham<br>
-                <a href="#">Competition Terms</a><br>
+                <a href="<?php echo get_permalink( get_page_by_path( 'competition terms' ) ); ?>">Competition Terms</a><br>
+
                 <?php wp_loginout(); ?>
             </div>
             <div>
