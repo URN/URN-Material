@@ -6,6 +6,8 @@
     var singleDay = false;
     var singleDayName;
 
+    var offset = -7;
+
     var request = $.ajax({
         url: getApiUrl(),
         type: "get",
@@ -13,7 +15,27 @@
 
     request.done(function (data) {
         populateSchedule(data);
+        scrollToLive();
     });
+
+    function scrollToLive() {
+        var d = new Date();
+        var currentTimeMins = d.getHours() * 60 + d.getMinutes();
+
+        var $scrollBox = $schedule.find(".timetable");
+
+        if (d.getHours() < Math.abs(offset)) {
+            currentTimeMins += 24 * 60;
+        }
+
+        var live = currentTimeMins * calculateMinuteWidth() + (offset * 60 * calculateMinuteWidth());
+
+        live = live - $scrollBox.width() / 2;
+
+        $scrollBox.animate({
+            scrollLeft: live
+        }, 500);
+    }
 
     function getApiUrl() {
         if ($schedule.hasClass("mini-schedule")) {
