@@ -56,10 +56,6 @@
 
         var durationWidth = slotData.duration;
 
-        if (parseInt(slotData.to) < parseInt(slotData.from)) {
-            durationWidth = slotData.duration - convertTimeToMinutes(slotData.to);
-        }
-
         $slot.css({
             width : calculateSlotWidth(durationWidth) + "px",
             left: calculateSlotLeftOffset(slotData.from) + "px"
@@ -77,7 +73,25 @@
     }
 
     function calculateSlotLeftOffset(startTime) {
-        return convertTimeToMinutes(startTime) * calculateMinuteWidth();
+        var minuteWidth = calculateMinuteWidth();
+
+        var hoursOffset = -7;
+
+        var minsOffset = hoursOffset * 60;
+
+        var offset = minsOffset * minuteWidth;
+
+        var startTimeMins = convertTimeToMinutes(startTime);
+
+        // Move shows that start before the offset to the end of the schedule
+        // I HAVE NO IDEA WHY THE ADJUSTED startTimeMins WORKS BUT IT DOES
+        // sorry anyone who ends up needing to tweak this
+        if (startTimeMins < Math.abs(hoursOffset) * 60) {
+            startTimeMins += 10 * 60;
+            return startTimeMins * minuteWidth - offset;
+        }
+
+        return startTimeMins * minuteWidth + offset;
     }
 
     // HH:MM
@@ -98,21 +112,11 @@
 
             $.each(slots, function (j, slotData) {
                 var from = parseInt(slotData.from);
-                var to = parseInt(slotData.to);
-
-                if (to < from) {
-                    var overlapSlotData = JSON.parse(JSON.stringify(slotData));
-                    overlapSlotData.from = "00:00";
-                    overlapSlotData.duration = overlapSlotData.duration - ((24 * 60) - convertTimeToMinutes(slotData.from));
-
-                    shows[dayNames[i + 1]].push(overlapSlotData);
-                }
 
                 var $slot = createSlot(slotData);
                 $slotList.append($slot);
             });
         });
 
-        //if slot start time is greater than end time, copy that over into next day, trim overlapping end from day1 and trim overlapping start from day2
     }
 })(jQuery);
