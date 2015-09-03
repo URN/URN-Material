@@ -54,44 +54,67 @@ get_header(); ?>
 </div>
 
 <div class="schedule">
-    <div class="schedule-container">
-        <div class="schedule-timeline">
-
-          <!-- Times along the top -->
-            <div class="schedule-label">
-                <ul>
-                    <li><span>Midnight</span></li>
-                    <li><span>1am</span></li>
-                    <li><span>2am</span></li>
-                    <li><span>3am</span></li>
-                    <li><span>4am</span></li>
-                    <li><span>5am</span></li>
-                    <li><span>6am</span></li>
-                    <li><span>7am</span></li>
-                    <li><span>8am</span></li>
-                    <li><span>9am</span></li>
-                    <li><span>10am</span></li>
-                    <li><span>11am</span></li>
-                    <li><span>Noon</span></li>
-                    <li><span>1pm</span></li>
-                    <li><span>2pm</span></li>
-                    <li><span>3pm</span></li>
-                    <li><span>4pm</span></li>
-                    <li><span>5pm</span></li>
-                    <li><span>6pm</span></li>
-                    <li><span>7pm</span></li>
-                    <li><span>8pm</span></li>
-                    <li><span>9pm</span></li>
-                    <li><span>10pm</span></li>
-                    <li><span>11pm</span></li>
+            <ul class="day-names">
+                <li class="day-name">Monday</li>
+                <li class="day-name">Tuesday</li>
+                <li class="day-name">Wednesday</li>
+                <li class="day-name">Thursday</li>
+                <li class="day-name">Friday</li>
+                <li class="day-name">Saturday</li>
+                <li class="day-name">Sunday</li>
+            </ul>
+            <div class="timetable">
+                <ul class="times">
+                    <li class="live-indicator">Live</li>
+                    <li>7am</li>
+                    <li>8am</li>
+                    <li>9am</li>
+                    <li>10am</li>
+                    <li>11am</li>
+                    <li>Noon</li>
+                    <li>1pm</li>
+                    <li>2pm</li>
+                    <li>3pm</li>
+                    <li>4pm</li>
+                    <li>5pm</li>
+                    <li>6pm</li>
+                    <li>7pm</li>
+                    <li>8pm</li>
+                    <li>9pm</li>
+                    <li>10pm</li>
+                    <li>11pm</li>
+                    <li>Midnight</li>
+                    <li>1am</li>
+                    <li>2am</li>
+                    <li>3am</li>
+                    <li>4am</li>
+                    <li>5am</li>
+                    <li>6am</li>
                 </ul>
-
-                <div class="schedule-progress"></div>
+                <ul class="days">
+                    <li class="day monday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day tuesday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day wednesday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day thursday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day friday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day saturday">
+                        <ul class="slots"></ul>
+                    </li>
+                    <li class="day sunday">
+                        <ul class="slots"></ul>
+                    </li>
+                </ul>
             </div>
-
-            <div class="schedule-week"></div>
         </div>
-    </div>
-</div>
 
 <?php get_footer(); ?>

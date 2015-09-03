@@ -1,16 +1,31 @@
 (function ($) {
     "use strict";
 
-    var $schedule = $(".mini-schedule");
+    var $schedule = $(".schedule");
+    var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    var singleDay = false;
+    var singleDayName;
 
     var request = $.ajax({
-        url: "/api/schedule/week",
+        url: getApiUrl(),
         type: "get",
     });
 
     request.done(function (data) {
         populateSchedule(data);
     });
+
+    function getApiUrl() {
+        if ($schedule.hasClass("mini-schedule")) {
+            var currentDay = dayNames[new Date().getDay()];
+            singleDay = true;
+            singleDayName = currentDay;
+            return "/api/schedule/day/" + currentDay;
+        }
+        else {
+            return "/api/schedule/week";
+        }
+    }
 
     function createSlot(slotData) {
         var $slot = $("<li>").addClass("show");
@@ -64,8 +79,8 @@
         return $slot;
     }
 
-    function calculateMinuteWidth() {
-        return $schedule.find(".times li:nth-child(2)").outerWidth() / 60;
+    function calculateMinuteWidth()
+{        return $schedule.find(".times li:nth-child(2)").outerWidth() / 60;
     }
 
     function calculateSlotWidth(length) {
@@ -103,12 +118,9 @@
     }
 
     function populateSchedule(shows) {
-        var dayNames = ["monday", "tuesday", "wednesday", "thursday", "friday"];
-
-        $.each(dayNames, function (i, dayName) {
-            var slots = shows[dayName];
-
-            var $slotList = $schedule.find("li.day." + dayName + " .slots");
+        if (singleDay) {
+            var slots = shows.shows;
+            var $slotList = $schedule.find("li.day .slots");
 
             $.each(slots, function (j, slotData) {
                 var from = parseInt(slotData.from);
@@ -116,7 +128,20 @@
                 var $slot = createSlot(slotData);
                 $slotList.append($slot);
             });
-        });
+        }
+        else {
+            $.each(dayNames, function (i, dayName) {
+                var slots = shows[dayName];
 
+                var $slotList = $schedule.find("li.day." + dayName + " .slots");
+
+                $.each(slots, function (j, slotData) {
+                    var from = parseInt(slotData.from);
+
+                    var $slot = createSlot(slotData);
+                    $slotList.append($slot);
+                });
+            });
+        }
     }
 })(jQuery);

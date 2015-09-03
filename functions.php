@@ -7,15 +7,23 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('nav-overflow', get_template_directory_uri() . '/js/nav-overflow.js', array('jquery'), false, true);
 
     // CHANGE TO ONLY INSERT ON SCHEDULE AND HOME PAGES
-    wp_enqueue_script('mini-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
+
+    if ( is_home() ) {
+        wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
+    }
 
     if ( is_page ('schedule')) {
-        wp_enqueue_script('schedule-main', get_template_directory_uri() . '/js/schedule-main.js', array('jquery'), false, true);
+        wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
     }
 
     if (is_page ('urn-tv')) {
         wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
     }
+
+    global $wp_scripts;
+    foreach( $wp_scripts->queue as $handle ) :
+        echo $handle . ' | ';
+    endforeach;
 
     //
     // Gives us access to Wordpress variables in Javascript.
