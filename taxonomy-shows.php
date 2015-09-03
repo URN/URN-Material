@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="row">
-    <div class="content">
+    <div class="entry-content">
 
         <h1><?php single_cat_title(); ?></h1>
         <h2>Description</h2>
