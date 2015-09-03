@@ -6,7 +6,7 @@
     var singleDay = false;
     var singleDayName;
 
-    var offset = -7;
+    var hoursOffset = -7;
 
     var request = $.ajax({
         url: getApiUrl(),
@@ -24,11 +24,11 @@
 
         var $scrollBox = $schedule.find(".timetable");
 
-        if (d.getHours() < Math.abs(offset)) {
+        if (d.getHours() < Math.abs(hoursOffset)) {
             currentTimeMins += 24 * 60;
         }
 
-        var live = currentTimeMins * calculateMinuteWidth() + (offset * 60 * calculateMinuteWidth());
+        var live = currentTimeMins * calculateMinuteWidth() + (hoursOffset * 60 * calculateMinuteWidth());
 
         live = live - $scrollBox.width() / 2;
 
@@ -111,8 +111,6 @@
 
     function calculateSlotLeftOffset(startTime) {
         var minuteWidth = calculateMinuteWidth();
-
-        var hoursOffset = -7;
 
         var minsOffset = hoursOffset * 60;
 
