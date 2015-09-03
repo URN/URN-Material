@@ -24,7 +24,6 @@
             </ul>
             <div class="timetable">
                 <ul class="times">
-                    <li class="live-indicator">Live</li>
                     <li>7am</li>
                     <li>8am</li>
                     <li>9am</li>

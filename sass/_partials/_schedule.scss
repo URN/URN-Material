@@ -2,7 +2,6 @@ $border-color: #fff;
 $border-width: 2px;
 $day-height: 100px;
 $day-name-width: 150px;
-$live-indicator-width: 40px;
 $slot-spacing: 4px;
 $time-height: 40px;
 $time-width: 100px;
@@ -60,45 +59,6 @@ $time-width: 100px;
 
         &:nth-child(odd) {
             background: black(0.1);
-        }
-    }
-
-    .live-indicator {
-        background: $urn-pink;
-        color: #fff;
-        font-size: 0.875em;
-        left: 30px;
-        margin-left: $day-name-width;
-        padding: 4px 0;
-        position: absolute;
-        text-align: center;
-        text-transform: uppercase;
-        top: -20px;
-        width: $live-indicator-width;
-
-        &:after {
-            border-color: $urn-pink transparent transparent;
-            border-style: solid;
-            border-width: 7px 6px 0;
-            bottom: -6px;
-            content: '';
-            font-weight: 700;
-            height: 0;
-            left: #{$live-indicator-width / 2};
-            margin-left: -15%;
-            position: absolute;
-            width: 0;
-        }
-
-        &:before {
-            background: $urn-pink;
-            content: '';
-            height: #{($day-height * 7) + $time-height};
-            left: #{$live-indicator-width / 2};
-            position: absolute;
-            top: 20px;
-            width: 1px;
-            z-index: 1;
         }
     }
 

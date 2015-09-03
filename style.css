@@ -963,42 +963,6 @@ button::-moz-focus-inner {
 .schedule .day-name:nth-child(odd) {
   background: rgba(0, 0, 0, 0.1);
 }
-.schedule .live-indicator {
-  background: #e63d9b;
-  color: #fff;
-  font-size: 0.875em;
-  left: 30px;
-  margin-left: 150px;
-  padding: 4px 0;
-  position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  top: -20px;
-  width: 40px;
-}
-.schedule .live-indicator:after {
-  border-color: #e63d9b transparent transparent;
-  border-style: solid;
-  border-width: 7px 6px 0;
-  bottom: -6px;
-  content: '';
-  font-weight: 700;
-  height: 0;
-  left: 20px;
-  margin-left: -15%;
-  position: absolute;
-  width: 0;
-}
-.schedule .live-indicator:before {
-  background: #e63d9b;
-  content: '';
-  height: 740px;
-  left: 20px;
-  position: absolute;
-  top: 20px;
-  width: 1px;
-  z-index: 1;
-}
 .schedule .slots {
   background: #fff;
   height: 100px;
