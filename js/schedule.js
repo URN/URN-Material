@@ -24,9 +24,6 @@
 
         window.clearTimeout(requestRepeatInterval);
         requestRepeatInterval = window.setInterval(function () {
-            // Empty all of the slots
-            $schedule.find(".slots").empty();
-
             // Resend the AJAX request
             $.ajax(that);
         }, 180000);
@@ -157,6 +154,9 @@
     }
 
     function populateSchedule(shows) {
+        // Empty all of the slots of existing shows
+        $schedule.find(".slots").empty();
+
         if (singleDay) {
             var slots = shows.shows;
             var $slotList = $schedule.find("li.day .slots");
