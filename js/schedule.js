@@ -6,6 +6,8 @@
     var singleDay = false;
     var singleDayName;
 
+    var requestRepeatInterval;
+
     var hoursOffset = -7;
 
     var request = $.ajax({
@@ -14,9 +16,26 @@
     });
 
     request.done(function (data) {
+        console.log("Refreshing schedule", new Date());
+        var that = this;
+
         populateSchedule(data);
         scrollToLive();
+
+        window.clearTimeout(requestRepeatInterval);
+        requestRepeatInterval = window.setInterval(function () {
+            // Empty all of the slots
+            $schedule.find(".slots").empty();
+
+            // Resend the AJAX request
+            $.ajax(that);
+        }, 180000);
     });
+
+    window.setInterval(function () {
+        scrollToLive();
+    }, 60000);
+
 
     function scrollToLive() {
         var d = new Date();
