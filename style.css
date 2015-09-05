@@ -994,7 +994,7 @@ button::-moz-focus-inner {
 }
 .schedule .show.live a:hover, .schedule .show.live a:focus {
   background: #e63d9b;
-  box-shadow: 0 0 75px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 75px 25px rgba(255, 255, 255, 0.05);
 }
 .schedule .show.live a:after {
   background: inherit;
