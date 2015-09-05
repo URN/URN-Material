@@ -1028,10 +1028,10 @@ button::-moz-focus-inner {
   color: #fff;
 }
 .schedule .show.after-dark a {
-  background: #2d2d2d;
+  background: #3b4251;
 }
 .schedule .show.after-dark a:hover, .schedule .show.after-dark a:focus {
-  background: #1e1e1e;
+  background: #2e343f;
 }
 .schedule .show.culture a {
   background: #ed6346;
