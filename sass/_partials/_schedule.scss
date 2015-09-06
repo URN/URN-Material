@@ -71,7 +71,6 @@ $time-width: 100px;
     }
 
     .show {
-        @include transition(opacity 0.15s ease);
         color: white(0.8);
         cursor: pointer;
         height: 100%;
@@ -82,7 +81,10 @@ $time-width: 100px;
 
         &.live a {
             @include transform(scale(1.08));
-            @include transition(background 0.1s ease, box-shadow 0.25s ease);
+            @include transition(
+                background 0.1s ease,
+                box-shadow 0.25s ease
+            );
             background: darken($urn-pink, 20%);
             box-shadow: 0 0 50px black(0.4);
             color: #fff;
@@ -110,12 +112,20 @@ $time-width: 100px;
             }
         }
 
-        &.dim {
+        &.dim a {
             opacity: 0.4;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
         }
 
         a {
-            @include transition(color 0.25s ease);
+            @include transition(
+                color 0.25s ease,
+                opacity 0.15s ease
+            );
             background: $urn-pink;
             color: inherit;
             display: block;

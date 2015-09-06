@@ -3,6 +3,7 @@
 
     var $schedule = $(".schedule");
     var $categorySelect = $(".schedule-category-select");
+    var $searchFilterTxt = $(".schedule-category-filter-search");
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     var singleDay = false;
     var singleDayName;
@@ -44,6 +45,34 @@
                 }
             });
         }
+
+        // Fire the change event for the search filter so that any changes in categorya
+        // are reflected in currently visible show slots
+        $searchFilterTxt.trigger("input");
+    });
+
+    $searchFilterTxt.on("input", function(e) {
+        var query = $(e.target).val().toLowerCase().trim();
+
+        $schedule.find(".show").each(function (i, show) {
+            var $show = $(show);
+
+            var title = $show.find(".title").text().toLowerCase();
+            var hosts = $show.find(".hosts").text().toLowerCase();
+
+            var currentCategory = $categorySelect.val();
+
+            // Keep the show slot visible if the current show is a part of the currently
+            // select category and there's a match for the query in the show's title or
+            // host names
+            if ((currentCategory === "all" || $show.hasClass(currentCategory)) &&
+                title.indexOf(query) !== -1 || hosts.indexOf(query) !== -1) {
+                $show.removeClass("dim");
+            }
+            else if (!$show.hasClass("live")) {
+                $show.addClass("dim");
+            }
+        });
     });
 
     function scrollToLive() {

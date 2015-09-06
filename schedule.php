@@ -42,7 +42,7 @@ get_header(); ?>
         <h2>Filter</h2>
         <div class="btn-dropdown">
             <label for="schedule-category-select">Show Category</label>
-            <select name="schedule-category-select" class="schedule-category-select">
+            <select autocomplete="off" name="schedule-category-select" class="schedule-category-select">
                 <option value="all">All</option>
                 <option value="after-dark">After Dark</option>
                 <option value="culture">Culture</option>
@@ -50,6 +50,9 @@ get_header(); ?>
                 <option value="news">News</option>
                 <option value="sport">Sport</option>
             </select>
+
+            <label for="schedule-category-filter-search">Search</label>
+            <input autocomplete="off" type="text" name="schedule-category-filter-search" class="schedule-category-filter-search">
         </div>
     </div>
 </div>
