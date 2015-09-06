@@ -48,11 +48,17 @@
 
         // Fire the change event for the search filter so that any changes in categorya
         // are reflected in currently visible show slots
-        $searchFilterTxt.trigger("input");
+        if ($searchFilterTxt.val().trim() !== "") {
+            $searchFilterTxt.trigger("input");
+        }
     });
 
     $searchFilterTxt.on("input", function(e) {
         var query = $(e.target).val().toLowerCase().trim();
+
+        if (query === "") {
+            $categorySelect.trigger("change");
+        }
 
         $schedule.find(".show").each(function (i, show) {
             var $show = $(show);
