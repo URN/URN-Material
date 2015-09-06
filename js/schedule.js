@@ -5,34 +5,23 @@
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     var singleDay = false;
     var singleDayName;
-
-    var requestRepeatInterval;
-
     var hoursOffset = -7;
 
-    var request = $.ajax({
-        url: getApiUrl(),
-        type: "get",
-    });
+    (function refreshSchedule() {
+        var request = $.ajax({
+            url: getApiUrl(),
+            type: "get",
+        });
 
-    request.done(function (data) {
-        console.log("Refreshing schedule", new Date());
-        var that = this;
+        request.done(function (data) {
+            populateSchedule(data);
+            scrollToLive();
+        });
 
-        populateSchedule(data);
-        scrollToLive();
-
-        window.clearTimeout(requestRepeatInterval);
-        requestRepeatInterval = window.setInterval(function () {
-            // Resend the AJAX request
-            $.ajax(that);
-        }, 180000);
-    });
-
-    window.setInterval(function () {
-        scrollToLive();
-    }, 60000);
-
+        request.always(function () {
+            setTimeout(refreshSchedule, 120000);
+        });
+    })();
 
     function scrollToLive() {
         var d = new Date();
