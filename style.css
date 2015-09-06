@@ -320,7 +320,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 860px;
+  width: 980px;
 }
 @media (max-width: 800px) {
   .wrapper {
@@ -672,7 +672,7 @@ button::-moz-focus-inner {
   color: #fff;
   margin: 0 auto -20px;
   position: relative;
-  width: 824px;
+  width: 944px;
   z-index: 3;
 }
 @media (max-width: 800px) {
