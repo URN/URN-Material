@@ -971,6 +971,10 @@ button::-moz-focus-inner {
   width: 100%;
 }
 .schedule .show {
+  -moz-transition: opacity 0.15s ease;
+  -o-transition: opacity 0.15s ease;
+  -webkit-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   height: 100%;
@@ -1010,6 +1014,9 @@ button::-moz-focus-inner {
   position: absolute;
   text-transform: uppercase;
   top: -18px;
+}
+.schedule .show.dim {
+  opacity: 0.4;
 }
 .schedule .show a {
   -moz-transition: color 0.25s ease;

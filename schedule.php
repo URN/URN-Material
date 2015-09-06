@@ -41,13 +41,14 @@ get_header(); ?>
 
         <h2>Filter</h2>
         <div class="btn-dropdown">
-           <select>
-                <option value="">Show</option>
-                <option value="a-genre">A show</option>
-            </select>
-            <select>
-                <option value="">Genre</option>
-                <option value="a-genre">A genre</option>
+            <label for="schedule-category-select">Show Category</label>
+            <select name="schedule-category-select" class="schedule-category-select">
+                <option value="all">All</option>
+                <option value="after-dark">After Dark</option>
+                <option value="culture">Culture</option>
+                <option value="daytime">Daytime</option>
+                <option value="news">News</option>
+                <option value="sport">Sport</option>
             </select>
         </div>
     </div>

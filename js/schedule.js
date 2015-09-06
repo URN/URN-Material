@@ -2,6 +2,7 @@
     "use strict";
 
     var $schedule = $(".schedule");
+    var $categorySelect = $(".schedule-category-select");
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     var singleDay = false;
     var singleDayName;
@@ -22,6 +23,28 @@
             setTimeout(refreshSchedule, 120000);
         });
     })();
+
+    $categorySelect.val("all");
+
+    $categorySelect.change(function () {
+        var category = $(this).val();
+        var $shows = $schedule.find(".show");
+
+        if (category === "all") {
+            $shows.removeClass("dim");
+        }
+        else {
+            $shows.each(function (i, show) {
+                var $show = $(show);
+                if (!$show.hasClass("live") && !$show.hasClass(category)) {
+                    $show.addClass("dim");
+                }
+                else {
+                    $show.removeClass("dim");
+                }
+            });
+        }
+    });
 
     function scrollToLive() {
         var d = new Date();

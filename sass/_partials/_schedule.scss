@@ -71,6 +71,7 @@ $time-width: 100px;
     }
 
     .show {
+        @include transition(opacity 0.15s ease);
         color: white(0.8);
         cursor: pointer;
         height: 100%;
@@ -107,6 +108,10 @@ $time-width: 100px;
                 text-transform: uppercase;
                 top: -18px;
             }
+        }
+
+        &.dim {
+            opacity: 0.4;
         }
 
         a {
