@@ -11,6 +11,18 @@ $time-width: 100px;
     width: 100%;
 }
 
+.filter-container {
+    margin: 20px 0;
+
+    .schedule-category-select {
+        margin-right: 30px;
+    }
+
+    label:after {
+        content: ':';
+    }
+}
+
 .schedule {
     @include display-flex;
     @include flex-direction(row);

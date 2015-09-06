@@ -39,10 +39,10 @@ get_header(); ?>
             endwhile;
         ?>
 
-        <h2>Filter</h2>
-        <div class="btn-dropdown">
+        <div class="filter-container">
+            <h2>Filter</h2>
             <label for="schedule-category-select">Show Category</label>
-            <select autocomplete="off" name="schedule-category-select" class="schedule-category-select">
+            <select autocomplete="off" name="schedule-category-select" class="select schedule-category-select">
                 <option value="all">All</option>
                 <option value="after-dark">After Dark</option>
                 <option value="culture">Culture</option>
@@ -52,7 +52,7 @@ get_header(); ?>
             </select>
 
             <label for="schedule-category-filter-search">Search</label>
-            <input autocomplete="off" type="text" name="schedule-category-filter-search" class="schedule-category-filter-search">
+            <input autocomplete="off" type="text" name="schedule-category-filter-search" class="txt schedule-category-filter-search">
         </div>
     </div>
 </div>
