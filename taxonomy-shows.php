@@ -26,13 +26,16 @@ $category = $options['show_category'];
 $slots = unserialize($options['slot']);
 $slug = $show->slug;
 
+$category_slug = strtolower($category);
+$category_slug = str_replace(' ', '-', $category_slug);
+
 if ($name_prelude !== "") {
     $name = str_replace($name_prelude, '', $name);
 }
 
 ?>
 
-<header class="show-page-header">
+<header class="show-page-header <?php echo $category_slug; ?>">
     <div class="titles">
         <h2 class="title-prelude"><?php echo $name_prelude; ?></h2>
         <h1 class="title"><?php echo $name; ?></h1>
@@ -47,9 +50,9 @@ if ($name_prelude !== "") {
             <li class="host">
                 <a href="#">
                     <img class="icon" src="/wp-content/themes/urn-material/images/iona.jpg" alt="Iona Hampson">
-                    Iona Hampson
+                    <span class="name">Iona Hampson</span>
                 </a>
-                <span class="committee-tag">Head of Marketting</span>
+                <a href="/committee" title="Committee Member" class="committee-tag">Head of Marketting</a>
             </li>
         </ul>
     </div>

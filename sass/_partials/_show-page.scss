@@ -1,11 +1,37 @@
 .show-page-header {
-    @include background-image(linear-gradient(left, rgba(105, 56, 159, 1) 0%, rgba(217, 52, 150, 1) 100%));
-    @include filter-gradient(#69389f, #d93496, horizontal);
-    background-color: rgb(105, 56, 159);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left, $urn-purple 0%, $urn-pink 100%));
+    @include filter-gradient($urn-purple, $urn-pink, horizontal);
+    background-color: $urn-purple;
     color: #fff;
     padding: #{$listen-now-overlap + 30px} 30px 30px 30px;
     position: relative;
     text-align: center;
+
+    // &.after-dark {
+    //     @include filter-gradient($urn-purple, $urn-after-dark-color, horizontal);
+    //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-after-dark-color 70%));
+    // }
+
+    // &.culture {
+    //     @include filter-gradient($urn-purple, $urn-culture-color, horizontal);
+    //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-culture-color 70%));
+    // }
+
+    // &.daytime {
+    //     @include filter-gradient($urn-purple, $urn-daytime-color, horizontal);
+    //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-daytime-color 70%));
+    // }
+
+    // &.news {
+    //     @include filter-gradient($urn-purple, $urn-news-color, horizontal);
+    //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-news-color 70%));
+    // }
+
+    // &.sport {
+    //     @include filter-gradient($urn-purple, $urn-sport-color, horizontal);
+    //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-sport-color 70%));
+    // }
 
     .titles {
         display: inline-block;
@@ -52,7 +78,6 @@
         margin: 10px 0;
 
         a {
-            color: inherit;
             text-decoration: none;
         }
 
@@ -62,21 +87,15 @@
             vertical-align: middle;
             width: 35px;
         }
+
+        .name {
+            text-decoration: underline;
+            color: $body-text-color;
+        }
     }
 
     h1 {
         font-size: 1.5em;
         font-weight: 600;
     }
-}
-
-.committee-tag {
-    background: $urn-pink;
-    color: #fff;
-    display: inline-block;
-    font-size: 0.75em;
-    font-weight: 600;
-    margin: 0 5px;
-    padding: 1px 4px 3px;
-    text-transform: uppercase;
 }
