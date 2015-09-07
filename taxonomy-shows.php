@@ -33,13 +33,19 @@ if ($name_prelude !== "") {
     $name = str_replace($name_prelude, '', $name);
 }
 
+$slot_strings = array();
+
+foreach ($slots as $slot) {
+    $slot_strings[] = $slot['day'] . 's from ' . $slot['from'];
+}
+
 ?>
 
 <header class="show-page-header <?php echo $category_slug; ?>">
     <div class="titles">
         <h2 class="title-prelude"><?php echo $name_prelude; ?></h2>
         <h1 class="title"><?php echo $name; ?></h1>
-        <h3 class="time">Wednesdays from 3PM</h3>
+        <h3 class="time"><?php echo implode(', ', $slot_strings) ?></h3>
     </div>
 </header>
 
