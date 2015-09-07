@@ -7,6 +7,13 @@
     <title>URN: University Radio Nottingham</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient {
+                filter: none;
+            }
+        </style>
+    <![endif]-->
     <?php wp_head(); ?>
 </head>
 <body>
