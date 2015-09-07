@@ -2,7 +2,8 @@ button::-moz-focus-inner {
     border: 0;
 }
 
-.btn {
+.btn,
+%btn {
     @include body-font;
     @include transition(background 0.15s ease);
     background: $urn-pink;
@@ -27,6 +28,11 @@ button::-moz-focus-inner {
     &:active {
         box-shadow: inset 0 2px 3px -2px black(0.4);
     }
+}
+
+%anchor-btn {
+    @extend %btn;
+    text-decoration: none;
 }
 
 .select,

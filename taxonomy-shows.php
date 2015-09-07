@@ -50,25 +50,27 @@ foreach ($slots as $slot) {
 </header>
 
 <div class="main-content">
-    <div class="show-page-members">
-        <h1>Show Hosts</h1>
-        <ul>
-            <li class="host">
-                <a href="#">
-                    <img class="icon" src="/wp-content/themes/urn-material/images/iona.jpg" alt="Iona Hampson">
-                    <span class="name">Iona Hampson</span>
-                </a>
-                <a href="/committee" title="Committee Member" class="committee-tag">Head of Marketting</a>
-            </li>
+    <div class="show-page-show-info">
+        <div class="show-page-members">
+            <h1>Show Hosts</h1>
+            <ul>
+                <li class="host">
+                    <a href="#">
+                        <img class="icon" src="/wp-content/themes/urn-material/images/iona.jpg" alt="Iona Hampson">
+                        <span class="name">Iona Hampson</span>
+                    </a>
+                    <a href="/committee" title="Committee Member" class="committee-tag">Head of Marketting</a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="show-page-description"><?php echo $description; ?></p>
+
+        <ul class="show-page-external-links">
+            <li><a href="<?php echo $fb_link; ?>" class="facebook">Facebook</a></li>
+            <li><a href="<?php echo $tw_link; ?>" class="twitter">Twitter</a></li>
         </ul>
     </div>
-
-    <p class="show-page-description"><?php echo $description; ?></p>
-
-    <ul class="show-page-external-links">
-        <li><a href="<?php echo $fb_link; ?>">Facebook</a></li>
-        <li><a href="<?php echo $tw_link; ?>">Twitter</a></li>
-    </ul>
 </div>
 
 <?php get_footer(); ?>
