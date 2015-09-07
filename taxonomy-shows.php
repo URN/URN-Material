@@ -1,46 +1,65 @@
 <?php
-/*
- * Displays content for a certain show
- *
- */
-get_header(); ?>
 
-<div class="row">
-    <div class="entry-content">
+get_header();
 
-        <h1><?php single_cat_title(); ?></h1>
-        <h2>Description</h2>
+$show = get_queried_object();
+$show_id = $show->term_id;
 
-        <?php if (term_description()) : ?>
-            <p><?php echo term_description(); ?></p>
-        <?php else : ?>
-            <p>No description set</p>
-        <?php endif; ?>
+$all_options = wp_load_alloptions();
+$options = array();
+foreach ($all_options as $key => $value) {
+    $key_start = 'show_' . $show_id . '_custom_option_';
+    if (preg_match('/^' . $key_start . '\w*$/', $key)) {
+        $options[str_replace($key_start, '', $key)] = $value;
+    }
+}
 
+$description = $show->description;
+$name = $show->name;
+$fullname = $show->name;
+$name_prelude = $options['name_prelude'];
+$fb_link = $options['fb_link'];
+$tw_link = $options['tw_link'];
+$ended = $options['ended'];
+$hidden = $options['hidden'];
+$category = $options['show_category'];
+$slots = unserialize($options['slot']);
+$slug = $show->slug;
 
-        <h2>Posts</h2>
-        <?php if (have_posts()) : ?>
+if ($name_prelude !== "") {
+    $name = str_replace($name_prelude, '', $name);
+}
 
-            <?php while (have_posts()) : the_post(); ?>
+?>
 
-                <?php
-                    the_ID();
-                    the_content();
-                    the_permalink();
-                    the_title();
-                    the_category();
-                    get_the_time('Y-m-j');
-                ?>
-
-            <?php endwhile; ?>
-
-        <?php else : ?>
-
-            <p><?php _e( 'No posts found for ' . single_cat_title('', false) . '.'); ?></p>
-
-        <?php endif; ?>
-
+<header class="show-page-header">
+    <div class="titles">
+        <h2 class="title-prelude"><?php echo $name_prelude; ?></h2>
+        <h1 class="title"><?php echo $name; ?></h1>
+        <h3 class="time">Wednesdays from 3PM</h3>
     </div>
+</header>
+
+<div class="main-content">
+    <div class="show-page-members">
+        <h1>Show Hosts</h1>
+        <ul>
+            <li class="host">
+                <a href="#">
+                    <img class="icon" src="/wp-content/themes/urn-material/images/iona.jpg" alt="Iona Hampson">
+                    Iona Hampson
+                </a>
+                <span class="committee-tag">Head of Marketting</span>
+            </li>
+        </ul>
+    </div>
+
+    <p class="show-page-description"><?php echo $description; ?></p>
+
+    <ul class="show-page-external-links">
+        <li><a href="<?php echo $fb_link; ?>">Facebook</a></li>
+        <li><a href="<?php echo $tw_link; ?>">Twitter</a></li>
+    </ul>
 </div>
 
 <?php get_footer(); ?>

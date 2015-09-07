@@ -2,6 +2,12 @@
     @include display-flex;
     @include flex-direction(row);
 
+    padding: 0 $general-element-spacing;
+
+    &:last-child {
+        padding-bottom: $general-element-spacing;
+    }
+
     .module {
         @include flex-grow(1);
         background: #e6e6e6;

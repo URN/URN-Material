@@ -41,8 +41,6 @@ body {
     @include flex(1);
     background: #fff;
     box-shadow: 0 0 8px black(.27);
-    padding: $general-element-spacing;
-    padding-top: 50px;
     position: relative;
     width: 90%;
     z-index: 2;
@@ -61,7 +59,9 @@ body {
 
 }
 
-
+.main-content {
+    padding: $general-element-spacing;
+}
 
 /**
  * Typography
