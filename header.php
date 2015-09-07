@@ -44,6 +44,6 @@
 
 <?php endif; ?>
 
-    <?php include('includes/listen-now.html'); ?>
+    <?php include('includes/listen-now.php'); ?>
     <div class="wrapper" id="page-container"><!-- start main page container -->
 

@@ -729,6 +729,12 @@ button::-moz-focus-inner {
     width: 100%;
   }
 }
+#listen-now.minimise .now-playing {
+  box-shadow: none;
+}
+#listen-now.minimise .show-container {
+  display: none;
+}
 #listen-now .now-playing {
   display: -webkit-flex;
   display: flex;

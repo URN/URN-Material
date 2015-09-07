@@ -11,6 +11,16 @@
         width: 100%;
     }
 
+    &.minimise {
+        .now-playing {
+            box-shadow: none;
+        }
+
+        .show-container {
+            display: none;
+        }
+    }
+
     .now-playing {
         @include display-flex;
         @include flex-direction(row);
