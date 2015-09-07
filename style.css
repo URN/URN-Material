@@ -845,6 +845,9 @@ button::-moz-focus-inner {
   flex-direction: row;
   padding: 0 15px;
 }
+.row:first-child {
+  padding-top: 35px;
+}
 .row:last-child {
   padding-bottom: 15px;
 }
@@ -853,7 +856,6 @@ button::-moz-focus-inner {
   flex-grow: 1;
   background: #e6e6e6;
   height: 200px;
-  margin-top: 15px;
   text-align: center;
   width: 100%;
 }

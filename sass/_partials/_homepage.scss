@@ -4,6 +4,10 @@
 
     padding: 0 $general-element-spacing;
 
+    &:first-child {
+        padding-top: #{$listen-now-overlap + $general-element-spacing};
+    }
+
     &:last-child {
         padding-bottom: $general-element-spacing;
     }
@@ -12,7 +16,6 @@
         @include flex-grow(1);
         background: #e6e6e6;
         height: 200px;
-        margin-top: $general-element-spacing;
         text-align: center;
         width: 100%;
 
