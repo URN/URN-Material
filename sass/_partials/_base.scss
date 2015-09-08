@@ -124,3 +124,51 @@ body {
     display: block;
     margin: 7px auto;
 }
+
+
+/**
+ * Tabs
+ */
+.tabs {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .tab-title {
+        background: #eee;
+        border: 1px solid #ddd;
+        padding: .7em 1em;
+        cursor: pointer;
+        z-index: 1;
+        margin-left: -1px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    .tab-content {
+        width: 100%;
+        margin-top: -1px;
+        padding: 1em;
+        border: 1px solid #ddd;
+        -webkit-order: 1;
+        order: 1;
+    }
+
+    input[type=radio],
+    .tab-content {
+        display: none;
+    }
+
+    input[type=radio]:checked + label {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+
+        & + div {
+            display: block;
+        }
+    }
+}
