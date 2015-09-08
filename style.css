@@ -1313,6 +1313,7 @@ button::-moz-focus-inner {
 
 .videos {
   color: #5e44cb;
+  padding-top: 35px;
 }
 
 .cards {
