@@ -19,6 +19,7 @@
                         0 17px 50px 0 rgba(0, 0, 0, .19));
     height: 100%;
     margin-bottom: 20px; // Card bottom separator
+    display: -moz-inline-stack;
     display: inline-block;
 
     .boom .small_media {
