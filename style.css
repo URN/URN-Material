@@ -291,6 +291,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #fff;
 }
 
+@media (max-width: 620px) {
+  #youmax-video-list-div {
+    padding: 0;
+  }
+
+  #youmax-encloser {
+    padding: 0;
+  }
+}
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -361,6 +370,83 @@ body {
 
 .main-content {
   padding: 15px;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.btn,
+.show-page-external-links a {
+  font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
+  -moz-transition: background 0.15s ease;
+  -o-transition: background 0.15s ease;
+  -webkit-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+  background: #e63d9b;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  font-size: 0.875em;
+  font-weight: 600;
+  padding: 2px 12px;
+  text-transform: uppercase;
+}
+.btn:after,
+.show-page-external-links a:after {
+  content: '!';
+}
+.btn:hover, .btn:focus,
+.show-page-external-links a:hover,
+.show-page-external-links a:focus {
+  background: #d51b82;
+  outline: none;
+}
+.btn:active,
+.show-page-external-links a:active {
+  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
+}
+
+.show-page-external-links a {
+  text-decoration: none;
+}
+
+.select,
+.txt {
+  -moz-transition: box-shadow 0.15s ease;
+  -o-transition: box-shadow 0.15s ease;
+  -webkit-transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease;
+  background: #f0f0f0;
+  border: 1px solid #a8a8a8;
+  margin: 0 5px;
+  padding: 6px 10px;
+}
+.select:focus,
+.txt:focus {
+  border-color: #e63d9b;
+  box-shadow: 0 0 5px #ef81be;
+}
+
+.select {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.committee-tag {
+  background: #e63d9b;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 2px 4px;
+  text-transform: uppercase;
+}
+.committee-tag:hover, .committee-tag:focus {
+  background: #d51b82;
+}
+.committee-tag:active {
+  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
 }
 
 /**
@@ -443,6 +529,11 @@ body {
   -webkit-order: 1;
   order: 1;
 }
+@media (max-width: 620px) {
+  .tabs .tab-content {
+    padding: 0;
+  }
+}
 .tabs input[type=radio],
 .tabs .tab-content {
   display: none;
@@ -453,83 +544,6 @@ body {
 }
 .tabs input[type=radio]:checked + label + div {
   display: block;
-}
-
-button::-moz-focus-inner {
-  border: 0;
-}
-
-.btn,
-.show-page-external-links a {
-  font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
-  -moz-transition: background 0.15s ease;
-  -o-transition: background 0.15s ease;
-  -webkit-transition: background 0.15s ease;
-  transition: background 0.15s ease;
-  background: #e63d9b;
-  cursor: pointer;
-  border: 0;
-  color: #fff;
-  font-size: 0.875em;
-  font-weight: 600;
-  padding: 2px 12px;
-  text-transform: uppercase;
-}
-.btn:after,
-.show-page-external-links a:after {
-  content: '!';
-}
-.btn:hover, .btn:focus,
-.show-page-external-links a:hover,
-.show-page-external-links a:focus {
-  background: #d51b82;
-  outline: none;
-}
-.btn:active,
-.show-page-external-links a:active {
-  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
-}
-
-.show-page-external-links a {
-  text-decoration: none;
-}
-
-.select,
-.txt {
-  -moz-transition: box-shadow 0.15s ease;
-  -o-transition: box-shadow 0.15s ease;
-  -webkit-transition: box-shadow 0.15s ease;
-  transition: box-shadow 0.15s ease;
-  background: #f0f0f0;
-  border: 1px solid #a8a8a8;
-  margin: 0 5px;
-  padding: 6px 10px;
-}
-.select:focus,
-.txt:focus {
-  border-color: #e63d9b;
-  box-shadow: 0 0 5px #ef81be;
-}
-
-.select {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.committee-tag {
-  background: #e63d9b;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.75em;
-  font-weight: 600;
-  margin: 0 5px;
-  padding: 2px 4px;
-  text-transform: uppercase;
-}
-.committee-tag:hover, .committee-tag:focus {
-  background: #d51b82;
-}
-.committee-tag:active {
-  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
 }
 
 #header {
@@ -1342,9 +1356,9 @@ button::-moz-focus-inner {
 }
 
 .card {
-  -moz-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
   height: 100%;
   margin-bottom: 20px;
   display: -moz-inline-stack;

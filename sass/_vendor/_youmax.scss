@@ -5,6 +5,7 @@
  * @license MIT
  */
 
+
 .youmax-showing {
     color: #f5f5f5;
     font-weight: 400;
@@ -228,4 +229,14 @@
 .youmax-load-more-div-click {
     background: #616060;
     color: #fff;
+}
+
+@media (max-width: 620px) {
+    #youmax-video-list-div {
+        padding: 0;
+    }
+
+    #youmax-encloser {
+        padding: 0;
+    }
 }
