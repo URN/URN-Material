@@ -113,9 +113,6 @@ var youmax_global_options = {};
       youmaxWidgetWidth = $('#youmax').width();
 
       $('#youmax').append('<div id="youmax-header"><div id="youmax-stat-holder"></div></div>');
-
-      //$('#youmax').append('<div id="youmax-tabs"></div>');
-
       $('#youmax').append('<div id="youmax-tabs"><span id="featured_" class="youmax-tab">Featured</span><span id="uploads_" class="youmax-tab">Uploads</span><span id="playlists_" class="youmax-tab">Playlists</span></div>');
 
       $('#youmax').append('<div id="youmax-encloser"><iframe id="youmax-video" width="' + (youmaxWidgetWidth - 2) + '" height="' + (youmaxWidgetWidth / youmax_global_options.youtubeVideoAspectRatio) + '" src="" frameborder="0" allowfullscreen></iframe><div id="youmax-video-list-div"></div><div id="youmax-load-more-div">LOAD MORE</div></div>');
@@ -564,6 +561,11 @@ var youmax_global_options = {};
         } else if (youmaxTabId.indexOf("playlists_") != -1) {
           getPlaylists();
         }
+
+        if (youmax_global_options.showGridOnly) {
+          $('#youmax-header').hide();
+          $('#youmax-tabs').hide();
+        }
       });
 
       $('#youmax-load-more-div').click(function () {
@@ -622,13 +624,20 @@ var youmax_global_options = {};
     youmax_global_options.apiKey = options.apiKey;
     youmax_global_options.youTubeChannelURL = options.youTubeChannelURL || '';
     youmax_global_options.youTubePlaylistURL = options.youTubePlaylistURL || '';
-    youmax_global_options.youmaxDefaultTab = options.youmaxDefaultTab || 'FEATURED';
     youmax_global_options.youmaxColumns = options.youmaxColumns || 3;
     youmax_global_options.showVideoInLightbox = options.showVideoInLightbox || false;
     youmax_global_options.youmaxChannelId = '';
     youmax_global_options.maxResults = options.maxResults || 15;
     youmax_global_options.youmaxItemCount = 0;
     youmax_global_options.youtubeVideoAspectRatio = 640 / 360;
+
+    if (options.showGridOnly) {
+      youmax_global_options.youmaxDefaultTab = 'FEATURED';
+    } else {
+      youmax_global_options.youmaxDefaultTab = options.youmaxDefaultTab || 'FEATURED';
+    }
+
+    youmax_global_options.showGridOnly = options.showGridOnly || false;
 
     //youmax_global_options.youmaxWidgetWidth = options.youmaxWidgetWidth||800;
     //youmax_global_options.showFeaturedVideoOnLoad = options.showFeaturedVideoOnLoad||false;

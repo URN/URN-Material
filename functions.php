@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
     }
 
-    if (is_page ('urn-tv')) {
+    if (is_page ('urn-tv') || is_page ('music')) {
         wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
     }
 
