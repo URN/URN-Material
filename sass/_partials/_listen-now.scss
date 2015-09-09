@@ -51,7 +51,8 @@
             .progress-bar {
                 background: #fff;
                 height: 4px;
-                width: 33%;
+                max-width: 100%;
+                width: 0%;
             }
         }
     }

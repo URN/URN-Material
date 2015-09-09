@@ -821,7 +821,8 @@ button::-moz-focus-inner {
 #listen-now .now-playing .progress-container .progress-bar {
   background: #fff;
   height: 4px;
-  width: 33%;
+  max-width: 100%;
+  width: 0%;
 }
 #listen-now .show-container {
   display: -webkit-flex;

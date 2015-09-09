@@ -8,6 +8,7 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_script('audio-boom-feed', get_template_directory_uri() . '/js/audio-boom-feed.js', array('jquery'), false, true);
 
+    wp_enqueue_script('listen-now', get_template_directory_uri() . '/js/listen-now.js', array('jquery'), false, true);
 
     if ( is_home() ) {
         wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);

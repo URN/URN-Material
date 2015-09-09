@@ -1,7 +1,7 @@
 <?php $minimise = is_home() ? '' : 'minimise' ?>
 <div id="listen-now" class="<?php echo $minimise; ?>">
     <div class="now-playing">
-        <span class="current-track">Don't - Ed Sheeran</span>
+        <span class="current-track"></span>
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
