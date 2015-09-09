@@ -15,7 +15,6 @@ jQuery(document).ready(function( $ ) {
         });
         request.done(function (data) {
             var $podcasts = $('<ul>', { class: 'cards'});
-
             $.each(data.body.audio_clips, function (i, clipData) {
                 var $podcast = makeCard(clipData, {
                     text: $(el).attr('data-channel-name'),
@@ -23,8 +22,7 @@ jQuery(document).ready(function( $ ) {
                 });
                 $podcasts.append($podcast);
             });
-
-            $('.audioboom-feed').append($podcasts);
+            $(el).append($podcasts);
         });
     }
 
