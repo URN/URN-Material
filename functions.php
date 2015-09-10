@@ -40,6 +40,9 @@ add_action('get_header', function() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 });
 
+
+
+
 // Enable Menus under Appearance
 add_theme_support( 'menus' );
 if ( function_exists( 'register_nav_menus' ) ) {
@@ -80,7 +83,6 @@ add_filter( 'wp_nav_menu_items', 'add_extension_to_nav', 10, 2 ); // 10: priorit
 // Add Home to Nav
 add_filter( 'wp_nav_menu_items', 'add_additional_nav_items'); // TODO add filter, so this doesnt apply to every nav
 
-
 //
 // Format a custom Nav menu
 //
@@ -115,5 +117,59 @@ class header_nav_walker extends Walker_Nav_Menu
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
     }
 }
+
+
+
+
+//
+// Shows our stylings inside of the Wordpress Post Editor (when writing a new post)
+//
+// Styles defined in editor-style.css
+//
+add_editor_style();
+
+//
+// Change Wordpress Post Editor Toolbar styles (when writing a new post)
+// See more settings here https://codex.wordpress.org/TinyMCE#Customize_TinyMCE_with_Filters
+//
+function mytheme_tinymce_settings( $settings ) {
+    $settings['toolbar1'] = join(",", array(
+        'bold',
+        'italic',
+        'strikethrough',
+        'blockquote',
+        'hr',
+        // 'bullist',
+        // 'numlist',
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        'link',
+        'unlink',
+        'wp_more',
+        'spellchecker',
+        'wp_fullscreen',
+        'wp_adv'
+    ));
+
+    $settings['toolbar2'] = join(",", array(
+        'formatselect',
+        'underline',
+        'alignjustify',
+        'forecolor',
+        'pastetext',
+        'removeformat',
+        'charmap',
+        'outdent',
+        'indent',
+        'undo',
+        'redo',
+        'wp_help'
+    ));
+
+    return $settings;
+}
+
+add_filter( 'tiny_mce_before_init', 'mytheme_tinymce_settings' );
 
 ?>

@@ -1,0 +1,25 @@
+/*
+    This stylesheet is loaded automatically by Wordpress when compiled
+    and placed in the root theme directory folder as editor-style.css
+
+    For more info, check out the codex:
+    http://codex.wordpress.org/Editor_Style
+
+    Wrap the entire post style inside the TinyMCE selector, as suggested
+    here http://codex.wordpress.org/Function_Reference/add_editor_style
+*/
+
+body#tinymce.wp-editor {
+
+    @import 'compass',
+            'compass/reset';
+
+    @import '_partials/variables',
+            '_partials/mixins',
+            '_partials/functions',
+            '_partials/breakpoints',
+            '_partials/base',
+            '_partials/components';
+
+    @include body-font;
+}

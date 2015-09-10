@@ -75,51 +75,38 @@ button::-moz-focus-inner {
 
 
 
-/**
- * Typography
- */
+//
+// Typography
+//
 
-.row .entry-content {
-    h1,
-    h2 {
-        margin-bottom: 10px;
-        margin-top: 20px;
-    }
+h1,
+h2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
 
-    h1 {
-        font-size: 30px;
-    }
+h1 {
+    font-size: 30px;
+}
 
-    h2 {
-        font-size: 22px;
-        font-weight: bold;
-    }
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
 
-    p {
-        line-height: 1.4em;
-        margin-bottom: 6px;
-    }
+p {
+    line-height: 1.4em;
+    margin-bottom: 6px;
+}
 
-    b {
-        font-weight: bold;
-    }
-
-    ol {
-        list-style-type: decimal;
-    }
-
-    li {
-        font-weight: 400;
-        line-height: 1.2em;
-        margin-left: 50px;
-        padding-bottom: 10px;
-    }
+b {
+    font-weight: bold;
 }
 
 
-/**
- * Alignment
- */
+//
+// Alignment
+//
 
 .alignleft {
     float: left;
@@ -138,9 +125,9 @@ button::-moz-focus-inner {
 }
 
 
-/**
- * Tabs
- */
+//
+// Tabs
+//
 .tabs {
     display: -webkit-flex;
     display: flex;
