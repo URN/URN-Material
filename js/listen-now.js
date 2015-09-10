@@ -12,6 +12,7 @@
         var request = $.ajax({
             url: "/api/current_song",
             type: "get",
+            dataType: "json"
         });
 
         request.done(function (newSong) {
