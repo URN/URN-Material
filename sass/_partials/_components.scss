@@ -30,6 +30,17 @@ button::-moz-focus-inner {
     }
 }
 
+$btn-default: #9b989a;
+
+.btn-default {
+    background: $btn-default;
+
+    &:hover,
+    &:focus {
+        background: darken($btn-default, 10%);
+    }
+}
+
 %anchor-btn {
     @extend %btn;
     text-decoration: none;

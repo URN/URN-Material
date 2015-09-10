@@ -152,6 +152,12 @@ body#tinymce.wp-editor .btn:hover, body#tinymce.wp-editor .btn:focus {
 body#tinymce.wp-editor .btn:active {
   box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
 }
+body#tinymce.wp-editor .btn-default {
+  background: #9b989a;
+}
+body#tinymce.wp-editor .btn-default:hover, body#tinymce.wp-editor .btn-default:focus {
+  background: #827e81;
+}
 body#tinymce.wp-editor .select,
 body#tinymce.wp-editor .txt {
   transition: box-shadow 0.15s ease;

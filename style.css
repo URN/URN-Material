@@ -407,6 +407,13 @@ button::-moz-focus-inner {
   box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
 }
 
+.btn-default {
+  background: #9b989a;
+}
+.btn-default:hover, .btn-default:focus {
+  background: #827e81;
+}
+
 .show-page-external-links a {
   text-decoration: none;
 }
