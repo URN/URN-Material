@@ -1386,8 +1386,25 @@ b {
   padding-bottom: 35px;
   width: 100%;
 }
+.audioboom-headlines h1 {
+  text-align: center;
+}
 .audioboom-headlines iframe {
   margin-top: 15px;
+}
+
+.blog-excerpt li {
+  padding-bottom: 30px;
+}
+.blog-excerpt h1 {
+  font-weight: bold;
+}
+.blog-excerpt h1:hover {
+  text-decoration: underline;
+}
+.blog-excerpt a {
+  color: #222;
+  text-decoration: none;
 }
 
 .btn-wrapper {

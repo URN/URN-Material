@@ -1,0 +1,37 @@
+
+.audioboom-headlines {
+    padding-bottom: $page-padding;
+    width: 100%;
+
+    h1 {
+        text-align: center;
+    }
+
+    iframe {
+        margin-top: $general-element-spacing;
+    }
+}
+
+.blog-excerpt {
+
+    li {
+        padding-bottom: #{$general-element-spacing * 2};
+    }
+
+    h1 {
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+}
+
+.btn-wrapper {
+    padding: $general-element-spacing;
+}
