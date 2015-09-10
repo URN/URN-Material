@@ -15,11 +15,11 @@
 }
 
 .card {
-    @include box-shadow(0 12px 16px 0 rgba(0, 0, 0, .24),
-                        0 17px 50px 0 rgba(0, 0, 0, .19));
+    @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, .24),
+                        0 5px 22px 0 rgba(0, 0, 0, .19));
     height: 100%;
     margin-bottom: 20px; // Card bottom separator
-    display: -moz-inline-stack;
+    display: -moz-inline-stack; // Fix Firefox bug
     display: inline-block;
 
     .boom .small_media {
