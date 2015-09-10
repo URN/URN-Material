@@ -11,7 +11,6 @@ get_header(); ?>
 
 <div class="row">
     <div class="entry-content">
-    <?php the_title( '<h1>', '</h1>' ); ?>
     <?php
         // Start the loop.
         while ( have_posts() ) : the_post();
