@@ -207,18 +207,32 @@ body#tinymce.wp-editor p {
 body#tinymce.wp-editor b {
   font-weight: bold;
 }
+body#tinymce.wp-editor .entry-content h1,
+body#tinymce.wp-editor .entry-content h2 {
+  display: block;
+  padding: 0.67em 0;
+}
+body#tinymce.wp-editor strong {
+  font-weight: bold;
+}
 body#tinymce.wp-editor .alignleft {
   float: left;
-  margin: 7px 28px 28px 0;
+  margin: 15px 28px 28px 0;
+  text-align: left;
 }
 body#tinymce.wp-editor .alignright {
   float: right;
-  margin: 7px 0 28px 28px;
+  margin: 15px 0 28px 28px;
+  text-align: right;
 }
 body#tinymce.wp-editor .aligncenter {
   clear: both;
   display: block;
-  margin: 7px auto;
+  margin: 15px auto;
+  text-align: center;
+}
+body#tinymce.wp-editor .gallery-columns-2.gallery-size-large {
+  padding-bottom: 15px;
 }
 body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item {
   width: 50% !important;
