@@ -1287,6 +1287,7 @@ b {
   background: #008ac4;
 }
 .schedule .show .title {
+  font-size: 16px;
   font-weight: 600;
 }
 .schedule .show .hosts {
