@@ -220,6 +220,13 @@ body#tinymce.wp-editor .aligncenter {
   display: block;
   margin: 7px auto;
 }
+body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item {
+  width: 50% !important;
+}
+body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item img {
+  height: 50%;
+  width: 100%;
+}
 body#tinymce.wp-editor .tabs {
   display: -webkit-flex;
   display: flex;
