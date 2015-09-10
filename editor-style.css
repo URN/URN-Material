@@ -207,13 +207,14 @@ body#tinymce.wp-editor p {
 body#tinymce.wp-editor b {
   font-weight: bold;
 }
+body#tinymce.wp-editor strong {
+  font-weight: bold;
+}
 body#tinymce.wp-editor .entry-content h1,
 body#tinymce.wp-editor .entry-content h2 {
   display: block;
   padding: 0.67em 0;
-}
-body#tinymce.wp-editor strong {
-  font-weight: bold;
+  line-height: 1.3em;
 }
 body#tinymce.wp-editor .alignleft {
   float: left;

@@ -108,17 +108,19 @@ b {
     font-weight: bold;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .entry-content {
     h1,
     h2 {
         display: block;
         padding: 0.67em 0;
+        line-height: 1.3em;
     }
 }
 
-strong {
-    font-weight: bold;
-}
 
 
 //
