@@ -1,59 +1,73 @@
 <?php
 
-add_action('wp_enqueue_scripts', function() {
+/**
+ * Enqueue scripts and styles.
+ *
+ */
+function urn_material_scripts() {
+    // Load our main stylesheet.
     wp_enqueue_style('main-style', get_stylesheet_uri());
+
+    // Add custom fonts, used in the main stylesheet.
     wp_enqueue_style('google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Raleway:300');
 
+    // Add global JS scripts
     wp_enqueue_script('nav-overflow', get_template_directory_uri() . '/js/nav-overflow.js', array('jquery'), false, true);
-
     wp_enqueue_script('audio-boom-feed', get_template_directory_uri() . '/js/audio-boom-feed.js', array('jquery'), false, true);
-
     wp_enqueue_script('listen-now', get_template_directory_uri() . '/js/listen-now.js', array('jquery'), false, true);
 
-    if ( is_home() ) {
+    // Add specific JS scripts
+    if ( is_home() || is_page ('schedule')) {
         wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
     }
-
-    if ( is_page ('schedule')) {
-        wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
-    }
-
     if (is_page ('urn-tv') || is_page ('music')) {
         wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
     }
 
-    //
-    // Gives us access to Wordpress variables in Javascript.
-    // e.g.
-    //  var url = WP_VARS.site_url; // Wordpress site URL 'http://live.urn1350.net/'
-    //
-    // Note, we attach this to nav-overflow just so we can access these from any page.
-    //
-    $wp_custom_vars = array (
+    /**
+     * Gives us access to Wordpress variables in Javascript.
+     * USAGE:
+     *  var url = WP_VARS.site_url; // Wordpress site URL
+     *  > 'http://live.urn1350.net/'
+     *
+     * Note, we may want to remove these are I think they are unused @TODO
+     */
+    wp_localize_script('jquery', 'WP_VARS', array (
         'template_url' => get_bloginfo('template_url'),
         'site_url' => get_option('siteurl')
-    );
-    wp_localize_script('nav-overflow', 'WP_VARS', $wp_custom_vars);
-});
+    ));
+}
+add_action( 'wp_enqueue_scripts', 'urn_material_scripts' );
 
+
+/**
+ * Stop WP admin bar from pushing down the <body>, make it overlap instead.
+ */
 add_action('get_header', function() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 });
 
 
-
-
-// Enable Menus under Appearance
+/**
+ * Enable Menus under Appearance section in Wordpress
+ */
 add_theme_support( 'menus' );
 if ( function_exists( 'register_nav_menus' ) ) {
 
+    // Add the main nav header menu
     function register_my_menu() {
         register_nav_menu('header-menu', __( 'Header Menu' ));
     }
-
     add_action( 'init', 'register_my_menu' );
 }
 
+
+/**
+ * Add the responsiveness ('...') to the Header nav
+ *
+ * @param [type] $items [description]
+ * @param [type] $args  [description]
+ */
 function add_extension_to_nav( $items, $args )
 {
     $items .= "<li class='nav-overflow'>";
@@ -62,8 +76,15 @@ function add_extension_to_nav( $items, $args )
     $items .= "</li>";
     return $items;
 }
+add_filter( 'wp_nav_menu_items', 'add_extension_to_nav', 10, 2 ); // 10: priority
 
-// Filter wp_nav_menu() to add additional links and other output
+
+
+/**
+ * Add Home item to Navbar by filtering wp_nav_menu() and adding additional links
+ *
+ * @param [type] $items [description]
+ */
 function add_additional_nav_items($items) {
     if(wp_title('', false) == "") {
         $is_current = "current";
@@ -71,21 +92,21 @@ function add_additional_nav_items($items) {
         $is_current = "";
     }
 
-    $homelink = '<li class="nav-item ' . $is_current . '"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
+    $homelink = '<li class="nav-item ' . $is_current . '">' .
+                    '<a href="' . home_url( '/' ) . '">' . __('Home') . '</a>' .
+                '</li>';
+
     $items = $homelink . $items;
 
     return $items;
 }
+// TODO add something like wp_nav_menu_items:header-nav filter, so this doesnt apply to every nav
+add_filter( 'wp_nav_menu_items', 'add_additional_nav_items');
 
-// Add the responsiveness ('...') to the Header nav
-add_filter( 'wp_nav_menu_items', 'add_extension_to_nav', 10, 2 ); // 10: priority
 
-// Add Home to Nav
-add_filter( 'wp_nav_menu_items', 'add_additional_nav_items'); // TODO add filter, so this doesnt apply to every nav
-
-//
-// Format a custom Nav menu
-//
+/**
+ * Format our own custom Nav menu, instead of using the default code WP provides for Navs
+ */
 class header_nav_walker extends Walker_Nav_Menu
 {
     /**
@@ -121,17 +142,20 @@ class header_nav_walker extends Walker_Nav_Menu
 
 
 
-//
-// Shows our stylings inside of the Wordpress Post Editor (when writing a new post)
-//
-// Styles defined in editor-style.css
-//
+/**
+ * Shows our stylings inside of the Wordpress Post Editor (when writing a new post)
+ *
+ * Styles defined in editor-style.css
+*/
 add_editor_style();
 
-//
-// Change Wordpress Post Editor Toolbar styles (when writing a new post)
-// See more settings here https://codex.wordpress.org/TinyMCE#Customize_TinyMCE_with_Filters
-//
+/**
+ * Change Wordpress Post Editor Toolbar styles (when writing a new post)
+ * See more settings here https://codex.wordpress.org/TinyMCE#Customize_TinyMCE_with_Filters
+ *
+ * @param  [type] $settings [description]
+ * @return [type]           [description]
+ */
 function mytheme_tinymce_settings( $settings ) {
     $settings['toolbar1'] = join(",", array(
         'bold',
@@ -169,7 +193,6 @@ function mytheme_tinymce_settings( $settings ) {
 
     return $settings;
 }
-
 add_filter( 'tiny_mce_before_init', 'mytheme_tinymce_settings' );
 
 ?>
