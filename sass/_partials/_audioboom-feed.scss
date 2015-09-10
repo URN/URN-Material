@@ -1,0 +1,70 @@
+.audioboom-feed {
+    .cards {
+        @include column-count(3);
+        @include column-gap(30px);
+
+        list-style: none;
+        margin-bottom: 50px;
+
+        @include breakpoint(laptop) {
+            @include column-count(2);
+        }
+
+        @include breakpoint(mobile) {
+            @include column-count(1);
+        }
+    }
+
+    .card {
+        @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, .24),
+                            0 5px 22px 0 rgba(0, 0, 0, .19));
+        height: 100%;
+        margin-bottom: 20px; // Card bottom separator
+        display: -moz-inline-stack; // Fix Firefox bug
+        display: inline-block;
+
+        .boom .small_media {
+            display: none; // Hide image in embed
+        }
+
+        @include breakpoint(laptop) {
+            width: 100%;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        button {
+            margin-bottom: 15px;
+            float: right;
+
+            &.urn-daytime {
+                background-color: $urn-daytime-color;
+            }
+
+            &.urn-pulse {
+                background-color: $urn-news-color;
+            }
+        }
+
+        .podcast_title,
+        p {
+            line-height: 1.3em;
+            padding: 10px 0;
+        }
+
+        .podcast_title {
+            font-size: 1.1em;
+        }
+
+        .podcast_wrapper {
+            padding: 10px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
