@@ -195,4 +195,25 @@ function mytheme_tinymce_settings( $settings ) {
 }
 add_filter( 'tiny_mce_before_init', 'mytheme_tinymce_settings' );
 
+
+
+
+/**
+ * Change the Wordpress Login Logo to the URN logo
+ *
+ */
+function urn_login_logo() {
+    ?>
+        <style type="text/css">
+            .login h1 a {
+                background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo-black.png');
+                background-size: 100px;
+                height: 100px; /* Set same as bg-size */
+                width: 100%;
+            }
+        </style>
+    <?php
+}
+
+add_action( 'login_enqueue_scripts', 'urn_login_logo' );
 ?>
