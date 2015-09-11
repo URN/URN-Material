@@ -216,4 +216,21 @@ function urn_login_logo() {
 }
 
 add_action( 'login_enqueue_scripts', 'urn_login_logo' );
+
+
+
+
+/**
+ * Sends the message to the studio
+ * @param  string $message Message to send
+ * @return bool            True if success, false if not
+ */
+function message_studio($message) {
+    $sender_ip = $_SERVER['REMOTE_ADDR'];
+    $url = 'http://int.urn1350.net:8080/web/submit_message.php?type=web&message=' . urlencode($message);
+    $url .= '&sender=' . urlencode($sender_ip);
+    $data = file_get_contents($url);
+    return ($data == 'OK');
+}
+
 ?>
