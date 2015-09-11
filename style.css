@@ -918,6 +918,9 @@ strong {
   width: 32px;
   z-index: 2;
 }
+#listen-now .show-container .play:hover {
+  background-color: #be1875;
+}
 #listen-now .show-container .send-message {
   position: relative;
   width: 50%;

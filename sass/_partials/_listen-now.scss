@@ -134,6 +134,10 @@
             white-space: nowrap;
             width: 32px;
             z-index: 2;
+
+            &:hover {
+                background-color: darken($urn-pink, 15%);
+            }
         }
 
         .send-message {
