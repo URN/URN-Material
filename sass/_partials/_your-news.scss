@@ -15,20 +15,17 @@
 .blog-excerpt {
 
     li {
-        padding-bottom: #{$general-element-spacing * 2};
-    }
-
-    h1 {
-        font-weight: bold;
-
-        &:hover {
-            text-decoration: underline;
-        }
+        padding-bottom: $general-element-spacing;
+        padding-top: $general-element-spacing;
     }
 
     a {
         color: #222;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

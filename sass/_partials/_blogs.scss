@@ -1,0 +1,16 @@
+
+.blog-wrapper {
+    padding: $general-element-spacing;
+
+    h1.show-title {
+
+        a {
+            color: #222;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

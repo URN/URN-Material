@@ -1430,19 +1430,28 @@ strong {
 }
 
 .blog-excerpt li {
-  padding-bottom: 30px;
-}
-.blog-excerpt h1 {
-  font-weight: bold;
-}
-.blog-excerpt h1:hover {
-  text-decoration: underline;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 .blog-excerpt a {
   color: #222;
   text-decoration: none;
 }
+.blog-excerpt a:hover {
+  text-decoration: underline;
+}
 
 .btn-wrapper {
   padding: 15px;
+}
+
+.blog-wrapper {
+  padding: 15px;
+}
+.blog-wrapper h1.show-title a {
+  color: #222;
+  text-decoration: none;
+}
+.blog-wrapper h1.show-title a:hover {
+  text-decoration: underline;
 }
