@@ -117,7 +117,7 @@
 
         var $title = $("<h1>").addClass("title").text(slotData.name);
 
-        var $hosts = $("<h2>").addClass("hosts").text(slotData.hosts.join(", "));
+        var $hosts = $("<h2>").addClass("hosts").text(slotData.hosts.map(function(el) {return el.name;}).join(", "));
 
         var $times = $("<h3>").addClass("times").text(slotData.from + " - " + slotData.to + " (" + slotData.duration + " mins)");
 
