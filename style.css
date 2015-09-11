@@ -520,6 +520,7 @@ strong {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-top: 15px;
   width: 100%;
 }
 .tabs .tab-title {

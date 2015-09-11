@@ -168,10 +168,9 @@ strong {
 // Tabs
 //
 .tabs {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    padding-top: $general-element-spacing;
     width: 100%;
 
     .tab-title {
