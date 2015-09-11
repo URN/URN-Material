@@ -22,45 +22,6 @@ get_header(); ?>
     </div>
 </div>
 
-<?php
-
-    /**
-     * [get_posts_by_author description]
-     * @param  int $posts_per_page    [description]
-     * @param  int $author            [description]
-     * @return string                 [description]
-     */
-    function get_posts_by_author($posts_per_page, $author) {
-        $output = "<ul class='blog-excerpt'>";
-
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-
-            $args = array( 'posts_per_page' => $posts_per_page, 'author' => $author);
-
-            $myposts = get_posts( $args );
-            foreach ( $myposts as $post ) : setup_postdata( $post );
-                $output .= "<li>";
-                $output .= "<h1><a href=" . get_the_permalink($post) . ">" . get_the_title($post) . "</a></h1>";
-                $output .= "<p>" . get_the_date('', $post) . "</p>";
-                $output .= "<p>". get_the_excerpt() . "</p>";
-                $output .= "<a href=" . get_the_permalink($post) . "><button class='btn btn-default'>Read More</button></a>";
-                $output .= "</li>";
-            endforeach;
-            wp_reset_postdata();
-
-        // End the loop.
-        endwhile;
-        $output .= "</ul>";
-
-        // Create Show All Button
-        $output .= "<div class='btn-wrapper'>";
-        $output .= "<a href='" . get_author_posts_url( $author ) . "'><button class='btn'>Show all</button></a>";
-        $output .= "</div>";
-        return $output;
-    }
-?>
-
 <div class="row">
     <section class="tabs">
         <input id="tab-one" type="radio" name="grp" checked="checked"/>
@@ -74,7 +35,6 @@ get_header(); ?>
         <div class="tab-content">
             <!-- Blog posts with author URN -->
             <?php echo get_posts_by_author(10, 2); ?>
-
         </div>
 
         <input id="tab-four" type="radio" name="grp" />
@@ -87,10 +47,8 @@ get_header(); ?>
         <input id="tab-five" type="radio" name="grp" />
         <label for="tab-five" class="tab-title">SU Elections</label>
         <div class="tab-content">
-
             <!-- Blog posts with author Elections Show -->
             <?php echo get_posts_by_author(10, 139); ?>
-
         </div>
     </section>
 

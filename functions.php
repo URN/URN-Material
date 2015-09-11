@@ -33,7 +33,7 @@ function urn_material_scripts() {
      * Note, we may want to remove these are I think they are unused @TODO
      */
     wp_localize_script('jquery', 'WP_VARS', array (
-        'template_url' => get_bloginfo('template_url'),
+        'template_url' => get_template_directory_uri(),
         'site_url' => get_option('siteurl')
     ));
 }
@@ -231,6 +231,44 @@ function message_studio($message) {
     $url .= '&sender=' . urlencode($sender_ip);
     $data = file_get_contents($url);
     return ($data == 'OK');
+}
+
+
+
+/**
+ * [get_posts_by_author description]
+ * @param  int $posts_per_page    [description]
+ * @param  int $author            [description]
+ * @return string                 [description]
+ */
+function get_posts_by_author($posts_per_page, $author) {
+    $output = "<ul class='blog-excerpt'>";
+
+    // Start the loop.
+    while ( have_posts() ) : the_post();
+
+        $args = array( 'posts_per_page' => $posts_per_page, 'author' => $author);
+
+        $myposts = get_posts( $args );
+        foreach ( $myposts as $post ) : setup_postdata( $post );
+            $output .= "<li>";
+            $output .= "<h1><a href=" . get_the_permalink($post) . ">" . get_the_title($post) . "</a></h1>";
+            $output .= "<p>" . get_the_date('', $post) . "</p>";
+            $output .= "<p>". get_the_excerpt() . "</p>";
+            $output .= "<a href=" . get_the_permalink($post) . "><button class='btn btn-default'>Read More</button></a>";
+            $output .= "</li>";
+        endforeach;
+        wp_reset_postdata();
+
+    // End the loop.
+    endwhile;
+    $output .= "</ul>";
+
+    // Create Show All Button
+    $output .= "<div class='btn-wrapper'>";
+    $output .= "<a href='" . get_author_posts_url( $author ) . "'><button class='btn'>Show all</button></a>";
+    $output .= "</div>";
+    return $output;
 }
 
 ?>
