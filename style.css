@@ -1034,6 +1034,9 @@ strong {
 .row:last-child {
   padding-bottom: 15px;
 }
+.row h1 {
+  margin-bottom: 10px;
+}
 .row .module {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -1294,6 +1297,13 @@ strong {
 }
 .schedule .day-name:nth-child(odd) {
   background: rgba(0, 0, 0, 0.1);
+}
+.schedule .day-name a {
+  margin: 10px 0;
+  display: inline-block;
+  font-size: 0.6em;
+  padding: 2px 5px;
+  text-decoration: none;
 }
 .schedule .slots {
   background: #fff;

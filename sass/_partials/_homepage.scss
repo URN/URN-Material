@@ -12,6 +12,10 @@
         padding-bottom: $general-element-spacing;
     }
 
+    h1 {
+        margin-bottom: 10px;
+    }
+
     .module {
         @include flex-grow(1);
         background: #e6e6e6;

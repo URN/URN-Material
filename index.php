@@ -18,9 +18,13 @@
         <div class="clip">
             <iframe width="100%" height="150" style="background-color:transparent; display:block; min-width:300px; max-width:700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292768-students-complain-about-grad-ball/embed/v3?eid=AQAAAG9F0lVgPjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
         </div>
+        <h1>Schedule</h1>
         <div class="schedule mini-schedule">
             <ul class="day-names">
-                <li class="day-name">Today</li>
+                <li class="day-name">
+                    Today
+                    <a href="/schedule" class="btn">View Full Schedule</a>
+                </li>
             </ul>
             <div class="timetable">
                 <ul class="times">
