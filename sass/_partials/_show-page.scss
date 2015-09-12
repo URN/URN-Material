@@ -74,6 +74,8 @@
 }
 
 .show-page-members {
+    @include flex-shrink(0);
+
     .host {
         margin: 10px 0;
 
@@ -81,7 +83,7 @@
             text-decoration: none;
         }
 
-        .icon {
+        .avatar {
             height: 35px;
             margin-right: 5px;
             vertical-align: middle;
@@ -92,11 +94,6 @@
             color: $body-text-color;
             text-decoration: underline;
         }
-    }
-
-    h1 {
-        font-size: 1.5em;
-        font-weight: 600;
     }
 }
 
@@ -137,9 +134,47 @@
 
 .show-page-description {
     @include flex-grow(1);
+    padding: 10px 15px;
 }
 
 .show-page-show-info {
     @include display-flex;
     @include flex-direction(row);
+}
+
+.show-page-posts {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+
+.show-page-post {
+    background: #f2f0f0;
+    border-radius: 3px;
+    border: 1px solid #dedede;
+    box-shadow: 0 1px 3px black(0.12);
+    margin: 10px;
+    padding: 10px;
+
+    header {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: darken($body-text-color, 10%);
+            }
+        }
+    }
+
+    footer {
+        color: #787777;
+        font-size: 0.875em;
+        margin-top: 10px;
+    }
 }

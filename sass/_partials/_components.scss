@@ -68,10 +68,16 @@ $btn-default: #9b989a;
 // Typography
 //
 
+
 .main-content h1,
 .entry-content h1 {
     margin: 10px 0;
     font-size: 30px;
+}
+
+.main-content h1 {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .main-content h2,
@@ -87,7 +93,6 @@ $btn-default: #9b989a;
 
 }
 
-.main-content a,
 .entry-content a {
     color: $urn-pink;
 
@@ -217,7 +222,7 @@ a.committee-tag,
     font-size: 0.75em;
     font-weight: 600;
     margin: 0 5px;
-    padding: 2px 4px;
+    padding: 2px 6px 3px 5px;
     text-transform: uppercase;
 
     &:hover,

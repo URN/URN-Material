@@ -39,6 +39,44 @@ foreach ($slots as $slot) {
     $slot_strings[] = $slot['day'] . 's from ' . $slot['from'];
 }
 
+$term_objects = get_objects_in_term($show_id, 'shows');
+
+$users = array();
+foreach ($term_objects as $object_id) {
+    $userObject = get_user_by('id', $object_id);
+    $postObject = get_post($object_id);
+    if ($userObject) {
+        $user_id = $userObject->data->ID;
+        $user = array();
+        $user['name'] = $userObject->data->display_name;
+        $user['link'] = get_author_posts_url($user_id);
+        $user['image'] = get_avatar($id, 32);
+
+        $user['committee_role'] = esc_attr(get_the_author_meta('committee_role', $user_id));
+
+        $users[] = $user;
+    }
+}
+
+$postObjects = get_posts(array(
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'shows',
+            'field' => 'term_id',
+            'terms' => $show_id
+        )
+    )
+));
+
+$posts = array();
+foreach ($postObjects as $postObject) {
+    $post = array();
+    $post['title'] = $postObject->post_title;
+    $post['date'] = $postObject->post_date_gmt;
+    $post['excerpt'] = $postObject->post_excerpt;
+    $post['link'] = get_permalink($postObject->ID);
+    $posts[] = $post;
+}
 ?>
 
 <header class="show-page-header <?php echo $category_slug; ?>">
@@ -54,22 +92,49 @@ foreach ($slots as $slot) {
         <div class="show-page-members">
             <h1>Show Hosts</h1>
             <ul>
-                <li class="host">
-                    <a href="#">
-                        <img class="icon" src="/wp-content/themes/urn-material/images/iona.jpg" alt="Iona Hampson">
-                        <span class="name">Iona Hampson</span>
-                    </a>
-                    <a href="/committee" title="Committee Member" class="committee-tag">Head of Marketting</a>
-                </li>
+                <?php
+                    if (count($users) < 1) {
+                        echo "This show has no hosts assigned.";
+                    }
+                    else {
+                        foreach ($users as $user) {
+                            $role = $user['committee_role'];
+
+                            echo '<li class="host">';
+                            echo '<a href="' . $user['link'] . '">';
+                            echo $user['image'];
+                            echo '<span class="name">' . $user['name'] . '</span>';
+                            echo '</a>';
+
+                            if ($role !== '') {
+                                echo '<a href="/committee" title="Committee Member" class="committee-tag">' . $role . '</a>';
+                            }
+
+                            echo '</li>';
+                        }
+                    }
+
+                ?>
             </ul>
         </div>
-
         <p class="show-page-description"><?php echo $description; ?></p>
-
         <ul class="show-page-external-links">
             <li><a href="<?php echo $fb_link; ?>" class="facebook">Facebook</a></li>
             <li><a href="<?php echo $tw_link; ?>" class="twitter">Twitter</a></li>
         </ul>
+
+    </div>
+    <h1>Recent shows</h1>
+    <div class="show-page-posts">
+        <?php
+            foreach ($posts as $post) {
+                echo '<article class="show-page-post">';
+                echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
+                echo '<div class="body">' . $post['excerpt'] . '</div>';
+                echo '<footer>' . $post['date'] .'</footer>';
+                echo '</article>';
+            }
+        ?>
     </div>
 </div>
 
