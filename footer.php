@@ -10,8 +10,8 @@
             </div>
             <div>
                 <strong>Winner of Best Student Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014!</strong><br>
-                Contact the on-air presenters by sending us an online message, a text on <strong>07903 545 252</strong> or tweet <a href="#">@URN1350</a><br>
-                Find out more about us, and get in touch on our <a href="#">about</a> page<br>
+                Contact the on-air presenters by sending us an online message, a text on <strong>07903 545 252</strong> or tweet <a href="//twitter.com/urn1350" target="_blank">@URN1350</a><br>
+                Find out more about us, and get in touch on our <a href="<?php echo get_permalink( get_page_by_path( 'about us' ) ); ?>">about</a> page<br>
                 Web Design &amp; Development by <strong>James Turner</strong>, <strong>Harry Mumford-Turner</strong> and <strong>Iona Hampson</strong>
             </div>
         </div>
