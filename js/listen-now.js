@@ -8,23 +8,40 @@
     var currentSong = null;
     var loading = false;
 
-    function updateCurrentSong(callback) {
+    var $messageForm = $("#message-the-studio");
+    $messageForm.submit(function (e) {
+        var message = $messageForm.find("textarea[name=studio-message]").val().trim();
+
+        if (message === "") {
+            return false;
+        }
+
+        $messageForm.find("button").prop("disabled", true).text("Sending...");
+        $messageForm.find("textarea").val("");
+
         var request = $.ajax({
-            url: "/api/current_song",
-            type: "get",
-            dataType: "json"
+            url: "/api/send_message",
+            type: "post",
+            dataType: "json",
+            data: { message: message }
         });
 
-        request.done(function (newSong) {
-            loading = compareSongs(newSong, currentSong);
-
-            newSong.start_time = parseInt(newSong.start_time);
-            newSong.duration = parseInt(newSong.duration);
-            currentSong = newSong;
-
-            callback();
+        request.always(function () {
+            $messageForm.find("button").prop("disabled", false).text("Send");
         });
-    }
+
+        request.done(function (data) {
+            if (data.status === "success") {
+                $messageForm.html($("<span>").addClass("success").text("Thanks for the message!"));
+            }
+            else {
+                $messageForm.html($("<span>").addClass("success").text("Sorry, your message couldn't be delivered!"));
+            }
+        });
+
+        e.preventDefault();
+        return false;
+    });
 
     (function refreshNowPlaying() {
         var songString;
@@ -52,6 +69,24 @@
             }
         }, 1000);
     })();
+
+    function updateCurrentSong(callback) {
+        var request = $.ajax({
+            url: "/api/current_song",
+            type: "get",
+            dataType: "json"
+        });
+
+        request.done(function (newSong) {
+            loading = compareSongs(newSong, currentSong);
+
+            newSong.start_time = parseInt(newSong.start_time);
+            newSong.duration = parseInt(newSong.duration);
+            currentSong = newSong;
+
+            callback();
+        });
+    }
 
     function getSongProgressPercentage() {
         if (currentSong === null) {

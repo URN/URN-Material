@@ -941,6 +941,11 @@ strong {
   position: absolute;
   right: 6px;
 }
+#listen-now .show-container .send-message span {
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+}
 
 .audioboom-feed .cards {
   -moz-column-count: 3;
