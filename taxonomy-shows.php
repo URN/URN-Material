@@ -119,10 +119,15 @@ foreach ($postObjects as $postObject) {
         </div>
         <p class="show-page-description"><?php echo $description; ?></p>
         <ul class="show-page-external-links">
-            <li><a href="<?php echo $fb_link; ?>" class="facebook">Facebook</a></li>
-            <li><a href="<?php echo $tw_link; ?>" class="twitter">Twitter</a></li>
+            <?php
+                if ($fb_link !== '') {
+                    echo '<li><a href="' . $fb_link . '" class="facebook">Facebook</a></li>';
+                }
+                if ($tw_link !== '') {
+                    echo '<li><a href="' . $tw_link . '" class="twitter">Twitter</a></li>';
+                }
+            ?>
         </ul>
-
     </div>
     <h1>Recent shows</h1>
     <div class="show-page-posts">
