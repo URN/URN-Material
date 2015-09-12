@@ -94,7 +94,7 @@ foreach ($postObjects as $postObject) {
             <ul>
                 <?php
                     if (count($users) < 1) {
-                        echo "This show has no hosts assigned.";
+                        echo 'This show has no hosts assigned.';
                     }
                     else {
                         foreach ($users as $user) {
@@ -127,6 +127,9 @@ foreach ($postObjects as $postObject) {
     <h1>Recent shows</h1>
     <div class="show-page-posts">
         <?php
+            if (count($posts) < 1) {
+                echo 'This show has made no posts.';
+            }
             foreach ($posts as $post) {
                 echo '<article class="show-page-post">';
                 echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
