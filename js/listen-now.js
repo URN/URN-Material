@@ -67,7 +67,7 @@
             else {
                 refreshNowPlaying();
             }
-        }, 1000);
+        }, 5000);
     })();
 
     function updateCurrentSong(callback) {
