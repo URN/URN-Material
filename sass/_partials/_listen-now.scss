@@ -147,6 +147,10 @@
             width: 50%;
             z-index: 2;
 
+            form {
+                height: 100%;
+            }
+
             textarea {
                 @include body-font;
                 border: 0;

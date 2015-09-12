@@ -952,6 +952,9 @@ a.committee-tag:active,
   width: 50%;
   z-index: 2;
 }
+#listen-now .show-container .send-message form {
+  height: 100%;
+}
 #listen-now .show-container .send-message textarea {
   font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
   border: 0;
