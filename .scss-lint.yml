@@ -38,3 +38,6 @@ linters:
     # Properties should be sorted in order
     PropertySortOrder:
         enabled: false
+
+    QualifyingElement:
+        enabled: false
