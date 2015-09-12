@@ -271,4 +271,27 @@ function get_posts_by_author($posts_per_page, $author) {
     return $output;
 }
 
+function get_page_title() {
+    if (is_home()) {
+        return 'URN: University Radio Nottingham';
+    }
+    else {
+        return wp_title('') . ' - URN';
+    }
+}
+
+add_filter('wp_title', function ($title, $sep, $seplocation) {
+    if ( is_tax() ) {
+        $term_title = single_term_title( '', false );
+
+        if ( 'right' == $seplocation ) {
+            $title = $term_title . " $sep ";
+        } else {
+            $title = " $sep " . $term_title;
+        }
+    }
+    return $title;
+}, 10, 3 );
+
+
 ?>
