@@ -135,12 +135,14 @@ foreach ($postObjects as $postObject) {
             if (count($posts) < 1) {
                 echo 'This show has made no posts.';
             }
-            foreach ($posts as $post) {
-                echo '<article class="show-page-post">';
-                echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
-                echo '<div class="body">' . $post['excerpt'] . '</div>';
-                echo '<footer>' . $post['date'] .'</footer>';
-                echo '</article>';
+            else {
+                foreach ($posts as $post) {
+                    echo '<article class="show-page-post">';
+                    echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
+                    echo '<div class="body">' . $post['excerpt'] . '</div>';
+                    echo '<footer>' . $post['date'] .'</footer>';
+                    echo '</article>';
+                }
             }
         ?>
     </div>
