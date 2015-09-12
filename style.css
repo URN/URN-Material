@@ -832,6 +832,10 @@ strong {
   width: 100%;
 }
 #listen-now .now-playing .progress-container .progress-bar {
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
   background: #fff;
   height: 4px;
   max-width: 100%;

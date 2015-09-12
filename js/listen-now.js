@@ -47,6 +47,10 @@
         var songString;
         var progress = getSongProgressPercentage();
 
+        // Make the very first request fast and then subsequent requests a lot more
+        // infrequently
+        var timeout = currentSong === null ? 500 : 5000;
+
         if (currentSong !== null && !loading && progress <= 100) {
             songString = currentSong.title + " - " + currentSong.artist;
         }
@@ -56,7 +60,6 @@
 
         $song.text(songString);
 
-        redrawProgressBar();
 
         setTimeout(function () {
             if (progress >= 100) {
@@ -67,7 +70,7 @@
             else {
                 refreshNowPlaying();
             }
-        }, 5000);
+        }, timeout);
     })();
 
     function updateCurrentSong(callback) {
@@ -101,13 +104,16 @@
         return progressPercentage;
     }
 
-   function redrawProgressBar() {
+    (function redrawProgressBar() {
         var progress = getSongProgressPercentage();
         if (progress > 100) {
             progress = 0;
         }
         $progress.css({width: progress + "%"});
-    }
+        setTimeout(function () {
+            redrawProgressBar();
+        }, 500);
+    })();
 
     function compareSongs(song1, song2) {
         if (song1 === null || song2 === null) {

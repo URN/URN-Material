@@ -49,6 +49,8 @@
             width: 100%;
 
             .progress-bar {
+                @include transition(all 1s linear);
+
                 background: #fff;
                 height: 4px;
                 max-width: 100%;
