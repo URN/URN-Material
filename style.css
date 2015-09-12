@@ -439,42 +439,41 @@ button::-moz-focus-inner {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.committee-tag {
-  background: #e63d9b;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.75em;
-  font-weight: 600;
-  margin: 0 5px;
-  padding: 2px 4px;
-  text-transform: uppercase;
-}
-.committee-tag:hover, .committee-tag:focus {
-  background: #d51b82;
-}
-.committee-tag:active {
-  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
-}
-
-h1 {
+.main-content h1,
+.entry-content h1 {
+  margin: 10px 0;
   font-size: 30px;
 }
 
-h2 {
+.main-content h2,
+.entry-content h2 {
   font-size: 22px;
   font-weight: bold;
 }
 
-p {
+.main-content p,
+.entry-content p {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
 
-b {
+.main-content a,
+.entry-content a {
+  color: #e63d9b;
+}
+.main-content a:hover, .main-content a:focus,
+.entry-content a:hover,
+.entry-content a:focus {
+  color: #d51b82;
+}
+
+.main-content b,
+.entry-content b {
   font-weight: bold;
 }
 
-strong {
+.main-content strong,
+.entry-content strong {
   font-weight: bold;
 }
 
@@ -557,6 +556,27 @@ strong {
 }
 .tabs input[type=radio]:checked + label + div {
   display: block;
+}
+
+a.committee-tag,
+.committee-tag {
+  background: #e63d9b;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 2px 4px;
+  text-transform: uppercase;
+}
+a.committee-tag:hover, a.committee-tag:focus,
+.committee-tag:hover,
+.committee-tag:focus {
+  background: #d51b82;
+}
+a.committee-tag:active,
+.committee-tag:active {
+  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
 }
 
 #header {

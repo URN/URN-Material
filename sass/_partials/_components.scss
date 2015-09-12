@@ -64,51 +64,46 @@ $btn-default: #9b989a;
     box-shadow: 0 1px 3px black(0.2);
 }
 
-.committee-tag {
-    background: $urn-pink;
-    color: #fff;
-    display: inline-block;
-    font-size: 0.75em;
-    font-weight: 600;
-    margin: 0 5px;
-    padding: 2px 4px;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-        background: darken($urn-pink, 10%);
-    }
-
-    &:active {
-        box-shadow: inset 0 2px 3px -2px black(0.4);
-    }
-}
-
-
-
 //
 // Typography
 //
 
-h1 {
+.main-content h1,
+.entry-content h1 {
+    margin: 10px 0;
     font-size: 30px;
 }
 
-h2 {
+.main-content h2,
+.entry-content h2 {
     font-size: 22px;
     font-weight: bold;
 }
 
-p {
+.main-content p,
+.entry-content p {
     line-height: 1.4em;
     margin-bottom: 6px;
+
 }
 
-b {
+.main-content a,
+.entry-content a {
+    color: $urn-pink;
+
+    &:hover,
+    &:focus {
+        color: darken($urn-pink, 10%);
+    }
+}
+
+.main-content b,
+.entry-content b {
     font-weight: bold;
 }
 
-strong {
+.main-content strong,
+.entry-content strong {
     font-weight: bold;
 }
 
@@ -211,5 +206,26 @@ strong {
         & + div {
             display: block;
         }
+    }
+}
+
+a.committee-tag,
+.committee-tag {
+    background: $urn-pink;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin: 0 5px;
+    padding: 2px 4px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        background: darken($urn-pink, 10%);
+    }
+
+    &:active {
+        box-shadow: inset 0 2px 3px -2px black(0.4);
     }
 }
