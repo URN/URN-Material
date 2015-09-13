@@ -70,129 +70,21 @@ $btn-default: #9b989a;
 }
 
 
-
-
-
-
-
 //
-// Typography
+// Wordpress Post styles
 //
-
-.main-content h1 {
-    font-size: 1.5em;
-    font-weight: 600;
-}
 
 // main-content: Static content
-// entry-content: WP post content
 .main-content,
 .entry-content {
-    h1 {
-        margin: 10px 0;
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    p {
-        line-height: 1.4em;
-        margin-bottom: 6px;
-    }
-
-    b,
-    strong {
-        font-weight: bold;
-    }
+    @import 'wp-static';
 }
 
+// entry-content: WP post content
 .entry-content {
-    a {
-        color: $urn-pink;
-
-        &:hover,
-        &:focus {
-            color: darken($urn-pink, 10%);
-        }
-    }
-
-    h1,
-    h2 {
-        display: block;
-        padding: 0.67em 0;
-        line-height: 1.3em;
-    }
-
-    ol {
-        list-style: decimal inside none;
-    }
-
-    ul {
-        list-style: disc inside none;
-    }
-
-    ul,
-    ol {
-        padding: 10px;
-        line-height: 1.5em;
-
-        li {
-            padding-bottom: 5px;
-        }
-    }
-
-
-    //
-    // Alignment
-    //
-    .alignleft {
-        float: left;
-        margin: $general-element-spacing 28px 28px 0;
-        text-align: left;
-    }
-
-    .alignright {
-        float: right;
-        margin: $general-element-spacing 0 28px 28px;
-        text-align: right;
-    }
-
-    .aligncenter {
-        clear: both;
-        display: block;
-        margin: $general-element-spacing auto;
-        text-align: center;
-    }
-
-    // Set photos to be full width when they get larger than the wrapper
-    img {
-        &.size-large,
-        &.size-full {
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-
-    //
-    // Responsive 2 column Gallery
-    //
-    .gallery-columns-2.gallery-size-large {
-        padding-bottom: $general-element-spacing;
-
-        .gallery-item {
-            width: 50% !important;
-
-            img {
-                height: 50%;
-                width: 100%;
-            }
-        }
-    }
+    @import 'wp-posts';
 }
+
 
 //
 // Tabs

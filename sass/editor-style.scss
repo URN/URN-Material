@@ -16,10 +16,10 @@ body#tinymce.wp-editor {
 
     @import '_partials/variables',
             '_partials/mixins',
-            '_partials/functions',
-            '_partials/breakpoints',
-            '_partials/base',
-            '_partials/components';
+            '_partials/functions';
+
+    @import '_partials/wp-static';
+    @import '_partials/wp-posts';
 
     @include body-font;
 }

@@ -1,0 +1,24 @@
+
+//
+// These styles are shared with:
+// WP Post editor &
+// WP Post output
+//
+
+ol {
+    list-style: decimal inside none;
+}
+
+ul {
+    list-style: disc inside none;
+}
+
+ul,
+ol {
+    padding: 10px;
+    line-height: 1.5em;
+
+    li {
+        padding-bottom: 5px;
+    }
+}
