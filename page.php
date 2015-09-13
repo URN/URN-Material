@@ -9,7 +9,7 @@
  */
 get_header(); ?>
 
-<div class="row">
+<div class="main-content">
     <div class="entry-content">
     <?php
         // Start the loop.
