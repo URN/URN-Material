@@ -18,9 +18,11 @@ jQuery(document).ready(function( $ ) {
                 $('<ul>', { class: 'cards'}).append($('<li>'))
             ).append($load_more);
 
+            var audioboom_user = $(element).attr('data-channel-audioboom-type') + '/' + $(element).attr('data-channel-id');
+            var channel_url = ($(element).attr('data-channel-audioboom-type') == 'channel') ? '/boos' : '';
             this.config = {
-                api_url: '//api.audioboom.com/' + $(element).attr('data-channel-audioboom-type') +
-                    '/' + $(element).attr('data-channel-id') + '/audio_clips',
+                api_url: '//api.audioboom.com/' + audioboom_user + '/audio_clips',
+                channel_url: '//audioboom.com/' + audioboom_user + channel_url,
                 feed_name: $(element).attr('data-channel-name'),
                 feed_type: $(element).attr('data-channel-type'),
                 element: $(element).find('.cards'),
@@ -74,7 +76,11 @@ jQuery(document).ready(function( $ ) {
 
         makeCard: function(feed, podcast) {
             var $podcast_image = $('<img>', {src: podcast.urls.image});
-            var $show_type_button = $('<button>', { class: 'btn ' + feed.config.feed_type}).text(feed.config.feed_name);
+            var $show_type_button = $('<a>').attr('href', feed.config.channel_url).append(
+                $('<button>', {
+                    class: 'btn ' + feed.config.feed_type
+                }).text(feed.config.feed_name)
+            );
             var $podcast_embed = $('<iframe>', { scrolling: 'no', src: feed.makeEmbedUrl(podcast.urls.detail)}).css('width', '100%');
             var $podcast_description = $('<p>').text(podcast.description);
 
