@@ -497,6 +497,11 @@ button::-moz-focus-inner {
   height: 50%;
   width: 100%;
 }
+.main-content p,
+.entry-content p {
+  line-height: 1.4em;
+  margin-bottom: 6px;
+}
 
 .entry-content ol {
   list-style: decimal inside none;
@@ -518,10 +523,6 @@ button::-moz-focus-inner {
   display: block;
   padding: 0.67em 0;
   line-height: 1.3em;
-}
-.entry-content p {
-  line-height: 1.4em;
-  margin-bottom: 6px;
 }
 .entry-content a {
   color: #e63d9b;

@@ -104,6 +104,10 @@ body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item img {
   height: 50%;
   width: 100%;
 }
+body#tinymce.wp-editor p {
+  line-height: 1.4em;
+  margin-bottom: 6px;
+}
 body#tinymce.wp-editor ol {
   list-style: decimal inside none;
 }
@@ -124,10 +128,6 @@ body#tinymce.wp-editor h2 {
   display: block;
   padding: 0.67em 0;
   line-height: 1.3em;
-}
-body#tinymce.wp-editor p {
-  line-height: 1.4em;
-  margin-bottom: 6px;
 }
 body#tinymce.wp-editor a {
   color: #e63d9b;
