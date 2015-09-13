@@ -458,13 +458,6 @@ button::-moz-focus-inner {
   margin-bottom: 6px;
 }
 
-.entry-content a {
-  color: #e63d9b;
-}
-.entry-content a:hover, .entry-content a:focus {
-  color: #d51b82;
-}
-
 .main-content b,
 .entry-content b {
   font-weight: bold;
@@ -475,6 +468,12 @@ button::-moz-focus-inner {
   font-weight: bold;
 }
 
+.entry-content a {
+  color: #e63d9b;
+}
+.entry-content a:hover, .entry-content a:focus {
+  color: #d51b82;
+}
 .entry-content h1,
 .entry-content h2 {
   display: block;
@@ -499,6 +498,12 @@ button::-moz-focus-inner {
   display: block;
   margin: 15px auto;
   text-align: center;
+}
+
+img .size-large,
+img .size-full {
+  height: 100%;
+  width: 100%;
 }
 
 .gallery-columns-2.gallery-size-large {

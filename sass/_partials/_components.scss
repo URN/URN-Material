@@ -94,15 +94,6 @@ $btn-default: #9b989a;
 
 }
 
-.entry-content a {
-    color: $urn-pink;
-
-    &:hover,
-    &:focus {
-        color: darken($urn-pink, 10%);
-    }
-}
-
 .main-content b,
 .entry-content b {
     font-weight: bold;
@@ -114,6 +105,15 @@ $btn-default: #9b989a;
 }
 
 .entry-content {
+    a {
+        color: $urn-pink;
+
+        &:hover,
+        &:focus {
+            color: darken($urn-pink, 10%);
+        }
+    }
+
     h1,
     h2 {
         display: block;
@@ -145,6 +145,15 @@ $btn-default: #9b989a;
     display: block;
     margin: $general-element-spacing auto;
     text-align: center;
+}
+
+// Set photos to be full width when they get larger than the wrapper
+img {
+    .size-large,
+    .size-full {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 
