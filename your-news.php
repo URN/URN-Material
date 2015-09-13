@@ -13,11 +13,11 @@ get_header(); ?>
             <h1>Latest Headlines</h1>
             <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3289600-uonsu-grad-ball-joe-caunce-statement/embed/v3?eid=AQAAAJ-k8VUAMjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
             <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292768-students-complain-about-grad-ball/embed/v3?eid=AQAAAAKG8VVgPjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
-            <!-- <div class="btn-wrapper">
+            <div class="btn-wrapper">
                 <a href="//audioboom.com/channel/urnthepulse">
                     <button class="btn">See all headlines</button>
                 </a>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -26,7 +26,7 @@ get_header(); ?>
             <input id="tab-one" type="radio" name="grp" checked="checked"/>
             <label for="tab-one" class="tab-title">Pulse</label>
             <div class="tab-content">
-                <div class="audioboom-feed" data-channel-id="3119406" data-channel-type="urn-pulse" data-channel-name="URN Pulse"></div>
+                <div class="audioboom-feed" data-channel-id="3119406" data-channel-type="urn-pulse" data-channel-audioboom-type="channels" data-channel-name="URN Pulse"></div>
             </div>
 
             <input id="tab-three" type="radio" name="grp" />
