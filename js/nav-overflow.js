@@ -50,9 +50,9 @@ jQuery(document).ready(function ($) {
 
         var itemOffset = getNavItemOffset($lastVisibleItem);
 
-        // While there isn't enough space for the nav items, keep moving them into the 
+        // While there isn't enough space for the nav items, keep moving them into the
         // overflow menu
-        while (itemsVisible.length > 0 && 
+        while (itemsVisible.length > 0 &&
                viewWidth <= (itemOffset + $overflowIcon.width())) {
 
             // Move the right most nav item into the overflow menu
@@ -70,17 +70,17 @@ jQuery(document).ready(function ($) {
         }
 
 
-        // Get the most recently moved item 
+        // Get the most recently moved item
         var $lastOverflowedItem = getLastArrayItem(itemsOverflowed);
 
-        // While there's space for a nav item to be put back in the nav bar, keep adding 
+        // While there's space for a nav item to be put back in the nav bar, keep adding
         // them back
         while (itemsOverflowed.length > 0 &&
                viewWidth > itemOffset + $overflowIcon.outerWidth() + $.data($lastOverflowedItem, "width")) {
             itemsVisible.push($lastOverflowedItem);
             removeLastArrayItem(itemsOverflowed);
             moveItemToVisible(getLastArrayItem(itemsVisible));
-            $lastOverflowedItem = getLastArrayItem(itemsOverflowed);            
+            $lastOverflowedItem = getLastArrayItem(itemsOverflowed);
         }
 
         if (itemsOverflowed.length === 0) {
@@ -93,6 +93,8 @@ jQuery(document).ready(function ($) {
         // Make the visible nav items grow to fill the available horizontal space
         $items.addClass("flex-grow");
     });
+
+    $(window).resize();
 
     $overflowButton.click(function (e) {
             e.stopPropagation();
