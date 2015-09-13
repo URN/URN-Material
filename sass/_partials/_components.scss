@@ -65,43 +65,44 @@ $btn-default: #9b989a;
     box-shadow: 0 1px 3px black(0.2);
 }
 
+
+
+
+
+
+
 //
 // Typography
 //
 
+// main-content: Static content
+// entry-content: WP post content
+.main-content,
+.entry-content {
+    h1 {
+        margin: 10px 0;
+        font-size: 30px;
+    }
 
-.main-content h1,
-.entry-content h1 {
-    margin: 10px 0;
-    font-size: 30px;
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.4em;
+        margin-bottom: 6px;
+    }
+
+    b,
+    strong {
+        font-weight: bold;
+    }
 }
 
 .main-content h1 {
     font-size: 1.5em;
     font-weight: 600;
-}
-
-.main-content h2,
-.entry-content h2 {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.main-content p,
-.entry-content p {
-    line-height: 1.4em;
-    margin-bottom: 6px;
-
-}
-
-.main-content b,
-.entry-content b {
-    font-weight: bold;
-}
-
-.main-content strong,
-.entry-content strong {
-    font-weight: bold;
 }
 
 .entry-content {
@@ -120,59 +121,74 @@ $btn-default: #9b989a;
         padding: 0.67em 0;
         line-height: 1.3em;
     }
-}
 
-
-
-//
-// Alignment
-//
-
-.alignleft {
-    float: left;
-    margin: $general-element-spacing 28px 28px 0;
-    text-align: left;
-}
-
-.alignright {
-    float: right;
-    margin: $general-element-spacing 0 28px 28px;
-    text-align: right;
-}
-
-.aligncenter {
-    clear: both;
-    display: block;
-    margin: $general-element-spacing auto;
-    text-align: center;
-}
-
-// Set photos to be full width when they get larger than the wrapper
-img {
-    &.size-large,
-    &.size-full {
-        height: 100%;
-        width: 100%;
+    ol {
+        list-style: decimal inside none;
     }
-}
+
+    ul {
+        list-style: disc inside none;
+    }
+
+    ul,
+    ol {
+        padding: 10px;
+        line-height: 1.5em;
+
+        li {
+            padding-bottom: 5px;
+        }
+    }
 
 
-//
-// Responsive 2 column Gallery
-//
-.gallery-columns-2.gallery-size-large {
-    padding-bottom: $general-element-spacing;
+    //
+    // Alignment
+    //
+    .alignleft {
+        float: left;
+        margin: $general-element-spacing 28px 28px 0;
+        text-align: left;
+    }
 
-    .gallery-item {
-        width: 50% !important;
+    .alignright {
+        float: right;
+        margin: $general-element-spacing 0 28px 28px;
+        text-align: right;
+    }
 
-        img {
-            height: 50%;
+    .aligncenter {
+        clear: both;
+        display: block;
+        margin: $general-element-spacing auto;
+        text-align: center;
+    }
+
+    // Set photos to be full width when they get larger than the wrapper
+    img {
+        &.size-large,
+        &.size-full {
+            height: 100%;
             width: 100%;
         }
     }
-}
 
+
+    //
+    // Responsive 2 column Gallery
+    //
+    .gallery-columns-2.gallery-size-large {
+        padding-bottom: $general-element-spacing;
+
+        .gallery-item {
+            width: 50% !important;
+
+            img {
+                height: 50%;
+                width: 100%;
+            }
+        }
+    }
+}
 
 //
 // Tabs

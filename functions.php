@@ -39,6 +39,8 @@ function urn_material_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'urn_material_scripts' );
 
+
+
 /**
  * Enable Menus under Appearance section in Wordpress
  */
@@ -51,6 +53,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
     }
     add_action( 'init', 'register_my_menu' );
 }
+
 
 
 /**
@@ -93,6 +96,7 @@ function add_additional_nav_items($items) {
 }
 // TODO add something like wp_nav_menu_items:header-nav filter, so this doesnt apply to every nav
 add_filter( 'wp_nav_menu_items', 'add_additional_nav_items');
+
 
 
 /**
@@ -154,8 +158,8 @@ function mytheme_tinymce_settings( $settings ) {
         'strikethrough',
         'blockquote',
         'hr',
-        // 'bullist',
-        // 'numlist',
+        'bullist',
+        'numlist',
         'alignleft',
         'aligncenter',
         'alignright',

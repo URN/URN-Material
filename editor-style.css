@@ -184,10 +184,6 @@ body#tinymce.wp-editor .entry-content h1 {
   margin: 10px 0;
   font-size: 30px;
 }
-body#tinymce.wp-editor .main-content h1 {
-  font-size: 1.5em;
-  font-weight: 600;
-}
 body#tinymce.wp-editor .main-content h2,
 body#tinymce.wp-editor .entry-content h2 {
   font-size: 22px;
@@ -199,12 +195,14 @@ body#tinymce.wp-editor .entry-content p {
   margin-bottom: 6px;
 }
 body#tinymce.wp-editor .main-content b,
-body#tinymce.wp-editor .entry-content b {
-  font-weight: bold;
-}
 body#tinymce.wp-editor .main-content strong,
+body#tinymce.wp-editor .entry-content b,
 body#tinymce.wp-editor .entry-content strong {
   font-weight: bold;
+}
+body#tinymce.wp-editor .main-content h1 {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 body#tinymce.wp-editor .entry-content a {
   color: #e63d9b;
@@ -218,33 +216,48 @@ body#tinymce.wp-editor .entry-content h2 {
   padding: 0.67em 0;
   line-height: 1.3em;
 }
-body#tinymce.wp-editor .alignleft {
+body#tinymce.wp-editor .entry-content ol {
+  list-style: decimal inside none;
+}
+body#tinymce.wp-editor .entry-content ul {
+  list-style: disc inside none;
+}
+body#tinymce.wp-editor .entry-content ul,
+body#tinymce.wp-editor .entry-content ol {
+  padding: 10px;
+  line-height: 1.5em;
+}
+body#tinymce.wp-editor .entry-content ul li,
+body#tinymce.wp-editor .entry-content ol li {
+  padding-bottom: 5px;
+}
+body#tinymce.wp-editor .entry-content .alignleft {
   float: left;
   margin: 15px 28px 28px 0;
   text-align: left;
 }
-body#tinymce.wp-editor .alignright {
+body#tinymce.wp-editor .entry-content .alignright {
   float: right;
   margin: 15px 0 28px 28px;
   text-align: right;
 }
-body#tinymce.wp-editor .aligncenter {
+body#tinymce.wp-editor .entry-content .aligncenter {
   clear: both;
   display: block;
   margin: 15px auto;
   text-align: center;
 }
-body#tinymce.wp-editor img.size-large, body#tinymce.wp-editor img.size-full {
+body#tinymce.wp-editor .entry-content img.size-large, body#tinymce.wp-editor .entry-content img.size-full {
   height: 100%;
   width: 100%;
 }
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large {
+body#tinymce.wp-editor .entry-content .gallery-columns-2.gallery-size-large {
   padding-bottom: 15px;
 }
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item {
+body#tinymce.wp-editor .entry-content .gallery-columns-2.gallery-size-large .gallery-item {
   width: 50% !important;
 }
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item img {
+body#tinymce.wp-editor .entry-content .gallery-columns-2.gallery-size-large .gallery-item img {
   height: 50%;
   width: 100%;
 }

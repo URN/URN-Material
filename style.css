@@ -440,32 +440,26 @@ button::-moz-focus-inner {
   margin: 10px 0;
   font-size: 30px;
 }
-
-.main-content h1 {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
 .main-content h2,
 .entry-content h2 {
   font-size: 22px;
   font-weight: bold;
 }
-
 .main-content p,
 .entry-content p {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
-
 .main-content b,
-.entry-content b {
+.main-content strong,
+.entry-content b,
+.entry-content strong {
   font-weight: bold;
 }
 
-.main-content strong,
-.entry-content strong {
-  font-weight: bold;
+.main-content h1 {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .entry-content a {
@@ -480,38 +474,48 @@ button::-moz-focus-inner {
   padding: 0.67em 0;
   line-height: 1.3em;
 }
-
-.alignleft {
+.entry-content ol {
+  list-style: decimal inside none;
+}
+.entry-content ul {
+  list-style: disc inside none;
+}
+.entry-content ul,
+.entry-content ol {
+  padding: 10px;
+  line-height: 1.5em;
+}
+.entry-content ul li,
+.entry-content ol li {
+  padding-bottom: 5px;
+}
+.entry-content .alignleft {
   float: left;
   margin: 15px 28px 28px 0;
   text-align: left;
 }
-
-.alignright {
+.entry-content .alignright {
   float: right;
   margin: 15px 0 28px 28px;
   text-align: right;
 }
-
-.aligncenter {
+.entry-content .aligncenter {
   clear: both;
   display: block;
   margin: 15px auto;
   text-align: center;
 }
-
-img.size-large, img.size-full {
+.entry-content img.size-large, .entry-content img.size-full {
   height: 100%;
   width: 100%;
 }
-
-.gallery-columns-2.gallery-size-large {
+.entry-content .gallery-columns-2.gallery-size-large {
   padding-bottom: 15px;
 }
-.gallery-columns-2.gallery-size-large .gallery-item {
+.entry-content .gallery-columns-2.gallery-size-large .gallery-item {
   width: 50% !important;
 }
-.gallery-columns-2.gallery-size-large .gallery-item img {
+.entry-content .gallery-columns-2.gallery-size-large .gallery-item img {
   height: 50%;
   width: 100%;
 }
