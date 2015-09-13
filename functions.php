@@ -246,12 +246,7 @@ function get_posts_by_author($posts_per_page, $author) {
 
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post );
-            $output .= "<li>";
-            $output .= "<h1><a href=" . get_the_permalink($post) . ">" . get_the_title($post) . "</a></h1>";
-            $output .= "<p>" . get_the_date('', $post) . "</p>";
-            $output .= "<p>". get_the_excerpt() . "</p>";
-            $output .= "<a href=" . get_the_permalink($post) . "><button class='btn btn-default'>Read More</button></a>";
-            $output .= "</li>";
+            $output .= format_blog_excerpt($post);
         endforeach;
         wp_reset_postdata();
 
@@ -266,6 +261,34 @@ function get_posts_by_author($posts_per_page, $author) {
     return $output;
 }
 
+/**
+ * Prepares a blog except so they all match a standard
+ * @param  [type] $url     [description]
+ * @param  [type] $title   [description]
+ * @param  [type] $date    [description]
+ * @param  string $excerpt [description]
+ * @return [type]          [description]
+ */
+function format_blog_excerpt($post) {
+    $url = get_permalink($post->ID);
+    $title = $post->post_title;
+    $date = get_the_date('', $post->ID);
+    $excerpt = get_the_excerpt();
+
+    $output = "<li>";
+    $output .= "<h1><a href=" . $url . ">" . $title . "</a></h1>";
+    $output .= "<p>" . $date . "</p>";
+    $output .= "<p>". $excerpt . "</p>";
+    $output .= "<a href=" . $url . "><button class='btn btn-default'>Read More</button></a>";
+    $output .= "</li>";
+    return $output;
+}
+
+
+/**
+ * Get the current page title, used with the <title> element.
+ * @return string Title of the current page
+ */
 function get_page_title() {
     if (is_home()) {
         return 'URN: University Radio Nottingham';
