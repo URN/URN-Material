@@ -31,9 +31,10 @@ get_header(); ?>
                 <option disabled value="all">All</option>
                 <option disabled value="after-dark">After Dark</option>
                 <option disabled value="culture">Culture</option>
-                <option value="daytime" selected>Daytime</option>
+                <option disabled value="daytime">Daytime</option>
                 <option disabled value="news">News</option>
                 <option disabled value="sport">Sport</option>
+                <option selected value="speech">Speech</option>
             </select>
         </div>
 
