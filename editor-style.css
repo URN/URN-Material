@@ -234,8 +234,7 @@ body#tinymce.wp-editor .aligncenter {
   margin: 15px auto;
   text-align: center;
 }
-body#tinymce.wp-editor img .size-large,
-body#tinymce.wp-editor img .size-full {
+body#tinymce.wp-editor img.size-large, body#tinymce.wp-editor img.size-full {
   height: 100%;
   width: 100%;
 }

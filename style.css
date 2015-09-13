@@ -500,8 +500,7 @@ button::-moz-focus-inner {
   text-align: center;
 }
 
-img .size-large,
-img .size-full {
+img.size-large, img.size-full {
   height: 100%;
   width: 100%;
 }

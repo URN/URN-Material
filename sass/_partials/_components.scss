@@ -149,8 +149,8 @@ $btn-default: #9b989a;
 
 // Set photos to be full width when they get larger than the wrapper
 img {
-    .size-large,
-    .size-full {
+    &.size-large,
+    &.size-full {
         height: 100%;
         width: 100%;
     }
