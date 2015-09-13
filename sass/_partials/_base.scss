@@ -60,6 +60,6 @@ body {
 
 }
 
-#listen-now.minimise + #page-container .main-content {
+#listen-now.minimise + .play + #page-container .main-content {
     padding: #{$general-element-spacing + 20px} $general-element-spacing;
 }

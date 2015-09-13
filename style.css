@@ -369,7 +369,7 @@ body {
   }
 }
 
-#listen-now.minimise + #page-container .main-content {
+#listen-now.minimise + .play + #page-container .main-content {
   padding: 35px 15px;
 }
 
