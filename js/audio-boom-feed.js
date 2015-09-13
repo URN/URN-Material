@@ -10,7 +10,7 @@ jQuery(document).ready(function( $ ) {
     function audioboom_init(el) {
         // e.g. https://api.audioboom.com/channels/3139695/audio_clips
         var request = $.ajax({
-            url: '//api.audioboom.com/channels/' + $(el).attr('data-channel-id') + '/audio_clips',
+            url: '//api.audioboom.com/' + $(el).attr('data-channel-audioboom-type') + '/' + $(el).attr('data-channel-id') + '/audio_clips',
             type: 'get',
         });
         request.done(function (data) {

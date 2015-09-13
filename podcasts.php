@@ -41,7 +41,7 @@ get_header(); ?>
 </div>
 
 <div class="row">
-    <div class="audioboom-feed" data-channel-id="3139695" data-channel-type="urn-daytime" data-channel-name="URN Speech"></div>
+    <div class="audioboom-feed" data-channel-id="3139695" data-channel-audioboom-type="channels" data-channel-type="urn-daytime" data-channel-name="URN Speech"></div>
 </div>
 
 

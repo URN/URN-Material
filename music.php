@@ -54,10 +54,9 @@ get_header(); ?>
             <input id="tab-two" type="radio" name="grp" />
             <label for="tab-two" class="tab-title">Interviews</label>
             <div class="tab-content">
-                <div class="audioboom-feed" data-channel-id="3119406" data-channel-type="urn-interviews" data-channel-name="URN Interviews"></div>
+                <div class="audioboom-feed" data-channel-id="4374382" data-channel-audioboom-type="users" data-channel-type="urn-interviews" data-channel-name="URN Interviews"></div>
             </div>
         </section>
-
     </div>
 </div>
 
