@@ -10,10 +10,8 @@ get_header(); ?>
     <!-- Todays Headlines as 2 latest Audioboom embeds -->
     <div class="row">
         <div class="audioboom-headlines">
-            <!-- <h1>Latest Headlines</h1> -->
-
+            <h1>Latest Headlines</h1>
             <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3289600-uonsu-grad-ball-joe-caunce-statement/embed/v3?eid=AQAAAJ-k8VUAMjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
-
             <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292768-students-complain-about-grad-ball/embed/v3?eid=AQAAAAKG8VVgPjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
             <!-- <div class="btn-wrapper">
                 <a href="//audioboom.com/channel/urnthepulse">

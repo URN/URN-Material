@@ -5,11 +5,10 @@
 */
 get_header(); ?>
 
-<div class="row">
-    <!-- Featured podcasts -->
-</div>
+<div class="main-content">
 
-<div class="row">
+    <!-- Featured podcasts -->
+
     <div class="entry-content">
         <?php the_title( '<h1>', '</h1>' ); ?>
 
@@ -37,13 +36,10 @@ get_header(); ?>
                 <option selected value="speech">Speech</option>
             </select>
         </div>
-
     </div>
-</div>
 
-<div class="row">
     <div class="audioboom-feed" data-channel-id="3139695" data-channel-audioboom-type="channels" data-channel-type="urn-daytime" data-channel-name="URN Speech"></div>
-</div>
 
+</div>
 
 <?php get_footer(); ?>

@@ -7,25 +7,23 @@ get_header(); ?>
 
 <div class="main-content">
 
-    <div class="row">
-        <div class="entry-content">
-            <?php the_title( '<h1>', '</h1>' ); ?>
+    <div class="entry-content">
+        <?php the_title( '<h1>', '</h1>' ); ?>
 
-            <?php
-                // Start the loop.
-                while ( have_posts() ) : the_post();
+        <?php
+            // Start the loop.
+            while ( have_posts() ) : the_post();
 
-                    // Include the page content template.
-                    the_content();
+                // Include the page content template.
+                the_content();
 
-                // End the loop.
-                endwhile;
-            ?>
-        </div>
+            // End the loop.
+            endwhile;
+        ?>
     </div>
 
     <div class="blog-wrapper">
-
+<!-- Add in blog-excerpt css from your-news.scss? -->
         <?php
             $shows = get_terms( 'shows', 'orderby=count&hide_empty=0' );
             $count = count($shows);
