@@ -368,8 +368,8 @@ body {
   }
 }
 
-.main-content {
-  padding: 15px;
+#listen-now.minimise + #page-container .main-content {
+  padding: 35px 15px;
 }
 
 button::-moz-focus-inner {

@@ -59,6 +59,6 @@ body {
 
 }
 
-.main-content {
-    padding: $general-element-spacing;
+#listen-now.minimise + #page-container .main-content {
+    padding: #{$general-element-spacing + 20px} $general-element-spacing;
 }

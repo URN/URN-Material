@@ -121,8 +121,8 @@ body#tinymce.wp-editor #page-container {
     width: 100%;
   }
 }
-body#tinymce.wp-editor .main-content {
-  padding: 15px;
+body#tinymce.wp-editor #listen-now.minimise + #page-container .main-content {
+  padding: 35px 15px;
 }
 body#tinymce.wp-editor button::-moz-focus-inner {
   border: 0;
