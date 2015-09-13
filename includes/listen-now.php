@@ -21,7 +21,7 @@
             <h1 class="show-title-name">Iona Hampson</h1>
             <h3 class="show-title-time">From 3PM</h3>
         </div>
-        <a href="#" class="play">Listen Now</a>
+        <a href="http://urn1350.net/rp/console/main/index.php" target="_blank" class="play">Listen Now</a>
         <div class="send-message">
             <form id="message-the-studio" name="message-the-studio" method="post" action="">
                 <textarea autocomplete="off" name="studio-message" placeholder="<?php echo $message_studio_placeholder; ?>"></textarea>

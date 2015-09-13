@@ -126,8 +126,9 @@
         return equals;
     }
 
-    $("#listen-now .show-container .play").click(function() {
+    $("#listen-now .show-container .play").click(function(e) {
         window.open("http://urn1350.net/rp/console/main/index.php", "radioplayer", "height=665,width=380");
+        e.preventDefault();
     });
 
 })(jQuery);
