@@ -140,6 +140,7 @@ body#tinymce.wp-editor .btn {
   font-size: 0.875em;
   font-weight: 600;
   padding: 2px 12px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 body#tinymce.wp-editor .btn:after {

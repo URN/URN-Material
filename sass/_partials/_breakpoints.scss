@@ -7,5 +7,9 @@
         @media (max-width: 780px) { @content; }
     } @else if $point == mobile {
         @media (max-width: 620px)  { @content; }
+    } @else if $point == tiny {
+        @media (max-width: 440px)  { @content; }
+    } @else {
+        @media (max-width: $point) { @content; }
     }
 }

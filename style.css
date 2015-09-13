@@ -390,6 +390,7 @@ button::-moz-focus-inner {
   font-size: 0.875em;
   font-weight: 600;
   padding: 2px 12px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 .btn:after,
@@ -814,9 +815,9 @@ a.committee-tag:active,
   width: 944px;
   z-index: 3;
 }
-@media (max-width: 800px) {
+@media (max-width: 944px) {
   #listen-now {
-    width: 100%;
+    width: 96%;
   }
 }
 #listen-now.minimise .now-playing {
@@ -879,12 +880,23 @@ a.committee-tag:active,
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media (max-width: 440px) {
+  #listen-now .show-container {
+    display: block;
+  }
+}
 #listen-now .show-container .show-info {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   padding: 10px 0;
   position: relative;
   text-align: right;
+}
+@media (max-width: 440px) {
+  #listen-now .show-container .show-info {
+    padding-right: 15px;
+    width: 100%;
+  }
 }
 #listen-now .show-container .show-info .show-title-prelude,
 #listen-now .show-container .show-info .show-title-time {
@@ -921,6 +933,11 @@ a.committee-tag:active,
   width: 100%;
   z-index: 1;
 }
+@media (max-width: 440px) {
+  #listen-now .show-container .show-info:after {
+    background: #e63d9b;
+  }
+}
 #listen-now .show-container .show-info:before {
   content: '';
   position: absolute;
@@ -955,6 +972,11 @@ a.committee-tag:active,
   width: 32px;
   z-index: 2;
 }
+@media (max-width: 440px) {
+  #listen-now .show-container .play {
+    display: none;
+  }
+}
 #listen-now .show-container .play:hover {
   box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.35);
 }
@@ -962,6 +984,11 @@ a.committee-tag:active,
   position: relative;
   width: 50%;
   z-index: 2;
+}
+@media (max-width: 440px) {
+  #listen-now .show-container .send-message {
+    width: 100%;
+  }
 }
 #listen-now .show-container .send-message form {
   height: 100%;
@@ -976,6 +1003,11 @@ a.committee-tag:active,
   resize: none;
   width: 100%;
 }
+@media (max-width: 440px) {
+  #listen-now .show-container .send-message textarea {
+    height: 80px;
+  }
+}
 #listen-now .show-container .send-message button {
   bottom: 6px;
   position: absolute;
@@ -985,6 +1017,16 @@ a.committee-tag:active,
   display: block;
   margin: 30px 0;
   text-align: center;
+}
+#listen-now .large-play {
+  text-align: center;
+  padding: 8px 0;
+  display: none;
+}
+@media (max-width: 440px) {
+  #listen-now .large-play {
+    display: block;
+  }
 }
 
 .audioboom-feed .cards {

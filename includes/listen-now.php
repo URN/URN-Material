@@ -29,4 +29,5 @@
             </form>
         </div>
     </div>
+    <a href="http://urn1350.net/rp/console/main/index.php" target="_blank" class="btn large-play play">Listen Now</a>
 </div>
