@@ -1,27 +1,30 @@
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
 .audioboom-feed {
+    text-align: center;
+
     .cards {
-        @include column-count(3);
-        @include column-gap(30px);
-
         list-style: none;
-        margin-bottom: 50px;
-
-        @include breakpoint(laptop) {
-            @include column-count(2);
-        }
-
-        @include breakpoint(mobile) {
-            @include column-count(1);
-        }
+        justify-content: center;
+        @include display-flex();
+        @include flex-flow(row wrap);
     }
 
     .card {
         @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, .24),
                             0 5px 22px 0 rgba(0, 0, 0, .19));
+        width: 30%;
         height: 100%;
-        margin-bottom: 20px; // Card bottom separator
-        display: -moz-inline-stack; // Fix Firefox bug
-        display: inline-block;
+        margin: 15px;
+
+        opacity: 0;
+        @include animation(fadeIn ease-in 1);
+        @include animation-fill-mode(forwards);
+        @include animation-duration(0.5s);
+        @include animation-delay(0.2s);
 
         .boom .small_media {
             display: none; // Hide image in embed
