@@ -46,14 +46,6 @@ jQuery(document).ready(function( $ ) {
             for (var i = feed.config.current_shown; i < podcasts.length; i++) {
                 console.log('i ' + i + ', curr_shown: ' + feed.config.current_shown + ', podlength: ' + podcasts.length);
 
-                if (podcasts.length - 1 == feed.config.current_shown) {
-                    // Reached max podcasts
-                    console.log('Reached max podcasts');
-                    // Set button to null
-                    feed.config.more_button.text('No more').attr('disabled', 'true');
-                    break;
-                }
-
                 if (i > feed.config.max_display + feed.config.current_shown) {
                     feed.config.current_shown = i;
                     console.log('Ending, curr_shown ' + i);
@@ -61,6 +53,14 @@ jQuery(document).ready(function( $ ) {
                 }
 
                 $(feed.config.element).append(feed.makeCard(feed, podcasts[i]));
+
+                if (podcasts.length - 1 == feed.config.current_shown) {
+                    // Reached max podcasts
+                    console.log('Reached max podcasts');
+                    // Set button to null
+                    feed.config.more_button.text('No more').attr('disabled', 'true');
+                    break;
+                }
             }
         },
 
