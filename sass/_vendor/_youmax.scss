@@ -5,6 +5,7 @@
  * @license MIT
  */
 
+@import '../_partials/variables';
 
 .youmax-showing {
     color: #f5f5f5;
@@ -24,13 +25,13 @@
 }
 
 #youmax-header {
-    background-color: #353535;
+    // background-color: #353535;
     font: 24px Arial;
-    color: #fff;
+    // color: #fff;
     line-height: 25px;
     height: 90px;
     text-align: left;
-    border: 1px solid #353535;
+    // border: 1px solid #353535;
     position: relative;
 }
 
@@ -59,7 +60,6 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    font-family: Calibri;
     font-size: 14px;
     text-align: center;
     overflow-x: hidden;
@@ -81,6 +81,8 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     background-color: #fff;
+
+    @extend .panel;
 }
 
 #youmax-encloser {
@@ -98,19 +100,18 @@
 .youmax-video-list-title {
     color: #438bc5;
     display: inline-block;
-    padding: 2% 10px 0;
     font-weight: 700;
+    margin: 6px 0;
     max-width: 250px;
     max-height: 18px;
-    overflow: hidden;
 }
 
 .youmax-video-list-views {
     color: #555;
-    padding: 1% 10px 3%;
     display: inline-block;
     font-size: 12px;
     font-family: Arial;
+    margin: 6px 0;
 }
 
 .youmax-playlist-sidebar {
@@ -209,7 +210,7 @@
 
 .youmax-tab-hover {
     color: #fff;
-    background-color: #5a5959;
+    background-color: $urn-pink;
     text-shadow: 0 0;
 }
 
@@ -227,8 +228,7 @@
 
 #youmax-load-more-div:hover,
 .youmax-load-more-div-click {
-    background: #616060;
-    color: #fff;
+    background: #dbdbdb;
 }
 
 @media (max-width: 620px) {

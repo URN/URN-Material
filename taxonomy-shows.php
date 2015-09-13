@@ -137,7 +137,7 @@ foreach ($postObjects as $postObject) {
             }
             else {
                 foreach ($posts as $post) {
-                    echo '<article class="show-page-post">';
+                    echo '<article class="show-page-post panel">';
                     echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
                     echo '<div class="body">' . $post['excerpt'] . '</div>';
                     echo '<footer>' . $post['date'] .'</footer>';

@@ -1,5 +1,6 @@
 
 .videos {
-    color: $urn-purple;
+    // color: $urn-purple;
+    @include body-font();
     padding-top: $page-padding;
 }
