@@ -443,25 +443,11 @@ button::-moz-focus-inner {
 .entry-content h1 {
   font-size: 1.5em;
   font-weight: 600;
-  margin: 10px 0;
 }
 .main-content h2,
 .entry-content h2 {
   font-size: 22px;
   font-weight: bold;
-}
-.main-content h1,
-.main-content h2,
-.entry-content h1,
-.entry-content h2 {
-  display: block;
-  padding: 0.67em 0;
-  line-height: 1.3em;
-}
-.main-content p,
-.entry-content p {
-  line-height: 1.4em;
-  margin-bottom: 6px;
 }
 .main-content em,
 .entry-content em {
@@ -472,15 +458,6 @@ button::-moz-focus-inner {
 .entry-content b,
 .entry-content strong {
   font-weight: bold;
-}
-.main-content a,
-.entry-content a {
-  color: #e63d9b;
-}
-.main-content a:hover, .main-content a:focus,
-.entry-content a:hover,
-.entry-content a:focus {
-  color: #d51b82;
 }
 .main-content .alignleft,
 .entry-content .alignleft {
@@ -535,6 +512,22 @@ button::-moz-focus-inner {
 .entry-content ul li,
 .entry-content ol li {
   padding-bottom: 5px;
+}
+.entry-content h1,
+.entry-content h2 {
+  display: block;
+  padding: 0.67em 0;
+  line-height: 1.3em;
+}
+.entry-content p {
+  line-height: 1.4em;
+  margin-bottom: 6px;
+}
+.entry-content a {
+  color: #e63d9b;
+}
+.entry-content a:hover, .entry-content a:focus {
+  color: #d51b82;
 }
 
 .tabs {

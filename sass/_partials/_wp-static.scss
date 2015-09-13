@@ -10,7 +10,6 @@
 h1 {
     font-size: 1.5em;
     font-weight: 600;
-    margin: 10px 0; // Need?
 }
 
 h2 {
@@ -18,17 +17,6 @@ h2 {
     font-weight: bold;
 }
 
-h1,
-h2 {
-    display: block;
-    padding: 0.67em 0;
-    line-height: 1.3em;
-}
-
-p {
-    line-height: 1.4em;
-    margin-bottom: 6px;
-}
 
 em {
     font-style: italic;
@@ -37,16 +25,6 @@ em {
 b,
 strong {
     font-weight: bold;
-}
-
-
-a {
-    color: $urn-pink;
-
-    &:hover,
-    &:focus {
-        color: darken($urn-pink, 10%);
-    }
 }
 
 //
