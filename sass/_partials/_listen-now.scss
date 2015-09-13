@@ -122,6 +122,7 @@
 
         .play {
             @include flex-shrink(0);
+            @include transition(box-shadow 0.1s ease);
             align-self: center;
             background-color: #fff;
             background-image: url('images/play-icon.svg');
@@ -140,7 +141,7 @@
             z-index: 2;
 
             &:hover {
-                background-color: darken($urn-pink, 15%);
+                box-shadow: 0 0 20px 5px white(0.35);
             }
         }
 
