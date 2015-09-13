@@ -364,7 +364,7 @@
           $('#youmax-video').attr('src', 'http://www.youtube.com/embed/' + this.id);
           $('#youmax-video').show();
           $('html,body').animate({
-            scrollTop: $("#youmax-header").offset().top
+            scrollTop: $("#youmax-encloser").offset().top - 50
           }, 'slow');
         }
       });
