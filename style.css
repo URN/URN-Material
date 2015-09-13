@@ -328,6 +328,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   margin: 0 auto;
   width: 980px;
 }
@@ -1018,14 +1019,29 @@ a.committee-tag:active,
   margin: 30px 0;
   text-align: center;
 }
-#listen-now .large-play {
-  text-align: center;
-  padding: 8px 0;
+#listen-now > .large-play {
   display: none;
+  position: static;
 }
 @media (max-width: 440px) {
-  #listen-now .large-play {
+  #listen-now > .large-play {
     display: block;
+  }
+}
+
+.large-play {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  display: block;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+@media (max-width: 440px) {
+  .large-play {
+    display: none;
   }
 }
 

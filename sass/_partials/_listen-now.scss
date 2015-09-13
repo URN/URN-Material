@@ -203,16 +203,28 @@
                 text-align: center;
             }
         }
-
     }
 
-    .large-play {
-        text-align: center;
-        padding: 8px 0;
+    > .large-play {
         display: none;
+        position: static;
 
         @include breakpoint(tiny) {
             display: block;
         }
+    }
+}
+
+.large-play {
+    @include flex-shrink(0);
+    display: block;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+
+    @include breakpoint(tiny) {
+        display: none;
     }
 }

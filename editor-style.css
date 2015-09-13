@@ -83,6 +83,7 @@ body#tinymce.wp-editor #page-wrap {
   min-height: 100%;
 }
 body#tinymce.wp-editor .wrapper {
+  position: relative;
   margin: 0 auto;
   width: 980px;
 }
