@@ -79,6 +79,11 @@ $btn-default: #9b989a;
 // Typography
 //
 
+.main-content h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
 // main-content: Static content
 // entry-content: WP post content
 .main-content,
@@ -102,11 +107,6 @@ $btn-default: #9b989a;
     strong {
         font-weight: bold;
     }
-}
-
-.main-content h1 {
-    font-size: 1.5em;
-    font-weight: 600;
 }
 
 .entry-content {

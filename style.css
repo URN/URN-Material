@@ -439,6 +439,11 @@ button::-moz-focus-inner {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.main-content h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
 .main-content h1,
 .entry-content h1 {
   margin: 10px 0;
@@ -459,11 +464,6 @@ button::-moz-focus-inner {
 .entry-content b,
 .entry-content strong {
   font-weight: bold;
-}
-
-.main-content h1 {
-  font-size: 1.5em;
-  font-weight: 600;
 }
 
 .entry-content a {
@@ -1603,6 +1603,7 @@ a.committee-tag:active,
 }
 .audioboom-headlines h1 {
   text-align: center;
+  padding-bottom: 15px;
 }
 .audioboom-headlines iframe {
   margin-top: 15px;
@@ -1622,10 +1623,11 @@ a.committee-tag:active,
 
 .btn-wrapper {
   padding: 15px;
+  text-align: center;
 }
 
 .blog-wrapper {
-  padding: 15px;
+  padding-top: 15px;
 }
 .blog-wrapper h1.show-title a {
   color: #222;

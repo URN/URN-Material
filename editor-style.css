@@ -182,6 +182,10 @@ body#tinymce.wp-editor .txt:focus {
 body#tinymce.wp-editor .select {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+body#tinymce.wp-editor .main-content h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
 body#tinymce.wp-editor .main-content h1,
 body#tinymce.wp-editor .entry-content h1 {
   margin: 10px 0;
@@ -202,10 +206,6 @@ body#tinymce.wp-editor .main-content strong,
 body#tinymce.wp-editor .entry-content b,
 body#tinymce.wp-editor .entry-content strong {
   font-weight: bold;
-}
-body#tinymce.wp-editor .main-content h1 {
-  font-size: 1.5em;
-  font-weight: 600;
 }
 body#tinymce.wp-editor .entry-content a {
   color: #e63d9b;

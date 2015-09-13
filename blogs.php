@@ -23,61 +23,50 @@ get_header(); ?>
     </div>
 
     <div class="blog-wrapper">
-<!-- Add in blog-excerpt css from your-news.scss? -->
         <?php
             $shows = get_terms( 'shows', 'orderby=count&hide_empty=0' );
             $count = count($shows);
-            if ( $count > 0 ){
+            if ( $count > 0 ) {
                 foreach ( $shows as $show ) {
                     if ($show->count > 0) {
-                        ?>
-                        <h1 class="show-title">
-                            <a href="<?php echo get_permalink( get_page_by_path( $show->slug ) ); ?>">
-                                <?php echo $show->name; ?>
-                            </a>
-                        </h1>
-                        <p style="color:#ccc">Show ID <?php echo $show->term_id; ?></p>
+                        echo "<h1 class='show-title'>";
+                        echo "<a href=" . get_permalink( get_page_by_path( $show->slug ) ) . "'>";
+                        echo $show->name;
+                        echo "</a>";
+                        echo "</h1>";
 
-                        <!-- Get all the blog posts on that show -->
-                        <?php
-                            $posts = get_posts(array(
-                              'post_type' => 'post',
-                              'numberposts' => -1,
-                              'tax_query' => array(
-                                array(
-                                  'taxonomy' => 'shows',
-                                  'field' => 'id',
-                                  'terms' => $show->term_id,
-                                  'include_children' => true
-                                )
-                              )
-                            ));
-                        ?>
+                        // Get all the blog posts on that show
+                        $posts = get_posts(array(
+                          'post_type' => 'post',
+                          'numberposts' => -1,
+                          'tax_query' => array(
+                            array(
+                              'taxonomy' => 'shows',
+                              'field' => 'id',
+                              'terms' => $show->term_id,
+                              'include_children' => true
+                            )
+                          )
+                        ));
+                        echo "<ul class='blog-excerpt'>";
+                        foreach ( $posts as $post ) {
 
-                        <ul class="blog-excerpt">
-                            <?php
-                            foreach ( $posts as $post ) {
-                            ?>
-                                <li>
-                                    <h2>
-                                        <a href="<?php echo get_permalink($post->ID); ?>">
-                                            <?php echo $post->post_title; ?>
-                                        </a>
-                                    </h2>
-                                    <p><?php echo $post->post_date; ?></p>
-                                    <a href="<?php echo get_permalink($post->ID); ?>">
-                                        <button class="btn btn-default">View post</button>
-                                    </a>
-                                    <pre>
-                                        <?php //print_r($post); ?>
-                                    </pre>
-                                </li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
-
-                        <?php
+                            echo "<li>";
+                                echo "<h2>";
+                                    echo "<a href='" . get_permalink($post->ID) . "'>";
+                                    echo $post->post_title;
+                                    echo "</a>";
+                                echo "</h2>";
+                                echo "<p>" . get_the_date('', $post->ID) . "</p>";
+                                echo "<a href='" . get_permalink($post->ID) . "'>";
+                                echo "    <button class='btn btn-default'>View post</button>";
+                                echo "</a>";
+                                // echo "<pre>";
+                                // print_r($post);
+                                // echo "</pre>";
+                            echo "</li>";
+                        }
+                        echo "</ul>";
                     }
                 }
             }

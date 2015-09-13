@@ -5,6 +5,7 @@
 
     h1 {
         text-align: center;
+        padding-bottom: $general-element-spacing;
     }
 
     iframe {
@@ -13,7 +14,6 @@
 }
 
 .blog-excerpt {
-
     li {
         padding-bottom: $general-element-spacing;
         padding-top: $general-element-spacing;
@@ -31,4 +31,5 @@
 
 .btn-wrapper {
     padding: $general-element-spacing;
+    text-align: center;
 }
