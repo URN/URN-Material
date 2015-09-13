@@ -148,49 +148,18 @@ add_editor_style();
  * Change Wordpress Post Editor Toolbar styles (when writing a new post)
  * See more settings here https://codex.wordpress.org/TinyMCE#Customize_TinyMCE_with_Filters
  *
- * @param  [type] $settings [description]
- * @return [type]           [description]
+ * @param  array $settings [description]
+ * @return array           [description]
  */
 function mytheme_tinymce_settings( $settings ) {
-    $settings['toolbar1'] = join(",", array(
-        'bold',
-        'italic',
-        'strikethrough',
-        'blockquote',
-        'hr',
-        'bullist',
-        'numlist',
-        'alignleft',
-        'aligncenter',
-        'alignright',
-        'link',
-        'unlink',
-        'wp_more',
-        'spellchecker',
-        'wp_fullscreen',
-        'wp_adv'
-    ));
-
-    $settings['toolbar2'] = join(",", array(
-        'formatselect',
-        'underline',
-        'alignjustify',
-        'forecolor',
-        'pastetext',
-        'removeformat',
-        'charmap',
-        'outdent',
-        'indent',
-        'undo',
-        'redo',
-        'wp_help'
-    ));
-
+    $settings['block_formats'] = 'Heading 1=h1;Heading 2=h2; Normal text=p';
+    $settings['toolbar1']='formatselect,bold,italic,|,bullist,numlist,link,|,undo,redo';
+    $settings['toolbar2']='';
+    $settings['toolbar3']='';
+    $settings['toolbar4']='';
     return $settings;
 }
 add_filter( 'tiny_mce_before_init', 'mytheme_tinymce_settings' );
-
-
 
 
 /**
@@ -209,7 +178,6 @@ function urn_login_logo() {
         </style>
     <?php
 }
-
 add_action( 'login_enqueue_scripts', 'urn_login_logo' );
 
 
