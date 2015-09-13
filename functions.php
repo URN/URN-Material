@@ -39,15 +39,6 @@ function urn_material_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'urn_material_scripts' );
 
-
-/**
- * Stop WP admin bar from pushing down the <body>, make it overlap instead.
- */
-add_action('get_header', function() {
-    remove_action('wp_head', '_admin_bar_bump_cb');
-});
-
-
 /**
  * Enable Menus under Appearance section in Wordpress
  */

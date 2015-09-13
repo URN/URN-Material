@@ -81,9 +81,9 @@ body#tinymce.wp-editor #page-wrap {
   flex-direction: column;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 }
 body#tinymce.wp-editor .wrapper {
-  position: relative;
   margin: 0 auto;
   width: 980px;
 }

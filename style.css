@@ -325,10 +325,10 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 }
 
 .wrapper {
-  position: relative;
   margin: 0 auto;
   width: 980px;
 }
