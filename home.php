@@ -5,7 +5,7 @@
 
         <div class="module">
             <a href="<?php echo get_permalink( get_page_by_path( 'music' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
             </a>
         </div>
 
@@ -84,7 +84,7 @@
     <div class="row cover-photos">
         <div class="module">
             <a href="<?php echo get_permalink( get_page_by_path( 'urn-tv' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
             </a>
         </div>
 
