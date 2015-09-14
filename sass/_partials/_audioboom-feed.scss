@@ -1,7 +1,12 @@
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@include keyframes(fadeIn) {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
 
 .audioboom-feed {
     text-align: center;
