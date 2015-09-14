@@ -1,17 +1,23 @@
 <?php get_header(); ?>
 
 <div class="main-content">
-    <div class="row">
+    <div class="row cover-photos">
 
         <div class="module">
-            <a href="#">
-                <img style="height:100%;width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'music' ) )?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
             </a>
         </div>
 
         <div class="module">
-            <a href="#">
-                <img style="height:100%;width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_2.jpg" ?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'schedule' ) )?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_3.jpg" ?>">
+            </a>
+        </div>
+
+        <div class="module">
+            <a href="<?php echo get_permalink( get_page_by_path( 'your-news' ) )?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_2.jpg" ?>">
             </a>
         </div>
 
@@ -75,17 +81,25 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="module">URN TV Watch Now!</div>
+    <div class="row cover-photos">
         <div class="module">
+            <a href="<?php echo get_permalink( get_page_by_path( 'urn-tv' ) )?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
+            </a>
+        </div>
+
+        <div class="module blogs">
             <h1>Recent Coverage</h1>
-            <ul>
-                <li class="recent-post">Women's World Cup</li>
-                <li class="recent-post">Varsity Cricket</li>
-                <li class="recent-post">Goodbyes and others</li>
+            <ul class="blog-excerpt">
+                <li><h2><a href="<?php echo get_permalink( get_page_by_path( 'urn-interviews-emma-collins' ) )?>">URN Interviews: Emma Collins</a></h2><p>23th June 2015</p></li>
             </ul>
         </div>
-        <div class="module">Catch up with shows you've missed (podcasts)</div>
+
+        <div class="module">
+            <a href="<?php echo get_permalink( get_page_by_path( 'podcasts' ) )?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_5.jpg" ?>">
+            </a>
+        </div>
     </div>
 </div>
 <?php get_footer(); ?>

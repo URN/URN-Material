@@ -1165,13 +1165,15 @@ a.committee-tag:active,
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 .row:first-child {
   padding-top: 35px;
+  padding-bottom: 15px;
 }
 .row:last-child {
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 .row h1 {
   margin-bottom: 10px;
@@ -1187,6 +1189,12 @@ a.committee-tag:active,
 .row .module:not(:last-child) {
   margin-right: 15px;
 }
+.row .module.blogs {
+  padding: 0 10px;
+}
+.row .module.blogs .blog-excerpt {
+  padding-top: 7.5px;
+}
 .row .twitter {
   margin-top: 15px;
 }
@@ -1195,12 +1203,23 @@ a.committee-tag:active,
   flex-direction: column;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  margin-top: 15px;
-  padding-left: 15px;
   width: 0;
+}
+.row.vertical h1 {
+  margin-top: 22.5px;
+  margin-bottom: 30px;
+}
+.row.vertical h1:first-child {
+  margin-top: 0;
 }
 .row .clip {
   margin-bottom: 15px;
+}
+
+.cover-photos .module {
+  text-align: left;
+  background: #fff;
+  height: 100%;
 }
 
 .show-page-header {

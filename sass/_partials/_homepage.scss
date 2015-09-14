@@ -2,14 +2,16 @@
     @include display-flex;
     @include flex-direction(row);
 
-    padding: 0 $general-element-spacing;
+    padding: 0 #{$general-element-spacing * 2};
 
     &:first-child {
         padding-top: #{$listen-now-overlap + $general-element-spacing};
+        padding-bottom: $general-element-spacing;
     }
 
     &:last-child {
         padding-bottom: $general-element-spacing;
+        padding-top: $general-element-spacing;
     }
 
     h1 {
@@ -26,6 +28,14 @@
         &:not(:last-child) {
             margin-right: $general-element-spacing;
         }
+
+        &.blogs {
+            padding: 0 10px;
+
+            .blog-excerpt {
+                padding-top: #{$general-element-spacing / 2};
+            }
+        }
     }
 
     .twitter {
@@ -35,12 +45,27 @@
     &.vertical {
         @include flex-direction(column);
         @include flex-grow(1);
-        margin-top: $general-element-spacing;
-        padding-left: $general-element-spacing;
         width: 0;
+
+        h1 {
+            margin-top: #{$general-element-spacing * 1.5};
+            margin-bottom: #{$general-element-spacing * 2};
+        }
+
+        h1:first-child {
+            margin-top: 0;
+        }
     }
 
     .clip {
         margin-bottom: $general-element-spacing;
+    }
+}
+
+.cover-photos {
+    .module {
+        text-align: left;
+        background: #fff;
+        height: 100%;
     }
 }
