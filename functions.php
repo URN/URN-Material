@@ -200,11 +200,12 @@ function message_studio($message) {
 
 /**
  * [get_posts_by_author description]
- * @param  int $posts_per_page    [description]
- * @param  int $author            [description]
- * @return string                 [description]
+ * @param  int  $posts_per_page    [description]
+ * @param  int  $author            [description]
+ * @param  bool $with_excerpt      [<description>]
+ * @return string                  [description]
  */
-function get_posts_by_author($posts_per_page, $author) {
+function get_posts_by_author($posts_per_page, $author, $with_excerpt = true) {
     $output = "<ul class='blog-excerpt'>";
 
     // Start the loop.
@@ -214,7 +215,7 @@ function get_posts_by_author($posts_per_page, $author) {
 
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post );
-            $output .= format_blog_excerpt($post);
+            $output .= format_blog_excerpt($post, $with_excerpt);
         endforeach;
         wp_reset_postdata();
 
@@ -237,7 +238,7 @@ function get_posts_by_author($posts_per_page, $author) {
  * @param  string $excerpt [description]
  * @return [type]          [description]
  */
-function format_blog_excerpt($post) {
+function format_blog_excerpt($post, $with_excerpt = true) {
     $url = get_permalink($post->ID);
     $title = $post->post_title;
     $date = get_the_date('', $post->ID);
@@ -246,7 +247,9 @@ function format_blog_excerpt($post) {
     $output = "<li>";
     $output .= "<h1><a href=" . $url . ">" . $title . "</a></h1>";
     $output .= "<p>" . $date . "</p>";
-    $output .= "<p>". $excerpt . "</p>";
+    if ($with_excerpt) {
+        $output .= "<p>". $excerpt . "</p>";
+    }
     $output .= "<a href=" . $url . "><button class='btn btn-default'>Read More</button></a>";
     $output .= "</li>";
     return $output;
