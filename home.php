@@ -41,9 +41,11 @@
                 <ul class="day-names">
                     <li class="day-name">
                         Today
-                        <a href="/schedule" class="btn">View Full Schedule</a>
                     </li>
                 </ul>
+                <a href="<?php echo get_permalink( get_page_by_path( 'schedule' ) )?>">
+                    <button class="btn">Full Schedule</button>
+                </a>
                 <div class="timetable">
                     <ul class="times">
                         <li>7am</li>

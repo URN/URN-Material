@@ -1446,6 +1446,15 @@ a.committee-tag:active,
   flex-direction: row;
   position: relative;
 }
+.schedule .btn {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  z-index: 1;
+  -moz-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
+}
 .schedule .timetable {
   background: rgba(0, 0, 0, 0.1);
   overflow-x: auto;
