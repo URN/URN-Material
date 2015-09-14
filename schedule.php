@@ -9,15 +9,15 @@ get_header(); ?>
     <div class="row">
         <?php
             $show_categories = array();
-            $show_categories[] = array('name' => 'After Dark', 'slug' => 'afterdark', 'link' => 'afterdark.jpg');
-            $show_categories[] = array('name' => 'Culture', 'slug' => 'culture', 'link' => 'culture.jpg');
-            $show_categories[] = array('name' => 'Daytime', 'slug' => 'daytime', 'link' => 'daytime.jpg');
-            $show_categories[] = array('name' => 'News', 'slug' => 'news', 'link' => 'news.jpg');
-            $show_categories[] = array('name' => 'Sport', 'slug' => 'sport', 'link' => 'sport.jpg');
+            $show_categories[] = array('name' => 'After Dark', 'slug' => 'shows', 'anchor' => '#afterdark', 'link' => 'afterdark.jpg');
+            $show_categories[] = array('name' => 'Culture', 'slug' => 'shows', 'anchor' => '#culture', 'link' => 'culture.jpg');
+            $show_categories[] = array('name' => 'Daytime', 'slug' => 'shows', 'anchor' => '#daytime', 'link' => 'daytime.jpg');
+            $show_categories[] = array('name' => 'News', 'slug' => 'shows', 'anchor' => '#news', 'link' => 'news.jpg');
+            $show_categories[] = array('name' => 'Sport', 'slug' => 'shows', 'anchor' => '#sport', 'link' => 'sport.jpg');
 
             foreach($show_categories as $show) {
                 echo "<div class='show-photo'>";
-                echo "  <a href='" . get_permalink( get_page_by_path( $show['slug'] ) ) . "'>";
+                echo "  <a href=" . get_permalink( get_page_by_path( $show['slug'] ) ) . $show['anchor'] . ">";
                 echo "  <img src='" . get_template_directory_uri() . "/images/schedule/" . $show['link'] . "'>";
                 echo "  </a>";
                 echo "</div>";
