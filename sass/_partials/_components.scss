@@ -96,12 +96,18 @@ $btn-default: #9b989a;
     width: 100%;
 
     .tab-title {
+        margin-left: -1px;
         background: #eee;
         border: 1px solid #ddd;
         padding: .7em 1em;
         cursor: pointer;
         z-index: 1;
-        margin-left: -1px;
+
+        @include breakpoint(mobile) {
+            color: #555;
+            width: 100%;
+            margin-left: 0;
+        }
 
         &:first-of-type {
             margin-left: 0;
@@ -129,6 +135,10 @@ $btn-default: #9b989a;
     input[type=radio]:checked + label {
         background: #fff;
         border-bottom: 1px solid #fff;
+
+        @include breakpoint(mobile) {
+            color: #000;
+        }
 
         & + div {
             display: block;

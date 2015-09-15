@@ -592,12 +592,19 @@ button::-moz-focus-inner {
   width: 100%;
 }
 .tabs .tab-title {
+  margin-left: -1px;
   background: #eee;
   border: 1px solid #ddd;
   padding: .7em 1em;
   cursor: pointer;
   z-index: 1;
-  margin-left: -1px;
+}
+@media (max-width: 620px) {
+  .tabs .tab-title {
+    color: #555;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .tabs .tab-title:first-of-type {
   margin-left: 0;
@@ -622,6 +629,11 @@ button::-moz-focus-inner {
 .tabs input[type=radio]:checked + label {
   background: #fff;
   border-bottom: 1px solid #fff;
+}
+@media (max-width: 620px) {
+  .tabs input[type=radio]:checked + label {
+    color: #000;
+  }
 }
 .tabs input[type=radio]:checked + label + div {
   display: block;
@@ -1704,7 +1716,13 @@ a.committee-tag:active,
 
 .audioboom-headlines {
   padding-bottom: 35px;
+  padding-top: 35px;
   width: 100%;
+}
+@media (max-width: 620px) {
+  .audioboom-headlines {
+    padding-bottom: 0;
+  }
 }
 .audioboom-headlines h1 {
   text-align: center;
@@ -1714,19 +1732,25 @@ a.committee-tag:active,
   margin-top: 15px;
 }
 
-.blog-excerpt li {
-  padding-bottom: 15px;
+@media (max-width: 780px) {
+  .blog-excerpt {
+    padding: 15px;
+  }
 }
-.blog-excerpt a {
+.blog-excerpt li {
+  padding-bottom: 30px;
+}
+.blog-excerpt h1 a {
   color: #222;
   text-decoration: none;
 }
-.blog-excerpt a:hover {
+.blog-excerpt h1 a:hover {
   text-decoration: underline;
 }
 
 .btn-wrapper {
-  padding: 15px;
+  padding-bottom: 30px;
+  padding-top: 15px;
   text-align: center;
 }
 
