@@ -180,7 +180,7 @@
 
       renderSubscribeButton();
 
-      youmax_global_options.element.find('.youmax-tabs').find('span[class^=uploads_]').attr('class', 'uploads_' + channelUploadsPlaylistId);
+      youmax_global_options.element.find('.youmax-tabs').find('span[class^=uploads_]').attr('data-url', channelUploadsPlaylistId);
 
       youmaxDefaultTab = youmax_global_options.youmaxDefaultTab;
 
@@ -192,6 +192,10 @@
         youmax_global_options.element.find(".youmax-tabs span[class^=playlists_]").click();
       } else if (youmaxDefaultTab.toUpperCase() == 'FEATURED' || youmaxDefaultTab.toUpperCase() == 'FEATURED') {
         youmax_global_options.element.find(".youmax-tabs span[class^=featured_]").click();
+      } else {
+        youmax_global_options.element.find(".youmax-tabs span").each(function() {
+          if ($(this).text() == youmaxDefaultTab) { $(this).click(); }
+        });
       }
     },
 
@@ -242,7 +246,7 @@
         playlistTitle = playlistArray[i].snippet.title;
         playlistUploaded = playlistArray[i].snippet.publishedAt;
         playlistThumbnail = playlistArray[i].snippet.thumbnails.medium.url;
-        //playlistThumbnail = playlistThumbnail.replace("hqdefault","mqdefault");
+        // playlistThumbnail = playlistThumbnail.replace("hqdefault","mqdefault");
         if ((i + youmax_global_options.youmaxItemCount - zeroPlaylistCompensation) % youmaxColumns !== 0)
           youmax_global_options.element.find('.youmax-video-list-div').append('<div data-id="' + playListId + '" class="youmax-video-tnail-box" style="width:' + ((100 / youmaxColumns) - 4) + '%;"><div class="youmax-video-tnail" style="filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src=\'' + playlistThumbnail + '\', sizingMethod=\'scale\'); background-image:url(\'' + playlistThumbnail + '\')"><div class="youmax-playlist-sidebar" class="youmax-playlist-sidebar-' + playListId + '"><span class="youmax-playlist-video-count"><b>' + playlistSize + '</b><br/>VIDEOS</span></div></div><span class="youmax-video-list-title">' + playlistTitle + '</span><br/><span class="youmax-video-list-views">' + getDateDiff(playlistUploaded) + ' ago</span></div>');
         else
@@ -321,6 +325,9 @@
 
     // 4
     getUploads = function (youmaxTabId, playlistTitle, nextPageToken) {
+      console.log('Get Uploads!')
+      console.log('youmaxTabId: ' + youmaxTabId);
+
       var pageTokenUrl = "";
       var loadMoreFlag = false;
 
@@ -456,21 +463,33 @@
     loadYoumax = function () {
       youmaxWidgetWidth = youmax_global_options.element.width();
 
+      var $tabs = $('<div>', { class: 'youmax-tabs' });
+
+      if (youmax_global_options.customTabs != undefined && youmax_global_options.customTabs.length > 0) {
+        for (var i = 0; i < youmax_global_options.customTabs.length; i++) {
+          var tab = youmax_global_options.customTabs[i];
+          $tabs.append(
+            $('<span>', { class: tab.type + "_"}).text(tab.name).attr('data-url', tab.url)
+          );
+        }
+      } else {
+        $tabs.append(
+            $('<span>', { class: 'featured_'}).text('Featured').attr('data-url', youmax_global_options.youmaxFeaturedPlaylistId),
+            $('<span>', { class: 'uploads_'}).text('Uploads'),
+            $('<span>', { class: 'playlists_'}).text('Playlists').attr('data-url', youmax_global_options.youTubePlaylistURL)
+        );
+      }
+
       youmax_global_options.element.append(
         $('<div>', { class: 'youmax-header' })
       ).append(
         $('<div>', { class: 'youmax-stat-holder' })
       ).append(
-        $('<div>', { class: 'youmax-tabs' }).append(
-          $('<span>', { class: 'featured_'}).text('Featured'),
-          $('<span>', { class: 'uploads_'}).text('Uploads'),
-          $('<span>', { class: 'playlists_'}).text('Playlists')
-        )
+        $tabs
       );
 
-      if(youmax_global_options.showGridOnly) {
+      if(!youmax_global_options.showHeader) {
         youmax_global_options.element.find('.youmax-header').addClass('youmax-hide');
-        youmax_global_options.element.find('.youmax-tabs').addClass('youmax-hide');
       }
 
       youmax_global_options.element.append('<div class="youmax-encloser"><iframe class="youmax-video" width="' + (youmaxWidgetWidth - 2) + '" height="' + (youmaxWidgetWidth / youmax_global_options.youtubeVideoAspectRatio) + '" src="" frameborder="0" allowfullscreen></iframe><div class="youmax-video-list-div"></div><div class="youmax-load-more-div">LOAD MORE</div></div>');
@@ -489,6 +508,7 @@
       youmaxFeaturedPlaylistId = youTubePlaylistURL.substring(youTubePlaylistURL.indexOf("?list=") + 6);
       youmax_global_options.youmaxFeaturedPlaylistId = youmaxFeaturedPlaylistId;
     }
+    console.log(youTubePlaylistURL);
   },
 
   // 2
@@ -502,13 +522,14 @@
       youmax_global_options.element.find('.youmax-tab-hover').removeClass('youmax-tab-hover');
       $(this).addClass('youmax-tab-hover');
 
-      youmaxTabClass = $(this).attr('class').split(' ')[0]; //data-tab
+      youmaxTabClass = $(this).attr('class');
       showLoader();
 
       if (youmaxTabClass.indexOf("featured_") != -1) {
-        getUploads('featured_' + youmax_global_options.youmaxFeaturedPlaylistId, null, null);
+        getUploads('featured_' + $(this).attr('data-url'), null, null);
       } else if (youmaxTabClass.indexOf("uploads_") != -1) {
-        getUploads(youmaxTabClass);
+        console.log($(this).attr('data-url'));
+        getUploads('uploads_' + $(this).attr('data-url'));
       } else if (youmaxTabClass.indexOf("playlists_") != -1) {
         getPlaylists();
       }
@@ -520,14 +541,15 @@
       $youmaxLoadMoreDiv.html('LOADING..');
       $youmaxLoadMoreDiv.addClass('youmax-load-more-div-click');
 
-      var youmaxTabClass = youmax_global_options.element.find('.youmax-tab-hover').attr('class').split(' ')[0];
+      var youmaxTabClass = youmax_global_options.element.find('.youmax-tab-hover').attr('class');
+      var youmaxURL = youmax_global_options.element.find('.youmax-tab-hover').attr('data-url');
       var nextPageToken = $youmaxLoadMoreDiv.data('nextpagetoken');
 
       if (null != nextPageToken && nextPageToken != "undefined" && nextPageToken !== "") {
         if (youmaxTabClass.indexOf("featured_") != -1) {
-          getUploads('featured_' + youmax_global_options.youmaxFeaturedPlaylistId, null, nextPageToken);
+          getUploads('featured_' + youmaxURL, null, nextPageToken);
         } else if (youmaxTabClass.indexOf("uploads_") != -1) {
-          getUploads(youmaxTabClass, null, nextPageToken);
+          getUploads(youmaxURL, null, nextPageToken);
         } else if (youmaxTabClass == "playlists_") {
           getPlaylists(nextPageToken);
         }
@@ -565,6 +587,7 @@
     youmax_global_options.apiKey = options.apiKey;
     youmax_global_options.youTubeChannelURL = options.youTubeChannelURL || '';
     youmax_global_options.youTubePlaylistURL = options.youTubePlaylistURL || '';
+    youmax_global_options.youmaxFeaturedPlaylistId = options.youTubeFeaturedURL || '';
     youmax_global_options.youmaxColumns = options.youmaxColumns || 3;
     youmax_global_options.showVideoInLightbox = options.showVideoInLightbox || false;
     youmax_global_options.youmaxChannelId = '';
@@ -572,23 +595,16 @@
     youmax_global_options.youmaxItemCount = 0;
     youmax_global_options.youtubeVideoAspectRatio = 640 / 360;
 
-    youmax_global_options.showGridOnly = options.showGridOnly || false;
+    youmax_global_options.showHeader = options.showHeader || false;
+    youmax_global_options.youmaxDefaultTab = options.youmaxDefaultTab || 'FEATURED';
 
-    if (options.showGridOnly) {
-      youmax_global_options.youmaxDefaultTab = 'FEATURED';
-    } else {
-      youmax_global_options.youmaxDefaultTab = options.youmaxDefaultTab || 'FEATURED';
-      // Only set this if we are showing the header also
-      if (options.customHeaders != undefined && options.customHeaders.length > 0) {
-        youmax_global_options.customHeaders = true;
-        youmax_global_options.youmaxDefaultTab = 'FEATURED'; //options.customHeaders[0].name;
-        youmax_global_options.customheaders = options.customHeaders;
-      }
+    if (options.customTabs != undefined && options.customTabs.length > 0) {
+        youmax_global_options.customTabs = options.customTabs;
+        youmax_global_options.youmaxDefaultTab = options.customTabs[0].name;
     }
 
-
-    //youmax_global_options.youmaxWidgetWidth = options.youmaxWidgetWidth||800;
-    //youmax_global_options.showFeaturedVideoOnLoad = options.showFeaturedVideoOnLoad||false;
+    // youmax_global_options.youmaxWidgetWidth = options.youmaxWidgetWidth||800;
+    // youmax_global_options.showFeaturedVideoOnLoad = options.showFeaturedVideoOnLoad||false;
     youmax_global_options.youtubeMqdefaultAspectRatio = 300 / 180;
 
     initFeaturedVideos();

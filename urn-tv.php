@@ -16,11 +16,13 @@ get_header(); ?>
                 $('.youmax').youmax({
                     apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs', // harry.mumford-turner@urn1350.net
                     youTubeChannelURL: "http://www.youtube.com/user/urn1350",
-                    youTubePlaylistURL: "https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG",
+                    youTubePlaylistURL: "PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG", // https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG
+                    youTubeFeaturedURL: "PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG", // https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG
                     youmaxDefaultTab: "UPLOADS", // PLAYLISTS || UPLOADS || FEATURED
                     youmaxColumns: 3,
                     showVideoInLightbox: false,
-                    maxResults: 20
+                    maxResults: 20,
+                    showHeader: true
                 });
             });
         </script>

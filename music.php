@@ -25,7 +25,7 @@ get_header(); ?>
     <section class="tabs">
 
         <input id="tab-playlist-a" type="radio" name="grp" checked="checked"/>
-        <label for="tab-playlist-a" class="tab-title">Playlist</label>
+        <label for="tab-playlist-a" class="tab-title">Playlists</label>
         <div class="tab-content">
             <div class="videos">
                 <!-- Youtube Grid of images -->
@@ -37,23 +37,26 @@ get_header(); ?>
                         $('.youmax').youmax({
                             apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs', // harry.mumford-turner@urn1350.net
                             youTubeChannelURL: "http://www.youtube.com/user/urn1350",
-                            youTubePlaylistURL: "https://www.youtube.com/playlist?list=PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW",
+                            youTubePlaylistURL: "PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW",
                             youmaxColumns: 3,
                             showVideoInLightbox: false,
                             maxResults: 20,
-                            showGridOnly: true,
-                            customHeaders: [
+                            showHeader: false,
+                            customTabs: [
                                 {
                                     name: "Playlist A",
-                                    url: "https://www.youtube.com/playlist?list=PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
+                                    type: 'featured',
+                                    url: "PL7C00E83736FB02C3"
                                 },
                                 {
                                     name: "Playlist B",
-                                    url: "https://www.youtube.com/playlist?list=PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
+                                    type: 'featured',
+                                    url: "PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
                                 },
                                 {
                                     name: "Playlist C",
-                                    url: "https://www.youtube.com/playlist?list=PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
+                                    type: 'featured',
+                                    url: "PLWRJVI4Oj4IaYIWIpFlnRJ_v_fIaIl6Ey"
                                 }
                             ]
                         });
