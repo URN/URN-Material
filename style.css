@@ -85,17 +85,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #youmax-header {
-  font: 24px Arial;
+  font-size: 24px;
   line-height: 25px;
   height: 90px;
   text-align: left;
   position: relative;
 }
+@media (max-width: 620px) {
+  #youmax-header {
+    height: 100%;
+    padding-left: 15px;
+  }
+}
 
 .youmax-stat {
   float: right;
   margin: 25px 10px 10px;
-  font: 10px Arial;
+  font-size: 10px;
   color: #ccc;
   text-align: center;
 }
@@ -106,7 +112,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .youmax-stat-count {
-  font: 18px Arial;
+  font-size: 18px;
 }
 
 #youmax-channel-desc {
@@ -169,7 +175,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #555;
   display: inline-block;
   font-size: 12px;
-  font-family: Arial;
   margin: 6px 0;
 }
 
@@ -249,6 +254,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .youmax-subscribe div {
   vertical-align: top !important;
 }
+@media (max-width: 620px) {
+  .youmax-subscribe {
+    width: 120px;
+  }
+}
 
 #youmax-header-logo {
   border: 5px solid #fff;
@@ -256,6 +266,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 60px;
   margin: 15px 15px 15px 32px;
   display: inline-block;
+}
+@media (max-width: 620px) {
+  #youmax-header-logo {
+    display: none;
+  }
 }
 
 #youmax-load-more-div {
@@ -561,11 +576,6 @@ button::-moz-focus-inner {
   border: 1px solid #ddd;
   -webkit-order: 1;
   order: 1;
-}
-@media (max-width: 620px) {
-  .tabs .tab-content {
-    padding: 0;
-  }
 }
 @media (max-width: 780px) {
   .tabs .tab-content {
