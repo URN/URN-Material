@@ -213,13 +213,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .youmax-tabs {
   text-align: left;
-  padding: 25px 10px 0;
+  padding: 25px 10px 10px;
   font-size: 18px;
+}
+@media (max-width: 780px) {
+  .youmax-tabs {
+    padding: 40px 10px 20px;
+  }
 }
 @media (max-width: 440px) {
   .youmax-tabs {
-    padding: 20px 0 0;
-    font-size: 17px;
+    font-size: 20px;
+    padding-top: 0;
+    text-align: center;
   }
 }
 .youmax-tabs span {
@@ -229,6 +235,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @media (max-width: 440px) {
   .youmax-tabs span {
+    display: block;
     margin: 10px 2px 5px;
   }
 }
@@ -291,6 +298,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 18px;
   border: 1px solid #ccc;
   cursor: pointer;
+}
+@media (max-width: 620px) {
+  .youmax-load-more-div {
+    margin: 15px 10px;
+  }
 }
 
 .youmax-tab-hover {
@@ -1137,6 +1149,16 @@ a.committee-tag:active,
 }
 .audioboom-feed {
   text-align: center;
+}
+.audioboom-feed .load-more {
+  padding: 6px;
+  margin: 10px;
+  width: 20%;
+}
+@media (max-width: 780px) {
+  .audioboom-feed .load-more {
+    width: 90%;
+  }
 }
 .audioboom-feed .cards {
   list-style: none;

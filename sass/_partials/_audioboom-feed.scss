@@ -11,6 +11,16 @@
 .audioboom-feed {
     text-align: center;
 
+    .load-more {
+        padding: 6px;
+        margin: 10px;
+        width: 20%;
+
+        @include breakpoint(tablet) {
+            width: 90%;
+        }
+    }
+
     .cards {
         list-style: none;
         justify-content: center;
