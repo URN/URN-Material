@@ -62,4 +62,8 @@ body {
 
 #listen-now.minimise + .play + #page-container .main-content {
     padding: #{$general-element-spacing + 20px} $general-element-spacing;
+
+    @include breakpoint(mobile) {
+        padding: 35px 0;
+    }
 }

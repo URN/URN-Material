@@ -2,5 +2,5 @@
 .videos {
     @include body-font();
 
-    padding-top: $page-padding;
+    padding-top: #{$page-padding / 2};
 }

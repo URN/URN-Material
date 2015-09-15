@@ -78,7 +78,7 @@
 
 .youmax-video-tnail-box {
     width: 46%;
-    margin: 2%;
+    margin: 2% !important; // overriding extend .panel
     float: left;
     overflow: hidden;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -88,6 +88,7 @@
     @include breakpoint(mobile) {
         // TODO change this when reworked JS
         width: 95% !important; // padding
+        margin: 0;
     }
 
     @extend .panel;
@@ -155,12 +156,21 @@
     margin: 10px 5px 5px;
     padding: 5px;
     cursor: pointer;
+
+    @include breakpoint(tiny) {
+        margin: 10px 2px 5px;
+    }
 }
 
 #youmax-tabs {
     text-align: left;
     padding: 25px 10px 0;
     font-size: 18px;
+
+    @include breakpoint(tiny) {
+        padding: 20px 0 0;
+        font-size: 17px;
+    }
 }
 
 #youmax-lightbox {
