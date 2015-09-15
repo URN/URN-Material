@@ -1,6 +1,12 @@
 .row {
     @include display-flex;
+
+
     @include flex-direction(row);
+
+    @include breakpoint(mobile) {
+        @include flex-direction(column);
+    }
 
     padding: 0 #{$general-element-spacing * 2};
 
