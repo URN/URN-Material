@@ -155,12 +155,17 @@
 
 .youmax-tabs {
     text-align: left;
-    padding: 25px 10px 0;
+    padding: 25px 10px 10px;
     font-size: 18px;
 
+    @include breakpoint(tablet) {
+        padding: 40px 10px 20px;
+    }
+
     @include breakpoint(tiny) {
-        padding: 20px 0 0;
-        font-size: 17px;
+        font-size: 20px;
+        padding-top: 0;
+        text-align: center;
     }
 
     span {
@@ -169,6 +174,7 @@
         cursor: pointer;
 
         @include breakpoint(tiny) {
+            display: block;
             margin: 10px 2px 5px;
         }
     }
@@ -231,6 +237,10 @@
     font-size: 18px;
     border: 1px solid #ccc;
     cursor: pointer;
+
+    @include breakpoint(mobile) {
+        margin: 15px 10px;
+    }
 }
 
 .youmax-tab-hover {
