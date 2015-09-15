@@ -139,6 +139,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   cursor: pointer;
   background-color: #fff;
 }
+@media (max-width: 620px) {
+  .youmax-video-tnail-box {
+    width: 95% !important;
+  }
+}
 
 #youmax-encloser {
   padding-top: 20px;
@@ -148,7 +153,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
   text-align: left;
   display: inline-block;
-  padding: 0 15px;
   box-sizing: border-box;
 }
 
@@ -559,6 +563,11 @@ button::-moz-focus-inner {
   order: 1;
 }
 @media (max-width: 620px) {
+  .tabs .tab-content {
+    padding: 0;
+  }
+}
+@media (max-width: 780px) {
   .tabs .tab-content {
     padding: 0;
   }

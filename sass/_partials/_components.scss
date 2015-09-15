@@ -116,7 +116,7 @@ $btn-default: #9b989a;
 
         @include order(1);
 
-        @include breakpoint(mobile) {
+        @include breakpoint(tablet) {
             padding: 0;
         }
     }
