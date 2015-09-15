@@ -225,7 +225,7 @@ function get_posts_by_author($posts_per_page, $author, $with_excerpt = true) {
 
     // Create Show All Button
     $output .= "<div class='btn-wrapper'>";
-    $output .= "<a href='" . get_author_posts_url( $author ) . "'><button class='btn'>Show all</button></a>";
+    $output .= "<a href='" . get_permalink( get_page_by_path( 'blogs' ) ) . "'><button class='btn'>Show all</button></a>";
     $output .= "</div>";
     return $output;
 }
@@ -250,7 +250,7 @@ function format_blog_excerpt($post, $with_excerpt = true) {
     if ($with_excerpt) {
         $output .= "<p>". $excerpt . "</p>";
     }
-    $output .= "<a href=" . $url . "><button class='btn btn-default'>Read More</button></a>";
+    $output .= "<a href=" . $url . "><button class='btn'>Read More</button></a>";
     $output .= "</li>";
     return $output;
 }
