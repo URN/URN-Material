@@ -6,9 +6,17 @@ $slot-spacing: 4px;
 $time-height: 40px;
 $time-width: 100px;
 
-.show-photo img {
-    padding: 5px;
-    width: 100%;
+.show-photo {
+
+    @include breakpoint(mobile) {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    img {
+        padding: 5px;
+        width: 100%;
+    }
 }
 
 .filter-container {
