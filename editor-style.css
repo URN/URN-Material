@@ -74,36 +74,6 @@ body#tinymce.wp-editor b,
 body#tinymce.wp-editor strong {
   font-weight: bold;
 }
-body#tinymce.wp-editor .alignleft {
-  float: left;
-  margin: 15px 28px 28px 0;
-  text-align: left;
-}
-body#tinymce.wp-editor .alignright {
-  float: right;
-  margin: 15px 0 28px 28px;
-  text-align: right;
-}
-body#tinymce.wp-editor .aligncenter {
-  clear: both;
-  display: block;
-  margin: 15px auto;
-  text-align: center;
-}
-body#tinymce.wp-editor img.size-large, body#tinymce.wp-editor img.size-full {
-  height: 100%;
-  width: 100%;
-}
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large {
-  padding-bottom: 15px;
-}
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item {
-  width: 50% !important;
-}
-body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item img {
-  height: 50%;
-  width: 100%;
-}
 body#tinymce.wp-editor p {
   line-height: 1.4em;
   margin-bottom: 6px;
@@ -131,7 +101,49 @@ body#tinymce.wp-editor h2 {
 }
 body#tinymce.wp-editor a {
   color: #e63d9b;
+  word-wrap: break-word;
 }
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus {
   color: #d51b82;
+}
+body#tinymce.wp-editor .alignleft {
+  float: left;
+  margin: 15px 28px 28px 0;
+  text-align: left;
+}
+body#tinymce.wp-editor .alignright {
+  float: right;
+  margin: 15px 0 28px 28px;
+  text-align: right;
+}
+body#tinymce.wp-editor .aligncenter {
+  clear: both;
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+}
+@media (max-width: 620px) {
+  body#tinymce.wp-editor .aligncenter,
+  body#tinymce.wp-editor .alignright,
+  body#tinymce.wp-editor .alignleft {
+    width: 100% !important;
+  }
+}
+@media (max-width: 620px) {
+  body#tinymce.wp-editor img {
+    height: 100%;
+    width: 100%;
+  }
+}
+body#tinymce.wp-editor .gallery-columns-2.gallery-size-large {
+  padding-bottom: 15px;
+}
+@media (max-width: 620px) {
+  body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item {
+    width: 100% !important;
+  }
+}
+body#tinymce.wp-editor .gallery-columns-2.gallery-size-large .gallery-item img {
+  height: 50%;
+  width: 100%;
 }

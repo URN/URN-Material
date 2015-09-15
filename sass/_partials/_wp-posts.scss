@@ -1,4 +1,6 @@
 
+@import '_partials/breakpoints';
+
 //
 // These styles are shared with:
 // WP Post editor &
@@ -32,9 +34,73 @@ h2 {
 
 a {
     color: $urn-pink;
+    word-wrap: break-word;
 
     &:hover,
     &:focus {
         color: darken($urn-pink, 10%);
     }
 }
+
+
+
+//
+// Alignment
+//
+.alignleft {
+    float: left;
+    margin: $general-element-spacing 28px 28px 0;
+    text-align: left;
+}
+
+.alignright {
+    float: right;
+    margin: $general-element-spacing 0 28px 28px;
+    text-align: right;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: $general-element-spacing auto;
+    text-align: center;
+}
+
+.aligncenter,
+.alignright,
+.alignleft {
+    @include breakpoint(mobile) {
+        width: 100% !important;
+    }
+}
+
+// Set photos to be full width when they get larger than the wrapper
+img {
+    @include breakpoint(mobile) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+//
+// Responsive 2 column Gallery
+//
+.gallery-columns-2.gallery-size-large {
+    padding-bottom: $general-element-spacing;
+
+    .gallery-item {
+        @include breakpoint(mobile) {
+            width: 100% !important;
+        }
+
+        img {
+            height: 50%;
+            width: 100%;
+        }
+    }
+}
+
+// @include breakpoint(mobile) {
+//     width: 90%;
+//     height: 90%;
+// }

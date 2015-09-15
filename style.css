@@ -507,44 +507,6 @@ button::-moz-focus-inner {
 .entry-content strong {
   font-weight: bold;
 }
-.main-content .alignleft,
-.entry-content .alignleft {
-  float: left;
-  margin: 15px 28px 28px 0;
-  text-align: left;
-}
-.main-content .alignright,
-.entry-content .alignright {
-  float: right;
-  margin: 15px 0 28px 28px;
-  text-align: right;
-}
-.main-content .aligncenter,
-.entry-content .aligncenter {
-  clear: both;
-  display: block;
-  margin: 15px auto;
-  text-align: center;
-}
-.main-content img.size-large, .main-content img.size-full,
-.entry-content img.size-large,
-.entry-content img.size-full {
-  height: 100%;
-  width: 100%;
-}
-.main-content .gallery-columns-2.gallery-size-large,
-.entry-content .gallery-columns-2.gallery-size-large {
-  padding-bottom: 15px;
-}
-.main-content .gallery-columns-2.gallery-size-large .gallery-item,
-.entry-content .gallery-columns-2.gallery-size-large .gallery-item {
-  width: 50% !important;
-}
-.main-content .gallery-columns-2.gallery-size-large .gallery-item img,
-.entry-content .gallery-columns-2.gallery-size-large .gallery-item img {
-  height: 50%;
-  width: 100%;
-}
 .main-content p,
 .entry-content p {
   line-height: 1.4em;
@@ -574,9 +536,51 @@ button::-moz-focus-inner {
 }
 .entry-content a {
   color: #e63d9b;
+  word-wrap: break-word;
 }
 .entry-content a:hover, .entry-content a:focus {
   color: #d51b82;
+}
+.entry-content .alignleft {
+  float: left;
+  margin: 15px 28px 28px 0;
+  text-align: left;
+}
+.entry-content .alignright {
+  float: right;
+  margin: 15px 0 28px 28px;
+  text-align: right;
+}
+.entry-content .aligncenter {
+  clear: both;
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+}
+@media (max-width: 620px) {
+  .entry-content .aligncenter,
+  .entry-content .alignright,
+  .entry-content .alignleft {
+    width: 100% !important;
+  }
+}
+@media (max-width: 620px) {
+  .entry-content img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.entry-content .gallery-columns-2.gallery-size-large {
+  padding-bottom: 15px;
+}
+@media (max-width: 620px) {
+  .entry-content .gallery-columns-2.gallery-size-large .gallery-item {
+    width: 100% !important;
+  }
+}
+.entry-content .gallery-columns-2.gallery-size-large .gallery-item img {
+  height: 50%;
+  width: 100%;
 }
 
 .tabs {
