@@ -67,6 +67,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  * https://github.com/codehandling/youmax
  * @license MIT
  */
+.youmax-hide {
+  display: none !important;
+}
+
 .youmax-showing {
   color: #f5f5f5;
   font-weight: 400;
@@ -84,7 +88,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: .8;
 }
 
-#youmax-header {
+.youmax-header {
   font-size: 24px;
   line-height: 25px;
   height: 90px;
@@ -92,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
 }
 @media (max-width: 620px) {
-  #youmax-header {
+  .youmax-header {
     height: 100%;
     padding-left: 15px;
   }
@@ -106,7 +110,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
 }
 
-#youmax-stat-holder {
+.youmax-stat-holder {
   float: right;
   height: 100%;
 }
@@ -115,11 +119,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 18px;
 }
 
-#youmax-channel-desc {
+.youmax-channel-desc {
   text-align: left;
 }
 
-#youmax {
+.youmax {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -152,11 +156,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
-#youmax-encloser {
+.youmax-encloser {
   padding-top: 20px;
 }
 
-#youmax-video-list-div {
+.youmax-video-list-div {
   width: 100%;
   text-align: left;
   display: inline-block;
@@ -207,33 +211,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: no-repeat;
 }
 
-.youmax-tab {
-  color: #666;
-  text-shadow: 0 1px 0 #fff;
-  display: inline-block;
-  margin: 10px 5px 5px;
-  padding: 5px;
-  cursor: pointer;
-}
-@media (max-width: 440px) {
-  .youmax-tab {
-    margin: 10px 2px 5px;
-  }
-}
-
-#youmax-tabs {
+.youmax-tabs {
   text-align: left;
   padding: 25px 10px 0;
   font-size: 18px;
 }
 @media (max-width: 440px) {
-  #youmax-tabs {
+  .youmax-tabs {
     padding: 20px 0 0;
     font-size: 17px;
   }
 }
+.youmax-tabs span {
+  margin: 10px 5px 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+@media (max-width: 440px) {
+  .youmax-tabs span {
+    margin: 10px 2px 5px;
+  }
+}
 
-#youmax-lightbox {
+.youmax-lightbox {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 100;
@@ -248,7 +248,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: static !important;
 }
 
-#youmax-video-lightbox {
+.youmax-video-lightbox {
   opacity: 1;
 }
 
@@ -272,7 +272,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
-#youmax-header-logo {
+.youmax-header-logo {
   border: 5px solid #fff;
   vertical-align: middle;
   height: 60px;
@@ -280,12 +280,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: inline-block;
 }
 @media (max-width: 620px) {
-  #youmax-header-logo {
+  .youmax-header-logo {
     display: none;
   }
 }
 
-#youmax-load-more-div {
+.youmax-load-more-div {
   padding: 10px;
   margin: 15px 30px;
   font-size: 18px;
@@ -307,21 +307,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: inline-block;
 }
 
-#youmax-video {
+.youmax-video {
   margin-bottom: 20px !important;
 }
 
-#youmax-load-more-div:hover,
+.youmax-load-more-div:hover,
 .youmax-load-more-div-click {
   background: #dbdbdb;
 }
 
 @media (max-width: 620px) {
-  #youmax-video-list-div {
+  .youmax-video-list-div {
     padding: 0;
   }
 
-  #youmax-encloser {
+  .youmax-encloser {
     padding: 0;
   }
 }

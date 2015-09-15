@@ -8,6 +8,10 @@
 @import '../_partials/variables';
 @import '../_partials/breakpoints';
 
+.youmax-hide {
+    display: none !important;
+}
+
 .youmax-showing {
     color: #f5f5f5;
     font-weight: 400;
@@ -25,7 +29,7 @@
     opacity: .8;
 }
 
-#youmax-header {
+.youmax-header {
     font-size: 24px;
     line-height: 25px;
     height: 90px;
@@ -46,7 +50,7 @@
     text-align: center;
 }
 
-#youmax-stat-holder {
+.youmax-stat-holder {
     float: right;
     height: 100%;
 }
@@ -55,11 +59,11 @@
     font-size: 18px;
 }
 
-#youmax-channel-desc {
+.youmax-channel-desc {
     text-align: left;
 }
 
-#youmax {
+.youmax {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -94,11 +98,11 @@
     @extend .panel;
 }
 
-#youmax-encloser {
+.youmax-encloser {
     padding-top: 20px;
 }
 
-#youmax-video-list-div {
+.youmax-video-list-div {
     width: 100%;
     text-align: left;
     display: inline-block;
@@ -149,20 +153,7 @@
     background-repeat: no-repeat;
 }
 
-.youmax-tab {
-    color: #666;
-    text-shadow: 0 1px 0 #fff;
-    display: inline-block;
-    margin: 10px 5px 5px;
-    padding: 5px;
-    cursor: pointer;
-
-    @include breakpoint(tiny) {
-        margin: 10px 2px 5px;
-    }
-}
-
-#youmax-tabs {
+.youmax-tabs {
     text-align: left;
     padding: 25px 10px 0;
     font-size: 18px;
@@ -171,9 +162,19 @@
         padding: 20px 0 0;
         font-size: 17px;
     }
+
+    span {
+        margin: 10px 5px 5px;
+        padding: 5px;
+        cursor: pointer;
+
+        @include breakpoint(tiny) {
+            margin: 10px 2px 5px;
+        }
+    }
 }
 
-#youmax-lightbox {
+.youmax-lightbox {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 100;
@@ -188,7 +189,7 @@
     position: static !important;
 }
 
-#youmax-video-lightbox {
+.youmax-video-lightbox {
     opacity: 1;
 }
 
@@ -212,7 +213,7 @@
     }
 }
 
-#youmax-header-logo {
+.youmax-header-logo {
     border: 5px solid #fff;
     vertical-align: middle;
     height: 60px;
@@ -224,7 +225,7 @@
     }
 }
 
-#youmax-load-more-div {
+.youmax-load-more-div {
     padding: 10px;
     margin: 15px 30px;
     font-size: 18px;
@@ -246,21 +247,21 @@
     display: inline-block;
 }
 
-#youmax-video {
+.youmax-video {
     margin-bottom: 20px !important;
 }
 
-#youmax-load-more-div:hover,
+.youmax-load-more-div:hover,
 .youmax-load-more-div-click {
     background: #dbdbdb;
 }
 
 @media (max-width: 620px) {
-    #youmax-video-list-div {
+    .youmax-video-list-div {
         padding: 0;
     }
 
-    #youmax-encloser {
+    .youmax-encloser {
         padding: 0;
     }
 }

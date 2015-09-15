@@ -8,12 +8,12 @@ get_header(); ?>
 <div class="main-content">
     <div class="videos">
         <!-- Youtube Grid of images -->
-        <div id="youmax"></div>
+        <div class="youmax"></div>
 
         <script>
             jQuery(document).ready(function( $ ) {
                 // Settings (must be below youmax id)
-                $('#youmax').youmax({
+                $('.youmax').youmax({
                     apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs', // harry.mumford-turner@urn1350.net
                     youTubeChannelURL: "http://www.youtube.com/user/urn1350",
                     youTubePlaylistURL: "https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG",
