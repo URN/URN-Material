@@ -16,6 +16,9 @@ function urn_material_scripts() {
     wp_enqueue_script('audio-boom-feed', get_template_directory_uri() . '/js/audio-boom-feed.js', array('jquery'), false, true);
     wp_enqueue_script('listen-now', get_template_directory_uri() . '/js/listen-now.js', array('jquery'), false, true);
 
+    // Google Analytics
+    wp_enqueue_script('ga', get_template_directory_uri() . '/js/ga.js', array(), false, true);
+
     // Add specific JS scripts
     if ( is_home() || is_page ('schedule')) {
         wp_enqueue_script('the-schedule', get_template_directory_uri() . '/js/schedule.js', array('jquery'), false, true);
