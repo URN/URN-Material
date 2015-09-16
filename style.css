@@ -1295,8 +1295,18 @@ a.committee-tag:active,
 .row .module.blogs {
   padding: 0 10px;
 }
+@media (max-width: 620px) {
+  .row .module.blogs {
+    padding: 35px 0 0;
+  }
+}
 .row .module.blogs .blog-excerpt {
   padding-top: 7.5px;
+}
+@media (max-width: 620px) {
+  .row .module.blogs .blog-excerpt {
+    padding: 0;
+  }
 }
 .row .twitter {
   margin-top: 15px;
@@ -1314,6 +1324,13 @@ a.committee-tag:active,
 }
 .row.vertical h1:first-child {
   margin-top: 0;
+}
+@media (max-width: 620px) {
+  .row.vertical {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 .row .clip {
   margin-bottom: 15px;
@@ -1734,6 +1751,25 @@ a.committee-tag:active,
 .schedule .show:last-child {
   left: 363px;
   width: 250px;
+}
+
+@media (max-width: 620px) {
+  .mini-schedule {
+    padding: 15px;
+  }
+}
+@media (max-width: 620px) {
+  .mini-schedule .day-names,
+  .mini-schedule .timetable {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .mini-schedule .btn {
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .videos {
