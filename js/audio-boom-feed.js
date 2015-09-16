@@ -6,6 +6,8 @@ jQuery(document).ready(function( $ ) {
 
     var audioboom_feed = {
 
+        cached_podcasts: [],
+
         // Setup elements & load config
         init: function(element) {
 
@@ -25,12 +27,13 @@ jQuery(document).ready(function( $ ) {
                 channel_url: '//audioboom.com/' + audioboom_user + channel_url,
                 feed_name: $(element).attr('data-channel-name'),
                 feed_type: $(element).attr('data-channel-type'),
+                audioboom_type: $(element).attr('data-channel-audioboom-type'),
                 element: $(element).find('.cards'),
                 more_button: $load_more,
                 max_display: 2, // index based
                 current_shown: 0 // index based
             };
-
+            console.log('loading podcasts on init');
             this.loadPodcasts();
         },
 
@@ -41,10 +44,16 @@ jQuery(document).ready(function( $ ) {
 
         // Load podcasts via api call
         loadPodcasts: function() {
-            this.getData(this.displayPodcasts);
+            this.getData(this.displayPodcasts, this);
         },
 
         displayPodcasts: function(feed, podcasts) {
+            console.log('Displaying podcasts');
+            console.log(podcasts);
+            if (podcasts === undefined) {
+                this.setMoreButton('No more', true);
+                return;
+            }
             for (var i = feed.config.current_shown; i < podcasts.length; i++) {
 
                 if (i > feed.config.max_display + feed.config.current_shown) {
@@ -57,7 +66,7 @@ jQuery(document).ready(function( $ ) {
                 if (podcasts.length - 1 == feed.config.current_shown) {
                     // Reached max podcasts
                     // Set button to null
-                    feed.config.more_button.text('No more').attr('disabled', 'true');
+                    this.setMoreButton('No more', true);
                     break;
                 }
             }
@@ -99,9 +108,32 @@ jQuery(document).ready(function( $ ) {
                 url: this.config.api_url,
                 type: 'get'
             }).done(function (data) {
-                feed.cached_podcasts = data.body.audio_clips;
-                callback(feed, data.body.audio_clips);
+
+                // For users, the API call, returns all child channels, so we need to only add root channel podcasts
+                if (feed.config.audioboom_type == 'users') {
+                    $.each(data.body.audio_clips, function(index, val) {
+                        if(val !== undefined && val.channel === undefined) { // If there isnt a channel
+                            feed.cached_podcasts.push(val); // add it
+                        }
+                    });
+                } else {
+                    // Add everything
+                    feed.cached_podcasts = data.body.audio_clips;
+                }
+
+                callback(feed, feed.cached_podcasts);
+            }).always(function(result) {
+                if (result.status == 404) {
+                    console.log('Error wrong AudioBoom channel ' + result.statusText);
+                    feed.config.more_button.text('Cant find Audioboom channel').attr('disabled', 'true');
+                }
             });
+        },
+
+        setMoreButton: function(message, disable) {
+            var disabled = (disable ? 'true' : 'false');
+            console.log(this);
+            this.config.more_button.text(message).attr('disabled', disabled);
         }
     };
 
