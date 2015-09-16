@@ -24,7 +24,7 @@ get_header(); ?>
         ?>
     </div>
 
-    <a href="<?php echo get_permalink( get_page_by_path( 'shows' ) )?>">
+    <a href="<?php echo get_permalink( get_page_by_path( 'shows' ) )?>#off-air">
         <button class="btn">See all Podcasts</button>
     </a>
 
