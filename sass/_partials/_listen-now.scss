@@ -137,7 +137,7 @@
         .play {
             @include flex-shrink(0);
             @include transition(box-shadow 0.1s ease);
-            align-self: center;
+            @include align-self(center);
             background-color: #fff;
             background-image: url('images/play-icon.svg');
             background-position: 60% 50%;

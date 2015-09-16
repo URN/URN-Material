@@ -1042,6 +1042,7 @@ a.committee-tag:active,
   -o-transition: box-shadow 0.1s ease;
   -webkit-transition: box-shadow 0.1s ease;
   transition: box-shadow 0.1s ease;
+  -webkit-align-self: center;
   align-self: center;
   background-color: #fff;
   background-image: url("images/play-icon.svg");
