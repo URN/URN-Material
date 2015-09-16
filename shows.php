@@ -47,7 +47,7 @@ get_header(); ?>
     </div>
 
     <div class="shows">
-        <h1>All live shows</h1>
+        <h1 id="on-air">ON-AIR shows</h1>
         <p>This does not include online-shows</p>
          <?php
             // Print each show
@@ -63,6 +63,10 @@ get_header(); ?>
                 echo '<p>' . $show_sorted['name_prelude'];
             }
         ?>
+
+
+        <h1 id="off-air">OFF-AIR shows</h1>
+        <p>No shows found.</p>
     </div>
 </div>
 
