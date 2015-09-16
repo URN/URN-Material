@@ -7,7 +7,6 @@ $time-height: 40px;
 $time-width: 100px;
 
 .show-photo {
-
     @include breakpoint(mobile) {
         width: 50%;
         margin: 0 auto;
@@ -253,5 +252,30 @@ $time-width: 100px;
     .show:last-child {
         left: 363px; //set by js
         width: 250px;
+    }
+}
+
+
+.mini-schedule {
+
+    @include breakpoint(mobile) {
+        padding: $general-element-spacing;
+    }
+
+    // Hide these until good responsive layout has been added
+    .day-names,
+    .timetable {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .btn {
+        // Set button to be bigger on mobile
+        @include breakpoint(mobile) {
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
     }
 }

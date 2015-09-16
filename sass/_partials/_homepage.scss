@@ -38,8 +38,16 @@
         &.blogs {
             padding: 0 10px;
 
+            @include breakpoint(mobile) {
+                padding: 35px 0 0;
+            }
+
             .blog-excerpt {
                 padding-top: #{$general-element-spacing / 2};
+
+                @include breakpoint(mobile) {
+                    padding: 0;
+                }
             }
         }
     }
@@ -60,6 +68,12 @@
 
         h1:first-child {
             margin-top: 0;
+        }
+
+        @include breakpoint(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
         }
     }
 
