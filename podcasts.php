@@ -24,6 +24,10 @@ get_header(); ?>
         ?>
     </div>
 
+    <a href="<?php echo get_permalink( get_page_by_path( 'shows' ) )?>">
+        <button class="btn">See all Podcasts</button>
+    </a>
+
     <section class="tabs">
         <input id="tab-podcasts" type="radio" name="grp" checked="checked"/>
         <label for="tab-podcasts" class="tab-title">Podcasts</label>
