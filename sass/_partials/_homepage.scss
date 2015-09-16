@@ -31,6 +31,11 @@
         text-align: center;
         width: 100%;
 
+        @include breakpoint(mobile) {
+            height: 100%;
+            min-height: 100px; // Safari fallback
+        }
+
         &:not(:last-child) {
             margin-right: $general-element-spacing;
         }
@@ -40,6 +45,7 @@
 
             @include breakpoint(mobile) {
                 padding: 35px 0 0;
+                margin-bottom: #{$general-element-spacing * 2};
             }
 
             .blog-excerpt {
@@ -54,6 +60,11 @@
 
     .twitter {
         margin-top: $general-element-spacing;
+
+        // Hide on mobile
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     &.vertical {
@@ -64,6 +75,18 @@
         h1 {
             margin-top: #{$general-element-spacing * 1.5};
             margin-bottom: #{$general-element-spacing * 2};
+
+            // Hide on mobile
+            @include breakpoint(mobile) {
+                display: none;
+            }
+        }
+
+        .clip {
+            // Hide on mobile
+            @include breakpoint(mobile) {
+                display: none;
+            }
         }
 
         h1:first-child {
@@ -83,9 +106,24 @@
 }
 
 .cover-photos {
+
+    // Hide on mobile
+    &:first-child .module:nth-child(2) {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
     .module {
+        // Hide on mobile
+        @include breakpoint(mobile) {
+            &:last-child {
+                display: none;
+            }
+        }
+
         text-align: left;
         background: #fff;
-        height: 100%;
+        height: 100% ;
     }
 }

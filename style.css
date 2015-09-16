@@ -1293,6 +1293,12 @@ a.committee-tag:active,
   text-align: center;
   width: 100%;
 }
+@media (max-width: 620px) {
+  .row .module {
+    height: 100%;
+    min-height: 100px;
+  }
+}
 .row .module:not(:last-child) {
   margin-right: 15px;
 }
@@ -1302,6 +1308,7 @@ a.committee-tag:active,
 @media (max-width: 620px) {
   .row .module.blogs {
     padding: 35px 0 0;
+    margin-bottom: 30px;
   }
 }
 .row .module.blogs .blog-excerpt {
@@ -1315,6 +1322,11 @@ a.committee-tag:active,
 .row .twitter {
   margin-top: 15px;
 }
+@media (max-width: 620px) {
+  .row .twitter {
+    display: none;
+  }
+}
 .row.vertical {
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -1325,6 +1337,16 @@ a.committee-tag:active,
 .row.vertical h1 {
   margin-top: 22.5px;
   margin-bottom: 30px;
+}
+@media (max-width: 620px) {
+  .row.vertical h1 {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .row.vertical .clip {
+    display: none;
+  }
 }
 .row.vertical h1:first-child {
   margin-top: 0;
@@ -1340,10 +1362,20 @@ a.committee-tag:active,
   margin-bottom: 15px;
 }
 
+@media (max-width: 620px) {
+  .cover-photos:first-child .module:nth-child(2) {
+    display: none;
+  }
+}
 .cover-photos .module {
   text-align: left;
   background: #fff;
   height: 100%;
+}
+@media (max-width: 620px) {
+  .cover-photos .module:last-child {
+    display: none;
+  }
 }
 
 .show-page-header {
