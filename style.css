@@ -1272,6 +1272,7 @@ a.committee-tag:active,
   .row {
     -webkit-flex-direction: column;
     flex-direction: column;
+    padding: 0;
   }
 }
 .row:first-child {
@@ -1334,12 +1335,12 @@ a.committee-tag:active,
   flex-grow: 1;
   width: 0;
 }
-.row.vertical h1 {
+.row.vertical > h1 {
   margin-top: 22.5px;
   margin-bottom: 30px;
 }
 @media (max-width: 620px) {
-  .row.vertical h1 {
+  .row.vertical > h1 {
     display: none;
   }
 }
@@ -1592,6 +1593,10 @@ a.committee-tag:active,
 .filter-container label:after {
   content: ':';
 }
+.filter-container .search-filter-container {
+  display: inline-block;
+  margin: 10px 0;
+}
 
 .schedule {
   display: -webkit-flex;
@@ -1765,6 +1770,7 @@ a.committee-tag:active,
 .schedule .show .title {
   font-size: 16px;
   font-weight: 600;
+  margin: 0;
 }
 .schedule .show .hosts {
   margin: 5px 0;
@@ -1788,17 +1794,63 @@ a.committee-tag:active,
   left: 363px;
   width: 250px;
 }
+.schedule .inline-day-name {
+  display: none;
+}
+@media (max-width: 620px) {
+  .schedule .inline-day-name {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+  .schedule .day-names {
+    display: none;
+  }
+  .schedule .days {
+    width: 100%;
+  }
+  .schedule .timetable {
+    background: none;
+    overflow: inherit;
+    width: 100%;
+  }
+  .schedule .timetable > .times {
+    display: none;
+  }
+  .schedule .slots {
+    height: auto;
+  }
+  .schedule .show {
+    margin: 4px 0;
+    padding: 0;
+    position: static;
+    width: 100% !important;
+  }
+  .schedule .show.live {
+    margin: 10px 0;
+  }
+  .schedule .show.live a {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .schedule .show.live a:after {
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+}
 
 @media (max-width: 620px) {
   .mini-schedule {
     padding: 15px;
   }
 }
-@media (max-width: 620px) {
-  .mini-schedule .day-names,
-  .mini-schedule .timetable {
-    display: none;
-  }
+.mini-schedule h1.inline-day-name {
+  display: block;
+  margin: 5px 0;
+  padding-top: 20px;
 }
 @media (max-width: 620px) {
   .mini-schedule .btn {

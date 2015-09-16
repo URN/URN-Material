@@ -52,8 +52,10 @@ get_header(); ?>
                     <option value="sport">Sport</option>
                 </select>
 
-                <label for="schedule-category-filter-search">Search</label>
-                <input autocomplete="off" type="text" name="schedule-category-filter-search" class="txt schedule-category-filter-search">
+                <div class="search-filter-container">
+                    <label for="schedule-category-filter-search">Search</label>
+                    <input autocomplete="off" type="text" name="schedule-category-filter-search" class="txt schedule-category-filter-search">
+                </div>
             </div>
         </div>
     </div>
@@ -97,24 +99,31 @@ get_header(); ?>
             </ul>
             <ul class="days">
                 <li class="day monday">
+                    <h1 class="inline-day-name">Monday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day tuesday">
+                    <h1 class="inline-day-name">Tuesday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day wednesday">
+                    <h1 class="inline-day-name">Wednesday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day thursday">
+                    <h1 class="inline-day-name">Thursday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day friday">
+                    <h1 class="inline-day-name">Friday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day saturday">
+                    <h1 class="inline-day-name">Saturday</h1>
                     <ul class="slots"></ul>
                 </li>
                 <li class="day sunday">
+                    <h1 class="inline-day-name">Sunday</h1>
                     <ul class="slots"></ul>
                 </li>
             </ul>

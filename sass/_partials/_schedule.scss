@@ -28,6 +28,11 @@ $time-width: 100px;
     label:after {
         content: ':';
     }
+
+    .search-filter-container {
+        display: inline-block;
+        margin: 10px 0;
+    }
 }
 
 .schedule {
@@ -224,6 +229,7 @@ $time-width: 100px;
         .title {
             font-size: 16px;
             font-weight: 600;
+            margin: 0;
         }
 
         .hosts {
@@ -253,21 +259,76 @@ $time-width: 100px;
         left: 363px; //set by js
         width: 250px;
     }
+
+    .inline-day-name {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        .schedule-category-select {
+        }
+
+        .inline-day-name {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        .day-names {
+            display: none;
+        }
+
+        .days {
+            width: 100%;
+        }
+
+        .timetable {
+            background: none;
+            overflow: inherit;
+            width: 100%;
+        }
+
+        .timetable > .times {
+            display: none;
+        }
+
+        .slots {
+            height: auto;
+        }
+
+        .show {
+            margin: 4px 0;
+            padding: 0;
+            position: static;
+            width: 100% !important;
+
+            &.live {
+                margin: 10px 0;
+
+                a {
+                    @include transform(scale(1.05));
+                }
+
+                a:after {
+                    left: auto;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
 }
 
 
 .mini-schedule {
-
     @include breakpoint(mobile) {
         padding: $general-element-spacing;
     }
 
-    // Hide these until good responsive layout has been added
-    .day-names,
-    .timetable {
-        @include breakpoint(mobile) {
-            display: none;
-        }
+    h1.inline-day-name {
+        display: block;
+        margin: 5px 0;
+        padding-top: 20px;
     }
 
     .btn {

@@ -75,6 +75,7 @@
                     </ul>
                     <ul class="days">
                         <li class="day">
+                            <h1 class="inline-day-name">Today</h1>
                             <ul class="slots"></ul>
                         </li>
                     </ul>
