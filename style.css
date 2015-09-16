@@ -1223,8 +1223,17 @@ a.committee-tag:active,
 .audioboom-feed .card button.urn-daytime {
   background-color: #e50052;
 }
+.audioboom-feed .card button.urn-podcasts {
+  background-color: #009fe3;
+}
 .audioboom-feed .card button.urn-pulse {
   background-color: #009994;
+}
+.audioboom-feed .card button.urn-speech {
+  background-color: #ed6346;
+}
+.audioboom-feed .card button.urn-after-dark {
+  background-color: #3b4251;
 }
 .audioboom-feed .card .podcast_title,
 .audioboom-feed .card p {

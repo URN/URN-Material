@@ -22,23 +22,34 @@ get_header(); ?>
             // End the loop.
             endwhile;
         ?>
-
-        <div class="filter-container">
-            <h2>Filter</h2>
-            <label for="podcast-sort-select">Show Type</label>
-            <select autocomplete="off" name="podcast-sort-select" class="select podcast-sort-select">
-                <option disabled value="all">All</option>
-                <option disabled value="after-dark">After Dark</option>
-                <option disabled value="culture">Culture</option>
-                <option disabled value="daytime">Daytime</option>
-                <option disabled value="news">News</option>
-                <option disabled value="sport">Sport</option>
-                <option selected value="speech">Speech</option>
-            </select>
-        </div>
     </div>
 
-    <div class="audioboom-feed" data-channel-id="3139695" data-channel-audioboom-type="channels" data-channel-type="urn-daytime" data-channel-name="URN Speech"></div>
+    <section class="tabs">
+        <input id="tab-podcasts" type="radio" name="grp" checked="checked"/>
+        <label for="tab-podcasts" class="tab-title">Podcasts</label>
+        <div class="tab-content">
+            <div class="audioboom-feed" data-channel-id="184841" data-channel-audioboom-type="users" data-channel-type="urn-podcasts" data-channel-name="URN Podcasts"></div>
+        </div>
+
+        <input id="tab-news-sports-culture" type="radio" name="grp" />
+        <label for="tab-news-sports-culture" class="tab-title">News, Sports &amp; Culture</label>
+        <div class="tab-content">
+            <div class="audioboom-feed" data-channel-id="3139695" data-channel-audioboom-type="channels" data-channel-type="urn-speech" data-channel-name="URN Speech"></div>
+        </div>
+
+        <input id="tab-after-dark" type="radio" name="grp" />
+        <label for="tab-after-dark" class="tab-title">After Dark</label>
+        <div class="tab-content">
+            <div class="audioboom-feed" data-channel-id="4374438" data-channel-audioboom-type="users" data-channel-type="urn-after-dark" data-channel-name="URN AfterDark"></div>
+        </div>
+
+        <input id="tab-daytime" type="radio" name="grp" />
+        <label for="tab-daytime" class="tab-title">Daytime</label>
+        <div class="tab-content">
+            <div class="audioboom-feed" data-channel-id="3125607" data-channel-audioboom-type="users" data-channel-type="urn-daytime" data-channel-name="URN Daytime"></div>
+        </div>
+    </section>
+
 
 </div>
 

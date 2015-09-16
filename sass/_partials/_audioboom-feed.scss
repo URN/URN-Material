@@ -61,8 +61,20 @@
                 background-color: $urn-daytime-color;
             }
 
+            &.urn-podcasts {
+                background-color: $urn-sport-color;
+            }
+
             &.urn-pulse {
                 background-color: $urn-news-color;
+            }
+
+            &.urn-speech {
+                background-color: $urn-culture-color;
+            }
+
+            &.urn-after-dark {
+                background-color: $urn-after-dark-color;
             }
         }
 
