@@ -570,6 +570,10 @@ button::-moz-focus-inner {
     width: 100%;
   }
 }
+.entry-content .size-large {
+  height: 100%;
+  width: 100%;
+}
 .entry-content .gallery-columns-2.gallery-size-large {
   padding-bottom: 15px;
 }

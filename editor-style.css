@@ -135,6 +135,10 @@ body#tinymce.wp-editor .aligncenter {
     width: 100%;
   }
 }
+body#tinymce.wp-editor .size-large {
+  height: 100%;
+  width: 100%;
+}
 body#tinymce.wp-editor .gallery-columns-2.gallery-size-large {
   padding-bottom: 15px;
 }
