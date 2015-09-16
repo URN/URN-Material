@@ -323,12 +323,13 @@ $time-width: 100px;
 .mini-schedule {
     @include breakpoint(mobile) {
         padding: $general-element-spacing;
-    }
 
-    h1.inline-day-name {
-        display: block;
-        margin: 5px 0;
-        padding-top: 20px;
+
+        .inline-day-name {
+            display: block;
+            margin: 5px 0;
+            padding-top: 20px;
+        }
     }
 
     .btn {

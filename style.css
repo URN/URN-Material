@@ -1846,11 +1846,11 @@ a.committee-tag:active,
   .mini-schedule {
     padding: 15px;
   }
-}
-.mini-schedule h1.inline-day-name {
-  display: block;
-  margin: 5px 0;
-  padding-top: 20px;
+  .mini-schedule .inline-day-name {
+    display: block;
+    margin: 5px 0;
+    padding-top: 20px;
+  }
 }
 @media (max-width: 620px) {
   .mini-schedule .btn {
