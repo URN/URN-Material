@@ -1035,6 +1035,11 @@ a.committee-tag:active,
   width: 150%;
   z-index: 2;
 }
+@media (max-width: 620px) {
+  #listen-now .show-container .show-info:before {
+    width: 100%;
+  }
+}
 #listen-now .show-container .play {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
