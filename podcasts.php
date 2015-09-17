@@ -38,7 +38,7 @@ get_header(); ?>
         <input id="tab-news-sports-culture" type="radio" name="grp" />
         <label for="tab-news-sports-culture" class="tab-title">News, Sports &amp; Culture</label>
         <div class="tab-content">
-            <div class="audioboom-feed" data-channel-id="3139695" data-channel-audioboom-type="channels" data-channel-type="urn-speech" data-channel-name="URN Speech"></div>
+            <div class="audioboom-feed" data-channel-id="4227797" data-channel-audioboom-type="users" data-channel-type="urn-speech" data-channel-name="URN Speech"></div>
         </div>
 
         <input id="tab-after-dark" type="radio" name="grp" />
