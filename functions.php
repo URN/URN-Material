@@ -235,11 +235,9 @@ function get_posts_by_author($posts_per_page, $author, $with_excerpt = true) {
 
 /**
  * Prepares a blog except so they all match a standard
- * @param  [type] $url     [description]
- * @param  [type] $title   [description]
- * @param  [type] $date    [description]
- * @param  string $excerpt [description]
- * @return [type]          [description]
+ * @param  object $post         Post object
+ * @param  bool   $with_excerpt Print post excerpt also?
+ * @return string          Html for that excerpt
  */
 function format_blog_excerpt($post, $with_excerpt = true) {
     $url = get_permalink($post->ID);

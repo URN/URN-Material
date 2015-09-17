@@ -20,7 +20,6 @@
                 <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_2.jpg" ?>">
             </a>
         </div>
-
     </div>
 
     <div class="row">
@@ -87,20 +86,29 @@
     <div class="row cover-photos">
         <div class="module">
             <a href="<?php echo get_permalink( get_page_by_path( 'urn-tv' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
             </a>
         </div>
 
         <div class="module blogs">
-            <h1>Recent Coverage</h1>
-            <ul class="blog-excerpt">
-                <li><h2><a href="<?php echo get_permalink( get_page_by_path( 'urn-interviews-emma-collins' ) )?>">URN Interviews: Emma Collins</a></h2><p>23th June 2015</p></li>
-            </ul>
+            <?php
+            // Get the most recent blog
+            $posts = get_posts(array(
+               'numberposts' => 3
+            ));
+
+            echo "<ul class='blog-excerpt'>";
+            foreach ( $posts as $post ) {
+                echo format_blog_excerpt($post, false);
+                break;
+            }
+            echo "</ul>";
+            ?>
         </div>
 
         <div class="module">
             <a href="<?php echo get_permalink( get_page_by_path( 'podcasts' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_5.jpg" ?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
             </a>
         </div>
     </div>
