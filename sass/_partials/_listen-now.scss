@@ -60,8 +60,8 @@
     }
 
     .show-container {
-        $experimental-support-for-svg: true;
-        @include background-image(url('images/iona.jpg'), linear-gradient(left, $urn-purple 30%, transparent 30%));
+        // $experimental-support-for-svg: true;
+        // @include background-image(url('images/iona.jpg'), linear-gradient(left, $urn-purple 30%, transparent 30%));
         @include display-flex;
         @include filter-gradient($urn-purple, transparent, horizontal);
         @include flex-direction(row);

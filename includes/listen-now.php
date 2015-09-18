@@ -17,9 +17,9 @@
     </div>
     <div class="show-container">
         <div class="show-info">
-            <h2 class="show-title-prelude">The Afternoon Show With</h2>
-            <h1 class="show-title-name">Iona Hampson</h1>
-            <h3 class="show-title-time">From 3PM</h3>
+            <h2 class="show-title-prelude">URN presents</h2>
+            <h1 class="show-title-name">The Checklist</h1>
+            <h3 class="show-title-time">From 7PM-9PM</h3>
         </div>
         <a href="http://urn1350.net/rp/console/main/index.php" title="Listen now!" target="_blank" class="play">Listen Now</a>
         <div class="send-message">
