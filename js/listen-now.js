@@ -5,6 +5,10 @@
     var $song = $listenNow.find(".current-track");
     var $progress = $listenNow.find(".progress-bar");
 
+    var $show_prelude = $listenNow.find(".show-title-prelude");
+    var $show_name = $listenNow.find(".show-title-name");
+    var $show_time = $listenNow.find(".show-title-time");
+
     var currentSong = null;
     var loading = false;
 
@@ -43,6 +47,28 @@
         return false;
     });
 
+    var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+
+    (function updateCurrentShow() {
+        var request = $.ajax({
+            url: "/api/schedule/day/" + dayNames[new Date().getDay()],
+            type: "get",
+            dataType: "json"
+        });
+
+        request.error(function(error) {
+            console.log(error);
+            // $show_prelude.text('URN presents');
+            // $show_name.text('URN Live');
+            // $show_name.text('');
+        });
+
+        request.done(function (todaysSchedule) {
+            console.log(todaysSchedule);
+            // console.log(todaysSchedule.shows.show);
+        });
+    })();
+
     (function refreshNowPlaying() {
         var songString;
         var progress = getSongProgressPercentage();
@@ -50,7 +76,6 @@
         // Make the very first request fast and then subsequent requests a lot more
         // infrequently
         var timeout = currentSong === null ? 500 : 5000;
-
         if (currentSong !== null && !loading && progress <= 100) {
             songString = currentSong.title + " - " + currentSong.artist;
         }
