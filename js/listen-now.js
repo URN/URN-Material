@@ -47,7 +47,7 @@
         return false;
     });
 
-    var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+    var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
     (function updateCurrentShow() {
         var request = $.ajax({
