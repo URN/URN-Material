@@ -55,7 +55,7 @@
             songString = currentSong.title + " - " + currentSong.artist;
         }
         else {
-            songString = "Loading...";
+            songString = "URN Live";
         }
 
         $song.text(songString);
