@@ -18,8 +18,8 @@
     <div class="show-container">
         <div class="show-info">
             <h2 class="show-title-prelude">URN presents</h2>
-            <h1 class="show-title-name">The Checklist</h1>
-            <h3 class="show-title-time">From 7PM-9PM</h3>
+            <h1 class="show-title-name">URN Live</h1>
+            <h3 class="show-title-time">24/7</h3>
         </div>
         <a href="http://urn1350.net/rp/console/main/index.php" title="Listen now!" target="_blank" class="play">Listen Now</a>
         <div class="send-message">

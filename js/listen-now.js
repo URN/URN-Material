@@ -61,12 +61,11 @@
         });
 
         request.done(function (todaysSchedule) {
-            console.log(todaysSchedule);
             var found_live = false;
             $.each(todaysSchedule.shows, function (j, slotData) {
                 if (slotData.live) {
-                    $show_prelude.text("URN Presents"); //'URN presents'
-                    $show_name.text(slotData.name); // 'URN Live'
+                    $show_prelude.text("URN Presents");
+                    $show_name.text(slotData.name);
                     $show_time.text("From " + slotData.from + "-" + slotData.to);
                     found_live = true;
                 }
@@ -75,7 +74,7 @@
             if (!found_live) {
                 $show_prelude.text("URN presents");
                 $show_name.text("URN Live");
-                $show_time.text("");
+                $show_time.text("24/7");
             }
         });
     })();
