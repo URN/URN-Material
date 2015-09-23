@@ -216,6 +216,7 @@
             });
         }
         else {
+            shows = JSON.parse(shows);
             $.each(dayNames, function (i, dayName) {
                 var slots = shows[dayName];
 
