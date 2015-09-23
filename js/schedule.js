@@ -13,6 +13,7 @@
         var request = $.ajax({
             url: getApiUrl(),
             type: "get",
+            dataType: "json"
         });
 
         request.done(function (data) {
@@ -216,7 +217,6 @@
             });
         }
         else {
-            shows = JSON.parse(shows);
             $.each(dayNames, function (i, dayName) {
                 var slots = shows[dayName];
 
