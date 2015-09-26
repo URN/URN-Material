@@ -323,6 +323,10 @@ $time-width: 100px;
 .mini-schedule {
     margin-bottom: $general-element-spacing;
 
+    .day-names {
+        display: none;
+    }
+
     @include breakpoint(mobile) {
         padding: $general-element-spacing;
 
