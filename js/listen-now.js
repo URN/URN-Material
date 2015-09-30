@@ -161,7 +161,7 @@
         return equals;
     }
 
-    $("#listen-now .play").click(function(e) {
+    $(".play").click(function(e) {
         window.open("http://urn1350.net/rp/console/main/index.php", "radioplayer", "height=665,width=380");
         e.preventDefault();
     });

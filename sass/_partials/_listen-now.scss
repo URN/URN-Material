@@ -168,6 +168,8 @@
         }
 
         .send-message {
+            @include display-flex;
+            @include flex-direction(column);
             position: relative;
             width: 50%;
             z-index: 2;
@@ -177,11 +179,15 @@
             }
 
             form {
+                @include display-flex;
+                @include flex-direction(column);
+                @include flex-grow(1);
                 height: 100%;
             }
 
             textarea {
                 @include body-font;
+                @include flex-grow(1);
                 border: 0;
                 border-radius: 0;
                 font-size: 0.875em;
