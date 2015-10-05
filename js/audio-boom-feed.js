@@ -1,3 +1,7 @@
+/**
+ * AudioBoom JS plugin
+ *
+ */
 
 var audioboom_feeds = [];
 
@@ -17,9 +21,6 @@ jQuery(document).ready(function( $ ) {
                 var $load_more = $('<button>', { class: 'btn load-more' }).text('Load more').click(function() {
                     feed.loadCachedPodcasts();
                 });
-                $(element).append(
-                    $('<ul>', { class: 'cards'}).append($('<li>'))
-                ).append($load_more);
 
                 var audioboom_user = $(element).attr('data-channel-audioboom-type') + '/' + $(element).attr('data-channel-id');
                 var channel_url = ($(element).attr('data-channel-audioboom-type') == 'channels') ? '/boos' : '';
@@ -31,9 +32,23 @@ jQuery(document).ready(function( $ ) {
                     audioboom_type: $(element).attr('data-channel-audioboom-type'),
                     element: $(element),
                     more_button: $load_more,
+                    card_type: ($(element).attr('data-card-type') === undefined ? '1' : $(element).attr('data-card-type')),
                     max_display: 2, // index based
                     current_shown: 0 // index based
                 };
+
+
+                if (this.config.card_type == '1') {
+                    $(element).append(
+                        $('<ul>', { class: 'cards'}).append($('<li>'))
+                    ).append($load_more);
+                } else {
+                    $(element).append(
+                        $('<div>', { class: 'card-small'})
+                    );
+                }
+
+
                 this.loadPodcasts();
             },
 
@@ -47,7 +62,27 @@ jQuery(document).ready(function( $ ) {
                 this.getData(this.displayPodcasts, this);
             },
 
+            displaySmallPodcasts: function(feed, podcasts) {
+                this.config.more_button.css('display', 'none');
+
+                var number_to_show = 2; // Max number to show
+                if (podcasts.length < number_to_show) {
+                    number_to_show = podcasts.length;
+                }
+
+                for (var i = 0; i < number_to_show; i++) {
+                    $(feed.config.element).find('.card-small').append(
+                        feed.makeSmallCard(feed, podcasts[i])
+                    );
+                }
+            },
+
             displayPodcasts: function(feed, podcasts) {
+                if (feed.config.card_type == '0') {
+                    feed.displaySmallPodcasts(feed, podcasts);
+                    return;
+                }
+
                 if (podcasts === undefined) {
                     feed.setMoreButton('No more', true);
                     return;
@@ -70,10 +105,10 @@ jQuery(document).ready(function( $ ) {
                 }
             },
 
-            makeEmbedUrl: function(url) {
+            makeEmbedUrl: function(url, image) {
                 var embed_config = 'player_theme=light&amp;' +
                                    'link_color=%235e44cb&amp;' +
-                                   'image_option=none&amp;' +
+                                   (image ? "" : "image_option='none'&amp;") +
                                    'show_title=true';
                 return url.replace('https://', '//embeds.') + '/embed/v3?' + embed_config;
             },
@@ -85,7 +120,7 @@ jQuery(document).ready(function( $ ) {
                         class: 'btn ' + feed.config.feed_type
                     }).text(feed.config.feed_name)
                 );
-                var $podcast_embed = $('<iframe>', { scrolling: 'no', src: feed.makeEmbedUrl(podcast.urls.detail)}).css('width', '100%');
+                var $podcast_embed = $('<iframe>', { scrolling: 'no', src: feed.makeEmbedUrl(podcast.urls.detail, false)}).css('width', '100%');
                 var $podcast_description = $('<p>').text(podcast.description);
 
                 return $('<li>', { class: 'card'}).append(
@@ -96,6 +131,16 @@ jQuery(document).ready(function( $ ) {
                         $podcast_description
                     )
                 );
+            },
+
+            makeSmallCard: function(feed, podcast) {
+                var $podcast_embed = $('<iframe>',
+                {
+                    scrolling: 'no',
+                    src: feed.makeEmbedUrl(podcast.urls.detail, true)
+                }).css('width', '100%');
+
+                return $('<div>', { class: 'clip'}).append($podcast_embed);
             },
 
             // Get data from Audio Boom

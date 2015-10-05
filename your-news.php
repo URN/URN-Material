@@ -10,10 +10,14 @@ get_header(); ?>
     <!-- Todays Headlines as 2 latest Audioboom embeds -->
     <div class="audioboom-headlines">
         <h1>Latest Headlines</h1>
-        <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292950-students-with-disabilities-special-molly-o-brien-statement/embed/v3?eid=AQAAALz-9VUWPzIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
+       <!--  <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292950-students-with-disabilities-special-molly-o-brien-statement/embed/v3?eid=AQAAALz-9VUWPzIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
         <iframe width="100%" height="150" style="background-color:transparent;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="//embeds.audioboom.com/boos/3292768-students-complain-about-grad-ball/embed/v3?eid=AQAAAAKG8VVgPjIA&amp;player_theme=light&amp;link_color=%235e44cb&amp;image_option=small&amp;show_title=true" title="audioBoom player"></iframe>
+ -->
+        <div class="audioboom-feed" data-card-type="0" data-channel-id="4227841" data-channel-audioboom-type="users" data-channel-type="urn-headlines" data-channel-name="URN Headlines"></div>
+
+
         <div class="btn-wrapper">
-            <a href="//audioboom.com/channel/urnthepulse">
+            <a href="//audioboom.com/URNHeadlines">
                 <button class="btn">See all headlines</button>
             </a>
         </div>
