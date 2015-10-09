@@ -32,7 +32,7 @@ get_header(); ?>
         <input id="tab-podcasts" type="radio" name="grp" checked="checked"/>
         <label for="tab-podcasts" class="tab-title">Podcasts</label>
         <div class="tab-content">
-            <div class="audioboom-feed" data-channel-id="184841" data-channel-audioboom-type="users" data-channel-type="urn-podcasts" data-channel-name="URN Podcasts"></div>
+            <div class="audioboom-feed" data-childchannel="URN" data-channel-id="184841" data-channel-audioboom-type="users" data-channel-type="urn-podcasts" data-channel-name="URN Podcasts"></div>
         </div>
 
         <input id="tab-news-sports-culture" type="radio" name="grp" />

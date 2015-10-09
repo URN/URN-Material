@@ -30,6 +30,7 @@ jQuery(document).ready(function( $ ) {
                     feed_name: $(element).attr('data-channel-name'),
                     feed_type: $(element).attr('data-channel-type'),
                     audioboom_type: $(element).attr('data-channel-audioboom-type'),
+                    audioboom_childchannel: ($(element).attr('data-childchannel') === undefined ? '' : $(element).attr('data-childchannel')),
                     element: $(element),
                     more_button: $load_more,
                     card_type: ($(element).attr('data-card-type') === undefined ? '1' : $(element).attr('data-card-type')),
@@ -87,8 +88,8 @@ jQuery(document).ready(function( $ ) {
                     feed.setMoreButton('No more', true);
                     return;
                 }
-                for (var i = feed.config.current_shown; i < podcasts.length; i++) {
 
+                for (var i = feed.config.current_shown; i < podcasts.length; i++) {
                     if (i > feed.config.max_display + feed.config.current_shown) {
                         feed.config.current_shown = i;
                         break;
@@ -156,6 +157,9 @@ jQuery(document).ready(function( $ ) {
                     if (feed.config.audioboom_type == 'users') {
                         $.each(data.body.audio_clips, function(index, val) {
                             if(val !== undefined && val.channel === undefined) { // If there isnt a channel
+                                feed.cached_podcasts.push(val); // add it
+                            } else if (feed.config.audioboom_childchannel !== undefined &&
+                                       feed.config.audioboom_childchannel == val.channel.title) {
                                 feed.cached_podcasts.push(val); // add it
                             }
                         });
