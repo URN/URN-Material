@@ -8,6 +8,7 @@
     var $show_prelude = $listenNow.find(".show-title-prelude");
     var $show_name = $listenNow.find(".show-title-name");
     var $show_time = $listenNow.find(".show-title-time");
+    var $show_image = $listenNow.find(".show-image");
 
     var currentSong = null;
     var loading = false;
@@ -67,6 +68,11 @@
                     $show_prelude.text("URN Presents");
                     $show_name.text(slotData.name);
                     $show_time.text("From " + slotData.from + "-" + slotData.to);
+                    $show_image.attr("src", slotData.image);
+
+                    if (slotData.image !== "") {
+                        $show_image.css("display", "block");
+                    }
                     found_live = true;
                 }
             });

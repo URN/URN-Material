@@ -63,10 +63,10 @@
         // $experimental-support-for-svg: true;
         // @include background-image(url('images/iona.jpg'), linear-gradient(left, $urn-purple 30%, transparent 30%));
         @include display-flex;
-        @include filter-gradient($urn-purple, transparent, horizontal);
+        // @include filter-gradient($urn-purple, transparent, horizontal);
         @include flex-direction(row);
-        background-repeat: no-repeat;
-        background-size: contain;
+        // background-repeat: no-repeat;
+        // background-size: contain;
 
         @include breakpoint(tiny) {
             background: none;
@@ -105,7 +105,7 @@
             }
 
 
-            &:after {
+            /* &:after {
                 @include background-image(linear-gradient(left, rgba(30, 87, 153, 0.3) 0%, rgba(93, 54, 163, 1) 20%, rgba(230, 61, 155, 1) 56%, rgba(230, 61, 155, 1) 100%));
                 @include filter-gradient(#5e44cb, #db2e93, horizontal); // IE6-9
                 content: '';
@@ -120,7 +120,7 @@
                 @include breakpoint(tiny) {
                     background: $urn-pink;
                 }
-            }
+            } */
 
             &:before {
                 content: '';
@@ -223,6 +223,12 @@
         @include breakpoint(tiny) {
             display: block;
         }
+    }
+
+    .show-image {
+        display: block;
+        height: 100px;
+        width: 100px;
     }
 }
 
