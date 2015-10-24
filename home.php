@@ -4,19 +4,19 @@
     <div class="row cover-photos">
 
         <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'schedule' ) )?>">
+            <a target="_blank" href="//audioboom.com/boos/3727282-urn-talks-heforshe">
                 <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_3.jpg" ?>">
             </a>
         </div>
 
         <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'music' ) )?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'competitions' ) )?>">
                 <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
             </a>
         </div>
 
         <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'your-news' ) )?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'competitions' ) )?>">
                 <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_2.jpg" ?>">
             </a>
         </div>
