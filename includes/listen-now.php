@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="show-container">
-        <img class="show-image" style="display: none;" src="">
+        <div class="show-image" style="display: none;"></div>
         <div class="show-info">
             <h2 class="show-title-prelude">URN presents</h2>
             <h1 class="show-title-name">URN Live</h1>
