@@ -4,8 +4,8 @@
     <div class="row cover-photos">
 
         <div class="module">
-            <a target="_blank" href="//audioboom.com/boos/3727282-urn-talks-heforshe">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_3.jpg" ?>">
+            <a target="_blank" href="//audioboom.com/boos/3831925-the-nineteen-percent-1-body-contact">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
             </a>
         </div>
 
@@ -81,8 +81,8 @@
 
     <div class="row cover-photos">
         <div class="module">
-            <a href="//audioboom.com/boos/3831925-the-nineteen-percent-1-body-contact" target="_blank">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'urn-tv' ) )?>" target="_blank">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
             </a>
         </div>
 
@@ -104,7 +104,7 @@
 
         <div class="module">
             <a href="<?php echo get_permalink( get_page_by_path( 'podcasts' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_urn.jpg" ?>">
             </a>
         </div>
     </div>
