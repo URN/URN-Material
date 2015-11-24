@@ -14,8 +14,20 @@
     position: relative;
     text-decoration: none;
 
+    &:before {
+        background-image: url('images/santa-hat.png');
+        content: '';
+        height: 72px;
+        left: 96px;
+        position: absolute;
+        top: 4px;
+        width: 79px;
+        z-index: 1;
+    }
+
     img {
         @include flex-shrink(0);
+        position: relative;
         width: $logo-width;
 
         @include breakpoint(laptop) {
