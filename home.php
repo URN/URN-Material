@@ -10,8 +10,8 @@
         </div>
 
         <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'competitions' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_1.jpg" ?>">
+            <a href="https://audioboom.com/boos/3930886-the-price-of-sport-in-nottingham">
+                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_7.jpg" ?>">
             </a>
         </div>
 
