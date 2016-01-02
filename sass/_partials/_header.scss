@@ -23,10 +23,6 @@
         top: 4px;
         width: 79px;
         z-index: 1;
-
-        @include breakpoint(mobile) {
-            left: 48%;
-        }
     }
 
     img {
