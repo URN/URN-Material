@@ -19,6 +19,9 @@
 </head>
 <body>
 <div id="page-wrap">
+    <div class="notice">
+        Unfortunately due to technical issues URN is currently offline. We apologise for the inconvenience and hope to be back up an running as soon as possible.
+    </div>
     <header id="header">
         <div class="wrapper">
             <a href="/" id="title">
@@ -27,6 +30,7 @@
             </a>
         </div>
     </header>
+
 
 <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 
