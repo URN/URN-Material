@@ -280,8 +280,8 @@ add_filter('wp_title', function ($title, $sep, $seplocation) {
             $title = " $sep " . $term_title;
         }
     }
+
     return $title;
 }, 10, 3 );
-
 
 ?>

@@ -1,0 +1,67 @@
+html {
+    background: #f2f2f2;
+}
+
+body.stream {
+    @include box-shadow(0 0 50px 25px black(0.2));
+    background: $urn-purple;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    width: 380px;
+
+    audio {
+        display: block;
+        margin: 40px auto;
+        width: 90%;
+    }
+
+    h1 {
+        @include title-font;
+        color: #fff;
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 15px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    img {
+        display: block;
+        margin: 45px auto;
+    }
+
+    #listen-now .play,
+    .play {
+        display: none;
+    }
+
+    #listen-now {
+        width: auto;
+
+        .show-container {
+            display: block;
+
+            .show-image {
+                display: none !important;
+            }
+        }
+
+        .show-info {
+            &:before {
+                display: none;
+            }
+
+            padding: 10px;
+        }
+
+        .send-message {
+            width: 100%;
+
+            textarea {
+                height: 115px;
+            }
+        }
+    }
+}
