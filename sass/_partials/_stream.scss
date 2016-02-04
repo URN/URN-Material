@@ -4,15 +4,17 @@ html {
 
 body.stream {
     @include box-shadow(0 0 50px 25px black(0.2));
+    @include display-flex;
+    @include flex-direction(column);
     background: $urn-purple;
-    height: 690px;
+    height: 710px;
     margin: 0 auto;
     padding: 30px 0 0 0;
     width: 380px;
 
     audio {
         display: block;
-        margin: 40px auto;
+        margin: 20px auto;
         width: 90%;
     }
 
@@ -38,9 +40,13 @@ body.stream {
     }
 
     #listen-now {
-        width: auto;
+        @include flex-grow(1);
+        background: none;
+        margin: 0;
+        width: 100%;
 
         .show-container {
+            background: $urn-pink;
             display: block;
 
             .show-image {
@@ -57,11 +63,18 @@ body.stream {
         }
 
         .send-message {
+            @include display-flex;
+            @include flex-direction(column);
             width: 100%;
 
             textarea {
-                height: 115px;
+                height: 90px;
             }
+        }
+
+        #message-the-studio {
+            @include flex-grow(1);
+            height: auto;
         }
     }
 }

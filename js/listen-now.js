@@ -168,7 +168,7 @@
     }
 
     $(".play").click(function(e) {
-        window.open("/stream", "radioplayer", "height=690,width=380");
+        window.open("/stream", "radioplayer", "height=710,width=380");
         e.preventDefault();
     });
 
