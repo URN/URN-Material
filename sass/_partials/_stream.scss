@@ -1,0 +1,80 @@
+html {
+    background: #f2f2f2;
+}
+
+body.stream {
+    @include box-shadow(0 0 50px 25px black(0.2));
+    @include display-flex;
+    @include flex-direction(column);
+    background: $urn-purple;
+    height: 710px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    width: 380px;
+
+    audio {
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    h1 {
+        @include title-font;
+        color: #fff;
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 15px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    img {
+        display: block;
+        margin: 45px auto;
+    }
+
+    #listen-now .play,
+    .play {
+        display: none;
+    }
+
+    #listen-now {
+        @include flex-grow(1);
+        background: none;
+        margin: 0;
+        width: 100%;
+
+        .show-container {
+            background: $urn-pink;
+            display: block;
+
+            .show-image {
+                display: none !important;
+            }
+        }
+
+        .show-info {
+            &:before {
+                display: none;
+            }
+
+            padding: 10px;
+        }
+
+        .send-message {
+            @include display-flex;
+            @include flex-direction(column);
+            width: 100%;
+
+            textarea {
+                height: 90px;
+            }
+        }
+
+        #message-the-studio {
+            @include flex-grow(1);
+            height: auto;
+        }
+    }
+}

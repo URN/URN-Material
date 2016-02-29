@@ -33,6 +33,7 @@ jQuery(document).ready(function( $ ) {
                     audioboom_childchannel: ($(element).attr('data-childchannel') === undefined ? '' : $(element).attr('data-childchannel')),
                     element: $(element),
                     more_button: $load_more,
+                    show_image: ($(element).attr('data-show-image') === undefined ? 'true' : $(element).attr('data-show-image')),
                     card_type: ($(element).attr('data-card-type') === undefined ? '1' : $(element).attr('data-card-type')),
                     max_display: 2, // index based
                     current_shown: 0 // index based
@@ -63,10 +64,10 @@ jQuery(document).ready(function( $ ) {
                 this.getData(this.displayPodcasts, this);
             },
 
-            displaySmallPodcasts: function(feed, podcasts) {
+            displaySmallPodcasts: function(feed, podcasts, numberToShow) {
                 this.config.more_button.css('display', 'none');
 
-                var number_to_show = 2; // Max number to show
+                var number_to_show = numberToShow; // Max number to show
                 if (podcasts.length < number_to_show) {
                     number_to_show = podcasts.length;
                 }
@@ -80,7 +81,14 @@ jQuery(document).ready(function( $ ) {
 
             displayPodcasts: function(feed, podcasts) {
                 if (feed.config.card_type == '0') {
-                    feed.displaySmallPodcasts(feed, podcasts);
+                    var numberToShow = 2;
+                    feed.displaySmallPodcasts(feed, podcasts, numberToShow);
+                    return;
+                }
+
+                if (feed.config.card_type == '2') {
+                    var numberToShow = 3;
+                    feed.displaySmallPodcasts(feed, podcasts, numberToShow);
                     return;
                 }
 
@@ -115,7 +123,12 @@ jQuery(document).ready(function( $ ) {
             },
 
             makeCard: function(feed, podcast) {
-                var $podcast_image = $('<img>', {src: podcast.urls.image});
+                var $podcast_image = '';
+
+                if(feed.config.show_image == 'true') {
+                    $podcast_image = $('<img>', {src: podcast.urls.image});
+                }
+
                 var $show_type_button = $('<a>').attr('href', feed.config.channel_url).append(
                     $('<button>', {
                         class: 'btn ' + feed.config.feed_type
@@ -138,7 +151,7 @@ jQuery(document).ready(function( $ ) {
                 var $podcast_embed = $('<iframe>',
                 {
                     scrolling: 'no',
-                    src: feed.makeEmbedUrl(podcast.urls.detail, true)
+                    src: feed.makeEmbedUrl(podcast.urls.detail, (feed.config.show_image == "true"))
                 }).css('width', '100%');
 
                 return $('<div>', { class: 'clip'}).append($podcast_embed);

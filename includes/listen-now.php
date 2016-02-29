@@ -22,7 +22,7 @@
             <h1 class="show-title-name">URN Live</h1>
             <h3 class="show-title-time">24/7</h3>
         </div>
-        <a href="http://urn1350.net/rp/console/main/index.php" title="Listen now!" target="_blank" class="play">Listen Now</a>
+        <a href="/stream" title="Listen now!" target="_blank" class="play">Listen Now</a>
         <div class="send-message">
             <form id="message-the-studio" name="message-the-studio" method="post" action="">
                 <textarea autocomplete="off" name="studio-message" placeholder="<?php echo $message_studio_placeholder; ?>"></textarea>
@@ -30,6 +30,6 @@
             </form>
         </div>
     </div>
-    <a href="http://urn1350.net/rp/console/main/index.php" title="Listen now!" target="_blank" class="btn large-play play">Listen Now</a>
+    <a href="/stream" title="Listen now!" target="_blank" class="btn large-play play">Listen Now</a>
 </div>
-<a href="http://urn1350.net/rp/console/main/index.php" title="Listen now!" target="_blank" class="btn large-play play">Listen Now</a>
+<a href="/stream" title="Listen now!" target="_blank" class="btn large-play play">Listen Now</a>
