@@ -51,12 +51,12 @@ get_header(); ?>
                                 {
                                     name: "Playlist B",
                                     type: 'featured',
-                                    url: "PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
+                                    url: "PLj7bGB3G_znu08f1pWCwCHOCpBAhRHC78"
                                 },
                                 {
                                     name: "Playlist C",
                                     type: 'featured',
-                                    url: "PLWRJVI4Oj4IaYIWIpFlnRJ_v_fIaIl6Ey"
+                                    url: "PLj7bGB3G_znschvxh-cXqPtX7DS54Ui5k"
                                 }
                             ]
                         });
