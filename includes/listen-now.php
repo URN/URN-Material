@@ -25,6 +25,7 @@
         <a href="/stream" title="Listen now!" target="_blank" class="play">Listen Now</a>
         <div class="send-message">
             <form id="message-the-studio" name="message-the-studio" method="post" action="">
+                <span class="message"></span>
                 <textarea autocomplete="off" name="studio-message" placeholder="<?php echo $message_studio_placeholder; ?>"></textarea>
                 <button autocomplete="off" class="btn" type="submit" name="submit">Send</button>
             </form>

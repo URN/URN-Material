@@ -36,12 +36,8 @@
         });
 
         request.done(function (data) {
-            if (data.status === "success") {
-                $messageForm.html($("<span>").addClass("success").text("Thanks for the message!"));
-            }
-            else {
-                $messageForm.html($("<span>").addClass("success").text("Sorry, your message couldn't be delivered!"));
-            }
+            var message = data.status === "success" ? "Thanks for the message!" : "Sorry, your message couldn't be delivered!";
+            $messageForm.find(".message").text(message).show().delay(2000).fadeOut();
         });
 
         e.preventDefault();
