@@ -22,31 +22,30 @@
     }
 
     .cards {
-        list-style: none;
-        justify-content: center;
         @include display-flex();
         @include flex-flow(row wrap);
+        list-style: none;
+        justify-content: center;
     }
 
     .card {
         @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, .24),
                             0 5px 22px 0 rgba(0, 0, 0, .19));
-        width: 30%;
-        height: 100%;
-        margin: 15px;
-
-        opacity: 0;
         @include animation(fadeIn ease-in 1);
         @include animation-fill-mode(forwards);
         @include animation-duration(0.5s);
         @include animation-delay(0.2s);
-
-        .boom .small_media {
-            display: none; // Hide image in embed
-        }
+        width: 30%;
+        height: 100%;
+        margin: 15px;
+        opacity: 0;
 
         @include breakpoint(laptop) {
             width: 100%;
+        }
+
+        .boom .small_media {
+            display: none; // Hide image in embed
         }
 
         audio {

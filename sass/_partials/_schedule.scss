@@ -40,12 +40,63 @@ $time-width: 100px;
     @include flex-direction(row);
     position: relative;
 
+    @include breakpoint(mobile) {
+        .inline-day-name {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        .day-names {
+            display: none;
+        }
+
+        .days {
+            width: 100%;
+        }
+
+        .timetable {
+            background: none;
+            overflow: inherit;
+            width: 100%;
+        }
+
+        .timetable > .times {
+            display: none;
+        }
+
+        .slots {
+            height: auto;
+        }
+
+        .show {
+            margin: 4px 0;
+            padding: 0;
+            position: static;
+            width: 100% !important;
+
+            &.live {
+                margin: 10px 0;
+
+                a {
+                    @include transform(scale(1.05));
+                }
+
+                a:after {
+                    left: auto;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+
     .btn {
+        @include box-shadow(0 1px 8px 0 rgba(0, 0, 0, .24), 0 4px 23px 0 rgba(0, 0, 0, .19));
         position: absolute;
         right: 20px;
         top: 100px;
         z-index: 1;
-        @include box-shadow(0 1px 8px 0 rgba(0, 0, 0, .24), 0 4px 23px 0 rgba(0, 0, 0, .19));
     }
 
     .timetable {
@@ -263,79 +314,24 @@ $time-width: 100px;
     .inline-day-name {
         display: none;
     }
-
-    @include breakpoint(mobile) {
-        .schedule-category-select {
-        }
-
-        .inline-day-name {
-            display: block;
-            margin-bottom: 5px;
-            margin-top: 20px;
-        }
-
-        .day-names {
-            display: none;
-        }
-
-        .days {
-            width: 100%;
-        }
-
-        .timetable {
-            background: none;
-            overflow: inherit;
-            width: 100%;
-        }
-
-        .timetable > .times {
-            display: none;
-        }
-
-        .slots {
-            height: auto;
-        }
-
-        .show {
-            margin: 4px 0;
-            padding: 0;
-            position: static;
-            width: 100% !important;
-
-            &.live {
-                margin: 10px 0;
-
-                a {
-                    @include transform(scale(1.05));
-                }
-
-                a:after {
-                    left: auto;
-                    right: 0;
-                    top: 0;
-                }
-            }
-        }
-    }
 }
 
 
 .mini-schedule {
     margin-bottom: $general-element-spacing;
 
-    .day-names {
-        display: none;
-    }
-
     @include breakpoint(mobile) {
         padding: $general-element-spacing;
-
 
         .inline-day-name {
             display: block;
             margin: 5px 0;
             padding-top: 20px;
         }
+    }
+
+    .day-names {
+        display: none;
     }
 
     .btn {

@@ -115,12 +115,11 @@ $btn-default: #9b989a;
     }
 
     .tab-content {
+        @include order(1);
         width: 100%;
         margin-top: -1px;
         padding: 1em;
         border: 1px solid #ddd;
-
-        @include order(1);
 
         @include breakpoint(tablet) {
             padding: 0;
@@ -140,7 +139,7 @@ $btn-default: #9b989a;
             color: #000;
         }
 
-        & + div {
+        div {
             display: block;
         }
     }

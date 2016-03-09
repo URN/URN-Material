@@ -9,7 +9,7 @@ body.stream {
     background: $urn-purple;
     height: 710px;
     margin: 0 auto;
-    padding: 30px 0 0 0;
+    padding: 30px 0 0;
     width: 380px;
 
     audio {
@@ -55,11 +55,11 @@ body.stream {
         }
 
         .show-info {
+            padding: 10px;
+
             &:before {
                 display: none;
             }
-
-            padding: 10px;
         }
 
         .send-message {

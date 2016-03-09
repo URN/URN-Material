@@ -614,12 +614,12 @@ button::-moz-focus-inner {
   margin-left: 0;
 }
 .tabs .tab-content {
+  -webkit-order: 1;
+  order: 1;
   width: 100%;
   margin-top: -1px;
   padding: 1em;
   border: 1px solid #ddd;
-  -webkit-order: 1;
-  order: 1;
 }
 @media (max-width: 780px) {
   .tabs .tab-content {
@@ -639,7 +639,7 @@ button::-moz-focus-inner {
     color: #000;
   }
 }
-.tabs input[type=radio]:checked + label + div {
+.tabs input[type=radio]:checked + label div {
   display: block;
 }
 
@@ -1163,7 +1163,7 @@ body.stream {
   background: #5e44cb;
   height: 710px;
   margin: 0 auto;
-  padding: 30px 0 0 0;
+  padding: 30px 0 0;
   width: 380px;
 }
 body.stream audio {
@@ -1271,21 +1271,17 @@ body.stream #listen-now #message-the-studio {
   }
 }
 .audioboom-feed .cards {
-  list-style: none;
-  justify-content: center;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  list-style: none;
+  justify-content: center;
 }
 .audioboom-feed .card {
   -moz-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 22px 0 rgba(0, 0, 0, 0.19);
-  width: 30%;
-  height: 100%;
-  margin: 15px;
-  opacity: 0;
   -moz-animation: fadeIn ease-in 1;
   -webkit-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
@@ -1298,14 +1294,18 @@ body.stream #listen-now #message-the-studio {
   -moz-animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
-}
-.audioboom-feed .card .boom .small_media {
-  display: none;
+  width: 30%;
+  height: 100%;
+  margin: 15px;
+  opacity: 0;
 }
 @media (max-width: 800px) {
   .audioboom-feed .card {
     width: 100%;
   }
+}
+.audioboom-feed .card .boom .small_media {
+  display: none;
 }
 .audioboom-feed .card audio {
   width: 100%;
@@ -1419,6 +1419,13 @@ body.stream #listen-now #message-the-studio {
   flex-grow: 1;
   width: 0;
 }
+@media (max-width: 620px) {
+  .row.vertical {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
 .row.vertical > h1 {
   margin-top: 22.5px;
   margin-bottom: 30px;
@@ -1435,13 +1442,6 @@ body.stream #listen-now #message-the-studio {
 }
 .row.vertical h1:first-child {
   margin-top: 0;
-}
-@media (max-width: 620px) {
-  .row.vertical {
-    padding-left: 0;
-    padding-right: 0;
-    width: 100%;
-  }
 }
 .row .clip {
   margin-bottom: 15px;
@@ -1689,14 +1689,58 @@ body.stream #listen-now #message-the-studio {
   flex-direction: row;
   position: relative;
 }
+@media (max-width: 620px) {
+  .schedule .inline-day-name {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+  .schedule .day-names {
+    display: none;
+  }
+  .schedule .days {
+    width: 100%;
+  }
+  .schedule .timetable {
+    background: none;
+    overflow: inherit;
+    width: 100%;
+  }
+  .schedule .timetable > .times {
+    display: none;
+  }
+  .schedule .slots {
+    height: auto;
+  }
+  .schedule .show {
+    margin: 4px 0;
+    padding: 0;
+    position: static;
+    width: 100% !important;
+  }
+  .schedule .show.live {
+    margin: 10px 0;
+  }
+  .schedule .show.live a {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .schedule .show.live a:after {
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+}
 .schedule .btn {
+  -moz-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   right: 20px;
   top: 100px;
   z-index: 1;
-  -moz-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.24), 0 4px 23px 0 rgba(0, 0, 0, 0.19);
 }
 .schedule .timetable {
   background: rgba(0, 0, 0, 0.1);
@@ -1881,56 +1925,9 @@ body.stream #listen-now #message-the-studio {
 .schedule .inline-day-name {
   display: none;
 }
-@media (max-width: 620px) {
-  .schedule .inline-day-name {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 20px;
-  }
-  .schedule .day-names {
-    display: none;
-  }
-  .schedule .days {
-    width: 100%;
-  }
-  .schedule .timetable {
-    background: none;
-    overflow: inherit;
-    width: 100%;
-  }
-  .schedule .timetable > .times {
-    display: none;
-  }
-  .schedule .slots {
-    height: auto;
-  }
-  .schedule .show {
-    margin: 4px 0;
-    padding: 0;
-    position: static;
-    width: 100% !important;
-  }
-  .schedule .show.live {
-    margin: 10px 0;
-  }
-  .schedule .show.live a {
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  .schedule .show.live a:after {
-    left: auto;
-    right: 0;
-    top: 0;
-  }
-}
 
 .mini-schedule {
   margin-bottom: 15px;
-}
-.mini-schedule .day-names {
-  display: none;
 }
 @media (max-width: 620px) {
   .mini-schedule {
@@ -1941,6 +1938,9 @@ body.stream #listen-now #message-the-studio {
     margin: 5px 0;
     padding-top: 20px;
   }
+}
+.mini-schedule .day-names {
+  display: none;
 }
 @media (max-width: 620px) {
   .mini-schedule .btn {

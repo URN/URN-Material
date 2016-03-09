@@ -18,7 +18,16 @@ linters:
     IdSelector:
         enabled: false
 
+    VendorPrefix:
+        enabled: false
+
+    ImportantRule:
+        enabled: false
+
     ColorVariable:
+        enabled: false
+
+    SelectorFormat:
         enabled: false
 
     SelectorDepth:

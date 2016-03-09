@@ -1,15 +1,12 @@
 .row {
     @include display-flex;
-
-
     @include flex-direction(row);
+    padding: 0 #{$general-element-spacing * 2};
 
     @include breakpoint(mobile) {
         @include flex-direction(column);
         padding: 0;
     }
-
-    padding: 0 #{$general-element-spacing * 2};
 
     &:first-child {
         padding-top: #{$listen-now-overlap + $general-element-spacing};
@@ -73,6 +70,12 @@
         @include flex-grow(1);
         width: 0;
 
+        @include breakpoint(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
         > h1 {
             margin-top: #{$general-element-spacing * 1.5};
             margin-bottom: #{$general-element-spacing * 2};
@@ -93,12 +96,6 @@
         h1:first-child {
             margin-top: 0;
         }
-
-        @include breakpoint(mobile) {
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-        }
     }
 
     .clip {
@@ -116,15 +113,15 @@
     }
 
     .module {
+        text-align: left;
+        background: #fff;
+        height: 100%;
+
         // Hide on mobile
         @include breakpoint(mobile) {
             &:last-child {
                 display: none;
             }
         }
-
-        text-align: left;
-        background: #fff;
-        height: 100% ;
     }
 }
