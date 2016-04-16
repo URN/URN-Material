@@ -16,7 +16,8 @@ body#tinymce.wp-editor {
 
     @import '_partials/variables',
             '_partials/mixins',
-            '_partials/functions';
+            '_partials/functions',
+            '_partials/breakpoints';
 
     @import '_partials/wp-static';
     @import '_partials/wp-posts';
