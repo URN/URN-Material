@@ -513,6 +513,10 @@ button::-moz-focus-inner {
   margin-bottom: 6px;
 }
 
+.entry-content {
+  font-size: 1.4em;
+  padding: 15px;
+}
 .entry-content ol {
   list-style: decimal inside none;
 }
@@ -2004,6 +2008,7 @@ body.stream #listen-now #message-the-studio {
 }
 
 .blog-wrapper {
+  padding: 15px;
   padding-top: 15px;
 }
 .blog-wrapper h1.show-title a {
