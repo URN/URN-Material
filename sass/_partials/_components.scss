@@ -83,6 +83,9 @@ $btn-default: #9b989a;
 // entry-content: WP post content
 .entry-content {
     @import 'wp-posts';
+
+    font-size: 1.4em;
+    padding: 15px;
 }
 
 
