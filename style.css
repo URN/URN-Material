@@ -767,6 +767,7 @@ a.committee-tag:active,
 }
 #title #titleText {
   height: 160px;
+  padding-top: 53.33333px;
 }
 #title:hover:after, #title:focus:after {
   box-shadow: 0 0 160px 130px rgba(255, 255, 255, 0.3);
