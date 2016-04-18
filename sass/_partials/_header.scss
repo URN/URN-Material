@@ -37,8 +37,8 @@
         color: #fff;
         font-size: 2.25em;
         font-weight: 300;
-        height: $logo-height;
-        line-height: $logo-height;
+        //height: $logo-height;
+        //line-height: $logo-height;
         margin: 0 35px;
         text-align: center;
         text-transform: uppercase;
@@ -52,9 +52,45 @@
             white-space: normal;
         }
 
+
+
         @include breakpoint(mobile) {
             display: none;
         }
+    }
+
+    h2 {
+        @include flex-grow(1);
+        @include title-font;
+        color: #fff;
+        font-size: 1.0em;
+        font-weight: 300;
+        //height: $logo-height;
+        //line-height: $logo-height;
+        margin: 0 35px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        @include breakpoint(laptop) {
+            font-size: 2em;
+            line-height: 1.2;
+            margin-top: 40px;
+            text-align: left;
+            white-space: normal;
+        }
+
+
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    #titleText{
+      height: $logo-height;
+      //line-height: $logo-height;
+      padding-top: $logo-height / 3;
     }
 
     &:hover,
