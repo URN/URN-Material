@@ -4,9 +4,16 @@ The URN WordPress theme
 ![Theme preview](/screenshot.png?raw=true "Theme design")
 
 ## Quick Start
-1. Run <code>npm install</code> from the command line at the project root to install [grunt](https://github.com/gruntjs/grunt) and grunt plugins
-2. Run <code>grunt</code> from the command line within the project directory to start watching the project
-3. Grunt should compile your CSS as you edit the SCSS files
+1. Install Node.js from https://nodejs.org/en/ then run <code>npm install</code> from the command line at the project root
+2. Run <code>npm install -g grunt-cli</code> to install [grunt](https://github.com/gruntjs/grunt) and grunt plugins
+3. Install Ruby for your OS and make sure to check the option to add it to your PATH variable if on Windows
+4. Run <code>gem update --system</code>
+5. Run <code>gem install scss_lint</code>
+6. Run <code>npm install grunt-scss-lint</code>
+7. Run <code>gem install compass</code>
+8. Run <code>npm install grunt-contrib-compass</code>
+9. Run <code>grunt</code> from the command line within the project directory to start watching the project
+10. Grunt should now compile your CSS as you edit the SCSS files
 
 ## URLs
 Production - [`prod.urn1350.net`](http://prod.urn1350.net)
