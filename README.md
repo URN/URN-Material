@@ -4,6 +4,8 @@ The URN WordPress theme
 ![Theme preview](/screenshot.png?raw=true "Theme design")
 
 ## Quick Start
+Note: The following presumes that you already have a mysql and apache server installed locally.
+
 1. Install Node.js from https://nodejs.org/en/ then run <code>npm install</code> from the command line at the project root
 2. Run <code>npm install -g grunt-cli</code> to install [grunt](https://github.com/gruntjs/grunt) and grunt plugins
 3. Install Ruby for your OS and make sure to check the option to add it to your PATH variable if on Windows
