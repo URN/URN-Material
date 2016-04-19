@@ -720,7 +720,9 @@ a.committee-tag:active,
   color: #fff;
   font-size: 2.25em;
   font-weight: 300;
-  margin-bottom: 5px;
+  height: 160px;
+  line-height: 160px;
+  margin: 0 35px;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -738,39 +740,6 @@ a.committee-tag:active,
   #title h1 {
     display: none;
   }
-}
-#title h2 {
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-  font-size: 1.0em;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-@media (max-width: 800px) {
-  #title h2 {
-    font-size: 1em;
-    line-height: 1.2;
-    margin-top: 40px;
-    text-align: left;
-    white-space: normal;
-  }
-}
-@media (max-width: 620px) {
-  #title h2 {
-    display: none;
-  }
-}
-#title #titleText {
-  height: 160px;
-  padding-top: 53.33333px;
-  text-align: center;
-  margin: 0 35px;
-  margin-left: auto;
-  margin-right: auto;
 }
 #title:hover:after, #title:focus:after {
   box-shadow: 0 0 160px 130px rgba(255, 255, 255, 0.3);
