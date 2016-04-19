@@ -530,7 +530,7 @@ button::-moz-focus-inner {
 }
 .entry-content ul li,
 .entry-content ol li {
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 .entry-content h1,
 .entry-content h2 {
