@@ -2,6 +2,8 @@
 .blog-wrapper {
     padding: 15px;
     padding-top: $general-element-spacing;
+    height: 900px;
+    overflow-y: scroll;
 
     h1.show-title {
 

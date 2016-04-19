@@ -2010,6 +2010,8 @@ body.stream #listen-now #message-the-studio {
 .blog-wrapper {
   padding: 15px;
   padding-top: 15px;
+  height: 900px;
+  overflow-y: scroll;
 }
 .blog-wrapper h1.show-title a {
   color: #222;
