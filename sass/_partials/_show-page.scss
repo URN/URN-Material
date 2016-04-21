@@ -61,7 +61,7 @@
         }
     }
 
-    &:after {
+    &::after {
         background: url('images/noise.png');
         content: '';
         height: 100%;
@@ -109,7 +109,7 @@
     text-transform: uppercase;
     width: 150px;
 
-    &:after {
+    &::after {
         content: '';
     }
 

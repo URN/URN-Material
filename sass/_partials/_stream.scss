@@ -57,7 +57,7 @@ body.stream {
         .show-info {
             padding: 10px;
 
-            &:before {
+            &::before {
                 display: none;
             }
         }

@@ -115,7 +115,7 @@
         }
     }
 
-    &:before {
+    &::before {
         background: transparent;
         content: '';
         height: 140%;

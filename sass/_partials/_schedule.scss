@@ -25,7 +25,7 @@ $time-width: 100px;
         margin-right: 30px;
     }
 
-    label:after {
+    label::after {
         content: ':';
     }
 
@@ -138,7 +138,7 @@ $time-width: 100px;
                 box-shadow: 0 0 75px 25px white(0.05);
             }
 
-            &:after {
+            &::after {
                 background: inherit;
                 color: #fff;
                 content: 'On Air';
@@ -239,7 +239,7 @@ $time-width: 100px;
             font-size: 0.75em;
             font-weight: 600;
 
-            &:before {
+            &::before {
                 content: 'Hosts: ';
                 font-weight: 400;
                 opacity: 0.6;
@@ -308,7 +308,7 @@ $time-width: 100px;
                     @include transform(scale(1.05));
                 }
 
-                a:after {
+                a::after {
                     left: auto;
                     right: 0;
                     top: 0;

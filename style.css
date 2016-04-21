@@ -436,8 +436,8 @@ button::-moz-focus-inner {
   text-decoration: none;
   text-transform: uppercase;
 }
-.btn:after,
-.show-page-external-links a:after {
+.btn::after,
+.show-page-external-links a::after {
   content: '!';
 }
 .btn:hover, .btn:focus,
@@ -741,10 +741,10 @@ a.committee-tag:active,
     display: none;
   }
 }
-#title:hover:after, #title:focus:after {
+#title:hover::after, #title:focus::after {
   box-shadow: 0 0 160px 130px rgba(255, 255, 255, 0.3);
 }
-#title:after {
+#title::after {
   -moz-transition: box-shadow 0.15s ease;
   -o-transition: box-shadow 0.15s ease;
   -webkit-transition: box-shadow 0.15s ease;
@@ -760,7 +760,7 @@ a.committee-tag:active,
   width: 1px;
 }
 @media (max-width: 620px) {
-  #title:after {
+  #title::after {
     left: 50%;
   }
 }
@@ -874,7 +874,7 @@ a.committee-tag:active,
 .nav-overflow-list .nav-item a:hover, .nav-overflow-list .nav-item a:focus {
   background: #e2e2e2;
 }
-.nav-overflow-list:before {
+.nav-overflow-list::before {
   background: transparent;
   content: '';
   height: 140%;
@@ -936,7 +936,7 @@ a.committee-tag:active,
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-#listen-now .now-playing .current-track:before {
+#listen-now .now-playing .current-track::before {
   content: '\266A';
   font-family: 'Arial';
   font-weight: 600;
@@ -1016,7 +1016,7 @@ a.committee-tag:active,
   position: relative;
   z-index: 2;
 }
-#listen-now .show-container .show-info:before {
+#listen-now .show-container .show-info::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1027,7 +1027,7 @@ a.committee-tag:active,
   z-index: 2;
 }
 @media (max-width: 620px) {
-  #listen-now .show-container .show-info:before {
+  #listen-now .show-container .show-info::before {
     width: 100%;
   }
 }
@@ -1218,7 +1218,7 @@ body.stream #listen-now .show-container .show-image {
 body.stream #listen-now .show-info {
   padding: 10px;
 }
-body.stream #listen-now .show-info:before {
+body.stream #listen-now .show-info::before {
   display: none;
 }
 body.stream #listen-now .send-message {
@@ -1513,7 +1513,7 @@ body.stream #listen-now #message-the-studio {
   font-weight: 600;
   text-transform: uppercase;
 }
-.show-page-header:after {
+.show-page-header::after {
   background: url("images/noise.png");
   content: '';
   height: 100%;
@@ -1556,7 +1556,7 @@ body.stream #listen-now #message-the-studio {
   text-transform: uppercase;
   width: 150px;
 }
-.show-page-external-links a:after {
+.show-page-external-links a::after {
   content: '';
 }
 .show-page-external-links a.facebook {
@@ -1686,7 +1686,7 @@ body.stream #listen-now #message-the-studio {
 .filter-container .schedule-category-select {
   margin-right: 30px;
 }
-.filter-container label:after {
+.filter-container label::after {
   content: ':';
 }
 .filter-container .search-filter-container {
@@ -1796,7 +1796,7 @@ body.stream #listen-now #message-the-studio {
   background: #e63d9b;
   box-shadow: 0 0 75px 25px rgba(255, 255, 255, 0.05);
 }
-.schedule .show.live a:after {
+.schedule .show.live a::after {
   background: inherit;
   color: #fff;
   content: 'On Air';
@@ -1873,7 +1873,7 @@ body.stream #listen-now #message-the-studio {
   font-size: 0.75em;
   font-weight: 600;
 }
-.schedule .show .hosts:before {
+.schedule .show .hosts::before {
   content: 'Hosts: ';
   font-weight: 400;
   opacity: 0.6;
@@ -1931,7 +1931,7 @@ body.stream #listen-now #message-the-studio {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
-  .schedule .show.live a:after {
+  .schedule .show.live a::after {
     left: auto;
     right: 0;
     top: 0;

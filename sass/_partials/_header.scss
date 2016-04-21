@@ -59,13 +59,13 @@
 
     &:hover,
     &:focus {
-        &:after {
+        &::after {
             box-shadow: 0 0 160px 130px white(.3);
         }
     }
 
     // Create a white glow around the logo
-    &:after {
+    &::after {
         @include transition(box-shadow .15s ease);
         background: transparent;
         border-radius: 50%;

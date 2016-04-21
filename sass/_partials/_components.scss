@@ -16,7 +16,7 @@ button::-moz-focus-inner {
     text-decoration: none;
     text-transform: uppercase;
 
-    &:after {
+    &::after {
         content: '!';
     }
 
