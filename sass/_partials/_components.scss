@@ -98,6 +98,11 @@ $btn-default: #9b989a;
     padding-top: $general-element-spacing;
     width: 100%;
 
+    input[type=radio],
+    .tab-content {
+        display: none;
+    }
+
     .tab-title {
         margin-left: -1px;
         background: #eee;
@@ -118,21 +123,19 @@ $btn-default: #9b989a;
     }
 
     .tab-content {
-        @include order(1);
         width: 100%;
         margin-top: -1px;
         padding: 1em;
         border: 1px solid #ddd;
+
+        @include order(1);
 
         @include breakpoint(tablet) {
             padding: 0;
         }
     }
 
-    input[type=radio],
-    .tab-content {
-        display: none;
-    }
+
 
     input[type=radio]:checked + label {
         background: #fff;
@@ -142,7 +145,7 @@ $btn-default: #9b989a;
             color: #000;
         }
 
-        div {
+        & + div {
             display: block;
         }
     }
