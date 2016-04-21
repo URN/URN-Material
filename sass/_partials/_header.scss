@@ -37,9 +37,6 @@
         color: #fff;
         font-size: 2.25em;
         font-weight: 300;
-        height: $logo-height;
-        line-height: $logo-height;
-        margin: 0 35px;
         text-align: center;
         text-transform: uppercase;
         white-space: nowrap;
@@ -55,6 +52,59 @@
         @include breakpoint(mobile) {
             display: none;
         }
+    }
+
+    h2 {
+        @include flex-grow(1);
+        @include title-font;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        @include breakpoint(laptop) {
+            font-size: 1em;
+            line-height: 1.2;
+            margin-top: 40px;
+            text-align: left;
+            white-space: normal;
+        }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 1em;
+            word-wrap: break-word;
+            margin-top: 0;
+            padding-top: 0;
+            text-align: left;
+            white-space: normal;
+        }
+    }
+
+    #title-text {
+        height: $logo-height / 3;
+        padding-top: $logo-height / 3;
+        margin: 0 auto;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 1em;
+            word-wrap: break-word;
+            margin-left: 35px;
+            margin-right: 35px;
+            padding-top: 0;
+            text-align: left;
+            white-space: normal;
+        }
+
     }
 
     &:hover,

@@ -720,9 +720,6 @@ a.committee-tag:active,
   color: #fff;
   font-size: 2.25em;
   font-weight: 300;
-  height: 160px;
-  line-height: 160px;
-  margin: 0 35px;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -739,6 +736,62 @@ a.committee-tag:active,
 @media (max-width: 620px) {
   #title h1 {
     display: none;
+  }
+}
+#title h2 {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media (max-width: 800px) {
+  #title h2 {
+    font-size: 1em;
+    line-height: 1.2;
+    margin-top: 40px;
+    text-align: left;
+    white-space: normal;
+  }
+}
+@media (max-width: 620px) {
+  #title h2 {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+  #title h2 {
+    font-size: 1em;
+    word-wrap: break-word;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+    white-space: normal;
+  }
+}
+#title #title-text {
+  height: 53.33333px;
+  padding-top: 53.33333px;
+  margin: 0 auto;
+}
+@media (max-width: 620px) {
+  #title #title-text {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+  #title #title-text {
+    font-size: 1em;
+    word-wrap: break-word;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 0;
+    text-align: left;
+    white-space: normal;
   }
 }
 #title:hover::after, #title:focus::after {
