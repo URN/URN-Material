@@ -46,7 +46,7 @@ get_header(); ?>
                                 {
                                     name: "Playlist A",
                                     type: 'featured',
-                                    url: "PL7C00E83736FB02C3"
+                                    url: "PLj7bGB3G_znvbJ5E6hLDYn26akuU5HJkz"
                                 },
                                 {
                                     name: "Playlist B",
