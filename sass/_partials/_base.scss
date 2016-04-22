@@ -17,6 +17,11 @@ body {
     color: $body-text-color;
 }
 
+@font-face {
+    font-family: Milocha;
+    src: url('fonts/milocha.otf') format('opentype');
+}
+
 #page-wrap {
     @include display-flex;
     @include flex-direction(column);

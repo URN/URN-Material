@@ -2,6 +2,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+@mixin logo-font {
+    font-family: 'Milocha', 'Raleway', sans-serif;
+}
+
 @mixin body-font {
     font-family: 'Source Sans Pro', 'Open Sans', 'Arial', sans-serif;
 }

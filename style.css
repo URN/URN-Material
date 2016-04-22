@@ -356,6 +356,10 @@ body {
   color: #272727;
 }
 
+@font-face {
+  font-family: Milocha;
+  src: url("fonts/milocha.otf") format("opentype");
+}
 #page-wrap {
   display: -webkit-flex;
   display: flex;
@@ -716,9 +720,9 @@ a.committee-tag:active,
 #title h1 {
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Milocha', 'Raleway', sans-serif;
   color: #fff;
-  font-size: 2.25em;
+  font-size: 2.8em;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;

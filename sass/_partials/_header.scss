@@ -33,9 +33,9 @@
 
     h1 {
         @include flex-grow(1);
-        @include title-font;
+        @include logo-font;
         color: #fff;
-        font-size: 2.25em;
+        font-size: 2.8em;
         font-weight: 300;
         text-align: center;
         text-transform: uppercase;
