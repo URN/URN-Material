@@ -17,7 +17,7 @@ Note: The following presumes that you already have a mysql and apache server ins
 9. Run <code>grunt</code> from the command line within the project directory to start watching the project
 10. Grunt should now compile your CSS as you edit the SCSS files
 
-## URLs
+## URLs (currently unused)
 Production - [`prod.urn1350.net`](http://prod.urn1350.net)
 
 Development - [`dev.urn1350.net`](http://dev.urn1350.net) (not in use until production version goes live)
