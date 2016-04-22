@@ -14,10 +14,10 @@ get_header(); ?>
             jQuery(document).ready(function( $ ) {
                 // Settings (must be below youmax id)
                 $('.youmax').youmax({
-                    apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs', // harry.mumford-turner@urn1350.net
+                    apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs',
                     youTubeChannelURL: "http://www.youtube.com/user/urn1350",
-                    youTubePlaylistURL: "PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG", // https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG
-                    youTubeFeaturedURL: "PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG", // https://www.youtube.com/playlist?list=PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG
+                    youTubePlaylistURL: "PLj7bGB3G_znuQQjyceRF5WXDpopQ_5rTG",
+                    youTubeFeaturedURL: "PLj7bGB3G_znvMLnUKwsaNUvfRf8M7BQNG",
                     youmaxDefaultTab: "UPLOADS", // PLAYLISTS || UPLOADS || FEATURED
                     youmaxColumns: 3,
                     showVideoInLightbox: false,
