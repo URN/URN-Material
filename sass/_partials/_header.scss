@@ -56,25 +56,15 @@
 
     h2 {
         @include flex-grow(1);
-        @include title-font;
+        @include body-font;
         color: #fff;
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
+        text-shadow: 0 1px 3px black(0.25);
         text-transform: uppercase;
         white-space: nowrap;
 
-        @include breakpoint(laptop) {
-            font-size: 1em;
-            line-height: 1.2;
-            margin-top: 40px;
-            text-align: left;
-            white-space: normal;
-        }
-
-        @include breakpoint(mobile) {
-            display: none;
-        }
 
         @include breakpoint(tablet) {
             font-size: 1em;
@@ -83,6 +73,10 @@
             padding-top: 0;
             text-align: left;
             white-space: normal;
+        }
+
+        @include breakpoint(mobile) {
+            display: none;
         }
     }
 

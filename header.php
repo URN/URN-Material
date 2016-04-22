@@ -26,7 +26,8 @@
             <a href="/" id="title">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="URN Logo">
                 <div id="title-text">
-                  <h1>University Radio Nottingham</h1><br><h2>Your Music. Your News. Your Student Sound.</h2>
+                    <h1>University Radio Nottingham</h1>
+                    <h2>Your music. Your news. Your student sound.</h2>
                 </div>
             </a>
         </div>
