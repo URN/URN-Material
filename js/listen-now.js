@@ -68,6 +68,7 @@
 
                     if (slotData.image !== "") {
                         $show_image.css("display", "block");
+                        $show_image.css("background-size", "cover");
                     }
                     found_live = true;
                 }
