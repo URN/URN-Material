@@ -210,7 +210,7 @@
                 resize: none;
                 width: 100%;
 
-                @include breakpoint(tiny) {
+                @include breakpoint(mobile) {
                     height: 80px;
                 }
             }

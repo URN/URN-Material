@@ -774,9 +774,17 @@ a.committee-tag:active,
   padding-top: 53.33333px;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  #title #title-text h1 {
+    margin-top: 0;
+  }
+}
 @media (max-width: 620px) {
   #title #title-text {
     display: none;
+  }
+  #title #title-text h1 {
+    width: 100%;
   }
 }
 @media (max-width: 780px) {
@@ -788,6 +796,10 @@ a.committee-tag:active,
     padding-top: 0;
     text-align: left;
     white-space: normal;
+  }
+  #title #title-text h1 {
+    margin-top: 30px;
+    width: 75%;
   }
 }
 #title:hover::after, #title:focus::after {
@@ -1161,7 +1173,7 @@ a.committee-tag:active,
   resize: none;
   width: 100%;
 }
-@media (max-width: 440px) {
+@media (max-width: 620px) {
   #listen-now .show-container .send-message textarea {
     height: 80px;
   }
