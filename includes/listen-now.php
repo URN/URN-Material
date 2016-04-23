@@ -16,7 +16,8 @@
         </div>
     </div>
     <div class="show-container">
-        <div class="show-image" style="display: none;"></div>
+        <!-- <div class="show-image" style="display: none;"></div> -->
+        <div class="show-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/logo-player.png'); display: block"></div>
         <div class="show-info">
             <h2 class="show-title-prelude">URN presents</h2>
             <h1 class="show-title-name">URN Live</h1>
