@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/cover_urn.jpg">
     <meta property="og:description" content="University Radio Nottingham is the multi-award–winning university radio station of the University of Nottingham Students’ Union. During term-time we broadcast locally on University Park Campus on 1350AM and worldwide via our website.">
+    <meta name="theme-color" content="#5e44cb">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png" sizes="64x64">
     <!--[if gte IE 9]>
