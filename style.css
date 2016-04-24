@@ -2015,11 +2015,18 @@ body.stream #listen-now #message-the-studio {
 .mini-schedule .day-names {
   display: none;
 }
+.mini-schedule .timetable {
+  padding-top: 30px;
+}
 @media (max-width: 620px) {
   .mini-schedule .btn {
-    right: 0;
+    left: 50%;
+    margin-left: -80px;
+    padding: 15px;
+    right: initial;
+    text-align: center;
     top: 0;
-    width: 100%;
+    width: 160px;
   }
 }
 

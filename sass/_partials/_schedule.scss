@@ -336,12 +336,20 @@ $time-width: 100px;
         display: none;
     }
 
+    .timetable {
+        padding-top: 30px;
+    }
+
     .btn {
         // Set button to be bigger on mobile
         @include breakpoint(mobile) {
-            right: 0;
+            left: 50%;
+            margin-left: -80px;
+            padding: 15px;
+            right: initial;
+            text-align: center;
             top: 0;
-            width: 100%;
+            width: 160px;
         }
     }
 }
