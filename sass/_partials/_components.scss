@@ -88,6 +88,20 @@ $btn-default: #9b989a;
     padding: 15px;
 }
 
+//
+// Global anchor style
+//
+
+.anchor {
+    color: $urn-pink;
+    text-decoration: underline;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: darken($urn-pink, 10%);
+    }
+}
 
 //
 // Tabs

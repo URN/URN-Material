@@ -6,12 +6,6 @@
     #wp_pagination {
         text-align: center;
 
-        .previous_page {
-            &::after {
-                content: '|';
-            }
-        }
-
         .page_button {
             @include breakpoint(mobile) {
                 display: none;
@@ -22,14 +16,18 @@
             }
         }
 
+        .active_page_button {
+            color: #5142b8;
+
+            &::after {
+                content: '|';
+                color: $urn-pink;
+            }
+        }
+
         a {
-            color: #d51b82;
             font-weight: bold;
             text-decoration: none;
-
-            &:hover {
-                color: #5142b8;
-              }
           }
     }
 

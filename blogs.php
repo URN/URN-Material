@@ -51,20 +51,20 @@ $query = new WP_Query($args);?>
         //Pagination links
         echo '
         <div id="wp_pagination">
-          <a class="first_page" href="'.get_pagenum_link(1).'">&laquo; First</a>
-          <a class="previous_page" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo; Previous </a>';
+          <a class="first_page anchor" href="'.get_pagenum_link(1).'">&laquo; First</a>
+          <a class="previous_page anchor" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo; Previous |</a>';
           for($i=$curpage - 5;$i<=$curpage + 5;$i++){
             if ($i < 1) {//Stops displaying negative pages
               $i = 0;
             } elseif ($i > $query->max_num_pages) {//Stops displaying pages over the limit
               break;
             } else {
-              echo '<a class="'.($i == $curpage ? 'active ' : '').'page_button" href="'.get_pagenum_link($i).'"> '.$i.' </a>';
+              echo '<a class="'.($i == $curpage ? 'active_' : '').'page_button anchor" href="'.get_pagenum_link($i).'"> '.$i.' </a>';
             }
           }
           echo '
-          <a class="next_page" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'"> Next &rsaquo;</a>
-          <a class="last_page" href="'.get_pagenum_link($query->max_num_pages).'">Last &raquo;</a>
+          <a class="next_page anchor" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'"> Next &rsaquo;</a>
+          <a class="last_page anchor" href="'.get_pagenum_link($query->max_num_pages).'">Last &raquo;</a>
         </div>';
         ?>
 
