@@ -2079,6 +2079,9 @@ body.stream #listen-now #message-the-studio {
   padding: 15px;
   padding-top: 15px;
 }
+.blog-wrapper #wp_pagination {
+  text-align: center;
+}
 .blog-wrapper h1.show-title a {
   color: #222;
   text-decoration: none;

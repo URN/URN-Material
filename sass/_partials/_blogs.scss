@@ -3,6 +3,10 @@
     padding: 15px;
     padding-top: $general-element-spacing;
 
+    #wp_pagination{
+      text-align: center;
+    }
+
     h1.show-title {
 
         a {
