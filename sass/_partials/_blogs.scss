@@ -3,8 +3,34 @@
     padding: 15px;
     padding-top: $general-element-spacing;
 
-    #wp_pagination{
-      text-align: center;
+    #wp_pagination {
+        text-align: center;
+
+        .previous_page {
+            &::after {
+                content: '|';
+            }
+        }
+
+        .page_button {
+            @include breakpoint(mobile) {
+                display: none;
+            }
+
+            &::after {
+                content: '|';
+            }
+        }
+
+        a {
+            color: #d51b82;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                color: #5142b8;
+              }
+          }
     }
 
     h1.show-title {

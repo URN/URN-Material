@@ -2084,6 +2084,25 @@ body.stream #listen-now #message-the-studio {
 .blog-wrapper #wp_pagination {
   text-align: center;
 }
+.blog-wrapper #wp_pagination .previous_page::after {
+  content: '|';
+}
+@media (max-width: 620px) {
+  .blog-wrapper #wp_pagination .page_button {
+    display: none;
+  }
+}
+.blog-wrapper #wp_pagination .page_button::after {
+  content: '|';
+}
+.blog-wrapper #wp_pagination a {
+  color: #d51b82;
+  font-weight: bold;
+  text-decoration: none;
+}
+.blog-wrapper #wp_pagination a:hover {
+  color: #5142b8;
+}
 .blog-wrapper h1.show-title a {
   color: #222;
   text-decoration: none;
