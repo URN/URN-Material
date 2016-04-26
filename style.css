@@ -1140,6 +1140,7 @@ a.committee-tag:active,
   -webkit-flex-direction: column;
   flex-direction: column;
   position: relative;
+  min-height: 80px;
   width: 50%;
   z-index: 2;
 }
