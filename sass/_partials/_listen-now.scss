@@ -68,10 +68,26 @@
         @include flex-direction(row);
         // background-repeat: no-repeat;
         // background-size: contain;
+        position: relative;
 
         @include breakpoint(tiny) {
             background: none;
             display: block;
+        }
+
+        &::before {
+            background-image: url('images/noise.png');
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 150%;
+            z-index: 2;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
         }
 
         .show-info {
@@ -122,21 +138,6 @@
                     background: $urn-pink;
                 }
             } */
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-image: url('images/noise.png');
-                height: 100%;
-                width: 150%;
-                z-index: 2;
-
-                @include breakpoint(mobile) {
-                    width: 100%;
-                }
-            }
         }
 
         .play {

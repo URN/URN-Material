@@ -1033,11 +1033,27 @@ a.committee-tag:active,
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
+  position: relative;
 }
 @media (max-width: 440px) {
   #listen-now .show-container {
     background: none;
     display: block;
+  }
+}
+#listen-now .show-container::before {
+  background-image: url("images/noise.png");
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150%;
+  z-index: 2;
+}
+@media (max-width: 620px) {
+  #listen-now .show-container::before {
+    width: 100%;
   }
 }
 #listen-now .show-container .show-info {
@@ -1085,21 +1101,6 @@ a.committee-tag:active,
 #listen-now .show-container .show-info .show-title-name {
   position: relative;
   z-index: 2;
-}
-#listen-now .show-container .show-info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("images/noise.png");
-  height: 100%;
-  width: 150%;
-  z-index: 2;
-}
-@media (max-width: 620px) {
-  #listen-now .show-container .show-info::before {
-    width: 100%;
-  }
 }
 #listen-now .show-container .play {
   -webkit-flex-shrink: 0;
