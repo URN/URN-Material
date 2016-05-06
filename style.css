@@ -1863,7 +1863,7 @@ body.stream #listen-now #message-the-studio {
   background: #a71667;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 .schedule .show.live a:hover, .schedule .show.live a:focus {
   background: #e63d9b;
@@ -1905,6 +1905,9 @@ body.stream #listen-now #message-the-studio {
 .schedule .show a:hover, .schedule .show a:focus {
   background: #e3228d;
   color: #fff;
+  height: auto;
+  min-height: 100%;
+  z-index: 1;
 }
 .schedule .show.after-dark a {
   background: #3b4251;
