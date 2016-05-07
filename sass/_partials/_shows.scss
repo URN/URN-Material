@@ -1,15 +1,18 @@
-
-
 .shows {
 
     h1 {
+        color: $body-text-color;
         padding-bottom: $general-element-spacing;
         padding-top: $general-element-spacing;
     }
 
     h2 a {
-        color: #111 !important;
+        color: $urn-pink;
         text-decoration: none;
         font-size: 15px;
+
+        &:hover {
+            color: darken($urn-pink, 15%);
+        }
     }
 }

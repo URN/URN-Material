@@ -2126,11 +2126,15 @@ body.stream #listen-now #message-the-studio {
 }
 
 .shows h1 {
+  color: #272727;
   padding-bottom: 15px;
   padding-top: 15px;
 }
 .shows h2 a {
-  color: #111 !important;
+  color: #e63d9b;
   text-decoration: none;
   font-size: 15px;
+}
+.shows h2 a:hover {
+  color: #be1875;
 }
