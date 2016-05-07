@@ -498,7 +498,12 @@ button::-moz-focus-inner {
 }
 .main-content h2,
 .entry-content h2 {
-  font-size: 22px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.main-content h3,
+.entry-content h3 {
+  font-size: 1em;
   font-weight: bold;
 }
 .main-content em,
@@ -2125,16 +2130,9 @@ body.stream #listen-now #message-the-studio {
   text-decoration: underline;
 }
 
-.shows h1 {
-  color: #272727;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-.shows h2 a {
-  color: #e63d9b;
+.shows h3 a {
   text-decoration: none;
-  font-size: 15px;
 }
-.shows h2 a:hover {
-  color: #be1875;
+.shows .show {
+  margin-bottom: 20px;
 }

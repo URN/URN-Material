@@ -1,18 +1,9 @@
 .shows {
-
-    h1 {
-        color: $body-text-color;
-        padding-bottom: $general-element-spacing;
-        padding-top: $general-element-spacing;
+    h3 a {
+        text-decoration: none;
     }
 
-    h2 a {
-        color: $urn-pink;
-        text-decoration: none;
-        font-size: 15px;
-
-        &:hover {
-            color: darken($urn-pink, 15%);
-        }
+    .show {
+        margin-bottom: 20px;
     }
 }

@@ -64,7 +64,11 @@ body#tinymce.wp-editor h1 {
   font-weight: 600;
 }
 body#tinymce.wp-editor h2 {
-  font-size: 22px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body#tinymce.wp-editor h3 {
+  font-size: 1em;
   font-weight: bold;
 }
 body#tinymce.wp-editor em {
