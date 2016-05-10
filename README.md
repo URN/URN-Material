@@ -29,3 +29,34 @@ Note: The following presumes that you already have a mysql and apache server ins
 
 ### `grunt --force`
 Keep tasks running even if the SCSS lint fails (useful for development when CSS is still in-progress but make sure the linter passes before committing any SASS)
+
+## Hooks
+In order for pushes to this repository (and child theme repositories) to automatically update the live version of the site, a webhook is used to send a POST request to http://urn1350.net/hook.php when commits are pushed. The `hook.php` script then executes `/var/www/pull.sh`.
+
+### `hook.php`
+```php
+<?php echo shell_exec('../pull.sh');
+```
+
+### `pull.sh`
+```shell
+#!/bin/sh
+
+cd /var/www/html/wp-content/themes/urn-material;
+git checkout master;
+git pull 2>&1;
+
+echo '<br>';
+
+cd /var/www/html/wp-content/themes/urn-material-su-elections;
+git checkout master;
+git pull 2>&1;
+
+echo '<br>';
+
+cd /var/www/html/wp-content/themes/urn-material-varsity;
+git checkout master;
+git pull 2>&1;
+
+echo '<br>';
+```
