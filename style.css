@@ -458,6 +458,24 @@ button::-moz-focus-inner {
 .show-page-external-links a:disabled {
   background: #f297ca;
 }
+.btn.listen,
+.show-page-external-links a.listen {
+  background: #a71667;
+  padding: 0 8px;
+}
+.btn.listen:hover,
+.show-page-external-links a.listen:hover {
+  background: #ec6ab2;
+  outline: none;
+}
+.btn.listen:active,
+.show-page-external-links a.listen:active {
+  box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
+}
+.btn.listen::after,
+.show-page-external-links a.listen::after {
+  content: '';
+}
 
 .btn-default {
   background: #9b989a;
@@ -988,12 +1006,6 @@ a.committee-tag:active,
   #listen-now {
     width: 96%;
   }
-}
-#listen-now.minimise .now-playing {
-  box-shadow: none;
-}
-#listen-now.minimise .show-container {
-  display: none;
 }
 #listen-now .now-playing {
   display: -webkit-flex;

@@ -169,4 +169,13 @@
         e.preventDefault();
     });
 
+    $(".listen").click(function(e) {
+        $(".show-container").animate({height: 'toggle'});
+
+        var text = $(".listen").text();
+        $(".listen").text(text == "Expand" ? "Shrink" : "Expand");
+
+        e.preventDefault();
+    });
+
 })(jQuery);

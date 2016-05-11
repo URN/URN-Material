@@ -7,16 +7,18 @@
     }
 ?>
 
-<?php $minimise = is_home() ? '' : 'minimise' ?>
-<div id="listen-now" class="<?php echo $minimise; ?>">
+<?php $minimise = is_home() || is_page ('stream') ? '' : 'display: none;' ?>
+<?php $minimiseT = is_home() ? 'Shrink' : 'Expand' ?>
+<?php $btn = is_page ('stream') ? 'display: none;' : '' ?>
+<div id="listen-now">
     <div class="now-playing">
         <span class="current-track"></span>
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
+        <button class="btn listen" name="size" style="<?php echo $btn; ?>"><?php echo $minimiseT; ?></button>
     </div>
-    <div class="show-container">
-        <!-- <div class="show-image" style="display: none;"></div> -->
+    <div class="show-container" style="<?php echo $minimise; ?>">
         <div class="show-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/mic-icon.svg'); display: block"></div>
         <div class="show-info">
             <h2 class="show-title-prelude">URN presents</h2>
