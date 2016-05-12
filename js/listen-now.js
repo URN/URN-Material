@@ -170,7 +170,11 @@
     });
 
     $(".listen").click(function(e) {
-        $(".show-container").animate({height: 'toggle'});
+        if ($(window).width() < 800) {
+          $(".show-container").animate({height: 'toggle'}, {duration: 0});
+        }else {
+          $(".show-container").animate({height: 'toggle'});
+        }
 
         var text = $(".listen").text();
         $(".listen").text(text == "Expand" ? "Shrink" : "Expand");
