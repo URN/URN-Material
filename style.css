@@ -714,6 +714,10 @@ ul.show-page-external-links a {
   display: block;
 }
 
+.entry-content .tabs li {
+  font-size: 1em;
+}
+
 .entry-content a.committee-tag,
 a.committee-tag,
 .committee-tag {

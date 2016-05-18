@@ -165,8 +165,6 @@ $btn-default: #9b989a;
         }
     }
 
-
-
     input[type=radio]:checked + label {
         background: #fff;
         border-bottom: 1px solid #fff;
@@ -179,6 +177,10 @@ $btn-default: #9b989a;
             display: block;
         }
     }
+}
+
+.entry-content .tabs li {
+    font-size: 1em;
 }
 
 .entry-content a.committee-tag,
