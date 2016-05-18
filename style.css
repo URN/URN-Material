@@ -586,7 +586,7 @@ button::-moz-focus-inner {
 .entry-content h1,
 .entry-content h2 {
   display: block;
-  padding: 0.67em 0;
+  padding: 0.4em 0;
   line-height: 1.3em;
 }
 .entry-content a {

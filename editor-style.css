@@ -115,7 +115,7 @@ body#tinymce.wp-editor ol li {
 body#tinymce.wp-editor h1,
 body#tinymce.wp-editor h2 {
   display: block;
-  padding: 0.67em 0;
+  padding: 0.4em 0;
   line-height: 1.3em;
 }
 body#tinymce.wp-editor a {
