@@ -82,8 +82,7 @@ body#tinymce.wp-editor strong {
 body#tinymce.wp-editor del {
   text-decoration: line-through;
 }
-body#tinymce.wp-editor p,
-body#tinymce.wp-editor li {
+body#tinymce.wp-editor p {
   font-size: 1em;
   line-height: 1.4em;
   margin-bottom: 6px;
@@ -97,9 +96,13 @@ body#tinymce.wp-editor .entry-content h2 {
 body#tinymce.wp-editor .entry-content h3 {
   font-size: 1.4em;
 }
-body#tinymce.wp-editor .entry-content p,
-body#tinymce.wp-editor .entry-content li {
+body#tinymce.wp-editor .entry-content p {
   font-size: 1.4em;
+}
+body#tinymce.wp-editor .entry-content > ul > li {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  margin-bottom: 6px;
 }
 body#tinymce.wp-editor p.wp-caption-text {
   font-size: 1em;

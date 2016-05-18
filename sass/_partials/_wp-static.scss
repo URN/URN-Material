@@ -36,8 +36,7 @@ del {
     text-decoration: line-through;
 }
 
-p,
-li {
+p {
     font-size: 1em;
     line-height: 1.4em;
     margin-bottom: 6px;
@@ -56,9 +55,14 @@ li {
         font-size: 1.4em;
     }
 
-    p,
-    li {
+    p {
         font-size: 1.4em;
+    }
+
+    > ul > li {
+        font-size: 1.4em;
+        line-height: 1.4em;
+        margin-bottom: 6px;
     }
 }
 

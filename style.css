@@ -454,9 +454,7 @@ body {
   text-decoration: line-through;
 }
 .main-content p,
-.main-content li,
-.entry-content p,
-.entry-content li {
+.entry-content p {
   font-size: 1em;
   line-height: 1.4em;
   margin-bottom: 6px;
@@ -474,10 +472,14 @@ body {
   font-size: 1.4em;
 }
 .main-content .entry-content p,
-.main-content .entry-content li,
-.entry-content .entry-content p,
-.entry-content .entry-content li {
+.entry-content .entry-content p {
   font-size: 1.4em;
+}
+.main-content .entry-content > ul > li,
+.entry-content .entry-content > ul > li {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  margin-bottom: 6px;
 }
 .main-content p.wp-caption-text,
 .entry-content p.wp-caption-text {
@@ -712,10 +714,6 @@ ul.show-page-external-links a {
 }
 .tabs input[type=radio]:checked + label + div {
   display: block;
-}
-
-.entry-content .tabs li {
-  font-size: 1em;
 }
 
 .entry-content a.committee-tag,
