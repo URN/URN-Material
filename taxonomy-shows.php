@@ -88,36 +88,57 @@ foreach ($postObjects as $postObject) {
 </header>
 
 <div class="main-content">
-    <div class="show-page-show-info">
-        <div class="show-page-members">
-            <h1>Show Hosts</h1>
-            <ul>
-                <?php
-                    if (count($users) < 1) {
-                        echo 'This show has no hosts assigned.';
-                    }
-                    else {
-                        foreach ($users as $user) {
-                            $role = $user['committee_role'];
-
-                            echo '<li class="host">';
-                            echo '<a href="' . $user['link'] . '">';
-                            echo $user['image'];
-                            echo '<span class="name">' . $user['name'] . '</span>';
-                            echo '</a>';
-
-                            if ($role !== '') {
-                                echo '<a href="/committee" title="Committee Member" class="committee-tag">' . $role . '</a>';
-                            }
-
-                            echo '</li>';
+    <div class="entry-content">
+        <div class="show-page-show-info">
+            <div class="show-page-members">
+                <h1>Show Hosts</h1>
+                <ul>
+                    <?php
+                        if (count($users) < 1) {
+                            echo 'This show has no hosts assigned.';
                         }
-                    }
+                        else {
+                            foreach ($users as $user) {
+                                $role = $user['committee_role'];
 
-                ?>
-            </ul>
+                                echo '<li class="host">';
+                                echo '<a href="' . $user['link'] . '">';
+                                echo $user['image'];
+                                echo '<span class="name">' . $user['name'] . '</span>';
+                                echo '</a>';
+
+                                if ($role !== '') {
+                                    echo '<a href="/committee" title="Committee Member" class="committee-tag">' . $role . '</a>';
+                                }
+
+                                echo '</li>';
+                            }
+                        }
+
+                    ?>
+                </ul>
+            </div>
+            <p class="show-page-description"><?php echo $description; ?></p>
         </div>
-        <p class="show-page-description"><?php echo $description; ?></p>
+
+        <h1>Recent shows</h1>
+        <div class="show-page-posts">
+            <?php
+                if (count($posts) < 1) {
+                    echo 'This show has made no posts.';
+                }
+                else {
+                    foreach ($posts as $post) {
+                        echo '<article class="show-page-post panel">';
+                        echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
+                        echo '<div class="body">' . $post['excerpt'] . '</div>';
+                        echo '<footer>' . $post['date'] .'</footer>';
+                        echo '</article>';
+                    }
+                }
+            ?>
+        </div>
+
         <ul class="show-page-external-links">
             <?php
                 if ($fb_link !== '') {
@@ -128,23 +149,6 @@ foreach ($postObjects as $postObject) {
                 }
             ?>
         </ul>
-    </div>
-    <h1>Recent shows</h1>
-    <div class="show-page-posts">
-        <?php
-            if (count($posts) < 1) {
-                echo 'This show has made no posts.';
-            }
-            else {
-                foreach ($posts as $post) {
-                    echo '<article class="show-page-post panel">';
-                    echo '<header><a href="' . $post['link'] . '">' . $post['title'] . '</a></header>';
-                    echo '<div class="body">' . $post['excerpt'] . '</div>';
-                    echo '<footer>' . $post['date'] .'</footer>';
-                    echo '</article>';
-                }
-            }
-        ?>
     </div>
 </div>
 

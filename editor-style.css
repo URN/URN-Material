@@ -60,15 +60,15 @@ body#tinymce.wp-editor article, body#tinymce.wp-editor aside, body#tinymce.wp-ed
   display: block;
 }
 body#tinymce.wp-editor h1 {
-  font-size: 1.5em;
+  font-size: 2.25em;
   font-weight: 600;
 }
 body#tinymce.wp-editor h2 {
-  font-size: 1.2em;
+  font-size: 1.68em;
   font-weight: bold;
 }
 body#tinymce.wp-editor h3 {
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 body#tinymce.wp-editor em {
@@ -79,6 +79,7 @@ body#tinymce.wp-editor strong {
   font-weight: bold;
 }
 body#tinymce.wp-editor p {
+  font-size: 1.4em;
   line-height: 1.4em;
   margin-bottom: 6px;
 }

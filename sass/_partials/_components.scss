@@ -1,3 +1,20 @@
+//
+// Wordpress Post styles
+//
+
+// main-content: Static content
+.main-content,
+.entry-content {
+    @import 'wp-static';
+}
+
+// entry-content: WP post content
+.entry-content {
+    @import 'wp-posts';
+
+    // padding: 15px;
+}
+
 button::-moz-focus-inner {
     border: 0;
 }
@@ -87,24 +104,6 @@ $btn-default: #9b989a;
     box-shadow: 0 1px 3px black(0.2);
 }
 
-
-//
-// Wordpress Post styles
-//
-
-// main-content: Static content
-.main-content,
-.entry-content {
-    @import 'wp-static';
-}
-
-// entry-content: WP post content
-.entry-content {
-    @import 'wp-posts';
-
-    padding: 15px;
-}
-
 //
 // Global anchor style
 //
@@ -182,6 +181,7 @@ $btn-default: #9b989a;
     }
 }
 
+.entry-content a.committee-tag,
 a.committee-tag,
 .committee-tag {
     background: $urn-pink;
@@ -189,8 +189,9 @@ a.committee-tag,
     display: inline-block;
     font-size: 0.75em;
     font-weight: 600;
+    line-height: 1;
     margin: 0 5px;
-    padding: 2px 6px 3px 5px;
+    padding: 4px 6px 4px 5px;
     text-transform: uppercase;
 
     &:hover,
