@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main-content">
+<div class="main-content home-content">
     <div class="row cover-photos">
 
         <div class="module">

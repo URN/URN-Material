@@ -410,13 +410,18 @@ body {
   }
 }
 
-#listen-now.minimise + .play + #page-container .main-content {
+#listen-now + .play + #page-container .main-content {
   padding: 35px 15px;
 }
 @media (max-width: 620px) {
-  #listen-now.minimise + .play + #page-container .main-content {
+  #listen-now + .play + #page-container .main-content {
     padding: 35px 0;
   }
+}
+
+#listen-now + .play + #page-container .main-content.home-content {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 button::-moz-focus-inner {
