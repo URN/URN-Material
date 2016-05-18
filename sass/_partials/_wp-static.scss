@@ -32,8 +32,12 @@ strong {
     font-weight: bold;
 }
 
+del {
+    text-decoration: line-through;
+}
 
-p {
+p,
+li {
     font-size: 1em;
     line-height: 1.4em;
     margin-bottom: 6px;
@@ -52,11 +56,13 @@ p {
         font-size: 1.4em;
     }
 
-    p {
+    p,
+    li {
         font-size: 1.4em;
     }
 }
 
 p.wp-caption-text {
     font-size: 1em;
+    color: #6c6c6c;
 }

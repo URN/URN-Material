@@ -449,8 +449,14 @@ body {
 .entry-content strong {
   font-weight: bold;
 }
+.main-content del,
+.entry-content del {
+  text-decoration: line-through;
+}
 .main-content p,
-.entry-content p {
+.main-content li,
+.entry-content p,
+.entry-content li {
   font-size: 1em;
   line-height: 1.4em;
   margin-bottom: 6px;
@@ -468,12 +474,15 @@ body {
   font-size: 1.4em;
 }
 .main-content .entry-content p,
-.entry-content .entry-content p {
+.main-content .entry-content li,
+.entry-content .entry-content p,
+.entry-content .entry-content li {
   font-size: 1.4em;
 }
 .main-content p.wp-caption-text,
 .entry-content p.wp-caption-text {
   font-size: 1em;
+  color: #6c6c6c;
 }
 
 .entry-content ol {
