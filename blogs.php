@@ -38,7 +38,7 @@ $query = new WP_Query($args);?>
             echo "<ul class='blog-excerpt'>";
             foreach ( $posts as $post ) {
                 setup_postdata( $post );
-                echo format_blog_excerpt($post);
+                echo format_blog_excerpt($post, true, 'h2');
             }
             wp_reset_postdata();
             echo "</ul>";

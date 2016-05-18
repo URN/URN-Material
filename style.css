@@ -2135,12 +2135,21 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 .blog-excerpt li {
   padding-bottom: 30px;
 }
-.blog-excerpt h1 a {
+.blog-excerpt h1,
+.blog-excerpt h2 {
+  margin: 5px 0;
+}
+.blog-excerpt h1 a,
+.blog-excerpt h2 a {
   color: #222;
   text-decoration: none;
 }
-.blog-excerpt h1 a:hover {
+.blog-excerpt h1 a:hover,
+.blog-excerpt h2 a:hover {
   text-decoration: underline;
+}
+.blog-excerpt p {
+  font-size: 1em;
 }
 
 .btn-wrapper {
@@ -2150,7 +2159,6 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 }
 
 .blog-wrapper {
-  padding: 15px;
   padding-top: 15px;
 }
 .blog-wrapper #wp_pagination {

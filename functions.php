@@ -239,14 +239,14 @@ function get_posts_by_author($posts_per_page, $author, $with_excerpt = true) {
  * @param  bool   $with_excerpt Print post excerpt also?
  * @return string          Html for that excerpt
  */
-function format_blog_excerpt($post, $with_excerpt = true) {
+function format_blog_excerpt($post, $with_excerpt = true, $heading = 'h1') {
     $url = get_permalink($post->ID);
     $title = $post->post_title;
     $date = get_the_date('', $post->ID);
     $excerpt = get_the_excerpt();
 
     $output = "<li>";
-    $output .= "<h1><a href=" . $url . ">" . $title . "</a></h1>";
+    $output .= "<$heading><a href=" . $url . ">" . $title . "</a></$heading>";
     $output .= "<p>" . $date . "</p>";
     if ($with_excerpt) {
         $output .= "<p>". $excerpt . "</p>";

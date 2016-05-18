@@ -25,13 +25,23 @@
         padding-bottom: #{$general-element-spacing * 2};
     }
 
-    h1 a {
+    h1,
+    h2 {
+        margin: 5px 0;
+    }
+
+    h1 a,
+    h2 a {
         color: #222;
         text-decoration: none;
 
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    p {
+        font-size: 1em;
     }
 }
 
