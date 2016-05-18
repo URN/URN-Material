@@ -25,37 +25,35 @@ get_header(); ?>
         ?>
     </div>
 
-    <div class="row">
-        <div class="entry-content">
-            <?php the_title( '<h1>', '</h1>' ); ?>
+    <div class="entry-content">
+        <?php the_title( '<h1>', '</h1>' ); ?>
 
-            <?php
-                // Start the loop.
-                while ( have_posts() ) : the_post();
+        <?php
+            // Start the loop.
+            while ( have_posts() ) : the_post();
 
-                    // Include the page content template.
-                    the_content();
+                // Include the page content template.
+                the_content();
 
-                // End the loop.
-                endwhile;
-            ?>
+            // End the loop.
+            endwhile;
+        ?>
 
-            <div class="filter-container">
-                <h2>Filter</h2>
-                <label for="schedule-category-select">Show Category</label>
-                <select autocomplete="off" name="schedule-category-select" class="select schedule-category-select">
-                    <option value="all">All</option>
-                    <option value="after-dark">After Dark</option>
-                    <option value="culture">Culture</option>
-                    <option value="daytime">Daytime</option>
-                    <option value="news">News</option>
-                    <option value="sport">Sport</option>
-                </select>
+        <div class="filter-container">
+            <h2>Filter</h2>
+            <label for="schedule-category-select">Show Category</label>
+            <select autocomplete="off" name="schedule-category-select" class="select schedule-category-select">
+                <option value="all">All</option>
+                <option value="after-dark">After Dark</option>
+                <option value="culture">Culture</option>
+                <option value="daytime">Daytime</option>
+                <option value="news">News</option>
+                <option value="sport">Sport</option>
+            </select>
 
-                <div class="search-filter-container">
-                    <label for="schedule-category-filter-search">Search</label>
-                    <input autocomplete="off" type="text" name="schedule-category-filter-search" class="txt schedule-category-filter-search">
-                </div>
+            <div class="search-filter-container">
+                <label for="schedule-category-filter-search">Search</label>
+                <input autocomplete="off" type="text" name="schedule-category-filter-search" class="txt schedule-category-filter-search">
             </div>
         </div>
     </div>

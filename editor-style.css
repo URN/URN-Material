@@ -82,6 +82,21 @@ body#tinymce.wp-editor p {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
+body#tinymce.wp-editor .entry-content h1 {
+  font-size: 2.25em;
+}
+body#tinymce.wp-editor .entry-content h2 {
+  font-size: 1.68em;
+}
+body#tinymce.wp-editor .entry-content h3 {
+  font-size: 1.4em;
+}
+body#tinymce.wp-editor .entry-content p {
+  font-size: 1.4em;
+}
+body#tinymce.wp-editor p.wp-caption-text {
+  font-size: 1em;
+}
 body#tinymce.wp-editor ol {
   list-style: decimal inside none;
 }

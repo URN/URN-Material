@@ -411,7 +411,7 @@ body {
 }
 
 #listen-now + .play + #page-container .main-content {
-  padding: 35px 15px;
+  padding: 35px 15px 15px 15px;
 }
 @media (max-width: 620px) {
   #listen-now + .play + #page-container .main-content {
@@ -544,9 +544,28 @@ button::-moz-focus-inner {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
+.main-content .entry-content h1,
+.entry-content .entry-content h1 {
+  font-size: 2.25em;
+}
+.main-content .entry-content h2,
+.entry-content .entry-content h2 {
+  font-size: 1.68em;
+}
+.main-content .entry-content h3,
+.entry-content .entry-content h3 {
+  font-size: 1.4em;
+}
+.main-content .entry-content p,
+.entry-content .entry-content p {
+  font-size: 1.4em;
+}
+.main-content p.wp-caption-text,
+.entry-content p.wp-caption-text {
+  font-size: 1em;
+}
 
 .entry-content {
-  font-size: 1.4em;
   padding: 15px;
 }
 .entry-content ol {
@@ -2074,8 +2093,6 @@ body.stream #listen-now #message-the-studio {
 }
 
 .audioboom-headlines {
-  padding-bottom: 35px;
-  padding-top: 35px;
   width: 100%;
 }
 @media (max-width: 620px) {

@@ -37,3 +37,25 @@ p {
     line-height: 1.4em;
     margin-bottom: 6px;
 }
+
+.entry-content {
+    h1 {
+        font-size: 2.25em;
+    }
+
+    h2 {
+        font-size: 1.68em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+}
+
+p.wp-caption-text {
+    font-size: 1em;
+}
