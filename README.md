@@ -19,6 +19,7 @@ Note: The following presumes that you already have a mysql and apache server ins
 
 ## Grunt
 ### `grunt mirror`
+Presuming your running a linux system, 
 [Get a complete mirror](https://github.com/URN/URN-Material/blob/94177fc0245dcfbde6c5d6365ef6b42ff3dca9e1/Gruntfile.js#L34-L37) of the live WordPress database locally.
 
 ##### Requirements:
