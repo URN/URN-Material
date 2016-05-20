@@ -418,7 +418,6 @@ body {
     padding: 35px 0;
   }
 }
-
 #listen-now + .play + #page-container .main-content.home-content {
   padding-left: 0;
   padding-right: 0;
@@ -459,6 +458,11 @@ body {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
+.main-content p.wp-caption-text,
+.entry-content p.wp-caption-text {
+  font-size: 1em;
+  color: #6c6c6c;
+}
 .main-content .entry-content h1,
 .entry-content .entry-content h1 {
   font-size: 2.25em;
@@ -480,11 +484,6 @@ body {
   font-size: 1.4em;
   line-height: 1.4em;
   margin-bottom: 6px;
-}
-.main-content p.wp-caption-text,
-.entry-content p.wp-caption-text {
-  font-size: 1em;
-  color: #6c6c6c;
 }
 
 .entry-content ol {

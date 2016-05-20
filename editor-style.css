@@ -87,6 +87,10 @@ body#tinymce.wp-editor p {
   line-height: 1.4em;
   margin-bottom: 6px;
 }
+body#tinymce.wp-editor p.wp-caption-text {
+  font-size: 1em;
+  color: #6c6c6c;
+}
 body#tinymce.wp-editor .entry-content h1 {
   font-size: 2.25em;
 }
@@ -103,10 +107,6 @@ body#tinymce.wp-editor .entry-content > ul > li {
   font-size: 1.4em;
   line-height: 1.4em;
   margin-bottom: 6px;
-}
-body#tinymce.wp-editor p.wp-caption-text {
-  font-size: 1em;
-  color: #6c6c6c;
 }
 body#tinymce.wp-editor ol {
   list-style: decimal inside none;

@@ -40,6 +40,11 @@ p {
     font-size: 1em;
     line-height: 1.4em;
     margin-bottom: 6px;
+
+    &.wp-caption-text {
+        font-size: 1em;
+        color: #6c6c6c;
+    }
 }
 
 .entry-content {
@@ -64,9 +69,4 @@ p {
         line-height: 1.4em;
         margin-bottom: 6px;
     }
-}
-
-p.wp-caption-text {
-    font-size: 1em;
-    color: #6c6c6c;
 }

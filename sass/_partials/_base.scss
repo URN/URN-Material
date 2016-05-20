@@ -71,9 +71,9 @@ body {
     @include breakpoint(mobile) {
         padding: 35px 0;
     }
-}
 
-#listen-now + .play + #page-container .main-content.home-content {
-    padding-left: 0;
-    padding-right: 0;
+    &.home-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
