@@ -2016,7 +2016,6 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   margin: 0;
 }
 .schedule .show .hosts {
-  margin: 5px 0;
   font-size: 0.75em;
   font-weight: 600;
 }
@@ -2028,6 +2027,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 .schedule .show .times {
   font-size: 0.75em;
   font-weight: 600;
+  margin: 5px 0;
 }
 .schedule .show:first-child {
   left: 30px;
