@@ -161,7 +161,11 @@
 
         $a.append($title);
         $a.append($times);
-        $a.append($hosts);
+
+        if (slotData.hosts.length > 0) {
+            $a.append($hosts);
+        }
+
         $slot.append($a);
 
         var durationWidth = slotData.duration;
