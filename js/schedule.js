@@ -129,6 +129,13 @@
             title : slotData.name
         });
 
+        if (slotData.override) {
+            $a.attr("href", "#");
+            $a.click(function (e) {
+                e.preventDefault();
+            });
+        }
+
         if (slotData.live) {
             $slot.addClass("live");
         }
@@ -203,6 +210,12 @@
         return totalMinutes;
     }
 
+    function getNextDayName(dayName) {
+        var i = dayNames.indexOf(dayName) + 1;
+        i = i > (dayNames.length - 1) ? i - dayNames.length : i;
+        return dayNames[i];
+    }
+
     function populateSchedule(shows) {
         // Empty all of the slots of existing shows
         $schedule.find(".slots").empty();
@@ -214,8 +227,33 @@
             $.each(slots, function (j, slotData) {
                 var from = parseInt(slotData.from);
 
-                var $slot = createSlot(slotData);
-                $slotList.append($slot);
+                var fromDateTime = new Date();
+                fromDateTime.setHours(parseInt(slotData.from.substring(0, 2)));
+                fromDateTime.setMinutes(parseInt(slotData.from.substring(3, 5)));
+
+                var toDateTime = new Date();
+                toDateTime.setHours(parseInt(slotData.to.substring(0, 2)));
+                toDateTime.setMinutes(parseInt(slotData.to.substring(3, 5)));
+
+                var midnightDateTime = new Date();
+                midnightDateTime.setHours(0);
+                midnightDateTime.setMinutes(0);
+
+                // If the show ends before it starts, it must end after midnight,
+                // so truncate it at midnight
+                if (fromDateTime > toDateTime) {
+                    var minsAfterMidnight = Math.abs(toDateTime.getTime() - midnightDateTime.getTime());
+                    minsAfterMidnight = minsAfterMidnight / 60000;
+
+                    // slotData.to = "00:00";
+                    slotData.duration = slotData.duration - minsAfterMidnight;
+                    var $slot = createSlot(slotData);
+                    $slotList.append($slot);
+                }
+                else {
+                    var $slot = createSlot(slotData);
+                    $slotList.append($slot);
+                }
             });
         }
         else {
@@ -224,11 +262,45 @@
 
                 var $slotList = $schedule.find("li.day." + dayName + " .slots");
 
+                var nextDayName = getNextDayName(dayName);
+                var $nextDaySlotList = $schedule.find("li.day." + nextDayName + " .slots");
+
                 $.each(slots, function (j, slotData) {
                     var from = parseInt(slotData.from);
 
-                    var $slot = createSlot(slotData);
-                    $slotList.append($slot);
+                    var fromDateTime = new Date();
+                    fromDateTime.setHours(parseInt(slotData.from.substring(0, 2)));
+                    fromDateTime.setMinutes(parseInt(slotData.from.substring(3, 5)));
+
+                    var toDateTime = new Date();
+                    toDateTime.setHours(parseInt(slotData.to.substring(0, 2)));
+                    toDateTime.setMinutes(parseInt(slotData.to.substring(3, 5)));
+
+                    var midnightDateTime = new Date();
+                    midnightDateTime.setHours(0);
+                    midnightDateTime.setMinutes(0);
+
+                    // If the show ends before it starts, it must end after midnight,
+                    // so truncate it at midnight and create a new slot for the next day
+                    if (fromDateTime > toDateTime) {
+                        var nextDaySlotData = JSON.parse(JSON.stringify(slotData));
+
+                        var minsAfterMidnight = Math.abs(toDateTime.getTime() - midnightDateTime.getTime());
+                        minsAfterMidnight = minsAfterMidnight / 60000;
+
+                        slotData.duration = slotData.duration - minsAfterMidnight;
+                        var $slot = createSlot(slotData);
+                        $slotList.append($slot);
+
+                        nextDaySlotData.from = "00:00";
+                        nextDaySlotData.duration = minsAfterMidnight;
+                        var $nextDaySlot = createSlot(nextDaySlotData);
+                        $nextDaySlotList.append($nextDaySlot);
+                    }
+                    else {
+                        var $slot = createSlot(slotData);
+                        $slotList.append($slot);
+                    }
                 });
             });
         }
