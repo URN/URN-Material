@@ -196,7 +196,7 @@
     // HH:MM
     function convertTimeToMinutes(time) {
         var hours = parseInt(time.substring(0, 2));
-        var minutes = parseInt(time.substring(3, 4));
+        var minutes = parseInt(time.substring(3, 5));
         var totalMinutes = (hours * 60) + minutes;
         return totalMinutes;
     }
