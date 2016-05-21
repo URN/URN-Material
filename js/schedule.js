@@ -5,15 +5,14 @@
     var $categorySelect = $(".schedule-category-select");
     var $searchFilterTxt = $(".schedule-category-filter-search");
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-    var singleDay = false;
-    var singleDayName;
+    var singleDay = $schedule.hasClass("mini-schedule");
 
     // Number of hours that schedule starts at
     var hoursOffset = 0;
 
     (function refreshSchedule() {
         var request = $.ajax({
-            url: getApiUrl(),
+            url: "/api/schedule/week",
             type: "get",
             dataType: "json"
         });
@@ -101,18 +100,6 @@
         $scrollBox.animate({
             scrollLeft: live
         }, 500);
-    }
-
-    function getApiUrl() {
-        if ($schedule.hasClass("mini-schedule")) {
-            var currentDay = dayNames[new Date().getDay()];
-            singleDay = true;
-            singleDayName = currentDay;
-            return "/api/schedule/day/" + currentDay;
-        }
-        else {
-            return "/api/schedule/week";
-        }
     }
 
     function createSlot(slotData) {
@@ -225,7 +212,7 @@
         $schedule.find(".slots").empty();
 
         if (singleDay) {
-            var slots = shows.shows;
+            var slots = shows[dayNames[new Date().getDay()]];
             var $slotList = $schedule.find("li.day .slots");
 
             $.each(slots, function (j, slotData) {
