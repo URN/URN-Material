@@ -7,7 +7,9 @@
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     var singleDay = false;
     var singleDayName;
-    var hoursOffset = -7;
+
+    // Number of hours that schedule starts at
+    var hoursOffset = 0;
 
     (function refreshSchedule() {
         var request = $.ajax({
