@@ -138,22 +138,24 @@
             autoscroll = false;
         }
 
-        switch (slotData.category) {
-            case "After Dark":
+        switch (slotData.category.toLowerCase()) {
+            case "after dark":
                 $slot.addClass("after-dark");
                 break;
-            case "Culture":
+            case "culture":
                 $slot.addClass("culture");
                 break;
-            case "Daytime":
+            case "daytime":
                 $slot.addClass("daytime");
                 break;
-            case "News":
+            case "news":
                 $slot.addClass("news");
                 break;
-            case "Sport":
+            case "sport":
                 $slot.addClass("sport");
                 break;
+            case "automation":
+                $slot.addClass("automation");
             default:
         }
 
