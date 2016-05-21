@@ -70,6 +70,13 @@ get_header(); ?>
         </ul>
         <div class="timetable">
             <ul class="times">
+                <li>Midnight</li>
+                <li>1am</li>
+                <li>2am</li>
+                <li>3am</li>
+                <li>4am</li>
+                <li>5am</li>
+                <li>6am</li>
                 <li>7am</li>
                 <li>8am</li>
                 <li>9am</li>
@@ -87,13 +94,6 @@ get_header(); ?>
                 <li>9pm</li>
                 <li>10pm</li>
                 <li>11pm</li>
-                <li>Midnight</li>
-                <li>1am</li>
-                <li>2am</li>
-                <li>3am</li>
-                <li>4am</li>
-                <li>5am</li>
-                <li>6am</li>
             </ul>
             <ul class="days">
                 <li class="day monday">
