@@ -138,27 +138,19 @@
             autoscroll = false;
         }
 
-        switch (slotData.category.toLowerCase()) {
-            case "after dark":
-                $slot.addClass("after-dark");
-                break;
+        slotData.category = slotData.category.replace(/\s+/g, '-').toLowerCase();
+        switch (slotData.category) {
+            case "after-dark":
             case "culture":
-                $slot.addClass("culture");
-                break;
             case "daytime":
-                $slot.addClass("daytime");
-                break;
             case "news":
-                $slot.addClass("news");
-                break;
             case "sport":
-                $slot.addClass("sport");
-                break;
             case "automation":
-                $slot.addClass("automation");
             case "varsity":
-                $slot.addClass("varsity");
+                $slot.addClass(slotData.category);
+                break;
             default:
+                break;
         }
 
         $a.append($title);
