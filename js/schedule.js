@@ -156,6 +156,8 @@
                 break;
             case "automation":
                 $slot.addClass("automation");
+            case "varsity":
+                $slot.addClass("varsity");
             default:
         }
 

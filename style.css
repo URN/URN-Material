@@ -2021,6 +2021,12 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 .schedule .show.automation a:hover, .schedule .show.automation a:focus {
   background: #7c2b3f;
 }
+.schedule .show.varsity a {
+  background: #005f36;
+}
+.schedule .show.varsity a:hover, .schedule .show.varsity a:focus {
+  background: #004025;
+}
 .schedule .show .title {
   font-size: 16px;
   font-weight: 600;

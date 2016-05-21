@@ -243,6 +243,15 @@ $time-width: 100px;
             }
         }
 
+        &.varsity a {
+            background: $urn-varsity-color;
+
+            &:hover,
+            &:focus {
+                background: darken($urn-varsity-color, 6%);
+            }
+        }
+
         .title {
             font-size: 16px;
             font-weight: 600;
