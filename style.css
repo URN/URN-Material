@@ -1953,6 +1953,12 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   text-transform: uppercase;
   top: -18px;
 }
+.schedule .show.live.full-day a {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 .schedule .show.dim a {
   opacity: 0.4;
 }

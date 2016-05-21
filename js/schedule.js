@@ -7,6 +7,9 @@
     var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     var singleDay = $schedule.hasClass("mini-schedule");
 
+    // Automatically scroll to the live point in the schedule
+    var autoscroll = true;
+
     // Number of hours that schedule starts at
     var hoursOffset = 0;
 
@@ -19,7 +22,10 @@
 
         request.done(function (data) {
             populateSchedule(data);
-            scrollToLive();
+
+            if (autoscroll) {
+                scrollToLive();
+            }
         });
 
         request.always(function () {
@@ -125,6 +131,11 @@
 
         if (slotData.live) {
             $slot.addClass("live");
+        }
+
+        if (slotData.from === "00:00" && slotData.to === "24:00") {
+            $slot.addClass("full-day");
+            autoscroll = false;
         }
 
         switch (slotData.category) {

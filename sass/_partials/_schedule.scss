@@ -153,6 +153,10 @@ $time-width: 100px;
             }
         }
 
+        &.live.full-day a {
+            @include transform(scale(1));
+        }
+
         &.dim a {
             opacity: 0.4;
 
