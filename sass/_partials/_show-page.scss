@@ -8,6 +8,10 @@
     position: relative;
     text-align: center;
 
+    @include breakpoint(tablet) {
+        background-size: 800px;
+    }
+
     // &.after-dark {
     //     @include filter-gradient($urn-purple, $urn-after-dark-color, horizontal);
     //     @include background-image(linear-gradient(left, $urn-purple 0%, $urn-after-dark-color 70%));

@@ -1616,6 +1616,11 @@ body.stream #listen-now #message-the-studio {
   position: relative;
   text-align: center;
 }
+@media (max-width: 780px) {
+  .show-page-header {
+    background-size: 800px;
+  }
+}
 .show-page-header .titles {
   display: inline-block;
   margin: 0 auto;
