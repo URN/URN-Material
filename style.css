@@ -2021,10 +2021,11 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   background: #008ac4;
 }
 .schedule .show.automation a {
-  background: #93334a;
+  background: #e5e5e5;
+  color: #575757;
 }
 .schedule .show.automation a:hover, .schedule .show.automation a:focus {
-  background: #7c2b3f;
+  background: #d6d6d6;
 }
 .schedule .show.varsity a {
   background: #005f36;
