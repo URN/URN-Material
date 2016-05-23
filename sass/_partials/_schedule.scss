@@ -153,7 +153,7 @@ $time-width: 100px;
             }
         }
 
-        &.live.full-day a {
+        &.live.long-slot a {
             @include transform(scale(1));
         }
 

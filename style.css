@@ -1958,7 +1958,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   text-transform: uppercase;
   top: -18px;
 }
-.schedule .show.live.full-day a {
+.schedule .show.live.long-slot a {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -webkit-transform: scale(1);

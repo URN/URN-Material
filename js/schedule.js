@@ -131,11 +131,18 @@
 
         if (slotData.live) {
             $slot.addClass("live");
+
+            // Stop autoscroll if the current slot is live and lasts all day
+            // this stops the title of the long slot scrolling off-screen
+            if (slotData.from === "00:00" && slotData.to === "24:00") {
+                autoscroll = false;
+            }
         }
 
-        if (slotData.from === "00:00" && slotData.to === "24:00") {
-            $slot.addClass("full-day");
-            autoscroll = false;
+        // The 'long-slot' class will the slot rectangle from scaling up when it's live
+        // For very wide slots it affects the positioning too much
+        if (slotData.duration > 300) {
+            $slot.addClass("long-slot");
         }
 
         slotData.category = slotData.category.replace(/\s+/g, '-').toLowerCase();
