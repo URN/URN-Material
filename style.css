@@ -2033,7 +2033,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   background: #004025;
 }
 .schedule .show .title {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 600;
   margin: 0;
 }
@@ -2050,6 +2050,14 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   font-size: 0.75em;
   font-weight: 600;
   margin: 5px 0;
+}
+.schedule .show .description {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.875em;
+  line-height: 1.2em;
+  height: 2.4em;
 }
 .schedule .show:first-child {
   left: 30px;

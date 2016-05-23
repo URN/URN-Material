@@ -117,6 +117,8 @@
 
         var $hosts = $("<h2>").addClass("hosts").text(slotData.hosts.map(function(el) {return el.name;}).join(", "));
 
+        var $desc = $("<p>").addClass("description").text(slotData.description);
+
         var $a = $("<a>").attr({
             href : "/show/" + slotData.slug,
             title : slotData.name
@@ -165,6 +167,11 @@
 
         if (slotData.hosts.length > 0) {
             $a.append($hosts);
+        }
+
+        // Only show the description on schedule override items
+        if (slotData.override) {
+            $a.append($desc);
         }
 
         $slot.append($a);
