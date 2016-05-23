@@ -1862,6 +1862,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   background: rgba(0, 0, 0, 0.1);
   overflow-x: auto;
   overflow-y: hidden;
+  margin-left: 0.3em;
 }
 .schedule .timetable > .times {
   display: -webkit-flex;
@@ -2021,11 +2022,11 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   background: #008ac4;
 }
 .schedule .show.automation a {
-  background: #e5e5e5;
+  background: #ccc;
   color: #575757;
 }
 .schedule .show.automation a:hover, .schedule .show.automation a:focus {
-  background: #d6d6d6;
+  background: #bdbdbd;
 }
 .schedule .show.varsity a {
   background: #005f36;
