@@ -26,7 +26,7 @@ get_header(); ?>
                     <li>News Editor: <strong>Megan Ashdown</strong></li>
                     <li>Sports Editor: <strong>Elliot Chaplin</strong></li>
                     <li>Playlist Editor: <strong>Henry Coates</strong></li>
-                    <li>Drama Editor: <del><strong>Joe Archer</strong></del> <strong>Harry Boutflower</strong></li>
+                    <li>Drama Editor: <strong>Harry Boutflower</strong></li>
                     <li>Technical Manager: <strong>James Turner</strong></li>
                     <li>Head of IT: <strong>Harry Mumford-Turner</strong></li>
                     <li>Head of Marketing and Online Content: <strong>Iona Hampson</strong></li>
