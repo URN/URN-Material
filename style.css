@@ -1862,7 +1862,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   background: rgba(0, 0, 0, 0.1);
   overflow-x: auto;
   overflow-y: hidden;
-  margin-left: 0.3em;
+  margin-left: 4px;
 }
 .schedule .timetable > .times {
   display: -webkit-flex;

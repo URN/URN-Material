@@ -53,7 +53,7 @@ $time-width: 100px;
         background: black(0.1);
         overflow-x: auto;
         overflow-y: hidden;
-        margin-left: 0.3em;
+        margin-left: $slot-spacing;
 
         > .times {
             @include display-flex;
