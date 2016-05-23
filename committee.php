@@ -73,6 +73,26 @@ get_header(); ?>
                     <li>Head of Finance and Sales: <strong>Ben Malone</strong></li>
                 </ul>
             </div>
+
+            <input id="tab-2012-2013" type="radio" name="grp" autocomplete="off" />
+            <label for="tab-2012-2013" class="tab-title">2012 - 2013</label>
+            <div class="tab-content">
+                <ul>
+                    <li>Station Editor: <strong>Jonny Lupton</strong></li>
+                    <li>Deputy Station Editor: <strong>Stuart Manton</strong></li>
+                    <li>Head of Daytime: <strong>Arthur Mollett</strong></li>
+                    <li>Head of Specialist Music: <strong>Ben Malone</strong></li>
+                    <li>Head of Speech: <strong>Genie Pearce</strong></li>
+                    <li>Head of News: <strong>Miranda Bubb-Humfryes</strong></li>
+                    <li>Head of Sport: <strong>Michael Gaffney</strong></li>
+                    <li>Head of Drama: <strong>Ben Hollands</strong></li>
+                    <li>Technical Manager: <strong>George O'Neill</strong></li>
+                    <li>Website Editor: <strong>Thomas Mees</strong></li>
+                    <li>Playlist Editor: <strong>Izzie Clarke</strong></li>
+                    <li>Brand Manager: <strong>Martin Rothe / Debbie Widdick</strong></li>
+                    <li>Head of Sales and Finance: <strong>Sam Robinson</strong></li>
+                </ul>
+            </div>
         </section>
     </div>
 </div>
