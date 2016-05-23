@@ -48,7 +48,7 @@
 
     (function updateCurrentShow() {
         var request = $.ajax({
-            url: "/api/schedule/day/" + dayNames[new Date().getDay()],
+            url: "/api/schedule/week",
             type: "get",
             dataType: "json"
         });
@@ -59,7 +59,7 @@
 
         request.done(function (todaysSchedule) {
             var found_live = false;
-            $.each(todaysSchedule.shows, function (j, slotData) {
+            $.each(todaysSchedule[dayNames[new Date().getDay()]], function (j, slotData) {
                 if (slotData.live) {
                     $show_prelude.text("URN Presents");
                     $show_name.text(slotData.name);
