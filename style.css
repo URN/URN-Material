@@ -1850,6 +1850,13 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   width: 100%;
 }
 
+@media (max-width: 620px) {
+  .schedule-category-images {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 .filter-container {
   margin: 20px 0;
 }

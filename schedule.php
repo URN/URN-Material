@@ -6,7 +6,7 @@
 get_header(); ?>
 <div class="main-content">
 
-    <div class="row">
+    <div class="row schedule-category-images">
         <?php
             $show_categories = array();
             $show_categories[] = array('name' => 'After Dark', 'slug' => 'shows', 'anchor' => '#afterdark', 'link' => 'afterdark.jpg');

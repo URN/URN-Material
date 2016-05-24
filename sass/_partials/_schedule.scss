@@ -18,6 +18,12 @@ $time-width: 100px;
     }
 }
 
+.schedule-category-images {
+    @include breakpoint(mobile) {
+        @include flex-direction(row);
+    }
+}
+
 .filter-container {
     margin: 20px 0;
 
