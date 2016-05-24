@@ -709,6 +709,7 @@ ul.show-page-external-links a {
 @media (max-width: 620px) {
   .tabs input[type=radio]:checked + label {
     color: #000;
+    font-weight: 600;
   }
 }
 .tabs input[type=radio]:checked + label + div {

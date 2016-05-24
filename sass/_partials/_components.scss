@@ -171,6 +171,7 @@ $btn-default: #9b989a;
 
         @include breakpoint(mobile) {
             color: #000;
+            font-weight: 600;
         }
 
         + div {
