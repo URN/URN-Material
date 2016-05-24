@@ -113,6 +113,11 @@ ul.show-page-external-links {
     list-style-type: none;
     padding: 0;
 
+    @include breakpoint(mobile) {
+        display: block;
+        margin: 20px 0;
+    }
+
     a {
         @extend %anchor-btn;
         background: $urn-pink;
@@ -124,8 +129,6 @@ ul.show-page-external-links {
         text-align: center;
         text-transform: uppercase;
         width: 150px;
-
-
 
         &::after {
             content: '';
@@ -156,11 +159,20 @@ ul.show-page-external-links {
 .show-page-description {
     @include flex-grow(1);
     padding: 20px;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin: 20px 0;
+    }
 }
 
 .show-page-show-info {
     @include display-flex;
     @include flex-direction(row);
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
 }
 
 .show-page-posts {

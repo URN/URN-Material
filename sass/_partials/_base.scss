@@ -34,7 +34,7 @@ body {
     width: $wrapper-width;
 
     @include breakpoint(laptop) {
-        padding: 0 20px;
+        padding: 0;
         width: $wrapper-width-small;
     }
 
@@ -70,6 +70,10 @@ body {
 
     @include breakpoint(mobile) {
         padding: 35px 0;
+    }
+
+    @include breakpoint(laptop) {
+        padding: 0 20px;
     }
 
     &.home-content {
