@@ -21,16 +21,19 @@
         position: relative;
         z-index: 3;
 
-
         .current-track {
             @include flex-shrink(0);
-        }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 170px;
 
-        .current-track::before {
-            content: '\266A';
-            font-family: 'Arial';
-            font-weight: 600;
-            margin-right: 3px;
+            &::before {
+                content: '\266A';
+                font-family: 'Arial';
+                font-weight: 600;
+                margin-right: 3px;
+            }
         }
 
         .progress-container {

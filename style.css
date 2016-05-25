@@ -1065,6 +1065,10 @@ a.committee-tag:active,
 #listen-now .now-playing .current-track {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
 }
 #listen-now .now-playing .current-track::before {
   content: '\266A';
