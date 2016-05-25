@@ -1068,7 +1068,7 @@ a.committee-tag:active,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 170px;
+  max-width: 200px;
 }
 #listen-now .now-playing .current-track::before {
   content: '\266A';
