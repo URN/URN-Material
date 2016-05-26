@@ -1068,7 +1068,16 @@ a.committee-tag:active,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+}
+@media (max-width: 780px) {
+  #listen-now .now-playing .current-track {
+    max-width: 200px;
+  }
+}
+@media (max-width: 780px) {
+  #listen-now .now-playing .current-track {
+    max-width: 200px;
+  }
 }
 #listen-now .now-playing .current-track::before {
   content: '\266A';
