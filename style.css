@@ -375,7 +375,7 @@ body {
 }
 @media (max-width: 800px) {
   .wrapper {
-    padding: 0;
+    padding: 0 20px;
     width: 760px;
   }
 }
