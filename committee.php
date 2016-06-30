@@ -14,7 +14,28 @@ get_header(); ?>
         ?>
 
         <section class="tabs">
-            <input id="tab-2015-2016" type="radio" name="grp" autocomplete="off" checked="checked"/>
+            <input id="tab-2016-2017" type="radio" name="grp" autocomplete="off" checked="checked"/>
+            <label for="tab-2016-2017" class="tab-title">2016 - 2017</label>
+            <div class="tab-content">
+                <ul>
+                    <li>Station Editor: <strong>James Perkins</strong></li>
+                    <li>Deputy Station Editor: <strong>Matt Manley</strong></li>
+                    <li>Head of Daytime Programming: <strong>Nick Sutton Smith</strong></li>
+                    <li>Head of Speech Based Programming: <strong>Nick Clay</strong></li>
+                    <li>Head of Specialist Music Programming: <strong>Gabrielle Morris</strong></li>
+                    <li>News Editor: <strong>Harry Robertson</strong></li>
+                    <li>Sports Editor: <strong>Joe Tanner</strong></li>
+                    <li>Playlist Editor: <strong>Katie Willmott</strong></li>
+                    <li>Drama Editor: <strong>Ela Wydrzynska</strong></li>
+                    <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
+                    <li>Head of IT: <strong>Shivani Dave</strong></li>
+                    <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Jack Newman</strong></li>
+                    <li>Head of Finance and Sales: <strong>Joe Palmer</strong></li>
+                </ul>
+            </div>
+
+            <input id="tab-2015-2016" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2015-2016" class="tab-title">2015 - 2016</label>
             <div class="tab-content">
                 <ul>
