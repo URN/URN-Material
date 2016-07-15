@@ -24,6 +24,7 @@
 <div id="page-wrap">
     <header id="header">
         <div class="wrapper">
+            <a href="\app"><div class="ad">Have you heard about our new app?</div></a>
             <a href="/" id="title">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="URN Logo">
                 <div id="title-text">
@@ -31,6 +32,8 @@
                     <h2>Your music. Your news. Your student sound.</h2>
                 </div>
             </a>
+
+
         </div>
     </header>
 
