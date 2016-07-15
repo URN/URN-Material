@@ -1,6 +1,6 @@
 /*
     Theme Name: URN Material
-    Author: James Turner & Harry Mumford-Turner
+    Author: James Turner & Harry Mumford-Turner & Johnathan Graydon
     Description: The new look of URN
     Version: 0.1
     License: ?
@@ -2286,4 +2286,28 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 
 .tabs ul {
   list-style-type: none;
+}
+
+iframe {
+  border-style: solid;
+  border-color: #5e44cb;
+  border-width: 4px;
+  overflow: hidden;
+  width: 560px;
+  height: 315px;
+}
+@media (max-width: 620px) {
+  iframe {
+    width: 250px;
+    height: auto;
+    border-style: none;
+  }
+}
+
+.cen {
+  text-align: center;
+}
+
+.logo {
+  width: 165px;
 }
