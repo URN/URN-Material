@@ -32,8 +32,6 @@
                     <h2>Your music. Your news. Your student sound.</h2>
                 </div>
             </a>
-
-
         </div>
     </header>
 
