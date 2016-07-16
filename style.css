@@ -2343,3 +2343,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 .logo {
   width: 165px;
 }
+
+.subTitle {
+  text-decoration: underline;
+}
