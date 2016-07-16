@@ -763,7 +763,7 @@ a.committee-tag:active,
   overflow: hidden;
 }
 #header .ad {
-  z-index: 999999;
+  z-index: 10000;
   position: absolute;
   top: 165px;
   left: 50%;
