@@ -21,7 +21,7 @@ $user = get_queried_object();
 
             // Include the page content template.
             the_content();
-            echo "<br />";
+            echo "<br /> <hr />";
 
         // End the loop.
         endwhile;
