@@ -35,9 +35,19 @@ if ($name_prelude !== "") {
 
 $slot_strings = array();
 
+$time = $slots[0]['from'];
+
 foreach ($slots as $slot) {
-    $slot_strings[] = $slot['day'] . 's from ' . $slot['from'];
+    if ($slot['from'] == $time) {
+        $slot_strings[] = $slot['day'] . 's, ';
+    }else {
+        $slot_strings[] = $slot['day'] . 's from ' . $time;
+    }
+
+    $time = $slot['from'];
 }
+
+$slot_strings[] = 'from ' . $slot['from'];
 
 $term_objects = get_objects_in_term($show_id, 'shows');
 
@@ -83,7 +93,7 @@ foreach ($postObjects as $postObject) {
     <div class="titles">
         <h2 class="title-prelude"><?php echo $name_prelude; ?></h2>
         <h1 class="title"><?php echo $name; ?></h1>
-        <h3 class="time"><?php echo implode(', ', $slot_strings) ?></h3>
+        <h3 class="time"><?php echo implode(' ', $slot_strings) ?></h3>
     </div>
 </header>
 
