@@ -40,15 +40,33 @@ get_header(); ?>
         <input id="tab-four" type="radio" name="grp" />
         <label for="tab-four" class="tab-title">Uni of Sport</label>
         <div class="tab-content">
-             <!-- Blog posts with author Sports show -->
-            <?php echo get_posts_by_author(10, 41); ?>
+            <!-- Blog posts with category Sport -->
+            <?php
+                // Get the most recent blog
+                $posts = get_posts(array('category_name' => 'Sport'));
+
+                echo "<ul class='blog-excerpt'>";
+                foreach ( $posts as $post ) {
+                    echo format_blog_excerpt($post, false);
+                }
+                echo "</ul>";
+                ?>
         </div>
 
         <input id="tab-five" type="radio" name="grp" />
         <label for="tab-five" class="tab-title">SU</label>
         <div class="tab-content">
-            <!-- Blog posts with author Elections Show -->
-            <?php echo get_posts_by_author(10, 139); ?>
+            <!-- Blog posts with category SU -->
+            <?php
+                // Get the most recent blog
+                $posts = get_posts(array('category_name' => 'SU'));
+
+                echo "<ul class='blog-excerpt'>";
+                foreach ( $posts as $post ) {
+                    echo format_blog_excerpt($post, false);
+                }
+                echo "</ul>";
+            ?>
         </div>
     </section>
 
