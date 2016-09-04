@@ -127,6 +127,7 @@ $btn-default: #9b989a;
     @include flex-wrap(wrap);
     padding-top: $general-element-spacing;
     width: 100%;
+    padding-bottom: $general-element-spacing;
 
     input[type=radio],
     .tab-content {
