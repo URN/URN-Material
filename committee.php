@@ -26,7 +26,7 @@ get_header(); ?>
                     <li>News Editor: <strong>Harry Robertson</strong></li>
                     <li>Sports Editor: <strong>Joe Tanner</strong></li>
                     <li>Playlist Editor: <strong>Katie Willmott</strong></li>
-                    <li>Drama Editor: <strong>Ela Wydrzynska</strong></li>
+                    <li>Drama Editor: <strong>Ella Wydrzynska</strong></li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
                     <li>Head of IT: <strong>Shivani Dave</strong></li>
                     <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong></li>
