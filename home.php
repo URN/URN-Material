@@ -80,11 +80,6 @@
     </div>
 
     <div class="row cover-photos">
-        <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'urn-tv' ) )?>" target="_blank">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_4.jpg" ?>">
-            </a>
-        </div>
 
         <div class="module blogs">
             <?php
@@ -93,20 +88,17 @@
                'numberposts' => 3
             ));
 
+            echo "<h1>Latest Blog Posts</h1>";
+
             echo "<ul class='blog-excerpt'>";
             foreach ( $posts as $post ) {
-                echo format_blog_excerpt($post, false);
-                break;
+                setup_postdata( $post );
+                echo format_blog_excerpt($post, true);
             }
             echo "</ul>";
             ?>
         </div>
 
-        <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'podcasts' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_urn.jpg" ?>">
-            </a>
-        </div>
     </div>
 </div>
 <?php get_footer(); ?>
