@@ -93,7 +93,7 @@
             echo "<ul class='blog-excerpt'>";
             foreach ( $posts as $post ) {
                 setup_postdata( $post );
-                echo format_blog_excerpt($post, true);
+                echo format_blog_excerpt($post, true, h2);
             }
             echo "</ul>";
             ?>
