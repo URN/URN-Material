@@ -5,17 +5,6 @@
 */
 get_header(); ?>
 
-<?php
-global $paged;
-$curpage = $paged ? $paged : 1;
-$args = array(
-    'orderby' => 'post_date',
-    'posts_per_page' => 5, //Chnage this to edit how many posts per page
-    'post_status'      => 'publish',
-    'paged' => $paged
-);
-$query = new WP_Query($args);?>
-
 <div class="main-content">
 
     <div class="entry-content">
@@ -30,44 +19,98 @@ $query = new WP_Query($args);?>
             ?>
     </div><!-- /.entry-content -->
 
-    <div class="blog-wrapper">
-        <?php
-            // Get all the blogs
-            $posts = get_posts($args);
+    <section class="tabs">
+        <input id="tab-one" type="radio" name="grp" checked="checked"/>
+        <label for="tab-one" class="tab-title">All</label>
+        <div class="tab-content">
 
-            echo "<ul class='blog-excerpt'>";
-            foreach ( $posts as $post ) {
-                setup_postdata( $post );
-                echo format_blog_excerpt($post, true, 'h2');
-            }
-            wp_reset_postdata();
-            echo "</ul>";
+            <?php
+                // // Get all the blogs
+                // $posts = get_posts(array(
+                //     'orderby' => 'post_date',
+                //     'posts_per_page' => 5, //Chnage this to edit how many posts per page
+                //     'post_status'      => 'publish'
+                // ));
+                //
+                // echo "<ul class='blog-excerpt'>";
+                // foreach ( $posts as $post ) {
+                //     setup_postdata( $post );
+                //     echo format_blog_excerpt($post, true, 'h2');
+                // }
+                // wp_reset_postdata();
+                // echo "</ul>";
+                echo do_shortcode('[ajax_load_more max_pages="0" posts_per_page="8"]');
+            ?>
+        </div>
 
-        // End the loop.
-        endwhile;
-        ?>
+        <input id="tab-two" type="radio" name="grp" />
+        <label for="tab-two" class="tab-title">Sport</label>
+        <div class="tab-content">
+            <?php
+                // // Get the most recent sport blogs
+                // $posts = get_posts(array(
+                //     'orderby' => 'post_date',
+                //     'posts_per_page' => 5, //Chnage this to edit how many posts per page
+                //     'post_status'      => 'publish',
+                //     'category_name' => 'Sport'
+                // ));
+                //
+                // echo "<ul class='blog-excerpt'>";
+                // foreach ( $posts as $post ) {
+                //     setup_postdata( $post );
+                //     echo format_blog_excerpt($post, true, 'h2');
+                // }
+                // echo "</ul>";
+                echo do_shortcode('[ajax_load_more post_type="post" category="sport" max_pages="0" posts_per_page="8"]');
+            ?>
+        </div>
 
-        <?php
-        //Pagination links
-        echo '
-        <div id="wp_pagination">
-          <a class="first_page anchor" href="'.get_pagenum_link(1).'">&laquo; First</a>
-          <a class="previous_page anchor" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo; Previous |</a>';
-          for($i=$curpage - 5;$i<=$curpage + 5;$i++){
-            if ($i < 1) {//Stops displaying negative pages
-              $i = 0;
-            } elseif ($i > $query->max_num_pages) {//Stops displaying pages over the limit
-              break;
-            } else {
-              echo '<a class="'.($i == $curpage ? 'active_' : '').'page_button anchor" href="'.get_pagenum_link($i).'"> '.$i.' </a>';
-            }
-          }
-          echo '
-          <a class="next_page anchor" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'"> Next &rsaquo;</a>
-          <a class="last_page anchor" href="'.get_pagenum_link($query->max_num_pages).'">Last &raquo;</a>
-        </div>';
-        ?>
+        <input id="tab-three" type="radio" name="grp" />
+        <label for="tab-three" class="tab-title">Music</label>
+        <div class="tab-content">
+            <?php
+                // // Get the most recent music blogs
+                // $posts = get_posts(array(
+                //     'orderby' => 'post_date',
+                //     'posts_per_page' => 5, //Chnage this to edit how many posts per page
+                //     'post_status'      => 'publish',
+                //     'category_name' => 'Music'
+                // ));
+                //
+                // echo "<ul class='blog-excerpt'>";
+                // foreach ( $posts as $post ) {
+                //     setup_postdata( $post );
+                //     echo format_blog_excerpt($post, true, 'h2');
+                // }
+                // echo "</ul>";
+                echo do_shortcode('[ajax_load_more post_type="post" category="music" max_pages="0" posts_per_page="8"]');
+            ?>
+        </div>
 
-    </div>
+        <input id="tab-four" type="radio" name="grp" />
+        <label for="tab-four" class="tab-title">Opinion</label>
+        <div class="tab-content">
+            <?php
+                // // Get the most recent opinion blogs
+                // $posts = get_posts(array(
+                //     'orderby' => 'post_date',
+                //     'posts_per_page' => 5, //Chnage this to edit how many posts per page
+                //     'post_status'      => 'publish',
+                //     'category_name' => 'Opinion'
+                // ));
+                //
+                // echo "<ul class='blog-excerpt'>";
+                // foreach ( $posts as $post ) {
+                //     setup_postdata( $post );
+                //     echo format_blog_excerpt($post, true, 'h2');
+                // }
+                // echo "</ul>";
+                echo do_shortcode('[ajax_load_more post_type="post" category="opinion" max_pages="0" posts_per_page="8"]');
+
+            // End the loop.
+            endwhile;
+            ?>
+        </div>
+    </section>
 </div> <!-- /.main-content -->
 <?php get_footer(); ?>
