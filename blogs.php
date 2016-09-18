@@ -111,6 +111,13 @@ get_header(); ?>
             endwhile;
             ?>
         </div>
+
+        <input id="tab-five" type="radio" name="grp" />
+        <label for="tab-five" class="tab-title">Interviews</label>
+        <div class="tab-content">
+            <div class="audioboom-feed" data-channel-id="4374382" data-channel-audioboom-type="users" data-channel-type="urn-interviews" data-channel-name="URN Interviews"></div>
+        </div>
+
     </section>
 </div> <!-- /.main-content -->
 <?php get_footer(); ?>
