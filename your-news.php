@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="main-content">
 
     <div class="row row-wide">
-        <div class="row vertical">
+        <div class="row vertical" style="padding-top: 15px;">
             <h1>News Posts</h1>
             <?php
             // Get the most recent blog

@@ -9,8 +9,7 @@
     }
 
     &:first-child {
-        // padding-top: #{$listen-now-overlap + $general-element-spacing};
-        padding-top: #{$general-element-spacing};
+        padding-top: #{$listen-now-overlap + $general-element-spacing};
         padding-bottom: $general-element-spacing;
     }
 
