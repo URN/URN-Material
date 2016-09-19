@@ -14,7 +14,7 @@ get_header(); ?>
             // Get the most recent blog
             $posts = get_posts(array(
                 'numberposts' => 3,
-                'category_name' => 'Pulse, SU'
+                'category_name' => 'News'
             ));
 
             echo "<ul class='blog-excerpt'>";
