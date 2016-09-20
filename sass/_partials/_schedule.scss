@@ -382,6 +382,8 @@ $time-width: 100px;
     }
 
     .btn {
+        z-index: 5;
+
         // Set button to be bigger on mobile
         @include breakpoint(mobile) {
             bottom: initial;

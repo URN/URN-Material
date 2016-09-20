@@ -488,6 +488,11 @@ body {
 .entry-content .entry-content p {
   font-size: 1.4em;
 }
+.main-content .entry-content p.wp-caption-text,
+.entry-content .entry-content p.wp-caption-text {
+  font-size: 1em;
+  color: #6c6c6c;
+}
 .main-content .entry-content > ul > li,
 .entry-content .entry-content > ul > li {
   font-size: 1.4em;
@@ -2215,6 +2220,9 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 }
 .mini-schedule .timetable {
   padding-top: 30px;
+}
+.mini-schedule .btn {
+  z-index: 5;
 }
 @media (max-width: 620px) {
   .mini-schedule .btn {

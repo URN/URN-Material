@@ -103,6 +103,10 @@ body#tinymce.wp-editor .entry-content h3 {
 body#tinymce.wp-editor .entry-content p {
   font-size: 1.4em;
 }
+body#tinymce.wp-editor .entry-content p.wp-caption-text {
+  font-size: 1em;
+  color: #6c6c6c;
+}
 body#tinymce.wp-editor .entry-content > ul > li {
   font-size: 1.4em;
   line-height: 1.4em;
