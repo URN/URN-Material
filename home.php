@@ -2,23 +2,43 @@
 
 <div class="main-content home-content">
     <div class="row cover-photos">
+        <div class="slideshow">
+        	<figure class="show noday">
+        		<a href="<?php echo get_permalink( get_page_by_path( 'app' ) )?>"><img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/app.png" width="100%" /></a>
+        	</figure>
 
-        <div class="module">
-            <a target="_blank" href="//audioboom.com/boos/3831925-the-nineteen-percent-1-body-contact">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_6.jpg" ?>">
-            </a>
-        </div>
+            <?php // TODO: Fix link ?>
 
-        <div class="module">
-            <a href="https://audioboom.com/boos/3930886-the-price-of-sport-in-nottingham">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_7.jpg" ?>">
-            </a>
-        </div>
+            <figure class="noday">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/mooch_coffee.png" width="100%" />
+            </figure>
 
-        <div class="module">
-            <a href="<?php echo get_permalink( get_page_by_path( 'competitions' ) )?>">
-                <img style="width:100%" src="<?php echo get_template_directory_uri() . "/images/cover_2.jpg" ?>">
-            </a>
+        	<figure class="noday">
+        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/mooch_burger.png" width="100%" />
+            </figure>
+
+            <figure class="day tues">
+        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/tuesday.png" width="100%" />
+        	</figure>
+
+            <figure class="day weds">
+        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/wednesday.png" width="100%" />
+            </figure>
+
+            <figure class="day thurs">
+          		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/thursday.png" width="100%" />
+            </figure>
+
+            <figure class="day fri">
+        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/friday_1.png" width="100%" />
+            </figure>
+
+            <figure class="day fri">
+        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/friday_2.png" width="100%" />
+            </figure>
+
+          <span class="prev">&laquo;</span>
+          <span class="next">&raquo;</span>
         </div>
     </div>
 
