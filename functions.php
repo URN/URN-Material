@@ -138,8 +138,6 @@ class header_nav_walker extends Walker_Nav_Menu
 }
 
 
-
-
 /**
  * Shows our stylings inside of the Wordpress Post Editor (when writing a new post)
  *
@@ -172,7 +170,7 @@ add_filter( 'tiny_mce_before_init', 'mytheme_tinymce_settings' );
 function urn_login_logo() {
     ?>
         <style type="text/css">
-            .login h1 a {
+            #login h1 a, .login h1 a {
                 background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo-black.png');
                 background-size: 100px;
                 height: 100px; /* Set same as bg-size */
@@ -182,8 +180,6 @@ function urn_login_logo() {
     <?php
 }
 add_action( 'login_enqueue_scripts', 'urn_login_logo' );
-
-
 
 
 /**
