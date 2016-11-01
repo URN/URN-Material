@@ -298,16 +298,20 @@
                         var nextDaySlotData = JSON.parse(JSON.stringify(slotData));
 
                         var minsAfterMidnight = Math.abs(toDateTime.getTime() - midnightDateTime.getTime());
-                        minsAfterMidnight = minsAfterMidnight / 60000;
+
+                            // If the show doesn't finish at midnight wrap around
+                        if (minsAfterMidnight !== 0) {
+                                minsAfterMidnight = minsAfterMidnight / 60000;
+
+                                nextDaySlotData.from = "00:00";
+                                nextDaySlotData.duration = minsAfterMidnight;
+                                var $nextDaySlot = createSlot(nextDaySlotData);
+                                $nextDaySlotList.append($nextDaySlot);
+                        }
 
                         slotData.duration = slotData.duration - minsAfterMidnight;
                         var $slot = createSlot(slotData);
                         $slotList.append($slot);
-
-                        nextDaySlotData.from = "00:00";
-                        nextDaySlotData.duration = minsAfterMidnight;
-                        var $nextDaySlot = createSlot(nextDaySlotData);
-                        $nextDaySlotList.append($nextDaySlot);
                     }
                     else {
                         var $slot = createSlot(slotData);
