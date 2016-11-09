@@ -1,7 +1,6 @@
 <?php
 /**
  * The template for displaying single blog posts.
- *
  */
 get_header(); ?>
 

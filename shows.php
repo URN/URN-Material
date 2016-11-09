@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Shows
- */
+*/
 
  $terms = get_terms( 'shows', 'orderby=count&hide_empty=0' );
 

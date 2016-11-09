@@ -7,8 +7,6 @@
         		<a href="<?php echo get_permalink( get_page_by_path( 'app' ) )?>"><img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/app.png" width="100%" /></a>
         	</figure>
 
-            <?php // TODO: Fix link ?>
-
             <figure class="noday">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/mooch_coffee.png" width="100%" />
             </figure>

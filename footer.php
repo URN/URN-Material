@@ -1,4 +1,4 @@
-    </div> <!-- end main page container -->
+</div> <!-- end main page container -->
     <footer id="footer">
         <div class="wrapper">
             <div>
