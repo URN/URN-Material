@@ -428,7 +428,7 @@ body {
 }
 @media (max-width: 800px) {
   #listen-now + .play + #page-container .main-content {
-    padding: 0 20px;
+    padding: 20px;
   }
 }
 #listen-now + .play + #page-container .main-content.home-content {
