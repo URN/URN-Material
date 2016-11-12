@@ -2162,6 +2162,9 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
   font-size: 1em;
   font-weight: 600;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 36px;
 }
 .schedule .show .hosts {
   font-size: 0.75em;

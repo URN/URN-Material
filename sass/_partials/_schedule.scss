@@ -264,6 +264,9 @@ $time-width: 100px;
             font-size: 1em;
             font-weight: 600;
             margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 36px; // Limit to 2 lines (2 * Line-Height)
         }
 
         .hosts {
