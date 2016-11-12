@@ -218,7 +218,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @media (max-width: 780px) {
   .youmax-tabs {
-    padding: 40px 10px 20px;
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: center;
   }
 }
 @media (max-width: 440px) {
@@ -232,6 +234,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 10px 5px 5px;
   padding: 5px;
   cursor: pointer;
+}
+@media (max-width: 780px) {
+  .youmax-tabs span {
+    display: block;
+    margin: 10px 2px 5px;
+  }
 }
 @media (max-width: 440px) {
   .youmax-tabs span {

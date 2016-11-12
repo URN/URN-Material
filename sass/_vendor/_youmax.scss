@@ -159,7 +159,9 @@
     font-size: 18px;
 
     @include breakpoint(tablet) {
-        padding: 40px 10px 20px;
+        font-size: 20px;
+        padding-top: 15px;
+        text-align: center;
     }
 
     @include breakpoint(tiny) {
@@ -172,6 +174,11 @@
         margin: 10px 5px 5px;
         padding: 5px;
         cursor: pointer;
+
+        @include breakpoint(tablet) {
+            display: block;
+            margin: 10px 2px 5px;
+        }
 
         @include breakpoint(tiny) {
             display: block;

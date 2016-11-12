@@ -22,12 +22,10 @@ get_header(); ?>
         ?>
 
     </div>
+<div class="row">
+        <iframe class="row vertical" src="https://embed.spotify.com/?uri=spotify%3Auser%3Aurnplaylist%3Aplaylist%3A7a5zE78nIKxubabMBYq3EA" width="300" height="800" frameborder="0" allowtransparency="true"></iframe>
 
-    <section class="tabs">
-        <input id="tab-playlist-a" type="radio" name="grp" checked="checked"/>
-        <label for="tab-playlist-a" class="tab-title">Playlists</label>
-        <div class="tab-content">
-            <div class="videos">
+        <div class="row vertical">
                 <!-- Youtube Grid of images -->
                 <div class="youmax"></div>
 
@@ -38,9 +36,9 @@ get_header(); ?>
                             apiKey: 'AIzaSyBWZBeWeXbWUHcNKbt-vEXH6q3ltP6CDLs', // harry.mumford-turner@urn1350.net
                             youTubeChannelURL: "http://www.youtube.com/user/urn1350",
                             youTubePlaylistURL: "PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW",
-                            youmaxColumns: 3,
+                            youmaxColumns: 1,
                             showVideoInLightbox: false,
-                            maxResults: 20,
+                            maxResults: 3,
                             showHeader: false,
                             customTabs: [
                                 {
@@ -63,8 +61,6 @@ get_header(); ?>
                     });
                 </script>
             </div>
-        </div>
-    </section>
-</div>
 
+</div>
 <?php get_footer(); ?>
