@@ -264,9 +264,14 @@ $time-width: 100px;
             font-size: 1em;
             font-weight: 600;
             margin: 0;
+
+            //Wrap to 2 lines using webkit but fall back to max-height if need be
+            display: -webkit-box;
+            max-height: 35px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-height: 36px; // Limit to 2 lines (2 * Line-Height)
         }
 
         .hosts {
