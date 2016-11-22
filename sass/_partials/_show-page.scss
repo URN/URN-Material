@@ -204,3 +204,9 @@ ul.show-page-external-links {
         margin-top: 10px;
     }
 }
+
+.show-image {
+    @include flex-shrink(0);
+    display: block;
+    width: 200px;
+}

@@ -23,6 +23,7 @@ $tw_link = $options['tw_link'];
 $ended = $options['ended'];
 $hidden = $options['hidden'];
 $category = $options['show_category'];
+$image = $options['image'];
 $slots = unserialize($options['slot']);
 $slug = $show->slug;
 
@@ -101,6 +102,7 @@ foreach ($postObjects as $postObject) {
     <div class="entry-content">
         <div class="show-page-show-info">
             <div class="show-page-members">
+                <img src="<?php echo $image; ?>" class="show-image" alt="<?php echo $name; ?>" />
                 <h1>Show Hosts</h1>
                 <ul>
                     <?php
