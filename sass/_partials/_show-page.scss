@@ -50,6 +50,10 @@
             @include title-font;
             font-size: 4.5em;
             margin: 10px 0;
+
+            @include breakpoint(mobile) {
+                font-size: 3.5em;
+            }
         }
 
         .time {

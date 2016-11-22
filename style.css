@@ -1734,6 +1734,11 @@ body.stream #listen-now #message-the-studio {
   font-size: 4.5em;
   margin: 10px 0;
 }
+@media (max-width: 620px) {
+  .show-page-header .titles .title {
+    font-size: 3.5em;
+  }
+}
 .show-page-header .titles .time {
   display: block;
   text-align: right;
