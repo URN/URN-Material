@@ -64,9 +64,9 @@
                     $show_prelude.text("URN Presents");
                     $show_name.text(slotData.name);
                     $show_time.text("From " + slotData.from + "-" + slotData.to);
-                    $show_image.css("background-image", "url(" + slotData.image + ")");
 
                     if (slotData.image !== "") {
+                        $show_image.css("background-image", "url(" + slotData.image + ")");
                         $show_image.css("display", "block");
                         $show_image.css("background-size", "cover");
                     }
