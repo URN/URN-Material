@@ -2,42 +2,7 @@
 
 <div class="main-content home-content">
     <div class="row cover-photos">
-        <div class="slideshow">
-        	<figure class="show noday">
-        		<a href="<?php echo get_permalink( get_page_by_path( 'app' ) )?>"><img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/app.png" width="100%" /></a>
-        	</figure>
-
-            <figure class="noday">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/mooch_coffee.png" width="100%" />
-            </figure>
-
-        	<figure class="noday">
-        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/mooch_burger.png" width="100%" />
-            </figure>
-
-            <figure class="day tues">
-        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/tuesday.png" width="100%" />
-        	</figure>
-
-            <figure class="day weds">
-        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/wednesday.png" width="100%" />
-            </figure>
-
-            <figure class="day thurs">
-          		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/thursday.png" width="100%" />
-            </figure>
-
-            <figure class="day fri">
-        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/friday_1.png" width="100%" />
-            </figure>
-
-            <figure class="day fri">
-        		<img src="<?php echo get_template_directory_uri(); ?>/images/slideshow/friday_2.png" width="100%" />
-            </figure>
-
-          <span class="prev">&laquo;</span>
-          <span class="next">&raquo;</span>
-        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/promo.png" width="100%" />
     </div>
 
     <div class="row">
