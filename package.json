@@ -1,6 +1,6 @@
 {
   "name": "urn-material",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The URN WordPress theme",
   "main": "Gruntfile.js",
   "scripts": {
@@ -10,16 +10,16 @@
     "type": "git",
     "url": "https://github.com/URN/URN-Material.git"
   },
-  "author": "James Turner & Harry Mumford-Turner",
+  "author": "James Turner & Harry Mumford-Turner & Johnathan Graydon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/URN/URN-Material/issues"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-compass": "^1.0.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-scss-lint": "^0.3.8",
-    "grunt-shell": "^1.1.2"
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-scss-lint": "^0.5.0",
+    "grunt-shell": "^2.1.0"
   }
 }
