@@ -2,7 +2,7 @@
 
 <div class="main-content home-content">
     <div class="row cover-photos">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/promo.png" width="100%" />
+        <img class="banner" src="<?php echo get_template_directory_uri(); ?>/images/promo.png"/>
     </div>
 
     <div class="row">

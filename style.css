@@ -1549,6 +1549,19 @@ body.stream #listen-now #message-the-studio {
 .row h1 {
   margin-bottom: 10px;
 }
+.row .banner {
+  width: 100%;
+}
+@media (max-width: 780px) {
+  .row .banner {
+    height: 180px;
+  }
+}
+@media (max-width: 620px) {
+  .row .banner {
+    height: 90px;
+  }
+}
 .row .module {
   -webkit-flex-grow: 1;
   flex-grow: 1;

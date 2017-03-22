@@ -22,6 +22,18 @@
         margin-bottom: 10px;
     }
 
+    .banner {
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            height: 180px;
+        }
+
+        @include breakpoint(mobile) {
+            height: 90px;
+        }
+    }
+
     .module {
         @include flex-grow(1);
         background: #e6e6e6;
