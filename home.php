@@ -56,9 +56,10 @@
                     </ul>
                 </div>
             </div>
-
-            <h1>Headlines</h1>
-            <div class="audioboom-feed" data-card-type="0" data-channel-id="4227841" data-channel-audioboom-type="users" data-channel-type="urn-headlines" data-channel-name="URN Headlines"></div>
+            <div class="adtotw">
+                <h1>After Dark Track of the Week</h1>
+                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/3AqnGV11CesKQnRJK8Novb" width="100%" height="280px"  frameborder="0" allowtransparency="true"></iframe>
+            </div>
         </div>
     </div>
 

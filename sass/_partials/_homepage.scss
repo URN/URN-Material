@@ -105,6 +105,15 @@
             }
         }
 
+        // After Dark Track of the Week
+        .adtotw h1 {
+            @include breakpoint(mobile) {
+                display: inline;
+            }
+
+            padding-top: 5px;
+        }
+
         h1:first-child {
             margin-top: 0;
         }

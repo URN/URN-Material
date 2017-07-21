@@ -1632,6 +1632,14 @@ body.stream #listen-now #message-the-studio {
     display: none;
   }
 }
+.row.vertical .adtotw h1 {
+  padding-top: 5px;
+}
+@media (max-width: 620px) {
+  .row.vertical .adtotw h1 {
+    display: inline;
+  }
+}
 .row.vertical h1:first-child {
   margin-top: 0;
 }
