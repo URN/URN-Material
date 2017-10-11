@@ -908,8 +908,6 @@ a.committee-tag:active,
   -webkit-transition: box-shadow 0.15s ease;
   transition: box-shadow 0.15s ease;
   background: transparent;
-  border-radius: 50%;
-  box-shadow: 0 0 160px 130px rgba(255, 255, 255, 0.2);
   content: '';
   height: 1px;
   left: 105.5px;
