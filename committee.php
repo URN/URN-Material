@@ -14,7 +14,28 @@ get_header(); ?>
         ?>
 
         <section class="tabs">
-            <input id="tab-2016-2017" type="radio" name="grp" autocomplete="off" checked="checked"/>
+
+            <input id="tab-2017-2018" type="radio" name="grp" autocomplete="off" checked="checked"/>
+            <label for="tab-2017-2018" class="tab-title">2017 - 2018</label>
+            <div class="tab-content">
+                <ul>
+                    <li>Station Editor: <strong>Gabrielle Morris</strong></li>
+                    <li>Deputy Station Editor: <strong>Nick Sutton-Smith</strong></li>
+                    <li>Head of Daytime Programming: <strong>Jack Butler</strong></li>
+                    <li>Head of Speech Based Programming: <strong>Harry Robertson</strong></li>
+                    <li>Head of Specialist Music Programming: <strong>Dom Nolan</strong></li>
+                    <li>News Editor: <strong>Bessie Ephgrave</strong></li>
+                    <li>Sports Editor: <strong>Jeremy Dunn</strong></li>
+                    <li>Playlist Editor: <strong>Katie Baxter</strong></li>
+                    <li>Drama Editor: <strong>Jack Ellis</strong></li>
+                    <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
+                    <li>Head of Marketing and Online Content: <strong>Beth Higginson</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Fred L Williams</strong></li>
+                    <li>Head of Finance and Sales: <strong>Jamie Keene</strong></li>
+                </ul>
+            </div>
+
+            <input id="tab-2016-2017" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2016-2017" class="tab-title">2016 - 2017</label>
             <div class="tab-content">
                 <ul>
@@ -29,8 +50,8 @@ get_header(); ?>
                     <li>Drama Editor: <strong>Ella Wydrzynska</strong></li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
                     <li>Head of IT: <strong>Shivani Dave</strong></li>
-                    <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong></li>
-                    <li>Head of Station Sound and Imaging: <strong>Jack Newman</strong></li>
+                    <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong> then followed by <strong>Beth Higginson</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Jack Newman</strong> then followed by <strong>Abby Chitty</strong></li>
                     <li>Head of Finance and Sales: <strong>Joe Palmer</strong> then followed by <strong>Jack Butler</strong></li>
                 </ul>
             </div>
