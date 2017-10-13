@@ -32,6 +32,7 @@ get_header(); ?>
                     <li>Head of Marketing and Online Content: <strong>Beth Higginson</strong></li>
                     <li>Head of Station Sound and Imaging: <strong>Fred L Williams</strong></li>
                     <li>Head of Finance and Sales: <strong>Jamie Keene</strong></li>
+                    <li>Head of Welfare: <strong>Nikki Osborne</strong></li>
                 </ul>
             </div>
 
