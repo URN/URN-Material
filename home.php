@@ -57,8 +57,8 @@
                 </div>
             </div>
             <div class="adtotw">
-                <h1>After Dark Track of the Week</h1>
-                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/3AqnGV11CesKQnRJK8Novb" width="100%" height="280px"  frameborder="0" allowtransparency="true"></iframe>
+                <h1>Weekly Playlist</h1>
+                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/7a5zE78nIKxubabMBYq3EA" width="100%" height="280px"  frameborder="0" allowtransparency="true"></iframe>
             </div>
         </div>
     </div>
