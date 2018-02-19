@@ -27,10 +27,10 @@ get_header(); ?>
                     <li>News Editor: <strong>Bessie Ephgrave</strong></li>
                     <li>Sports Editor: <strong>Jeremy Dunn</strong></li>
                     <li>Playlist Editor: <strong>Katie Baxter</strong></li>
-                    <li>Drama Editor: <strong>Jack Ellis</strong></li>
+                    <li>Drama Editor: <strong>Jack Ellis</strong> then followed by Nobody</li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
                     <li>Head of Marketing and Online Content: <strong>Beth Higginson</strong></li>
-                    <li>Head of Station Sound and Imaging: <strong>Fred L Williams</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Fred Llyod Williams</strong></li>
                     <li>Head of Finance and Sales: <strong>Jamie Keene</strong></li>
                     <li>Head of Welfare: <strong>Nikki Osborne</strong></li>
                 </ul>
