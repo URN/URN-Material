@@ -30,7 +30,7 @@ get_header(); ?>
                     <li>Drama Editor: <strong>Jack Ellis</strong> then followed by Nobody</li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
                     <li>Head of Marketing and Online Content: <strong>Beth Higginson</strong></li>
-                    <li>Head of Station Sound and Imaging: <strong>Fred Llyod Williams</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Fred Lloyd Williams</strong></li>
                     <li>Head of Finance and Sales: <strong>Jamie Keene</strong></li>
                     <li>Head of Welfare: <strong>Nikki Osborne</strong></li>
                 </ul>
