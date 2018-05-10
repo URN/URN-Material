@@ -15,6 +15,27 @@ get_header(); ?>
 
         <section class="tabs">
 
+            <input id="tab-2018-2019" type="radio" name="grp" autocomplete="off"/>
+            <label for="tab-2018-2019" class="tab-title">2018 - 2019</label>
+            <div class="tab-content">
+                <ul>
+                    <li>Station Editor: <strong>Katie Baxter</strong></li>
+                    <li>Deputy Station Editor: <strong>Jamie Keene</strong></li>
+                    <li>Head of Daytime Programming: <strong>Reece Davies</strong></li>
+                    <li>Head of Speech Based Programming: <strong>Jeremy Dunn</strong></li>
+                    <li>Head of Specialist Music Programming: <strong>Rory Evans</strong></li>
+                    <li>News Editor: <strong>Hermione Hearn</strong></li>
+                    <li>Sports Editor: <strong>Matthew Webb</strong></li>
+                    <li>Playlist Editor: <strong>Freija Jeppesen</strong></li>
+                    <li>Drama Editor: Position abolished</li>
+                    <li>Technical Manager: Nobody</li>
+                    <li>Head of Marketing and Online Content: <strong>Olly Powell-Gill</strong></li>
+                    <li>Head of Audio Production (Previously Station Sound and Imaging): <strong>Nikki Osborne</strong></li>
+                    <li>Head of Promotion and Finance (Previously Finance and Sales): <strong>Anna Lambert</strong></li>
+                    <li>Head of Welfare: <strong>Kathryn Embree</strong></li>
+                </ul>
+            </div>
+
             <input id="tab-2017-2018" type="radio" name="grp" autocomplete="off" checked="checked"/>
             <label for="tab-2017-2018" class="tab-title">2017 - 2018</label>
             <div class="tab-content">
@@ -29,10 +50,11 @@ get_header(); ?>
                     <li>Playlist Editor: <strong>Katie Baxter</strong></li>
                     <li>Drama Editor: <strong>Jack Ellis</strong> then followed by Nobody</li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
+                    <li>Head of IT: Position abolished</li>
                     <li>Head of Marketing and Online Content: <strong>Beth Higginson</strong></li>
                     <li>Head of Station Sound and Imaging: <strong>Fred Lloyd Williams</strong></li>
                     <li>Head of Finance and Sales: <strong>Jamie Keene</strong></li>
-                    <li>Head of Welfare: <strong>Nikki Osborne</strong></li>
+                    <li>Head of Welfare : <strong>Nikki Osborne</strong> (Position created)</li>
                 </ul>
             </div>
 
