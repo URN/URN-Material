@@ -20,6 +20,8 @@
     <meta name="application-name" content="URN">
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/images/favicons/browserconfig.xml">
 
+    <meta name="google-site-verification" content="ul4ZstfhhBdF0SWJsxHb5uNdOrkBCbhxm2LdX6uRIUA" />
+
     <!--[if gte IE 9]>
         <style type="text/css">
             .gradient {
