@@ -9,7 +9,7 @@ function urn_material_scripts() {
     wp_enqueue_style('main-style', get_stylesheet_uri());
 
     // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style('google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Raleway:300');
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Raleway:300');
 
     // Add global JS scripts
     wp_enqueue_script('nav-overflow', get_template_directory_uri() . '/js/nav-overflow.js', array('jquery'), false, true);
