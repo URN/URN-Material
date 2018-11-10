@@ -15,7 +15,7 @@ get_header(); ?>
 
         <section class="tabs">
 
-            <input id="tab-2018-2019" type="radio" name="grp" autocomplete="off"/>
+            <input id="tab-2018-2019" type="radio" name="grp" autocomplete="off" checked="checked"/>
             <label for="tab-2018-2019" class="tab-title">2018 - 2019</label>
             <div class="tab-content">
                 <ul>
@@ -36,7 +36,7 @@ get_header(); ?>
                 </ul>
             </div>
 
-            <input id="tab-2017-2018" type="radio" name="grp" autocomplete="off" checked="checked"/>
+            <input id="tab-2017-2018" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2017-2018" class="tab-title">2017 - 2018</label>
             <div class="tab-content">
                 <ul>
