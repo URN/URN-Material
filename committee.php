@@ -30,7 +30,8 @@ get_header(); ?>
                     <li>Drama Editor: Position abolished</li>
                     <li>Technical Manager: Nobody</li>
                     <li>Head of Marketing and Online Content: <strong>Olly Powell-Gill</strong></li>
-                    <li>Head of Audio Production (Previously Station Sound and Imaging): <strong>Nikki Osborne</strong></li>
+                    <li>Head of Audio Production (Previously Station Sound and Imaging): <strong>Nikki Osborne</strong>
+                    </li>
                     <li>Head of Promotion and Finance (Previously Finance and Sales): <strong>Anna Lambert</strong></li>
                     <li>Head of Welfare: <strong>Kathryn Embree</strong></li>
                 </ul>
@@ -73,9 +74,12 @@ get_header(); ?>
                     <li>Drama Editor: <strong>Ella Wydrzynska</strong></li>
                     <li>Technical Manager: <strong>Johnathan Graydon</strong></li>
                     <li>Head of IT: <strong>Shivani Dave</strong></li>
-                    <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong> then followed by <strong>Beth Higginson</strong></li>
-                    <li>Head of Station Sound and Imaging: <strong>Jack Newman</strong> then followed by <strong>Abby Chitty</strong></li>
-                    <li>Head of Finance and Sales: <strong>Joe Palmer</strong> then followed by <strong>Jack Butler</strong></li>
+                    <li>Head of Marketing and Online Content: <strong>Shana Gujral</strong> then followed by <strong>Beth
+                            Higginson</strong></li>
+                    <li>Head of Station Sound and Imaging: <strong>Jack Newman</strong> then followed by <strong>Abby
+                            Chitty</strong></li>
+                    <li>Head of Finance and Sales: <strong>Joe Palmer</strong> then followed by <strong>Jack
+                            Butler</strong></li>
                 </ul>
             </div>
 
@@ -91,7 +95,8 @@ get_header(); ?>
                     <li>News Editor: <strong>Megan Ashdown</strong></li>
                     <li>Sports Editor: <strong>Elliot Chaplin</strong></li>
                     <li>Playlist Editor: <strong>Henry Coates</strong></li>
-                    <li>Drama Editor: <strong>Joe Archer</strong> then followed by <strong>Harry Boutflower</strong></li>
+                    <li>Drama Editor: <strong>Joe Archer</strong> then followed by <strong>Harry Boutflower</strong>
+                    </li>
                     <li>Technical Manager: <strong>James Turner</strong></li>
                     <li>Head of IT: <strong>Harry Mumford-Turner</strong></li>
                     <li>Head of Marketing and Online Content: <strong>Iona Hampson</strong></li>
@@ -100,7 +105,7 @@ get_header(); ?>
                 </ul>
             </div>
 
-            <input id="tab-2014-2015" type="radio" name="grp" autocomplete="off" />
+            <input id="tab-2014-2015" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2014-2015" class="tab-title">2014 - 2015</label>
             <div class="tab-content">
                 <ul>
@@ -120,7 +125,7 @@ get_header(); ?>
                 </ul>
             </div>
 
-            <input id="tab-2013-2014" type="radio" name="grp" autocomplete="off" />
+            <input id="tab-2013-2014" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2013-2014" class="tab-title">2013 - 2014</label>
             <div class="tab-content">
                 <ul>
@@ -139,7 +144,7 @@ get_header(); ?>
                 </ul>
             </div>
 
-            <input id="tab-2012-2013" type="radio" name="grp" autocomplete="off" />
+            <input id="tab-2012-2013" type="radio" name="grp" autocomplete="off"/>
             <label for="tab-2012-2013" class="tab-title">2012 - 2013</label>
             <div class="tab-content">
                 <ul>

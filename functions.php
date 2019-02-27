@@ -25,19 +25,6 @@ function urn_material_scripts() {
     if (is_page ('urn-tv') || is_page ('music')) {
         wp_enqueue_script('youmax', get_template_directory_uri() . '/js/youmax.js', array('jquery'), false, true);
     }
-
-    /**
-     * Gives us access to Wordpress variables in Javascript.
-     * USAGE:
-     *  var url = WP_VARS.site_url; // Wordpress site URL
-     *  > 'http://live.urn1350.net/'
-     *
-     * Note, we may want to remove these are I think they are unused @TODO
-     */
-    wp_localize_script('jquery', 'WP_VARS', array (
-        'template_url' => get_template_directory_uri(),
-        'site_url' => get_option('siteurl')
-    ));
 }
 add_action( 'wp_enqueue_scripts', 'urn_material_scripts' );
 

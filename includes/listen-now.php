@@ -7,9 +7,9 @@
     }
 ?>
 
-<?php $minimise = is_home() || is_page ('stream') ? '' : 'display: none;' ?>
+<?php $minimise = is_home() || is_page( 'stream' ) ? '' : 'display: none;' ?>
 <?php $minimiseT = is_home() ? 'Shrink' : 'Expand' ?>
-<?php $btn = is_page ('stream') ? 'display: none;' : '' ?>
+<?php $btn = is_page( 'stream' ) ? 'display: none;' : '' ?>
 <div id="listen-now">
     <div class="now-playing">
         <span class="current-track"></span>
@@ -19,7 +19,8 @@
         <button class="btn listen" name="size" style="<?php echo $btn; ?>"><?php echo $minimiseT; ?></button>
     </div>
     <div class="show-container" style="<?php echo $minimise; ?>">
-        <div class="show-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/mic-icon.svg'); display: block"></div>
+        <div class="show-image"
+             style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/mic-icon.svg'); display: block"></div>
         <div class="show-info">
             <h2 class="show-title-prelude">URN presents</h2>
             <h1 class="show-title-name">URN Live</h1>
@@ -29,7 +30,9 @@
         <div class="send-message">
             <form id="message-the-studio" name="message-the-studio" method="post" action="">
                 <span class="message"></span>
-                <textarea autocomplete="off" name="studio-message" placeholder="<?php echo $message_studio_placeholder; ?>"></textarea>
+                <textarea autocomplete="off" name="studio-message"
+                          placeholder="<?php echo $message_studio_placeholder; ?>"
+                          aria-label="Text area to message into the studios"></textarea>
                 <button autocomplete="off" class="btn" type="submit" name="submit">Send</button>
             </form>
         </div>

@@ -2,12 +2,14 @@
 
 <div class="main-content home-content">
     <div class="row cover-photos">
-        <img class="banner" src="<?php echo get_template_directory_uri(); ?>/images/promo.png"/>
+        <img class="banner" src="<?php echo get_template_directory_uri(); ?>/images/promo.png" alt="Banner image"
+             title="Homepage banner"/>
     </div>
 
     <div class="row">
         <div class="twitter">
-            <a class="twitter-timeline" data-width="360" data-height="600" data-theme="light" href="https://twitter.com/URN1350/lists/urn-tweets?ref_src=twsrc%5Etfw">A Twitter List by URN1350</a>
+            <a class="twitter-timeline" data-width="360" data-height="600" data-theme="light"
+               href="https://twitter.com/URN1350/lists/urn-tweets?ref_src=twsrc%5Etfw">A Twitter List by URN1350</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <div class="row vertical">
@@ -18,7 +20,7 @@
                         Today
                     </li>
                 </ul>
-                <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'schedule' ) )?>">
+                <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'schedule' ) ) ?>">
                     Full Schedule
                 </a>
                 <div class="timetable">
@@ -58,31 +60,31 @@
             </div>
             <div class="adtotw">
                 <h1>Weekly Playlist</h1>
-                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/7a5zE78nIKxubabMBYq3EA" width="100%" height="280px"  frameborder="0" allowtransparency="true"></iframe>
+                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/7a5zE78nIKxubabMBYq3EA"
+                        width="100%" height="280px" frameborder="0" allowtransparency="true"
+                        title="Embedded Spotify playlist"></iframe>
             </div>
         </div>
     </div>
 
     <div class="row cover-photos">
-
         <div class="module blogs">
-            <?php
-            // Get the most recent blog
-            $posts = get_posts(array(
-               'numberposts' => 3
-            ));
+			<?php
+			// Get the most recent blog
+			$posts = get_posts( array(
+				'numberposts' => 3
+			) );
 
-            echo "<h1>Latest Blog Posts</h1>";
+			echo "<h1>Latest Blog Posts</h1>";
 
-            echo "<ul class='blog-excerpt'>";
-            foreach ( $posts as $post ) {
-                setup_postdata( $post );
-                echo format_blog_excerpt($post, true, h2);
-            }
-            echo "</ul>";
-            ?>
+			echo "<ul class='blog-excerpt'>";
+			foreach ( $posts as $post ) {
+				setup_postdata( $post );
+				echo format_blog_excerpt( $post, true, h2 );
+			}
+			echo "</ul>";
+			?>
         </div>
-
     </div>
 </div>
 <?php get_footer(); ?>
