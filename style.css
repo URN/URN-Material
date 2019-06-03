@@ -935,7 +935,7 @@ a.committee-tag:active,
 #nav > ul > .nav-item {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  padding: 0 11px;
+  padding: 0 9px;
   text-align: center;
 }
 @media (max-width: 620px) {
