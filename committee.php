@@ -14,7 +14,27 @@ get_header(); ?>
         ?>
 
         <section class="tabs">
-
+            <input id="tab-2019-2020" type="radio" name="grp" autocomplete="off" checked="checked"/>
+            <label for="tab-2019-2020" class="tab-title">2019 - 2020</label>
+            <div class="tab-content">
+                <ul>
+                    <li>Station Editor: <strong>Matthew Webb</strong></li>
+                    <li>Deputy Station Editor: <strong>Rory Evans</strong></li>
+                    <li>Head of Daytime Programming: <strong>Sarah Bertram</strong></li>
+                    <li>Head of Speech Based Programming: <strong>Rebecca Hyde</strong></li>
+                    <li>Head of Specialist Music Programming: <strong>Rúadhán Parnell Parnell</strong></li>
+                    <li>News Editor: <strong>Olivia Tweed</strong></li>
+                    <li>Sports Editor: <strong>Joe Wilkinson</strong></li>
+                    <li>Playlist Editor: <strong>Kathryn O'Connell</strong></li>
+                    <li>Head of Technology & Digital (Previously Technical Manager): <strong>Ricky Eatough</strong></li>
+                    <li>Head of Marketing and Online Content: <strong>Olly Powell-Gill</strong></li>
+                    <li>Head of Audio Production (Previously Station Sound and Imaging): <strong>Flora Wordie</strong>
+                    </li>
+                    <li>Head of Promotion and Finance (Previously Finance and Sales): <strong>Romany Jackson</strong></li>
+                    <li>Head of Welfare: <strong>Courtney Waters</strong></li>
+                </ul>
+            </div>
+            
             <input id="tab-2018-2019" type="radio" name="grp" autocomplete="off" checked="checked"/>
             <label for="tab-2018-2019" class="tab-title">2018 - 2019</label>
             <div class="tab-content">
