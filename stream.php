@@ -16,7 +16,7 @@ remove_action('wp_head', '_admin_bar_bump_cb');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/cover_urn.jpg">
     <meta property="og:description" content="University Radio Nottingham is the multi-award–winning university radio station of the University of Nottingham Students’ Union. During term-time we broadcast locally on University Park Campus on 1350AM and worldwide via our website.">
-    <meta name="theme-color" content="#5e44cb">
+    <meta name="theme-color" content="#5f2a87">
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicons/favicon-32x32.png" sizes="32x32">
@@ -42,7 +42,7 @@ remove_action('wp_head', '_admin_bar_bump_cb');
     <h1>University Radio Nottingham</h1>
 
     <audio controls autoplay>
-        <source src="https://corona.urn1350.net/radio/8000/urn_high.mp3" type="audio/mpeg">
+        <source src="http://128.243.155.14:8000/live" type="audio/mpeg">
     </audio>
 
     <?php include('includes/listen-now.php'); ?>
