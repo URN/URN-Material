@@ -6,7 +6,7 @@
             University Radio Nottingham<br>
             <a href="<?php echo get_permalink( get_page_by_path( 'competition terms' ) ); ?>">Competition Terms</a><br>
 
-			<?php wp_loginout(); ?>
+			<?php wp_loginout(); ?> <a href="https://portal.urn1350.net/">URN Portal</a>
         </div>
         <div>
             <strong>Winner of Best Student Radio Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014, 2016,
