@@ -1855,7 +1855,7 @@ ul.show-page-external-links a.twitter:hover, ul.show-page-external-links a.twitt
 }
 
 #footer {
-  background: url("images/purple-noise.png") repeat center;
+  background: #5f2a87
   box-shadow: inset 0 7px 5px -3px rgba(0, 0, 0, 0.08);
   color: rgba(255, 255, 255, 0.8);
   font-size: .875em;
