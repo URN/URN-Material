@@ -60,7 +60,7 @@
             </div>
             <div class="adtotw">
                 <h1>Weekly Playlist</h1>
-                <iframe src="https://open.spotify.com/embed/user/urnplaylist/playlist/7a5zE78nIKxubabMBYq3EA"
+                <iframe src="https://open.spotify.com/playlist/7a5zE78nIKxubabMBYq3EA?si=vCFmvrrwQte46dRhCXo7qw"
                         width="100%" height="280px" frameborder="0" allowtransparency="true"
                         title="Embedded Spotify playlist"></iframe>
             </div>
