@@ -6,7 +6,7 @@
             University Radio Nottingham<br>
             <a href="<?php echo get_permalink( get_page_by_path( 'competition terms' ) ); ?>">Competition Terms</a><br>
 
-			<?php wp_loginout(); ?> <a href="https://portal.urn1350.net/">URN Portal</a>
+			<?php wp_loginout(); ?> <a href="https://portal.urn1350.net/">URN Member Portal</a>
         </div>
         <div>
             <strong>Winner of Best Student Radio Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014, 2016,
@@ -18,8 +18,8 @@
 			<a href="<?php echo get_permalink( get_page_by_path( 'branding pack' ) ); ?>">Branding Pack</a> <br>
             Web Design &amp; Development by <strong><a href="https://jamesturner.im" target="_blank" rel="noopener">James
                     Turner</a></strong>, <strong><a href="https://harrymt.com" target="_blank" rel="noopener">Harry
-                    Mumford-Turner</a></strong>,<strong><a href="https://github.com/johnathan99j" target="_blank"
-                    rel="noopener">Johnathan Graydon</a></strong>and<strong><a 
+                    Mumford-Turner</a></strong>, <strong><a href="https://github.com/johnathan99j" target="_blank"
+                    rel="noopener">Johnathan Graydon</a></strong> and <strong><a 
 		    href="https://www.linkedin.com/in/rickyeatough/" target="_blank" rel="noopener">Ricky Eatough</a></strong>
         </div>
     </div>
