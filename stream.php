@@ -42,7 +42,7 @@ remove_action('wp_head', '_admin_bar_bump_cb');
     <h1>University Radio Nottingham</h1>
 
     <audio controls autoplay>
-        <source src="http://128.243.155.14:8000/live" type="audio/mpeg">
+        <source src="https://live.urn1350.net/listen" type="audio/mpeg">
     </audio>
 
     <?php include('includes/listen-now.php'); ?>
