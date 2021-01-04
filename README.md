@@ -1,5 +1,5 @@
 # URN-Material
-The URN WordPress theme
+The URN WordPress theme, in use up until end of life in 2021. This is no longer being developed, only maintained as we transition to the new site design, as found on the URN Github.
 
 ![Theme preview](/screenshot.png?raw=true "Theme design")
 
